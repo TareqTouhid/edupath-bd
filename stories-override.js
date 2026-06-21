@@ -161,10 +161,7 @@
                   });
                 })
               ),
-          filtered.length > 0 && E("div", { className: "pf-stories-bottom" },
-            E("div", { style: { fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 600, lineHeight: 1.2 } }, "Add your experience."),
-            E("button", { type: "button", className: "btn btn-primary", onClick: function () { go("contribute"); }, style: { flexShrink: 0 } }, "Share My Experience")
-          )
+          null
         )
       ),
       E(window.Footer, { go: go })
