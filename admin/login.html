@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>EduPath BD Admin Login</title>
+  <style>
+    :root{--bg:#f5efe4;--surface:#fff;--text:#1e1a16;--muted:#766b60;--green:#006a4e;--green-dark:#004d38;--line:rgba(30,26,22,.13);--bad:#c8553d}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--text);font-family:Arial,sans-serif;padding:24px}
+    .card{width:min(100%,420px);background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 50px rgba(30,26,22,.1);padding:28px}
+    h1{margin:0 0 8px;font-size:34px;line-height:1;letter-spacing:-.02em}
+    p{margin:0 0 22px;color:var(--muted);line-height:1.5}
+    label{display:block;font-weight:700;font-size:13px;margin:0 0 8px}
+    input{width:100%;border:1px solid var(--line);border-radius:10px;background:#fff;padding:13px 14px;font:inherit;font-size:15px}
+    button{width:100%;min-height:46px;border:0;border-radius:999px;background:var(--green);color:#fff;font-weight:800;cursor:pointer;margin-top:16px}
+    button:hover{background:var(--green-dark)}
+    button:disabled{opacity:.55;cursor:not-allowed}
+    .status{min-height:20px;margin-top:12px;font-size:13px;color:var(--muted)}
+    .status.bad{color:var(--bad)}
+    .links{display:flex;justify-content:space-between;gap:12px;margin-top:18px;font-size:13px}
+    a{color:var(--green);font-weight:700;text-decoration:none}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Admin Login</h1>
+    <p>Sign in to manage the central DB and review testimonials.</p>
+    <form id="loginForm">
+      <label for="password">Admin password</label>
+      <input id="password" type="password" placeholder="Enter admin password" autocomplete="current-password" autofocus />
+      <button id="submit" type="submit">Login</button>
+      <div id="status" class="status"></div>
+    </form>
+    <div class="links">
+      <a href="/">Public site</a>
+      <a href="/admin/testimonials.html">Testimonial review</a>
+    </div>
+  </main>
+
+  <script src="/admin/auth.js"></script>
+  <script>
+    const form = document.getElementById("loginForm");
+    const password = document.getElementById("password");
+    const submit = document.getElementById("submit");
+    const statusEl = document.getElementById("status");
+    const params = new URLSearchParams(location.search);
+    const next = params.get("next") || "/admin/";
+
+    if (window.EduPathAdminAuth.token()) {
+      location.replace(next);
+    }
+
+    form.addEventListener("submit", async event => {
+      event.preventDefault();
+      const token = password.value.trim();
+      if (!token) {
+        statusEl.textContent = "Enter the admin password.";
+        statusEl.className = "status bad";
+        return;
+      }
+      submit.disabled = true;
+      statusEl.textContent = "Checking password...";
+      statusEl.className = "status";
+      try {
+        await window.EduPathAdminAuth.login(token);
+        location.replace(next);
+      } catch (err) {
+        statusEl.textContent = err.message || "Login failed.";
+        statusEl.className = "status bad";
+      } finally {
+        submit.disabled = false;
+      }
+    });
+  </script>
+</body>
+</html>

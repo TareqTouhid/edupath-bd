@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@babel/core": "^7.29.7",
+    "@babel/preset-react": "^7.29.7"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.100.1",
+    "@vercel/blob": "^2.4.0"
+  }
+}

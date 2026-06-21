@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>EduPath BD Admin Portal</title>
+  <style>
+    :root{--bg:#f5efe4;--surface:#fff;--alt:#ede8df;--text:#1e1a16;--muted:#766b60;--green:#006a4e;--line:rgba(30,26,22,.13);--bad:#c8553d;--blue:#1f4f86}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,sans-serif}
+    main{max-width:1240px;margin:0 auto;padding:28px 18px 80px}
+    header{display:flex;justify-content:space-between;gap:18px;align-items:end;border-bottom:1px solid var(--line);padding-bottom:18px;margin-bottom:18px}
+    h1{font-size:clamp(30px,4vw,48px);line-height:1;margin:0 0 8px;letter-spacing:-.02em}
+    h2{font-size:22px;margin:0 0 8px}
+    h3{font-size:16px;margin:0 0 8px}
+    p{color:var(--muted);line-height:1.5;margin:0}
+    .nav{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+    .tab{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:8px;padding:10px 12px;font-weight:700;cursor:pointer}
+    .tab.active{background:var(--green);color:#fff;border-color:var(--green)}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px;box-shadow:0 8px 22px rgba(30,26,22,.06)}
+    label{display:block;font-weight:700;font-size:13px;margin:12px 0 6px}
+    input,select,textarea{width:100%;border:1px solid var(--line);border-radius:8px;background:#fff;padding:11px 12px;font:inherit;font-size:14px}
+    textarea{min-height:140px;resize:vertical;font-family:Consolas,monospace}
+    button{border:0;border-radius:8px;padding:11px 14px;background:var(--green);color:#fff;font-weight:700;cursor:pointer}
+    button.secondary{background:var(--alt);color:var(--text)}
+    button.blue{background:var(--blue)}
+    button.bad{background:var(--bad)}
+    button:disabled{opacity:.55;cursor:not-allowed}
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .hidden{display:none}
+    .status{font-size:13px;color:var(--muted);margin-top:10px;white-space:pre-wrap}
+    .table{width:100%;border-collapse:collapse;font-size:13px;margin-top:12px}
+    .table th,.table td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+    .table input{padding:8px;font-size:12px}
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0}
+    .stat{background:#faf7f1;border:1px solid var(--line);border-radius:8px;padding:12px}
+    .stat strong{display:block;font-size:24px}
+    .mono{font-family:Consolas,monospace;font-size:12px}
+    @media(max-width:900px){header,.grid{grid-template-columns:1fr;display:grid}.stats{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Admin Portal</h1>
+        <p>Upload universities, departments, subjects, seats, jobs, and source links. Approved data merges into the central overlay DB and improves public search.</p>
+      </div>
+      <div class="actions">
+        <a href="/admin/testimonials.html"><button class="secondary" type="button">Testimonials</button></a>
+        <a href="/"><button class="secondary" type="button">Public site</button></a>
+        <button id="logout" class="secondary" type="button">Logout</button>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="actions">
+        <button id="loadOverlay" type="button">Load central DB</button>
+        <button id="saveJson" type="button" class="blue">Save JSON editor</button>
+      </div>
+      <div id="status" class="status">Signed in. Load the central DB to start editing.</div>
+      <div id="stats" class="stats"></div>
+    </section>
+
+    <nav class="nav">
+      <button class="tab active" data-tab="manual">Manual add</button>
+      <button class="tab" data-tab="csv">CSV upload</button>
+      <button class="tab" data-tab="extract">Extract from link</button>
+      <button class="tab" data-tab="review">Review/import</button>
+      <button class="tab" data-tab="json">JSON editor</button>
+    </nav>
+
+    <section id="manual" class="tabPage grid">
+      <div class="panel">
+        <h2>Add University</h2>
+        <label>Name</label><input id="uniName" placeholder="University of Example" />
+        <label>Short code</label><input id="uniShort" placeholder="UEX" />
+        <label>Type</label><select id="uniType"><option>public</option><option>private</option><option>international</option></select>
+        <label>City</label><input id="uniCity" placeholder="dhaka" />
+        <label>Website</label><input id="uniWebsite" placeholder="https://..." />
+        <div class="actions"><button id="addUni" type="button">Add to draft</button></div>
+      </div>
+      <div class="panel">
+        <h2>Add Subject + Offering</h2>
+        <label>University ID / short</label><input id="offerUni" placeholder="du" />
+        <label>Department</label><input id="offerDept" placeholder="Department of CSE" />
+        <label>Degree Name</label><input id="offerDegree" placeholder="B.Sc. Engineering" />
+        <label>Subject Name</label><input id="offerSubject" placeholder="Computer Science & Engineering" />
+        <label>Seats</label><input id="offerSeats" type="number" placeholder="65" />
+        <label>Source URL</label><input id="offerUrl" placeholder="https://..." />
+        <div class="actions"><button id="addOffering" type="button">Add to draft</button></div>
+      </div>
+    </section>
+
+    <section id="csv" class="tabPage hidden grid">
+      <div class="panel">
+        <h2>CSV Upload</h2>
+        <p>Columns accepted: university_name, university_id, department, degree_name, subject_name, subject_slug, seats, source_url.</p>
+        <label>Upload CSV file</label>
+        <input id="csvFile" type="file" accept=".csv,text/csv" />
+        <label>Paste CSV</label>
+        <textarea id="csvText" placeholder="university_name,department,degree_name,subject_name,seats&#10;DU,CSE,B.Sc.,Computer Science & Engineering,65"></textarea>
+        <div class="actions"><button id="parseCsv" type="button">Parse to draft</button></div>
+      </div>
+      <div class="panel">
+        <h2>CSV Rules</h2>
+        <p>CSV rows become offerings. Missing subject slugs and university IDs are generated automatically. Review before import.</p>
+      </div>
+    </section>
+
+    <section id="extract" class="tabPage hidden grid">
+      <div class="panel">
+        <h2>Extract From Link</h2>
+        <label>Admission / department / seat page URL</label>
+        <input id="extractUrl" placeholder="https://university.edu/admission/seats" />
+        <label>University name override</label>
+        <input id="extractUniName" placeholder="Optional" />
+        <label>University ID override</label>
+        <input id="extractUniId" placeholder="Optional, e.g. du" />
+        <div class="actions"><button id="extractBtn" type="button">Extract proposals</button></div>
+        <div id="extractStatus" class="status"></div>
+      </div>
+      <div class="panel">
+        <h2>Extractor Behavior</h2>
+        <p>It reads tables first. If no table exists, it scans text for program/seat patterns. Results are proposals only; import after review.</p>
+      </div>
+    </section>
+
+    <section id="review" class="tabPage hidden">
+      <div class="panel">
+        <h2>Draft Review</h2>
+        <p>Rows here are not public until imported.</p>
+        <div class="actions">
+          <button id="importDraft" type="button">Import draft to central DB</button>
+          <button id="clearDraft" class="secondary" type="button">Clear draft</button>
+        </div>
+        <div id="draftTable"></div>
+      </div>
+    </section>
+
+    <section id="json" class="tabPage hidden">
+      <div class="panel">
+        <h2>Central Overlay JSON</h2>
+        <p>Advanced editor. Save only valid JSON.</p>
+        <label>Overlay JSON</label>
+        <textarea id="jsonEditor" style="min-height:420px"></textarea>
+      </div>
+    </section>
+  </main>
+
+  <script src="/admin/auth.js"></script>
+  <script>
+    window.EduPathAdminAuth.requireLogin();
+    window.EduPathAdminAuth.attachLogout("logout");
+
+    const $ = id => document.getElementById(id);
+    const statusEl = $("status");
+    const statsEl = $("stats");
+    const jsonEditor = $("jsonEditor");
+    let overlay = null;
+    let draft = { universities: [], subjects: [], offerings: [], jobs: [] };
+
+    function slugify(value) {
+      return String(value || "").trim().toLowerCase().replace(/&/g, "and").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    }
+    function setStatus(text) { statusEl.textContent = text; }
+    function headers() {
+      return window.EduPathAdminAuth.headers();
+    }
+    function renderStats() {
+      const o = overlay || {};
+      statsEl.innerHTML = [
+        ["Universities", o.universities?.length || 0],
+        ["Subjects", o.subjects?.length || 0],
+        ["Offerings", o.offerings?.length || 0],
+        ["Jobs", o.jobs?.length || 0],
+      ].map(([k, v]) => `<div class="stat"><span>${k}</span><strong>${v}</strong></div>`).join("");
+    }
+    function syncEditor() {
+      jsonEditor.value = JSON.stringify(overlay || {}, null, 2);
+      renderStats();
+    }
+    async function loadOverlay() {
+      setStatus("Loading central overlay DB...");
+      const res = await fetch("/api/admin/data-overlay", { headers: headers() });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || "Load failed");
+      overlay = json.overlay;
+      syncEditor();
+      setStatus(`Loaded central DB overlay. Updated: ${overlay.updatedAt || "never"}`);
+    }
+    async function saveOverlayFromEditor() {
+      const parsed = JSON.parse(jsonEditor.value);
+      const res = await fetch("/api/admin/data-overlay", {
+        method: "POST",
+        headers: headers(),
+        body: JSON.stringify({ mode: "replace", overlay: parsed, source: "json-editor" })
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || "Save failed");
+      overlay = json.overlay;
+      syncEditor();
+      setStatus("Saved overlay JSON.");
+    }
+    function addDraftOffering(row) {
+      const subjectSlug = row.subject_slug || slugify(row.subject_name);
+      draft.offerings.push({ ...row, subject_slug: subjectSlug, university_id: row.university_id || slugify(row.university_name), seats: row.seats === "" ? null : Number(row.seats || 0) || null });
+      if (row.subject_name) draft.subjects.push({ slug: subjectSlug, name: row.subject_name, degree: row.degree_name || "", field: "admin" });
+      renderDraft();
+    }
+    function renderDraft() {
+      const rows = draft.offerings || [];
+      if (!rows.length) {
+        $("draftTable").innerHTML = '<p style="margin-top:14px">No draft rows yet.</p>';
+        return;
+      }
+      $("draftTable").innerHTML = `<table class="table"><thead><tr><th>University</th><th>Department</th><th>Degree</th><th>Subject</th><th>Seats</th><th>Source</th></tr></thead><tbody>${rows.map((r,i)=>`
+        <tr>
+          <td><input value="${r.university_id || ""}" data-i="${i}" data-k="university_id"></td>
+          <td><input value="${r.department || ""}" data-i="${i}" data-k="department"></td>
+          <td><input value="${r.degree_name || ""}" data-i="${i}" data-k="degree_name"></td>
+          <td><input value="${r.subject_name || ""}" data-i="${i}" data-k="subject_name"></td>
+          <td><input value="${r.seats || ""}" data-i="${i}" data-k="seats"></td>
+          <td><input value="${r.source_url || ""}" data-i="${i}" data-k="source_url"></td>
+        </tr>`).join("")}</tbody></table>`;
+    }
+    function parseCsv(text) {
+      const lines = text.split(/\r?\n/).filter(Boolean);
+      const headers = lines.shift().split(",").map(h => h.trim());
+      return lines.map(line => {
+        const cells = line.match(/("([^"]|"")*"|[^,]+)/g)?.map(c => c.replace(/^"|"$/g, "").replace(/""/g, '"').trim()) || [];
+        return Object.fromEntries(headers.map((h, i) => [h, cells[i] || ""]));
+      });
+    }
+
+    document.querySelectorAll(".tab").forEach(btn => btn.addEventListener("click", () => {
+      document.querySelectorAll(".tab").forEach(b => b.classList.remove("active"));
+      document.querySelectorAll(".tabPage").forEach(p => p.classList.add("hidden"));
+      btn.classList.add("active");
+      $(btn.dataset.tab).classList.remove("hidden");
+      if (btn.dataset.tab === "review") renderDraft();
+    }));
+
+    $("loadOverlay").onclick = () => loadOverlay().catch(err => setStatus(err.message));
+    $("saveJson").onclick = () => saveOverlayFromEditor().catch(err => setStatus(err.message));
+    $("addUni").onclick = () => {
+      const row = { id: slugify($("uniShort").value || $("uniName").value), name: $("uniName").value, short: $("uniShort").value, type: $("uniType").value, city: $("uniCity").value, website: $("uniWebsite").value };
+      draft.universities.push(row);
+      setStatus(`Added ${row.name} to draft.`);
+      renderDraft();
+    };
+    $("addOffering").onclick = () => {
+      addDraftOffering({ university_id: $("offerUni").value, department: $("offerDept").value, degree_name: $("offerDegree").value, subject_name: $("offerSubject").value, seats: $("offerSeats").value, source_url: $("offerUrl").value });
+      setStatus("Added offering to draft.");
+    };
+    $("parseCsv").onclick = () => {
+      parseCsv($("csvText").value).forEach(addDraftOffering);
+      setStatus("CSV parsed into draft.");
+    };
+    $("csvFile").onchange = async event => {
+      const file = event.target.files?.[0];
+      if (!file) return;
+      $("csvText").value = await file.text();
+      parseCsv($("csvText").value).forEach(addDraftOffering);
+      setStatus(`Parsed ${file.name} into draft.`);
+    };
+    $("extractBtn").onclick = async () => {
+      $("extractStatus").textContent = "Extracting...";
+      const res = await fetch("/api/admin/extract-url", {
+        method: "POST",
+        headers: headers(),
+        body: JSON.stringify({ url: $("extractUrl").value, universityName: $("extractUniName").value, universityId: $("extractUniId").value })
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || "Extraction failed");
+      if (json.university) draft.universities.push(json.university);
+      json.offerings.forEach(addDraftOffering);
+      $("extractStatus").textContent = `${json.offerings.length} proposed offering(s). Review before import.`;
+    };
+    $("importDraft").onclick = async () => {
+      const res = await fetch("/api/admin/import-data", {
+        method: "POST",
+        headers: headers(),
+        body: JSON.stringify({ patch: draft, source: "admin-portal" })
+      });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || "Import failed");
+      overlay = json.overlay;
+      draft = { universities: [], subjects: [], offerings: [], jobs: [] };
+      syncEditor();
+      renderDraft();
+      setStatus("Draft imported. Public UI will reflect it through /api/data-overlay.");
+    };
+    $("clearDraft").onclick = () => { draft = { universities: [], subjects: [], offerings: [], jobs: [] }; renderDraft(); };
+    document.addEventListener("input", e => {
+      if (!e.target.matches("[data-i][data-k]")) return;
+      draft.offerings[Number(e.target.dataset.i)][e.target.dataset.k] = e.target.value;
+    });
+    renderDraft();
+  </script>
+</body>
+</html>

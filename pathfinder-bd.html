@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PathFinder BD — Choose Your Path With Evidence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ── RESET & BASE ── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --green: #006A4E;
+    --green-dark: #004D38;
+    --green-light: #E8F4F0;
+    --green-mid: #1A8A68;
+    --gold: #F4A823;
+    --gold-light: #FEF3D8;
+    --gold-dark: #C4841A;
+    --white: #FFFFFF;
+    --off-white: #F8F7F4;
+    --gray-50: #F5F5F3;
+    --gray-100: #EBEBEA;
+    --gray-200: #D4D4D2;
+    --gray-400: #9C9C9A;
+    --gray-600: #6B6B69;
+    --gray-800: #2C2C2A;
+    --text: #1A1A18;
+    --radius: 14px;
+    --radius-sm: 8px;
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+    --shadow: 0 4px 24px rgba(0,0,0,0.09);
+    --shadow-lg: 0 12px 48px rgba(0,0,0,0.14);
+    --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--gray-100);
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 24px;
+    box-shadow: 0 1px 12px rgba(0,0,0,0.06);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: var(--green);
+    letter-spacing: -0.5px;
+    cursor: pointer;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-logo-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--gold); margin-top: 2px;
+  }
+  .nav-links {
+    display: flex; gap: 4px;
+  }
+  .nav-link {
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 13.5px; font-weight: 600;
+    color: var(--gray-600);
+    cursor: pointer; border: none; background: none;
+    transition: var(--transition);
+    white-space: nowrap;
+  }
+  .nav-link:hover { color: var(--green); background: var(--green-light); }
+  .nav-link.active { color: var(--green); background: var(--green-light); }
+  .nav-cta {
+    background: var(--green);
+    color: white;
+    padding: 9px 20px;
+    border-radius: 100px;
+    font-size: 13.5px; font-weight: 700;
+    cursor: pointer; border: none;
+    transition: var(--transition);
+    white-space: nowrap;
+  }
+  .nav-cta:hover { background: var(--green-dark); transform: translateY(-1px); }
+
+  /* ── SCREEN SYSTEM ── */
+  .app { padding-top: 64px; }
+  .screen { display: none; animation: fadeUp 0.4s ease both; }
+  .screen.active { display: block; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SCREEN 1: LANDING ── */
+  .hero {
+    background: var(--green);
+    position: relative; overflow: hidden;
+    padding: 80px 24px 72px;
+    text-align: center;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 120% 80% at 50% 120%, rgba(244,168,35,0.18) 0%, transparent 65%),
+                radial-gradient(ellipse 60% 40% at 80% 10%, rgba(255,255,255,0.06) 0%, transparent 50%);
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.9);
+    font-size: 12.5px; font-weight: 600; letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 7px 16px; border-radius: 100px;
+    margin-bottom: 28px;
+    position: relative; z-index: 1;
+  }
+  .hero-eyebrow::before {
+    content: '🇧🇩'; font-size: 14px;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 6vw, 72px);
+    font-weight: 900;
+    color: white;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    max-width: 760px; margin: 0 auto 20px;
+    position: relative; z-index: 1;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: clamp(15px, 2vw, 18px);
+    color: rgba(255,255,255,0.78);
+    max-width: 540px; margin: 0 auto 48px;
+    line-height: 1.65;
+    position: relative; z-index: 1;
+    font-weight: 400;
+  }
+  .hero-cards {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 16px; max-width: 800px; margin: 0 auto 0;
+    position: relative; z-index: 1;
+  }
+  .hero-card {
+    background: rgba(255,255,255,0.1);
+    border: 1.5px solid rgba(255,255,255,0.18);
+    border-radius: var(--radius);
+    padding: 28px 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    backdrop-filter: blur(8px);
+    text-align: left;
+  }
+  .hero-card:hover {
+    background: rgba(255,255,255,0.18);
+    border-color: rgba(255,255,255,0.35);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+  }
+  .hero-card-icon {
+    font-size: 28px; margin-bottom: 12px; display: block;
+  }
+  .hero-card h3 {
+    color: white; font-size: 17px; font-weight: 700; margin-bottom: 6px;
+  }
+  .hero-card p {
+    color: rgba(255,255,255,0.65); font-size: 13px; line-height: 1.5;
+  }
+  .hero-card-arrow {
+    display: inline-flex; align-items: center; gap: 4px;
+    color: var(--gold); font-size: 12.5px; font-weight: 700;
+    margin-top: 14px; letter-spacing: 0.3px;
+  }
+
+  /* Stats strip */
+  .stats-strip {
+    background: var(--gold);
+    padding: 16px 24px;
+    display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;
+  }
+  .stat-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 14px; font-weight: 700; color: var(--green-dark);
+  }
+  .stat-item strong { font-size: 20px; }
+
+  /* Did You Know strip */
+  .dyk-strip {
+    background: var(--green-dark);
+    padding: 20px 32px;
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    flex-wrap: wrap; text-align: center;
+  }
+  .dyk-label {
+    background: var(--gold);
+    color: var(--green-dark);
+    font-size: 11px; font-weight: 800; letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 4px 12px; border-radius: 100px;
+    white-space: nowrap;
+  }
+  .dyk-text {
+    color: rgba(255,255,255,0.9);
+    font-size: 15px; font-weight: 500;
+  }
+  .dyk-text strong { color: var(--gold); font-weight: 800; }
+
+  /* How it works */
+  .how-section {
+    padding: 72px 24px;
+    max-width: 1100px; margin: 0 auto;
+    text-align: center;
+  }
+  .section-label {
+    font-size: 11.5px; font-weight: 800; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--green);
+    margin-bottom: 12px;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700; color: var(--text);
+    margin-bottom: 16px; line-height: 1.2;
+  }
+  .section-sub {
+    font-size: 16px; color: var(--gray-600);
+    max-width: 520px; margin: 0 auto 56px;
+    line-height: 1.65;
+  }
+  .steps-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+  }
+  .step-card {
+    background: white; border-radius: var(--radius);
+    padding: 36px 28px; text-align: left;
+    border: 1.5px solid var(--gray-100);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative; overflow: hidden;
+  }
+  .step-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px; background: var(--gold);
+  }
+  .step-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+  .step-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px; font-weight: 900;
+    color: var(--gray-100); line-height: 1;
+    margin-bottom: 16px;
+  }
+  .step-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
+  .step-card p { font-size: 14.5px; color: var(--gray-600); line-height: 1.65; }
+
+  /* ── SCREEN 2: SUBJECTS ── */
+  .page-header {
+    background: white;
+    border-bottom: 1px solid var(--gray-100);
+    padding: 40px 24px 32px;
+    text-align: center;
+  }
+  .page-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 700; margin-bottom: 8px;
+  }
+  .page-header p { color: var(--gray-600); font-size: 15.5px; }
+
+  .filter-bar {
+    background: white;
+    border-bottom: 1px solid var(--gray-100);
+    padding: 14px 24px;
+    display: flex; gap: 8px; flex-wrap: wrap;
+    justify-content: center; align-items: center;
+    position: sticky; top: 64px; z-index: 50;
+  }
+  .filter-chip {
+    padding: 7px 18px;
+    border-radius: 100px;
+    font-size: 13px; font-weight: 600;
+    border: 1.5px solid var(--gray-200);
+    background: white; color: var(--gray-600);
+    cursor: pointer; transition: var(--transition);
+    white-space: nowrap;
+  }
+  .filter-chip:hover { border-color: var(--green); color: var(--green); }
+  .filter-chip.active { border-color: var(--green); background: var(--green); color: white; }
+
+  .subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; padding: 32px 24px;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .subject-card {
+    background: white; border-radius: var(--radius);
+    border: 1.5px solid var(--gray-100);
+    padding: 28px 24px;
+    cursor: pointer; transition: var(--transition);
+    position: relative; overflow: hidden;
+    box-shadow: var(--shadow-sm);
+  }
+  .subject-card:hover {
+    border-color: var(--green);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+  }
+  .subject-card-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 14px;
+  }
+  .field-badge {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
+    padding: 4px 12px; border-radius: 100px;
+    text-transform: uppercase;
+  }
+  .field-Technology { background: #EEF4FF; color: #3B5BDB; }
+  .field-Business { background: #FFF4E6; color: #E67700; }
+  .field-Science { background: #F0FFF4; color: #2F9E44; }
+  .field-Social\ Science { background: #FFF0F6; color: #C2255C; }
+  .field-Humanities { background: #F3F0FF; color: #7048E8; }
+  .field-Environmental\ Science { background: #E6FCF5; color: #099268; }
+  .field-Design\ \&\ Engineering { background: #FFF9DB; color: #F59F00; }
+  .field-Applied\ Science { background: #EBFBEE; color: #37B24D; }
+
+  .trend-badge {
+    display: flex; align-items: center; gap: 4px;
+    font-size: 11.5px; font-weight: 700;
+  }
+  .trend-rising { color: #2F9E44; }
+  .trend-stable { color: #E67700; }
+  .trend-niche { color: #7048E8; }
+  .trend-dot { width: 6px; height: 6px; border-radius: 50%; }
+  .trend-rising .trend-dot { background: #2F9E44; }
+  .trend-stable .trend-dot { background: #E67700; }
+  .trend-niche .trend-dot { background: #7048E8; }
+
+  .subject-card h3 {
+    font-size: 17px; font-weight: 700; margin-bottom: 8px;
+    line-height: 1.3; color: var(--text);
+  }
+  .subject-card p {
+    font-size: 13.5px; color: var(--gray-600);
+    line-height: 1.6; margin-bottom: 18px;
+  }
+  .subject-card-footer {
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid var(--gray-100); padding-top: 14px;
+    margin-top: auto;
+  }
+  .difficulty-badge {
+    font-size: 12px; font-weight: 600; color: var(--gray-600);
+    display: flex; align-items: center; gap: 4px;
+  }
+  .diff-dots { display: flex; gap: 3px; }
+  .diff-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gray-200); }
+  .diff-dot.filled { background: var(--green); }
+  .hsc-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+  .hsc-tag {
+    font-size: 10.5px; font-weight: 700;
+    padding: 3px 8px; border-radius: 4px;
+    background: var(--green-light); color: var(--green);
+  }
+  .subject-cta {
+    font-size: 13px; font-weight: 700; color: var(--green);
+    display: flex; align-items: center; gap: 4px;
+    margin-top: 14px;
+  }
+
+  /* ── SUBJECT MODAL ── */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0; z-index: 200;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+    overflow-y: auto;
+    animation: fadeIn 0.2s ease;
+  }
+  .modal-overlay.open { display: flex; align-items: flex-start; justify-content: center; padding: 32px 16px; }
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  .modal {
+    background: white; border-radius: 20px;
+    width: 100%; max-width: 780px;
+    box-shadow: var(--shadow-lg);
+    animation: slideUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    overflow: hidden;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(32px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .modal-header {
+    background: var(--green);
+    padding: 32px 36px 28px;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute; top: 20px; right: 20px;
+    width: 36px; height: 36px; border-radius: 50%;
+    background: rgba(255,255,255,0.15); border: none;
+    color: white; font-size: 20px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: var(--transition);
+  }
+  .modal-close:hover { background: rgba(255,255,255,0.25); }
+  .modal-field-badge {
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+  .modal-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 700; color: white; margin-bottom: 10px;
+    line-height: 1.2;
+  }
+  .modal-header-meta {
+    display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+  }
+  .modal-meta-chip {
+    background: rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.9);
+    font-size: 12.5px; font-weight: 600;
+    padding: 5px 14px; border-radius: 100px;
+    border: 1px solid rgba(255,255,255,0.2);
+  }
+  .confidence-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 12px; font-weight: 700;
+    padding: 5px 14px; border-radius: 100px;
+  }
+  .conf-early { background: rgba(255,140,0,0.2); color: #FFB347; border: 1px solid rgba(255,140,0,0.3); }
+  .conf-growing { background: rgba(100,200,100,0.2); color: #90EE90; border: 1px solid rgba(100,200,100,0.3); }
+  .conf-strong { background: rgba(50,205,50,0.2); color: #00FF7F; border: 1px solid rgba(50,205,50,0.3); }
+
+  .modal-body { padding: 32px 36px; }
+  .modal-desc { font-size: 15.5px; color: var(--gray-600); line-height: 1.7; margin-bottom: 28px; }
+
+  .modal-section { margin-bottom: 28px; }
+  .modal-section-title {
+    font-size: 13px; font-weight: 800; letter-spacing: 0.8px;
+    text-transform: uppercase; color: var(--green);
+    margin-bottom: 12px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .modal-section-title::after {
+    content: ''; flex: 1; height: 1px; background: var(--gray-100);
+  }
+  .learn-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+  }
+  .learn-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 13.5px; font-weight: 500; color: var(--text);
+    padding: 8px 12px; background: var(--gray-50);
+    border-radius: var(--radius-sm);
+  }
+  .learn-item::before { content: '→'; color: var(--green); font-weight: 700; }
+
+  .careers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .career-col { background: var(--gray-50); border-radius: var(--radius-sm); padding: 16px; }
+  .career-col h4 {
+    font-size: 12px; font-weight: 800; letter-spacing: 0.5px;
+    text-transform: uppercase; margin-bottom: 10px;
+  }
+  .career-col.bd h4 { color: var(--green); }
+  .career-col.abroad h4 { color: #3B5BDB; }
+  .career-item {
+    font-size: 13.5px; color: var(--text); padding: 5px 0;
+    border-bottom: 1px solid var(--gray-100);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .career-item:last-child { border-bottom: none; }
+  .career-item::before { font-size: 10px; }
+  .career-col.bd .career-item::before { content: '🟢'; }
+  .career-col.abroad .career-item::before { content: '🌐'; }
+
+  .salary-box {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    margin-bottom: 8px;
+  }
+  .salary-item {
+    background: var(--green-light);
+    border-radius: var(--radius-sm); padding: 16px;
+    border-left: 4px solid var(--green);
+  }
+  .salary-item.abroad {
+    background: #EEF4FF;
+    border-left-color: #3B5BDB;
+  }
+  .salary-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray-600); margin-bottom: 4px; }
+  .salary-value { font-size: 17px; font-weight: 800; color: var(--text); }
+  .salary-disclaimer {
+    font-size: 11.5px; color: var(--gray-400);
+    font-style: italic; margin-top: 6px;
+  }
+
+  .uni-list { display: flex; flex-wrap: wrap; gap: 8px; }
+  .uni-chip {
+    background: var(--green-light); color: var(--green-dark);
+    font-size: 12.5px; font-weight: 600;
+    padding: 6px 14px; border-radius: 100px;
+    border: 1px solid rgba(0,106,78,0.15);
+  }
+
+  .modal-testimonials { margin-top: 8px; }
+  .mini-testimonial {
+    background: var(--gray-50); border-radius: var(--radius-sm);
+    padding: 16px; margin-bottom: 12px;
+    border-left: 3px solid var(--gold);
+  }
+  .mini-test-quote { font-size: 14px; color: var(--text); line-height: 1.6; font-style: italic; margin-bottom: 10px; }
+  .mini-test-author { font-size: 12.5px; font-weight: 700; color: var(--green); }
+  .mini-test-role { font-size: 12px; color: var(--gray-600); }
+  .no-testimonials {
+    text-align: center; padding: 28px;
+    color: var(--gray-400); font-size: 14px;
+    background: var(--gray-50); border-radius: var(--radius-sm);
+  }
+
+  /* ── SCREEN 3: TESTIMONIALS ── */
+  .test-filter-bar {
+    background: white; border-bottom: 1px solid var(--gray-100);
+    padding: 16px 24px;
+    display: flex; gap: 8px; flex-wrap: wrap;
+    align-items: center; justify-content: center;
+    position: sticky; top: 64px; z-index: 50;
+  }
+  .filter-label {
+    font-size: 12.5px; font-weight: 700; color: var(--gray-600);
+    text-transform: uppercase; letter-spacing: 0.5px;
+    margin-right: 4px;
+  }
+  .testimonials-grid {
+    columns: 3 320px; gap: 20px;
+    padding: 32px 24px; max-width: 1200px; margin: 0 auto;
+  }
+  .test-card {
+    break-inside: avoid; background: white;
+    border-radius: var(--radius); border: 1.5px solid var(--gray-100);
+    padding: 24px; margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    cursor: pointer;
+    display: block; width: 100%;
+  }
+  .test-card:hover { border-color: var(--green); box-shadow: var(--shadow); }
+  .test-card-top {
+    display: flex; justify-content: space-between; align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  .test-name { font-size: 15px; font-weight: 700; color: var(--text); }
+  .test-meta { font-size: 12.5px; color: var(--gray-600); margin-top: 2px; }
+  .choose-chip {
+    font-size: 11.5px; font-weight: 700;
+    padding: 4px 12px; border-radius: 100px;
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .choose-yes { background: #EBFBEE; color: #2F9E44; border: 1px solid #B2F2BB; }
+  .choose-no { background: #FFF5F5; color: #E03131; border: 1px solid #FFC9C9; }
+  .test-subject-badge {
+    display: inline-block;
+    background: var(--green-light); color: var(--green-dark);
+    font-size: 11.5px; font-weight: 700;
+    padding: 4px 12px; border-radius: 100px;
+    margin-bottom: 12px;
+  }
+  .test-university {
+    font-size: 12.5px; color: var(--gray-600);
+    margin-bottom: 14px;
+    display: flex; align-items: center; gap: 4px;
+  }
+  .test-profession {
+    font-size: 13px; font-weight: 600; color: var(--green);
+    margin-bottom: 14px; display: flex; align-items: center; gap: 5px;
+  }
+  .test-quote {
+    font-size: 13.5px; color: var(--text); line-height: 1.7;
+    font-style: italic;
+    padding-left: 14px; border-left: 3px solid var(--gold);
+    margin-bottom: 14px;
+  }
+  .test-expanded { display: none; }
+  .test-card.expanded .test-expanded { display: block; }
+  .test-expanded-section { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--gray-100); }
+  .exp-label { font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gray-400); margin-bottom: 4px; }
+  .exp-text { font-size: 13px; color: var(--text); line-height: 1.65; }
+  .expand-hint {
+    font-size: 12px; color: var(--gray-400); font-weight: 600;
+    margin-top: 10px; text-align: center;
+  }
+  .test-card.expanded .expand-hint::before { content: '↑ Click to collapse'; }
+  .test-card:not(.expanded) .expand-hint::before { content: '↓ Click to read full story'; }
+
+  .no-results {
+    text-align: center; padding: 80px 24px;
+    color: var(--gray-400);
+  }
+  .no-results h3 { font-size: 20px; margin-bottom: 8px; color: var(--gray-600); }
+  .no-results p { font-size: 15px; }
+
+  /* ── SCREEN 4: AI MATCHER ── */
+  .matcher-container {
+    max-width: 680px; margin: 0 auto; padding: 48px 24px;
+  }
+  .matcher-header { text-align: center; margin-bottom: 40px; }
+  .matcher-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 4vw, 38px);
+    font-weight: 700; margin-bottom: 10px;
+  }
+  .matcher-header p { font-size: 15px; color: var(--gray-600); line-height: 1.65; }
+
+  .progress-bar-wrap {
+    background: var(--gray-100); border-radius: 100px;
+    height: 6px; margin-bottom: 36px; overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%; background: var(--green);
+    border-radius: 100px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .step-indicator {
+    text-align: center; font-size: 13px; font-weight: 600;
+    color: var(--gray-600); margin-bottom: 8px;
+  }
+
+  .step-panel { display: none; }
+  .step-panel.active { display: block; animation: fadeUp 0.3s ease both; }
+
+  .step-q {
+    font-size: clamp(20px, 3vw, 26px); font-weight: 700;
+    color: var(--text); margin-bottom: 8px; text-align: center;
+  }
+  .step-hint {
+    font-size: 14px; color: var(--gray-600); text-align: center;
+    margin-bottom: 28px; line-height: 1.5;
+  }
+
+  .chips-grid {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    justify-content: center; margin-bottom: 32px;
+  }
+  .option-chip {
+    padding: 11px 20px;
+    border-radius: 100px; border: 2px solid var(--gray-200);
+    background: white; color: var(--text);
+    font-size: 14px; font-weight: 600;
+    cursor: pointer; transition: var(--transition);
+    display: flex; align-items: center; gap: 7px;
+  }
+  .option-chip:hover { border-color: var(--green); color: var(--green); }
+  .option-chip.selected {
+    border-color: var(--green); background: var(--green); color: white;
+  }
+
+  .options-2col {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    margin-bottom: 32px;
+  }
+  .option-card {
+    padding: 20px; border: 2px solid var(--gray-200);
+    border-radius: var(--radius); background: white;
+    cursor: pointer; transition: var(--transition);
+    text-align: center;
+  }
+  .option-card:hover { border-color: var(--green); }
+  .option-card.selected { border-color: var(--green); background: var(--green-light); }
+  .option-card .opt-icon { font-size: 28px; margin-bottom: 8px; }
+  .option-card .opt-label { font-size: 15px; font-weight: 700; color: var(--text); }
+  .option-card .opt-desc { font-size: 12.5px; color: var(--gray-600); margin-top: 4px; }
+
+  .step-nav {
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .btn-prev {
+    padding: 12px 24px; border-radius: 100px;
+    border: 2px solid var(--gray-200); background: white;
+    font-size: 14px; font-weight: 700; color: var(--gray-600);
+    cursor: pointer; transition: var(--transition);
+    display: flex; align-items: center; gap: 6px;
+  }
+  .btn-prev:hover { border-color: var(--gray-400); color: var(--text); }
+  .btn-next {
+    padding: 13px 32px; border-radius: 100px;
+    background: var(--green); border: none; color: white;
+    font-size: 15px; font-weight: 700;
+    cursor: pointer; transition: var(--transition);
+    display: flex; align-items: center; gap: 6px;
+    box-shadow: 0 4px 16px rgba(0,106,78,0.3);
+  }
+  .btn-next:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,106,78,0.35); }
+  .btn-next:disabled { background: var(--gray-200); color: var(--gray-400); cursor: not-allowed; box-shadow: none; transform: none; }
+
+  /* Calculating animation */
+  .calculating {
+    text-align: center; padding: 60px 24px; display: none;
+  }
+  .calc-spinner {
+    width: 56px; height: 56px; margin: 0 auto 20px;
+    border: 4px solid var(--gray-100);
+    border-top-color: var(--green);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .calc-text {
+    font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 8px;
+  }
+  .calc-sub { font-size: 14px; color: var(--gray-600); }
+
+  /* Results */
+  .results-panel { display: none; }
+  .results-panel.show { display: block; animation: fadeUp 0.4s ease both; }
+  .results-title { text-align: center; margin-bottom: 8px; }
+  .results-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px; font-weight: 700; color: var(--text);
+  }
+  .results-sub {
+    text-align: center; color: var(--gray-600); font-size: 15px;
+    margin-bottom: 32px; line-height: 1.6;
+  }
+  .match-card {
+    background: white; border-radius: var(--radius);
+    border: 1.5px solid var(--gray-100);
+    padding: 28px; margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative; overflow: hidden;
+  }
+  .match-card:hover { border-color: var(--green); box-shadow: var(--shadow); }
+  .match-rank {
+    position: absolute; top: 0; right: 0;
+    background: var(--green); color: white;
+    font-size: 11px; font-weight: 800; letter-spacing: 0.5px;
+    padding: 6px 16px; border-radius: 0 var(--radius) 0 var(--radius);
+    text-transform: uppercase;
+  }
+  .match-rank.rank-1 { background: var(--gold); color: var(--green-dark); }
+  .match-card-header { margin-bottom: 16px; }
+  .match-card h3 { font-size: 19px; font-weight: 800; color: var(--text); margin-bottom: 4px; padding-right: 80px; }
+  .match-score-row {
+    display: flex; align-items: center; gap: 12px; margin: 14px 0;
+  }
+  .score-label { font-size: 13px; font-weight: 700; color: var(--green); white-space: nowrap; }
+  .score-bar-bg {
+    flex: 1; height: 8px; background: var(--gray-100);
+    border-radius: 100px; overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%; background: var(--green);
+    border-radius: 100px;
+    transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .score-pct { font-size: 15px; font-weight: 800; color: var(--green); }
+  .match-reasons { margin-bottom: 18px; }
+  .match-reason {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: 13.5px; color: var(--text); margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .match-reason::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .explore-btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--green); color: white;
+    padding: 10px 22px; border-radius: 100px;
+    font-size: 14px; font-weight: 700; border: none; cursor: pointer;
+    transition: var(--transition);
+  }
+  .explore-btn:hover { background: var(--green-dark); }
+  .results-disclaimer {
+    background: var(--gold-light);
+    border: 1.5px solid rgba(244,168,35,0.3);
+    border-radius: var(--radius-sm);
+    padding: 16px 20px; margin-top: 24px;
+    font-size: 13.5px; color: var(--gray-600); line-height: 1.65;
+  }
+  .results-disclaimer strong { color: var(--gold-dark); }
+  .restart-btn {
+    display: flex; align-items: center; justify-content: center; gap: 6px;
+    margin: 24px auto 0;
+    background: white; border: 2px solid var(--gray-200);
+    color: var(--gray-600); padding: 11px 24px;
+    border-radius: 100px; font-size: 14px; font-weight: 700;
+    cursor: pointer; transition: var(--transition);
+  }
+  .restart-btn:hover { border-color: var(--gray-400); color: var(--text); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--green-dark);
+    padding: 48px 24px;
+    text-align: center; margin-top: 0;
+  }
+  footer h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; font-weight: 700; color: white; margin-bottom: 10px;
+  }
+  footer p { color: rgba(255,255,255,0.65); font-size: 14px; line-height: 1.7; max-width: 500px; margin: 0 auto 24px; }
+  .footer-submit-btn {
+    background: var(--gold); color: var(--green-dark);
+    padding: 14px 32px; border-radius: 100px;
+    font-size: 15px; font-weight: 800; border: none; cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .footer-submit-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(244,168,35,0.4); }
+  .footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    margin-top: 40px; padding-top: 24px;
+    color: rgba(255,255,255,0.4); font-size: 13px;
+  }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 16px; }
+    .nav-link { padding: 7px 12px; font-size: 12.5px; }
+    .hero-cards { grid-template-columns: 1fr; gap: 12px; }
+    .stats-strip { gap: 20px; }
+    .steps-grid { grid-template-columns: 1fr; }
+    .subjects-grid { grid-template-columns: 1fr; padding: 20px 16px; }
+    .testimonials-grid { columns: 1; padding: 20px 16px; }
+    .modal-body { padding: 24px 20px; }
+    .modal-header { padding: 24px 20px 20px; }
+    .learn-grid { grid-template-columns: 1fr; }
+    .careers-grid { grid-template-columns: 1fr; }
+    .salary-box { grid-template-columns: 1fr; }
+    .options-2col { grid-template-columns: 1fr; }
+    .matcher-container { padding: 32px 16px; }
+    .nav-cta { display: none; }
+  }
+  @media (max-width: 480px) {
+    .nav-links { gap: 0; }
+    .nav-link { font-size: 11.5px; padding: 6px 10px; }
+    .dyk-strip { padding: 16px 20px; }
+    .how-section { padding: 48px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo" onclick="showScreen('home')">
+    PathFinder <span>BD</span>
+  </div>
+  <div class="nav-links">
+    <button class="nav-link active" onclick="showScreen('home')" data-screen="home">Home</button>
+    <button class="nav-link" onclick="showScreen('subjects')" data-screen="subjects">Subjects</button>
+    <button class="nav-link" onclick="showScreen('stories')" data-screen="stories">Stories</button>
+    <button class="nav-link" onclick="showScreen('matcher')" data-screen="matcher">AI Matcher</button>
+  </div>
+  <button class="nav-cta" onclick="showScreen('matcher')">Find My Path →</button>
+</nav>
+
+<div class="app">
+
+<!-- ══ SCREEN 1: HOME ══ -->
+<div class="screen active" id="screen-home">
+
+  <section class="hero">
+    <div class="hero-eyebrow">For SSC & HSC Graduates of Bangladesh</div>
+    <h1>Choose your path with <em>evidence,</em><br>not rumors.</h1>
+    <p class="hero-sub">Real stories from people already in the field. AI-powered matching. Honest career data — built by Bangladeshi students, for Bangladeshi students.</p>
+    <div class="hero-cards">
+      <div class="hero-card" onclick="showScreen('matcher')">
+        <span class="hero-card-icon">🧭</span>
+        <h3>Find My Subject</h3>
+        <p>Answer 5 quick questions. Get matched to subjects that fit your natural strengths and goals.</p>
+        <div class="hero-card-arrow">Start now →</div>
+      </div>
+      <div class="hero-card" onclick="showScreen('subjects')">
+        <span class="hero-card-icon">📚</span>
+        <h3>Browse Subjects</h3>
+        <p>Explore 10 subjects with career paths, salary data, and which universities offer them.</p>
+        <div class="hero-card-arrow">Explore →</div>
+      </div>
+      <div class="hero-card" onclick="showScreen('stories')">
+        <span class="hero-card-icon">💬</span>
+        <h3>Read Real Stories</h3>
+        <p>15 people share what it's really like — the good, the bad, and what they'd do differently.</p>
+        <div class="hero-card-arrow">Read stories →</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="stats-strip">
+    <div class="stat-item">📋 <strong>56</strong> Testimonials Collected</div>
+    <div class="stat-item">🎓 <strong>31</strong> Subjects Covered</div>
+    <div class="stat-item">🏛️ <strong>50+</strong> Universities Listed</div>
+    <div class="stat-item">✅ <strong>Free</strong> Forever</div>
+  </div>
+
+  <div class="dyk-strip">
+    <span class="dyk-label">Did You Know?</span>
+    <span class="dyk-text"><strong>42% of students</strong> in our survey said they'd choose a completely different subject if they could start over.</span>
+  </div>
+
+  <section class="how-section">
+    <div class="section-label">How PathFinder BD Works</div>
+    <h2 class="section-title">Three tools. One goal.</h2>
+    <p class="section-sub">We help you make the most important academic decision of your life with real evidence — not family pressure or peer rumors.</p>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>Hear from real people</h3>
+        <p>Browse testimonials from students and professionals who've been where you are. They share the honest good, bad, and what they wish they knew.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>Explore subject profiles</h3>
+        <p>Every subject has a full breakdown: what you'll study, careers in BD and abroad, realistic salary ranges, and which universities offer it.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>Get AI-matched</h3>
+        <p>Answer 5 questions about your interests, background, and goals. The AI recommends subjects that actually fit you — and shows you why.</p>
+      </div>
+    </div>
+  </section>
+
+</div><!-- end screen-home -->
+
+
+<!-- ══ SCREEN 2: SUBJECTS ══ -->
+<div class="screen" id="screen-subjects">
+  <div class="page-header">
+    <div class="section-label">Subject Explorer</div>
+    <h2 class="section-title" style="margin-bottom:8px">Find the right degree</h2>
+    <p>Click any subject for career paths, salary data, real testimonials, and universities.</p>
+  </div>
+  <div class="filter-bar" id="subject-filters">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-chip active" onclick="filterSubjects('all', this)">All Subjects</button>
+    <button class="filter-chip" onclick="filterSubjects('Technology', this)">Technology</button>
+    <button class="filter-chip" onclick="filterSubjects('Business', this)">Business</button>
+    <button class="filter-chip" onclick="filterSubjects('Science', this)">Science</button>
+    <button class="filter-chip" onclick="filterSubjects('Social Science', this)">Social Science</button>
+    <button class="filter-chip" onclick="filterSubjects('Humanities', this)">Humanities</button>
+    <button class="filter-chip" onclick="filterSubjects('rising', this)">📈 Rising Demand</button>
+  </div>
+  <div class="subjects-grid" id="subjects-grid"></div>
+</div>
+
+<!-- Subject Modal -->
+<div class="modal-overlay" id="subject-modal" onclick="closeModalOnOverlay(event)">
+  <div class="modal" id="modal-content">
+    <div class="modal-header" id="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div id="modal-field-badge"></div>
+      <h2 id="modal-title"></h2>
+      <div class="modal-header-meta" id="modal-meta"></div>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+
+<!-- ══ SCREEN 3: STORIES ══ -->
+<div class="screen" id="screen-stories">
+  <div class="page-header">
+    <div class="section-label">Real Testimonials</div>
+    <h2 class="section-title" style="margin-bottom:8px">Hear from people in the field</h2>
+    <p>15 real people share their undergraduate experience — unfiltered.</p>
+  </div>
+  <div class="test-filter-bar">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-chip active" onclick="filterTestimonials('all', this)">All Stories</button>
+    <button class="filter-chip" onclick="filterTestimonials('yes', this)">✅ Would Choose Again</button>
+    <button class="filter-chip" onclick="filterTestimonials('no', this)">🔄 Would Switch</button>
+    <button class="filter-chip" onclick="filterTestimonials('abroad', this)">🌍 Now Abroad</button>
+  </div>
+  <div class="testimonials-grid" id="testimonials-grid"></div>
+</div>
+
+
+<!-- ══ SCREEN 4: AI MATCHER ══ -->
+<div class="screen" id="screen-matcher">
+  <div class="matcher-container">
+    <div class="matcher-header">
+      <div class="section-label">AI Subject Matcher</div>
+      <h2>Let's find your fit</h2>
+      <p>5 questions. No sign-up needed. Based on real subject data and 56 testimonials.</p>
+    </div>
+
+    <!-- Progress -->
+    <div class="step-indicator" id="step-indicator">Step 1 of 5</div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progress-fill" style="width:20%"></div>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="step-panel active" id="step-1">
+      <div class="step-q">What do you naturally enjoy?</div>
+      <div class="step-hint">Select all that apply — be honest, not strategic.</div>
+      <div class="chips-grid" id="step1-chips">
+        <div class="option-chip" onclick="toggleChip(this,'interests','puzzles')">🧩 Solving puzzles</div>
+        <div class="option-chip" onclick="toggleChip(this,'interests','creating')">🎨 Creating things</div>
+        <div class="option-chip" onclick="toggleChip(this,'interests','helping')">🤝 Helping people</div>
+        <div class="option-chip" onclick="toggleChip(this,'interests','nature')">🌿 Understanding nature</div>
+        <div class="option-chip" onclick="toggleChip(this,'interests','numbers')">🔢 Working with numbers</div>
+        <div class="option-chip" onclick="toggleChip(this,'interests','writing')">✍️ Writing & storytelling</div>
+        <div class="option-chip" onclick="toggleChip(this,'interests','building')">🔧 Building & fixing</div>
+        <div class="option-chip" onclick="toggleChip(this,'interests','research')">🔍 Researching & reading</div>
+      </div>
+      <div class="step-nav">
+        <div></div>
+        <button class="btn-next" onclick="nextStep(1)">Next →</button>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step-panel" id="step-2">
+      <div class="step-q">Your HSC background?</div>
+      <div class="step-hint">This affects which subjects you're eligible for.</div>
+      <div class="options-2col" id="step2-opts">
+        <div class="option-card" onclick="selectSingle(this,'hscGroup','Science')">
+          <div class="opt-icon">🔬</div>
+          <div class="opt-label">Science</div>
+          <div class="opt-desc">Physics, Chemistry, Biology, Math</div>
+        </div>
+        <div class="option-card" onclick="selectSingle(this,'hscGroup','Commerce')">
+          <div class="opt-icon">📊</div>
+          <div class="opt-label">Commerce</div>
+          <div class="opt-desc">Accounting, Business, Economics</div>
+        </div>
+        <div class="option-card" onclick="selectSingle(this,'hscGroup','Arts')">
+          <div class="opt-icon">🎭</div>
+          <div class="opt-label">Arts / Humanities</div>
+          <div class="opt-desc">Bangla, English, History, Civics</div>
+        </div>
+        <div class="option-card" onclick="selectSingle(this,'hscGroup','any')">
+          <div class="opt-icon">🤔</div>
+          <div class="opt-label">Not sure yet</div>
+          <div class="opt-desc">Show me all options</div>
+        </div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-prev" onclick="prevStep(2)">← Back</button>
+        <button class="btn-next" onclick="nextStep(2)">Next →</button>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step-panel" id="step-3">
+      <div class="step-q">How comfortable are you with mathematics?</div>
+      <div class="step-hint">Be honest — it matters more than you think.</div>
+      <div class="options-2col" id="step3-opts">
+        <div class="option-card" onclick="selectSingle(this,'mathComfort','love')">
+          <div class="opt-icon">❤️</div>
+          <div class="opt-label">Love it</div>
+          <div class="opt-desc">Math is fun, I seek harder problems</div>
+        </div>
+        <div class="option-card" onclick="selectSingle(this,'mathComfort','fine')">
+          <div class="opt-icon">👍</div>
+          <div class="opt-label">Fine with it</div>
+          <div class="opt-desc">I can handle math when needed</div>
+        </div>
+        <div class="option-card" onclick="selectSingle(this,'mathComfort','manageable')">
+          <div class="opt-icon">😅</div>
+          <div class="opt-label">Manageable</div>
+          <div class="opt-desc">I get by but it's not my strength</div>
+        </div>
+        <div class="option-card" onclick="selectSingle(this,'mathComfort','avoid')">
+          <div class="opt-icon">🙅</div>
+          <div class="opt-label">Avoid if possible</div>
+          <div class="opt-desc">I'd prefer subjects without heavy math</div>
+        </div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-prev" onclick="prevStep(3)">← Back</button>
+        <button class="btn-next" onclick="nextStep(3)">Next →</button>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step-panel" id="step-4">
+      <div class="step-q">What matters most in your career?</div>
+      <div class="step-hint">Pick up to 3 things that genuinely drive you.</div>
+      <div class="chips-grid" id="step4-chips">
+        <div class="option-chip" onclick="toggleChip(this,'priorities','income')">💰 High income</div>
+        <div class="option-chip" onclick="toggleChip(this,'priorities','security')">🛡️ Job security</div>
+        <div class="option-chip" onclick="toggleChip(this,'priorities','creative')">🎨 Creative freedom</div>
+        <div class="option-chip" onclick="toggleChip(this,'priorities','society')">🌍 Helping society</div>
+        <div class="option-chip" onclick="toggleChip(this,'priorities','abroad')">✈️ Working abroad</div>
+        <div class="option-chip" onclick="toggleChip(this,'priorities','boss')">🚀 Being my own boss</div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-prev" onclick="prevStep(4)">← Back</button>
+        <button class="btn-next" onclick="nextStep(4)">Next →</button>
+      </div>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="step-panel" id="step-5">
+      <div class="step-q">Any constraints?</div>
+      <div class="step-hint">Select all that apply — this helps us filter realistic options.</div>
+      <div class="chips-grid" id="step5-chips">
+        <div class="option-chip" onclick="toggleChip(this,'constraints','public')">🏛️ Public university only</div>
+        <div class="option-chip" onclick="toggleChip(this,'constraints','budget')">💸 Budget-conscious</div>
+        <div class="option-chip" onclick="toggleChip(this,'constraints','home')">🏠 Stay near family</div>
+        <div class="option-chip" onclick="toggleChip(this,'constraints','private')">🏢 Open to private uni</div>
+        <div class="option-chip" onclick="toggleChip(this,'constraints','masters')">🎓 Planning to do Masters abroad</div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-prev" onclick="prevStep(5)">← Back</button>
+        <button class="btn-next" onclick="submitMatcher()">Find My Match 🧭</button>
+      </div>
+    </div>
+
+    <!-- Calculating -->
+    <div class="calculating" id="calculating">
+      <div class="calc-spinner"></div>
+      <div class="calc-text">Analysing your profile...</div>
+      <div class="calc-sub">Matching against 10 subjects and 15 testimonials</div>
+    </div>
+
+    <!-- Results -->
+    <div class="results-panel" id="results-panel">
+      <div class="results-title">
+        <h2>Your top matches</h2>
+      </div>
+      <p class="results-sub">Based on your interests, background, and goals — here are the subjects that fit you best.</p>
+      <div id="results-list"></div>
+      <div class="results-disclaimer">
+        <strong>Important:</strong> This is one input among many. Talk to people already working in these fields, discuss with your family, and consult a teacher or counselor before making your final decision. No algorithm can replace lived experience.
+      </div>
+      <button class="restart-btn" onclick="restartMatcher()">↺ Start Over</button>
+    </div>
+
+  </div>
+</div><!-- end matcher -->
+
+</div><!-- end .app -->
+
+<!-- FOOTER -->
+<footer>
+  <h3>Share Your Story</h3>
+  <p>Already studying or working in your field? Your experience could help thousands of students make better decisions. Takes 5 minutes.</p>
+  <button class="footer-submit-btn">✍️ Submit Your Testimonial</button>
+  <div class="footer-bottom">
+    PathFinder BD · Built for students, by students · Free forever · Data as of 2024–2025
+  </div>
+</footer>
+
+
+<script>
+// ══ DATA ══
+const testimonials = [
+  { name: "Sanjana Islam", age: 26, city: "Dhaka", country: "Bangladesh", subject: "Bangla", field: "Humanities", university: "Jagannath University", session: "2016-17", profession: "Journalist", org: "Gramnagar Barta", goodExp: "You can feel sensations well while reading. You can see the reality of a society at a certain time. You can know people well. You can discover your inner soul.", badExp: "You have to know history and understand psychology deeply.", whoShouldTake: "Who wants a government job or loves literature deeply", whoShouldNot: "Who wants to go abroad for higher study quickly", opportunities: "Teaching profession, journalism, civil service (BCS)", wouldChooseAgain: "Bangla", rating: "yes" },
+  { name: "Asif Ahmed", age: 32, city: "Dhaka", country: "Bangladesh", subject: "Zoology", field: "Science", university: "University of Dhaka", session: "2012-13", profession: "Banker", org: "Meghna Bank", goodExp: "Get to understand how life and nature work intertwinedly. Beautiful subject if you have the patience.", badExp: "Primitive curriculum, less opportunity of career choice in Bangladesh.", whoShouldTake: "Who has passion for life science and is from a financially stable family", whoShouldNot: "Who needs to be established in career quickly and doesn't like biology much", opportunities: "Computational biology, research, environmental science", wouldChooseAgain: "CSE", rating: "no" },
+  { name: "Fayeeza Humaira", age: 27, city: "Cincinnati", country: "USA", subject: "Geography and Environment", field: "Environmental Science", university: "University of Dhaka", session: "2016-17", profession: "Urban Planner", org: "Hamilton County Government (USA)", goodExp: "Fieldwork was the highlight. Connects you to the real world instantly.", badExp: "Absence of technical and contemporary curriculum in BD.", whoShouldTake: "Whoever has genuine interest in Geography, environment, and spatial thinking", whoShouldNot: "Whoever doesn't find it interesting — it's a passion-driven subject", opportunities: "GIS analyst, environmental scientist, urban planner, cartographer, climate researcher", wouldChooseAgain: "Transportation Planning", rating: "yes" },
+  { name: "Sawaan Mujib Khan", age: 32, city: "Dhaka", country: "Bangladesh", subject: "Architecture", field: "Design & Engineering", university: "AIUB", session: "2010-2016", profession: "Architect", org: "Design Education for Youngsters", goodExp: "Lot of things to learn, inspired by great teachers & discovered a new version of myself.", badExp: "No dedicated campus back then, but the system was still good.", whoShouldTake: "Who is passionate enough to learn and truly values creativity", whoShouldNot: "Who doesn't value creativity and is lazy — you'll burn out fast", opportunities: "Architecture blended with public administration, urban design, interior design", wouldChooseAgain: "Architecture again", rating: "yes" },
+  { name: "Mehrin Mostafa", age: 28, city: "Dhaka", country: "Bangladesh", subject: "Psychology", field: "Social Science", university: "University of Dhaka", session: "2013-14", profession: "Psychologist", org: "IUBAT", goodExp: "Freud's theory and understanding the human mind was genuinely fascinating.", badExp: "Poor course structure and less practical applicability in Bangladesh context.", whoShouldTake: "Who has deep passion for it and is naturally empathetic", whoShouldNot: "Less empathetic people — this field is emotionally demanding", opportunities: "Huge applied areas — counseling, HR, research, clinical psychology, UX", wouldChooseAgain: "Engineering (was my original first choice)", rating: "yes" },
+  { name: "Tainus Shabree", age: 27, city: "Cumilla", country: "Bangladesh", subject: "Agriculture", field: "Applied Science", university: "Noakhali Science & Technology University", session: "2016-17", profession: "Researcher", org: "Bangladesh Agricultural University (M.Sc.)", goodExp: "Allowed me to connect more closely with nature and apply knowledge at the field level.", badExp: "If resources could be better developed, students would have more research potential.", whoShouldTake: "Students who are creative, interested in research, and love life science", whoShouldNot: "Students who lack interest in life science — it's very biology-heavy", opportunities: "Agricultural scientist, economist, engineer, BCS officer, Agritech entrepreneur", wouldChooseAgain: "Agriculture again", rating: "yes" },
+  { name: "Syed Sami Ashfaq", age: 31, city: "Dhaka", country: "Bangladesh", subject: "Electrical and Electronic Engineering", field: "Technology", university: "Ahsanullah University of Science and Technology", session: "2011-2015", profession: "Senior Engineer", org: "bKash Limited", goodExp: "Learned how physics works by applying it in real projects. Met amazing mentor-professors.", badExp: "Lack of research facility and funding for complex projects.", whoShouldTake: "Those truly passionate about engineering who want to build things for their career", whoShouldNot: "Those not actually passionate — it's very challenging and needs dedication", opportunities: "Telecommunications, power sector, IT, banking, fintech", wouldChooseAgain: "CSE — most demanding jobs right now are CSE/IT based", rating: "yes" },
+  { name: "Lija Kabir Sweety", age: 26, city: "Dhaka", country: "Bangladesh", subject: "English Language and Literature", field: "Humanities", university: "Jagannath University", session: "2016-17", profession: "Officer", org: "PDS International", goodExp: "Fun courses and really cool professors who made the journey smooth and memorable.", badExp: "Literature part was not my thing personally — it's very heavy.", whoShouldTake: "Who genuinely loves literature and language, not just English as a skill", whoShouldNot: "Who thinks they love English just because they were good in SSC/HSC — that's very different", opportunities: "Teacher, researcher, translator, content writer, BCS cadre", wouldChooseAgain: "International Relations — fascinating multidisciplinary field", rating: "yes" },
+  { name: "Tanjib", age: 30, city: "Dhaka", country: "Bangladesh", subject: "Finance and Banking", field: "Business", university: "Jahangirnagar University", session: "2012-13", profession: "Executive Officer", org: "Private Commercial Bank", goodExp: "Related to real economy and financial systems. Very applicable in banking jobs.", badExp: "Some topics are not relevant to our actual economic system.", whoShouldTake: "Those who want to build a solid career in financial organizations", whoShouldNot: "Weak in calculations — this subject needs strong numerical reasoning", opportunities: "Banks, financial institutions, insurance companies, investment firms", wouldChooseAgain: "Any subject is rewarding when the teacher and course material is excellent", rating: "yes" },
+  { name: "A E M Ridwan", age: 27, city: "Atlanta", country: "USA", subject: "CSE", field: "Technology", university: "BRAC University", session: "2017-2021", profession: "Researcher", org: "Kennesaw State University (USA)", goodExp: "Semi-finalist in Esho Robot Banai (Bangladesh's first robotics reality show), merit scholarship, High Distinction, published research paper.", badExp: "Industry collaboration should increase — gap between academia and industry is too wide.", whoShouldTake: "Anyone with genuine interest and willingness to keep learning constantly", whoShouldNot: "Those thinking it will just make them successful without putting in the work", opportunities: "Software Development, AI/ML, Data Science, Cybersecurity, Robotics, Cloud, IoT, Research, Entrepreneurship", wouldChooseAgain: "CSE — very happy with my choice", rating: "yes" },
+  { name: "Jannatul Ferdous", age: 27, city: "Dhaka", country: "Bangladesh", subject: "Development Studies", field: "Social Science", university: "University of Dhaka", session: "2016-17", profession: "NGO Coordinator", org: "", goodExp: "Field visits gave real-world exposure. Experienced professors with NGO backgrounds.", badExp: "Mathematical courses were challenging for someone without a strong math background.", whoShouldTake: "Those interested in NGO work, policy, or international development professionally", whoShouldNot: "Those who want to specialise narrowly — this is very multidisciplinary by nature", opportunities: "NGO, Bank, UN bodies, INGO, research, government policy", wouldChooseAgain: "Development Studies again — absolutely no regrets", rating: "yes" },
+  { name: "Sumaya Mohammed Era", age: 26, city: "Dhaka", country: "Bangladesh", subject: "Graphic Design", field: "Design & Engineering", university: "Dhaka University", session: "2016-17", profession: "Art Teacher", org: "Springdale International School", goodExp: "Realistic projects like making an entire pop-up book from scratch, illustrating every page.", badExp: "Lack of quality printing materials and sometimes unclear project instructions.", whoShouldTake: "Anyone and everyone who loves art — it bridges all creative disciplines", whoShouldNot: "No real restrictions — though you should genuinely enjoy the creative process", opportunities: "Graphic designer, interior designer, fashion designer, artist, teacher, UI/UX", wouldChooseAgain: "Graphic Design — it sums up all sectors of art in one degree", rating: "yes" },
+  { name: "Fahim Sajjad", age: 30, city: "Dhaka", country: "Bangladesh", subject: "Geology", field: "Science", university: "University of Dhaka", session: "2014-15", profession: "Sales Engineer", org: "SLB", goodExp: "Field work was genuinely the highlight — going into nature and understanding Earth processes.", badExp: "Not recognized properly in Bangladesh — very niche job market locally.", whoShouldTake: "One who has real passion to understand Earth processes and doesn't mind being niche", whoShouldNot: "Medical lovers or anyone expecting easy local job placement", opportunities: "Oil and gas specialist, environmental consultant, mining engineer, international roles", wouldChooseAgain: "Pharmacy — I actually like Biology more", rating: "yes" },
+  { name: "Latiful Abedin", age: 30, city: "Dhaka", country: "Bangladesh", subject: "Physics", field: "Science", university: "University of Dhaka", session: "2013-14", profession: "Student (PhD track)", org: "", goodExp: "Builds extremely deep analytical thinking that transfers to any field.", badExp: "All bad experience with the BD curriculum — outdated, demotivating, poor teaching quality.", whoShouldTake: "Extremely passionate about physics with a long-term vision for research or academia", whoShouldNot: "Anyone who lacks optimism and dedication — it's a brutal journey in BD", opportunities: "Only Rooppur Atomic Center locally; very strong abroad opportunities for research", wouldChooseAgain: "English", rating: "no" },
+  { name: "Shann Navid", age: 29, city: "Dhaka", country: "Bangladesh", subject: "Economics", field: "Social Science", university: "East West University", session: "2015-2019", profession: "Sr. Executive", org: "PORCELANOSA", goodExp: "Interesting subject with good career potential. EWU optimised course materials very well.", badExp: "A bit difficult on the mathematics side — econometrics surprised many students.", whoShouldTake: "Good at mathematics, patient for research, and has a driven attitude", whoShouldNot: "Weaker in maths, or doesn't understand how the economy shapes the world", opportunities: "R&D, management consulting, NGO/INGO, solo researcher, policy work", wouldChooseAgain: "BBA in Marketing — I'm naturally better at it in real life", rating: "yes" },
+];
+
+const subjects = [
+  { name: "Computer Science & Engineering (CSE)", field: "Technology", hscGroup: ["Science"], mathRequired: true, difficulty: "High", diffLevel: 3, description: "Study of algorithms, software development, AI, networking, and computing systems. The most in-demand degree in Bangladesh right now.", whatYouLearn: ["Programming & Data Structures", "Algorithms & Complexity", "Database Systems", "AI & Machine Learning", "Computer Networks", "Software Engineering"], careersBD: ["Software Engineer", "Data Scientist", "IT Manager", "Cybersecurity Analyst", "System Administrator"], careersAbroad: ["Silicon Valley Software Engineer", "ML Research Scientist", "Tech Entrepreneur", "Cloud Architect"], salaryBD: "৳30,000 – ৳2,00,000+/month", salaryAbroad: "$80,000 – $180,000/year", trend: "rising", trendLabel: "📈 Rising", universities: ["BUET", "BRAC University", "NSU", "DIU", "AIUB", "EWU", "IUT", "KUET", "RUET", "CUET"], matchKeys: ["puzzles","numbers","building","income","abroad","masters"] },
+  { name: "Business Administration (BBA)", field: "Business", hscGroup: ["Science", "Commerce", "Arts"], mathRequired: false, diffLevel: 2, difficulty: "Medium", description: "Study of management, marketing, finance, accounting, and organizational behavior. Open to all HSC groups.", whatYouLearn: ["Management Principles", "Marketing & Sales", "Financial Accounting", "Entrepreneurship", "Supply Chain Management", "Human Resource Management"], careersBD: ["Bank Officer", "Marketing Executive", "HR Manager", "Brand Manager", "Entrepreneur"], careersAbroad: ["Management Consultant", "Investment Banker", "Business Analyst", "MBA Graduate roles"], salaryBD: "৳25,000 – ৳1,50,000+/month", salaryAbroad: "$60,000 – $150,000/year", trend: "stable", trendLabel: "⟶ Stable", universities: ["IBA-DU", "NSU", "BRAC University", "EWU", "AIUB", "DIU", "ULAB", "UIU"], matchKeys: ["numbers","boss","income","security","creating"] },
+  { name: "Physics", field: "Science", hscGroup: ["Science"], mathRequired: true, diffLevel: 4, difficulty: "Very High", description: "Fundamental study of matter, energy, space, and time — the language of the universe. Extremely demanding but deeply rewarding.", whatYouLearn: ["Classical Mechanics", "Quantum Physics", "Thermodynamics", "Electromagnetism", "Nuclear Physics", "Research Methods"], careersBD: ["Researcher", "Teacher", "Nuclear scientist (BAEC)", "BCS cadre"], careersAbroad: ["Research Scientist", "Data Physicist", "Quant Analyst", "PhD researcher"], salaryBD: "৳15,000 – ৳80,000/month", salaryAbroad: "$70,000 – $130,000/year", trend: "niche", trendLabel: "◎ Niche", universities: ["University of Dhaka", "Jahangirnagar University", "CUET", "RUET", "Rajshahi University"], matchKeys: ["puzzles","numbers","research","abroad","masters"] },
+  { name: "Psychology", field: "Social Science", hscGroup: ["Science", "Arts"], mathRequired: false, diffLevel: 2, difficulty: "Medium", description: "Study of human behavior, mental processes, emotions, and social dynamics. Growing fast as mental health awareness rises in BD.", whatYouLearn: ["Abnormal Psychology", "Cognitive Psychology", "Counseling Techniques", "Research Methods", "Social Psychology", "Neuropsychology"], careersBD: ["Counselor", "HR Specialist", "Researcher", "Teacher"], careersAbroad: ["Clinical Psychologist", "Organizational Psychologist", "UX Researcher", "Therapist"], salaryBD: "৳20,000 – ৳80,000/month", salaryAbroad: "$55,000 – $100,000/year", trend: "rising", trendLabel: "📈 Rising", universities: ["University of Dhaka", "Jahangirnagar University", "BRAC University"], matchKeys: ["helping","research","writing","society","creative"] },
+  { name: "Architecture", field: "Design & Engineering", hscGroup: ["Science"], mathRequired: true, diffLevel: 4, difficulty: "Very High", description: "Creative and technical study of designing buildings and spaces that serve people. Requires both artistic vision and engineering rigor.", whatYouLearn: ["Structural Design", "Environmental Architecture", "Urban Planning", "CAD & 3D Modeling", "Construction Technology", "History of Architecture"], careersBD: ["Architect", "Urban Planner", "Interior Designer", "Construction Manager"], careersAbroad: ["Sustainable Architect", "Urban Designer", "Landscape Architect"], salaryBD: "৳30,000 – ৳1,50,000+/month", salaryAbroad: "$60,000 – $120,000/year", trend: "rising", trendLabel: "📈 Rising", universities: ["BUET", "AIUB", "NSU", "BRAC University", "UAP"], matchKeys: ["creating","building","numbers","creative","boss"] },
+  { name: "Geography and Environment", field: "Environmental Science", hscGroup: ["Science", "Arts"], mathRequired: false, diffLevel: 2, difficulty: "Medium", description: "Study of Earth's physical features, climate systems, human geography, and environmental management. Strong abroad prospects.", whatYouLearn: ["Physical Geography", "GIS & Remote Sensing", "Urban Planning", "Climate Change", "Environmental Management", "Cartography"], careersBD: ["GIS Analyst", "Environmental Officer", "Planner", "Researcher"], careersAbroad: ["Urban Planner", "Environmental Consultant", "Climate Analyst", "GIS Specialist"], salaryBD: "৳20,000 – ৳80,000/month", salaryAbroad: "$55,000 – $95,000/year", trend: "rising", trendLabel: "📈 Rising", universities: ["University of Dhaka", "Jahangirnagar University", "Rajshahi University"], matchKeys: ["nature","research","society","abroad","masters"] },
+  { name: "English Language and Literature", field: "Humanities", hscGroup: ["Science", "Arts", "Commerce"], mathRequired: false, diffLevel: 2, difficulty: "Medium", description: "Study of language, literature, linguistics, and communication — the art of thinking and expression. Open to all groups.", whatYouLearn: ["British & American Literature", "Linguistics", "Creative Writing", "Translation Studies", "Cultural Studies", "Communication Skills"], careersBD: ["Teacher", "Content Writer", "Journalist", "BCS cadre"], careersAbroad: ["TEFL Teacher", "Translator", "Content Strategist", "Publisher"], salaryBD: "৳15,000 – ৳70,000/month", salaryAbroad: "$45,000 – $90,000/year", trend: "stable", trendLabel: "⟶ Stable", universities: ["University of Dhaka", "Jagannath University", "BRAC University", "NSU", "EWU"], matchKeys: ["writing","research","helping","creative","society"] },
+  { name: "Agriculture", field: "Applied Science", hscGroup: ["Science"], mathRequired: false, diffLevel: 2, difficulty: "Medium", description: "Science of crop production, soil management, animal husbandry, and sustainable food systems. Strong BCS and agritech opportunities.", whatYouLearn: ["Crop Science", "Soil Science", "Agricultural Economics", "Agribusiness", "Plant Pathology", "Agritech"], careersBD: ["Agricultural Officer (BCS)", "Agritech Entrepreneur", "NGO Field Officer", "Bank Agricultural Officer"], careersAbroad: ["Agricultural Researcher", "Food Scientist", "Sustainable Farming Consultant"], salaryBD: "৳20,000 – ৳80,000/month", salaryAbroad: "$50,000 – $90,000/year", trend: "rising", trendLabel: "📈 Rising", universities: ["Bangladesh Agricultural University", "SUST", "NSTU", "BSMRAU"], matchKeys: ["nature","research","society","boss","building"] },
+  { name: "Economics", field: "Social Science", hscGroup: ["Science", "Commerce"], mathRequired: true, diffLevel: 3, difficulty: "High", description: "Study of how societies allocate scarce resources — markets, policy, trade, and human behavior. Strong analytical degree.", whatYouLearn: ["Microeconomics", "Macroeconomics", "Econometrics", "Development Economics", "International Trade", "Policy Analysis"], careersBD: ["Bank Officer", "Researcher", "Policy Analyst", "NGO Economist"], careersAbroad: ["Economic Consultant", "Financial Analyst", "Policy Researcher", "PhD Economist"], salaryBD: "৳25,000 – ৳1,20,000/month", salaryAbroad: "$65,000 – $130,000/year", trend: "stable", trendLabel: "⟶ Stable", universities: ["University of Dhaka", "Jahangirnagar University", "NSU", "EWU", "BRAC University"], matchKeys: ["numbers","puzzles","research","society","income"] },
+  { name: "Development Studies", field: "Social Science", hscGroup: ["Science", "Arts", "Commerce"], mathRequired: false, diffLevel: 2, difficulty: "Medium", description: "Interdisciplinary study of poverty, inequality, governance, and international development. Open to all groups.", whatYouLearn: ["Development Theory", "Policy Analysis", "Research Methods", "Gender Studies", "Governance", "International Aid"], careersBD: ["NGO Programme Officer", "Bank Executive", "Researcher", "Policy Analyst"], careersAbroad: ["UN Staff", "INGO Programme Manager", "Development Consultant"], salaryBD: "৳20,000 – ৳90,000/month", salaryAbroad: "$50,000 – $100,000/year", trend: "rising", trendLabel: "📈 Rising", universities: ["University of Dhaka", "BRAC University", "NSU", "Jahangirnagar University"], matchKeys: ["helping","research","society","abroad","writing"] },
+];
+
+// ══ SCREEN NAVIGATION ══
+function showScreen(name) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + name).classList.add('active');
+  document.querySelectorAll('.nav-link').forEach(l => {
+    l.classList.toggle('active', l.dataset.screen === name);
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (name === 'subjects') renderSubjects(subjects);
+  if (name === 'stories') renderTestimonials(testimonials);
+}
+
+// ══ SUBJECT EXPLORER ══
+function getDiffDots(level, max = 4) {
+  let html = '<div class="diff-dots">';
+  for (let i = 1; i <= max; i++) {
+    html += `<div class="diff-dot${i <= level ? ' filled' : ''}"></div>`;
+  }
+  return html + '</div>';
+}
+
+function renderSubjects(list) {
+  const grid = document.getElementById('subjects-grid');
+  if (!list.length) {
+    grid.innerHTML = '<div class="no-results"><h3>No subjects match this filter.</h3><p>Try a different category.</p></div>';
+    return;
+  }
+  grid.innerHTML = list.map((s, i) => `
+    <div class="subject-card" onclick="openSubject(${subjects.indexOf(s)})">
+      <div class="subject-card-top">
+        <span class="field-badge field-${s.field.replace(/[^a-zA-Z]/g,'\\20').replace(/ /g,'\\ ')}" style="${fieldStyle(s.field)}">${s.field}</span>
+        <div class="trend-badge trend-${s.trend}">
+          <div class="trend-dot"></div>
+          ${s.trend.charAt(0).toUpperCase() + s.trend.slice(1)}
+        </div>
+      </div>
+      <h3>${s.name}</h3>
+      <p>${s.description}</p>
+      <div class="hsc-tags" style="margin-bottom:14px">
+        ${s.hscGroup.map(g => `<span class="hsc-tag">${g}</span>`).join('')}
+      </div>
+      <div class="subject-card-footer">
+        <div class="difficulty-badge">${getDiffDots(s.diffLevel)} ${s.difficulty}</div>
+        <div class="subject-cta">View details →</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+function fieldStyle(field) {
+  const styles = {
+    'Technology': 'background:#EEF4FF;color:#3B5BDB',
+    'Business': 'background:#FFF4E6;color:#E67700',
+    'Science': 'background:#F0FFF4;color:#2F9E44',
+    'Social Science': 'background:#FFF0F6;color:#C2255C',
+    'Humanities': 'background:#F3F0FF;color:#7048E8',
+    'Environmental Science': 'background:#E6FCF5;color:#099268',
+    'Design & Engineering': 'background:#FFF9DB;color:#F59F00',
+    'Applied Science': 'background:#EBFBEE;color:#37B24D',
+  };
+  return styles[field] || 'background:#F5F5F5;color:#555';
+}
+
+function filterSubjects(filter, btn) {
+  document.querySelectorAll('#subject-filters .filter-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  let filtered = subjects;
+  if (filter !== 'all') {
+    if (filter === 'rising') filtered = subjects.filter(s => s.trend === 'rising');
+    else filtered = subjects.filter(s => s.field === filter);
+  }
+  renderSubjects(filtered);
+}
+
+function openSubject(idx) {
+  const s = subjects[idx];
+  const relatedTests = testimonials.filter(t =>
+    t.subject.toLowerCase().includes(s.name.split('(')[0].trim().toLowerCase().split(' ').slice(0,2).join(' ').toLowerCase()) ||
+    s.name.toLowerCase().includes(t.subject.toLowerCase().split(' ').slice(0,2).join(' ').toLowerCase())
+  );
+  const confTier = relatedTests.length < 3
+    ? '<span class="confidence-badge conf-early">⚡ Early Data — more voices needed</span>'
+    : relatedTests.length <= 6
+    ? '<span class="confidence-badge conf-growing">📈 Growing Evidence</span>'
+    : '<span class="confidence-badge conf-strong">✅ Strong Evidence</span>';
+
+  document.getElementById('modal-title').textContent = s.name;
+  document.getElementById('modal-field-badge').innerHTML = `<span style="${fieldStyle(s.field)};font-size:12px;font-weight:700;padding:4px 12px;border-radius:100px;letter-spacing:0.5px;text-transform:uppercase;">${s.field}</span>`;
+  document.getElementById('modal-meta').innerHTML = `
+    <span class="modal-meta-chip">${s.trendLabel}</span>
+    <span class="modal-meta-chip">Difficulty: ${s.difficulty}</span>
+    <span class="modal-meta-chip">${s.hscGroup.join(' · ')}</span>
+    ${confTier}
+  `;
+
+  document.getElementById('modal-body').innerHTML = `
+    <p class="modal-desc">${s.description}</p>
+
+    <div class="modal-section">
+      <div class="modal-section-title">What You'll Learn</div>
+      <div class="learn-grid">
+        ${s.whatYouLearn.map(l => `<div class="learn-item">${l}</div>`).join('')}
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">Career Opportunities</div>
+      <div class="careers-grid">
+        <div class="career-col bd">
+          <h4>🇧🇩 In Bangladesh</h4>
+          ${s.careersBD.map(c => `<div class="career-item">${c}</div>`).join('')}
+        </div>
+        <div class="career-col abroad">
+          <h4>🌐 Internationally</h4>
+          ${s.careersAbroad.map(c => `<div class="career-item">${c}</div>`).join('')}
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">Salary Ranges</div>
+      <div class="salary-box">
+        <div class="salary-item">
+          <div class="salary-label">🇧🇩 In Bangladesh</div>
+          <div class="salary-value">${s.salaryBD}</div>
+        </div>
+        <div class="salary-item abroad">
+          <div class="salary-label">🌐 Internationally</div>
+          <div class="salary-value">${s.salaryAbroad}</div>
+        </div>
+      </div>
+      <div class="salary-disclaimer">Based on 2024 job postings. Ranges vary widely by university, employer, and individual performance. Verify independently before deciding.</div>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">Universities Offering This Subject</div>
+      <div class="uni-list">
+        ${s.universities.map(u => `<span class="uni-chip">${u}</span>`).join('')}
+      </div>
+    </div>
+
+    <div class="modal-section">
+      <div class="modal-section-title">What Students Say</div>
+      ${relatedTests.length ? relatedTests.map(t => `
+        <div class="mini-testimonial">
+          <div class="mini-test-quote">"${t.goodExp}"</div>
+          <div class="mini-test-author">${t.name}</div>
+          <div class="mini-test-role">${t.profession}${t.org ? ' · ' + t.org : ''} · ${t.university}</div>
+        </div>
+      `).join('') : `<div class="no-testimonials">No testimonials yet for this subject. <strong>Be the first to share your story!</strong><br><br>We're actively collecting more voices for this subject.</div>`}
+    </div>
+  `;
+
+  document.getElementById('subject-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('subject-modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function closeModalOnOverlay(e) {
+  if (e.target === document.getElementById('subject-modal')) closeModal();
+}
+
+// ══ TESTIMONIALS ══
+function flagEmoji(country) {
+  const flags = { 'USA': '🇺🇸', 'United States': '🇺🇸', 'Bangladesh': '🇧🇩', 'UK': '🇬🇧', 'Canada': '🇨🇦', 'Australia': '🇦🇺' };
+  return flags[country] || '🌍';
+}
+
+function renderTestimonials(list) {
+  const grid = document.getElementById('testimonials-grid');
+  if (!list.length) {
+    grid.innerHTML = '<div class="no-results" style="column-span:all"><h3>No stories match this filter.</h3><p>Try a different filter above.</p></div>';
+    return;
+  }
+  grid.innerHTML = list.map((t, i) => `
+    <div class="test-card" onclick="expandCard(this)">
+      <div class="test-card-top">
+        <div>
+          <div class="test-name">${t.name}</div>
+          <div class="test-meta">Age ${t.age} · ${flagEmoji(t.country)} ${t.city}</div>
+        </div>
+        <span class="choose-chip ${t.rating === 'yes' ? 'choose-yes' : 'choose-no'}">
+          ${t.rating === 'yes' ? '✅ No regrets' : '🔄 Would switch'}
+        </span>
+      </div>
+      <div class="test-subject-badge">${t.subject}</div>
+      <div class="test-university">🏛 ${t.university} · ${t.session}</div>
+      <div class="test-profession">💼 ${t.profession}${t.org ? ' · ' + t.org : ''}</div>
+      <div class="test-quote">${t.goodExp}</div>
+      <div class="test-expanded">
+        <div class="test-expanded-section">
+          <div class="exp-label">What was hard</div>
+          <div class="exp-text">${t.badExp}</div>
+        </div>
+        <div class="test-expanded-section">
+          <div class="exp-label">Who should take this subject</div>
+          <div class="exp-text">${t.whoShouldTake}</div>
+        </div>
+        <div class="test-expanded-section">
+          <div class="exp-label">Who shouldn't take this subject</div>
+          <div class="exp-text">${t.whoShouldNot}</div>
+        </div>
+        <div class="test-expanded-section">
+          <div class="exp-label">Career opportunities</div>
+          <div class="exp-text">${t.opportunities}</div>
+        </div>
+        <div class="test-expanded-section">
+          <div class="exp-label">If they could choose again</div>
+          <div class="exp-text">"${t.wouldChooseAgain}"</div>
+        </div>
+      </div>
+      <div class="expand-hint"></div>
+    </div>
+  `).join('');
+}
+
+function expandCard(card) {
+  card.classList.toggle('expanded');
+}
+
+function filterTestimonials(filter, btn) {
+  document.querySelectorAll('.test-filter-bar .filter-chip').forEach(c => c.classList.remove('active'));
+  btn.classList.add('active');
+  let filtered = testimonials;
+  if (filter === 'yes') filtered = testimonials.filter(t => t.rating === 'yes');
+  if (filter === 'no') filtered = testimonials.filter(t => t.rating === 'no');
+  if (filter === 'abroad') filtered = testimonials.filter(t => t.country !== 'Bangladesh');
+  renderTestimonials(filtered);
+}
+
+// ══ AI MATCHER ══
+let answers = { interests: [], hscGroup: null, mathComfort: null, priorities: [], constraints: [] };
+let currentStep = 1;
+
+function toggleChip(el, key, val) {
+  el.classList.toggle('selected');
+  if (!answers[key]) answers[key] = [];
+  if (el.classList.contains('selected')) {
+    if (!answers[key].includes(val)) answers[key].push(val);
+  } else {
+    answers[key] = answers[key].filter(v => v !== val);
+  }
+}
+
+function selectSingle(el, key, val) {
+  el.closest('.options-2col').querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  answers[key] = val;
+}
+
+function nextStep(from) {
+  if (from === 5) { submitMatcher(); return; }
+  goToStep(from + 1);
+}
+function prevStep(from) { goToStep(from - 1); }
+
+function goToStep(step) {
+  document.getElementById('step-' + currentStep).classList.remove('active');
+  currentStep = step;
+  document.getElementById('step-' + currentStep).classList.add('active');
+  document.getElementById('step-indicator').textContent = `Step ${step} of 5`;
+  document.getElementById('progress-fill').style.width = (step / 5 * 100) + '%';
+}
+
+function submitMatcher() {
+  document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+  const calc = document.getElementById('calculating');
+  calc.style.display = 'block';
+  setTimeout(() => {
+    calc.style.display = 'none';
+    showResults();
+  }, 1800);
+}
+
+function scoreSubject(s) {
+  let score = 0;
+  let reasons = [];
+  const a = answers;
+
+  // Interest match
+  const interestMatch = s.matchKeys.filter(k => a.interests.includes(k));
+  score += interestMatch.length * 15;
+  if (interestMatch.length > 0) {
+    const interestLabels = { puzzles:'solving puzzles', creating:'creating things', helping:'helping people', nature:'understanding nature', numbers:'working with numbers', writing:'writing & storytelling', building:'building things', research:'researching & reading' };
+    reasons.push(`Aligns with your interest in ${interestMatch.map(k => interestLabels[k] || k).join(' and ')}`);
+  }
+
+  // HSC compatibility
+  if (a.hscGroup && a.hscGroup !== 'any') {
+    if (s.hscGroup.includes(a.hscGroup)) { score += 20; reasons.push(`Open to ${a.hscGroup} group students`); }
+    else { score -= 30; reasons.push(`⚠️ Typically requires a different HSC group`); }
+  } else { score += 10; }
+
+  // Math comfort
+  if (s.mathRequired) {
+    if (a.mathComfort === 'love') { score += 15; reasons.push('You love maths — this subject needs strong mathematical thinking'); }
+    else if (a.mathComfort === 'fine') { score += 8; }
+    else if (a.mathComfort === 'manageable') { score += 0; }
+    else if (a.mathComfort === 'avoid') { score -= 25; reasons.push('⚠️ This subject requires significant mathematics'); }
+  } else {
+    if (a.mathComfort === 'avoid') { score += 10; reasons.push('No heavy mathematics required — fits your preference'); }
+  }
+
+  // Priority match
+  const priorityMap = {
+    income: ['Technology','Business'],
+    security: ['Technology','Business','Applied Science'],
+    creative: ['Design & Engineering','Humanities'],
+    society: ['Social Science','Environmental Science','Applied Science'],
+    abroad: ['Technology','Environmental Science','Science','Social Science'],
+    boss: ['Business','Design & Engineering','Applied Science'],
+  };
+  a.priorities.forEach(p => {
+    if (priorityMap[p] && priorityMap[p].includes(s.field)) {
+      score += 12;
+      const labels = { income:'high income', security:'job security', creative:'creative freedom', society:'helping society', abroad:'working abroad', boss:'entrepreneurship' };
+      reasons.push(`Good fit for your goal of ${labels[p] || p}`);
+    }
+  });
+
+  // Trend bonus
+  if (s.trend === 'rising') score += 8;
+
+  // Clamp to 0-100
+  score = Math.max(12, Math.min(98, score));
+  return { score: Math.round(score), reasons: reasons.slice(0, 3) };
+}
+
+function showResults() {
+  const scored = subjects.map(s => ({ ...s, ...scoreSubject(s) }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3);
+
+  const panel = document.getElementById('results-panel');
+  const list = document.getElementById('results-list');
+  const ranks = ['🥇 Best Match', '🥈 Strong Match', '🥉 Good Match'];
+
+  list.innerHTML = scored.map((s, i) => `
+    <div class="match-card">
+      <div class="match-rank ${i === 0 ? 'rank-1' : ''}">${ranks[i]}</div>
+      <div class="match-card-header">
+        <h3>${s.name}</h3>
+        <div style="font-size:13px;color:var(--gray-600);margin-top:4px">${s.field} · ${s.hscGroup.join(', ')}</div>
+      </div>
+      <div class="match-score-row">
+        <span class="score-label">Match</span>
+        <div class="score-bar-bg"><div class="score-bar-fill" style="width:0%" data-target="${s.score}%"></div></div>
+        <span class="score-pct">${s.score}%</span>
+      </div>
+      <div class="match-reasons">
+        ${s.reasons.map(r => `<div class="match-reason">${r}</div>`).join('')}
+        ${s.reasons.length === 0 ? '<div class="match-reason" style="color:var(--gray-600)">Moderate match based on your profile</div>' : ''}
+      </div>
+      <button class="explore-btn" onclick="exploreFromResult('${subjects.indexOf(s)}')">Explore this subject →</button>
+    </div>
+  `).join('');
+
+  panel.classList.add('show');
+
+  // Animate bars
+  setTimeout(() => {
+    document.querySelectorAll('.score-bar-fill').forEach(bar => {
+      bar.style.width = bar.dataset.target;
+    });
+  }, 100);
+}
+
+function exploreFromResult(idx) {
+  showScreen('subjects');
+  setTimeout(() => openSubject(parseInt(idx)), 300);
+}
+
+function restartMatcher() {
+  answers = { interests: [], hscGroup: null, mathComfort: null, priorities: [], constraints: [] };
+  currentStep = 1;
+  // Reset UI
+  document.querySelectorAll('.option-chip').forEach(c => c.classList.remove('selected'));
+  document.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+  document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('step-1').classList.add('active');
+  document.getElementById('step-indicator').textContent = 'Step 1 of 5';
+  document.getElementById('progress-fill').style.width = '20%';
+  document.getElementById('results-panel').classList.remove('show');
+  document.getElementById('calculating').style.display = 'none';
+}
+
+// ══ INIT ══
+renderSubjects(subjects);
+renderTestimonials(testimonials);
+</script>
+</body>
+</html>

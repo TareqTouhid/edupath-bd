@@ -1,0 +1,84 @@
+{
+  "version": 2,
+  "name": "edupath-bd",
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/universities", "destination": "/index.html" },
+    { "source": "/subjects", "destination": "/index.html" },
+    { "source": "/real-stories", "destination": "/index.html" },
+    { "source": "/stories", "destination": "/index.html" },
+    { "source": "/jobs", "destination": "/index.html" },
+    { "source": "/find-my-path", "destination": "/index.html" },
+    { "source": "/discover-opportunities", "destination": "/index.html" },
+    { "source": "/share-my-experience", "destination": "/index.html" }
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "includeFiles": "{server-lib/**,db/**,extracted/**,university-subjects.js,subject-universities.js}"
+    }
+  },
+  "headers": [
+    {
+      "source": "/index.html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
+        { "key": "Content-Encoding", "value": "identity" }
+      ]
+    },
+    {
+      "source": "/share-override.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/stories-override.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/matcher-override.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/ui-system.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/landing-override.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/no-footer.js",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/admin/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "no-store" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    }
+  ]
+}

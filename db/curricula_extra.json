@@ -1,0 +1,2231 @@
+[
+  {
+    "slug": "agricultural-engineering",
+    "name": "Agricultural Engineering",
+    "degree": "B.Sc. Engineering (Agricultural Engineering)",
+    "duration_years": 4,
+    "field": "Engineering & Technology",
+    "desc": "Agricultural Engineering applies engineering principles to solve problems in farming, food production, irrigation, and rural infrastructure. Students learn to design machinery, irrigation systems, food processing plants, and post-harvest technology for Bangladesh's agricultural sector.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Physics", "Chemistry", "Mathematics"],
+    "hsc_subjects_preferred": ["Biology", "Higher Mathematics"],
+    "jobs": ["agricultural-engineer", "irrigation-specialist", "food-processing-engineer", "farm-machinery-designer", "rural-development-officer"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Agricultural Engineering",
+        "Engineering Mathematics I (Calculus)",
+        "Engineering Physics",
+        "Engineering Chemistry",
+        "Agricultural Botany",
+        "Fundamentals of Agronomy",
+        "Engineering Drawing",
+        "Workshop Practice",
+        "Computer Applications in Agriculture",
+        "Communicative English"
+      ],
+      "year2": [
+        "Engineering Mathematics II (Differential Equations)",
+        "Mechanics of Materials (Strength of Materials)",
+        "Fluid Mechanics",
+        "Soil and Water Conservation Engineering",
+        "Irrigation and Drainage Engineering",
+        "Farm Power and Machinery I",
+        "Surveying and Levelling",
+        "Agricultural Extension and Rural Development",
+        "Agricultural Economics",
+        "Environmental Engineering"
+      ],
+      "year3": [
+        "Farm Power and Machinery II",
+        "Tractor Engineering",
+        "Irrigation System Design",
+        "Drainage Engineering and Land Reclamation",
+        "Food Engineering and Processing",
+        "Crop Storage Engineering",
+        "Agricultural Structures and Environment",
+        "Refrigeration and Air Conditioning",
+        "Electrical Engineering for Agriculture",
+        "Research Methodology and Statistics"
+      ],
+      "year4": [
+        "Post-Harvest Technology",
+        "Agricultural Process Engineering",
+        "Food Safety and Quality Control",
+        "Renewable Energy in Agriculture",
+        "Water Resources Management",
+        "Precision Agriculture and Remote Sensing",
+        "Project Management",
+        "Industrial Attachment / Field Practicum",
+        "Thesis / Design Project"
+      ]
+    },
+    "references": [
+      {"source": "BAU Department of Agricultural Engineering and Technology — Curricular Layout B.Sc. AET", "url": "https://bau.edu.bd/public/file_manager/aet.pdf"},
+      {"source": "Bangladesh Agricultural University Official Website", "url": "https://bau.edu.bd/pages/view_1/11057"}
+    ]
+  },
+  {
+    "slug": "anthropology",
+    "name": "Anthropology",
+    "degree": "B.S.S. (Hons.) in Anthropology",
+    "duration_years": 4,
+    "field": "Social Science",
+    "desc": "Anthropology studies human societies, cultures, evolution, and biological diversity across time and space. The programme at Dhaka University covers social-cultural, physical, and applied anthropology with a focus on Bangladesh and South Asian contexts.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["Sociology", "History", "Biology"],
+    "jobs": ["social-researcher", "development-worker", "cultural-consultant", "ngo-program-officer", "policy-analyst"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Anthropology",
+        "Foundations of Physical Anthropology",
+        "Kinship and Social Organisation",
+        "History and Culture of Bangladesh",
+        "Introduction to Sociology",
+        "Communicative English",
+        "Research Methods in Social Science",
+        "Basic Statistics for Social Scientists",
+        "Bangladesh Studies"
+      ],
+      "year2": [
+        "Cultural Anthropology",
+        "Economic Anthropology",
+        "Political Anthropology",
+        "Ethnographic Methods and Fieldwork",
+        "Human Evolution and Primatology",
+        "Urban Anthropology",
+        "South Asian Studies",
+        "Gender and Society",
+        "Medical Anthropology"
+      ],
+      "year3": [
+        "Theories in Anthropology",
+        "Ecological Anthropology",
+        "Applied Anthropology",
+        "Religion, Magic and Ritual",
+        "Archaeology and Prehistory",
+        "Anthropology of Development",
+        "Ethnicity and Identity",
+        "Peasant Society and Agrarian Change",
+        "Language and Culture"
+      ],
+      "year4": [
+        "Globalisation and Culture",
+        "Anthropology of Poverty and Inequality",
+        "Human Rights and Social Justice",
+        "Migration and Diaspora Studies",
+        "Advanced Research Methods and Data Analysis",
+        "Special Topics in South Asian Anthropology",
+        "Dissertation / Research Project"
+      ]
+    },
+    "references": [
+      {"source": "Department of Anthropology, Faculty of Social Science, University of Dhaka", "url": "https://dufss.ac.bd/department-of-anthropology/"},
+      {"source": "DU Anthropology Curriculum — BSS Final 2020", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/1650636149CURRICULUM-BSS-Final-27.12.2020.pdf"}
+    ]
+  },
+  {
+    "slug": "biochemistry",
+    "name": "Biochemistry",
+    "degree": "B.S. (Hons.) in Biochemistry and Molecular Biology",
+    "duration_years": 4,
+    "field": "Life & Earth Sciences",
+    "desc": "Biochemistry explores the chemical and molecular processes that underlie all living organisms, including metabolism, genetics, enzymology, and cell biology. Graduates are prepared for careers in research, pharmaceuticals, healthcare diagnostics, and biotechnology industries.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Biology", "Chemistry"],
+    "hsc_subjects_preferred": ["Physics", "Mathematics"],
+    "jobs": ["biochemist", "clinical-lab-scientist", "pharmaceutical-researcher", "food-scientist", "biotech-analyst"],
+    "curriculum": {
+      "year1": [
+        "Basic Biochemistry I (Carbohydrates, Lipids, Proteins)",
+        "Bioorganic Chemistry I",
+        "Biophysical Chemistry I",
+        "Molecular Biology I",
+        "Botany (Allied)",
+        "Computer Applications for Life Sciences",
+        "Communicative English",
+        "Practical Biochemistry Laboratory I",
+        "Viva-Voce"
+      ],
+      "year2": [
+        "Enzymes and Enzyme Kinetics",
+        "Carbohydrate Metabolism",
+        "Lipid Metabolism",
+        "Protein Metabolism and Amino Acid Biochemistry",
+        "Basic Molecular Biology II",
+        "Bioinorganic Chemistry",
+        "Cell Biology",
+        "Biostatistics and Calculus",
+        "Practical Biochemistry Laboratory II"
+      ],
+      "year3": [
+        "Molecular Genetics and Genetic Engineering",
+        "Clinical Biochemistry",
+        "Nutritional Biochemistry",
+        "Plant Biochemistry",
+        "Immunology",
+        "Microbiology",
+        "Bioenergetics",
+        "Endocrinology",
+        "Practical Biochemistry Laboratory III"
+      ],
+      "year4": [
+        "Cancer Biology",
+        "Neurochemistry",
+        "Pharmacology and Drug Biochemistry",
+        "Genomics, Proteomics and Bioinformatics",
+        "Virology",
+        "Industrial and Environmental Biochemistry",
+        "Research Methodology",
+        "Practical Laboratory IV",
+        "Thesis / Research Project",
+        "Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "DU Department of Biochemistry & Molecular Biology — BS Honours Syllabus 2020-21", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/1678169262Syllabusfor4-yearBSHonors2020-2021andonwards.Date-27-12-2021-1stYear.pdf"},
+      {"source": "University of Dhaka — Bachelor of Science in Biochemistry", "url": "https://du.ac.bd/undergrad/BCH"},
+      {"source": "Department of Biochemistry and Molecular Biology, University of Chittagong", "url": "https://cu.ac.bd/dbmb/"}
+    ]
+  },
+  {
+    "slug": "biomedical-engineering",
+    "name": "Biomedical Engineering",
+    "degree": "B.Sc. Engineering (Biomedical Engineering)",
+    "duration_years": 4,
+    "field": "Engineering & Technology",
+    "desc": "Biomedical Engineering applies engineering principles and design to medicine and biology, producing professionals who develop medical devices, diagnostic instruments, and healthcare technologies. BUET's programme is the flagship in Bangladesh, offering specialisations in biomechanics, imaging, and biosystems.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Physics", "Chemistry", "Mathematics"],
+    "hsc_subjects_preferred": ["Biology"],
+    "jobs": ["biomedical-engineer", "medical-device-designer", "clinical-engineer", "rehabilitation-engineer", "healthcare-technology-manager"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Biomedical Engineering",
+        "Waves and Oscillations, Optics and Thermal Physics",
+        "Chemistry I",
+        "Calculus and Analytic Geometry",
+        "English",
+        "Biology for Biomedical Engineers",
+        "Electrical Circuits",
+        "Engineering Drawing Sessional",
+        "Physics Sessional",
+        "Chemistry Sessional"
+      ],
+      "year2": [
+        "Human Anatomy and Physiology",
+        "Biomaterials",
+        "Signals and Systems",
+        "Bioinstrumentation",
+        "Linear Algebra and Complex Variables",
+        "Electronics",
+        "Numerical Analysis",
+        "Probability and Statistics",
+        "Bioinstrumentation Sessional",
+        "Electronics Sessional"
+      ],
+      "year3": [
+        "Biofluid Mechanics",
+        "Biomedical Imaging (X-ray, CT, MRI, Ultrasound)",
+        "Biosensors and Bio-MEMS",
+        "Biomechanics",
+        "Medical Electronics",
+        "Biomedical Signal Processing",
+        "Digital Image Processing",
+        "Hospital Engineering and Management",
+        "Elective I (Tissue Engineering / Neural Engineering)",
+        "Biomedical Imaging Sessional"
+      ],
+      "year4": [
+        "Telemedicine and Healthcare Systems",
+        "Rehabilitation Engineering",
+        "Biomedical Ethics and Regulations",
+        "Elective II (Magnetic Resonance Imaging / Biosensors Advanced)",
+        "Elective III (Bionanomaterials / Biostatistics)",
+        "Capstone Project / Thesis",
+        "Industrial Attachment"
+      ]
+    },
+    "references": [
+      {"source": "BUET Department of Biomedical Engineering — UG Curriculum", "url": "https://bme.buet.ac.bd/ug-curriculum/"},
+      {"source": "BUET BME Undergraduate Curriculum PDF 2022", "url": "https://bme.buet.ac.bd/wp-content/uploads/2022/08/Undergraduate-Curriculum.pdf"},
+      {"source": "MIST Department of Biomedical Engineering — B.Sc Syllabus 2021", "url": "https://www.mist.ac.bd/storage/files/bme/downloads/B.Sc%20Syllabus%202021.pdf"}
+    ]
+  },
+  {
+    "slug": "biotechnology",
+    "name": "Biotechnology",
+    "degree": "B.Sc. in Biotechnology",
+    "duration_years": 4,
+    "field": "Life & Earth Sciences",
+    "desc": "Biotechnology harnesses living systems and organisms to develop products and technologies for healthcare, agriculture, and industry. The programme in Bangladesh integrates molecular biology, genetic engineering, fermentation technology, and bioinformatics.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Biology", "Chemistry"],
+    "hsc_subjects_preferred": ["Physics", "Mathematics"],
+    "jobs": ["biotechnologist", "genetic-engineer", "fermentation-technologist", "biopharmaceutical-researcher", "agricultural-biotechnologist"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Biotechnology and Genetic Engineering",
+        "Basic Biochemistry",
+        "Biophysical Chemistry",
+        "Microbial World",
+        "Plants and People",
+        "Cell Biology",
+        "Computer Applications",
+        "English for Academic Purposes",
+        "Mathematics for Life Sciences",
+        "Laboratory Techniques I"
+      ],
+      "year2": [
+        "Bioorganic Chemistry",
+        "Metabolism (Carbohydrate, Lipid, Protein)",
+        "Enzymes and Enzyme Kinetics",
+        "Introduction to Molecular Biology",
+        "Human Physiology",
+        "Fundamentals of Genetic Engineering",
+        "Microbial Biotechnology",
+        "Biostatistics",
+        "Laboratory Techniques II"
+      ],
+      "year3": [
+        "Recombinant DNA Technology",
+        "Genomics and Proteomics",
+        "Plant Biotechnology and Tissue Culture",
+        "Animal Cell Biotechnology",
+        "Environmental Biotechnology",
+        "Bioinformatics",
+        "Fermentation Technology",
+        "Immunology",
+        "Industrial Biotechnology",
+        "Laboratory Techniques III"
+      ],
+      "year4": [
+        "Biopharmaceuticals",
+        "Nano-Biotechnology",
+        "Biosafety, Bioethics and Intellectual Property Rights",
+        "Clinical and Medical Biotechnology",
+        "Food Biotechnology",
+        "Marine Biotechnology",
+        "Biotechnology Entrepreneurship",
+        "Internship / Field Attachment",
+        "Thesis / Research Project"
+      ]
+    },
+    "references": [
+      {"source": "BRAC University — BSc Biotechnology Curriculum", "url": "https://www.bracu.ac.bd/academics/departments/mathematics-and-natural-sciences/bachelor-science-biotechnology/biotechnology-curriculum"},
+      {"source": "North South University — BS in Biochemistry and Biotechnology", "url": "https://www.northsouth.edu/academic/programs-18022021/bachelor/bbt.html"},
+      {"source": "BRAC University — Bachelor of Science in Biotechnology", "url": "https://www.bracu.ac.bd/avilable-program/bachelor-science-biotechnology-bio"}
+    ]
+  },
+  {
+    "slug": "botany",
+    "name": "Botany",
+    "degree": "B.S. (Hons.) in Botany",
+    "duration_years": 4,
+    "field": "Life & Earth Sciences",
+    "desc": "Botany is the scientific study of plants, covering their structure, physiology, ecology, genetics, and classification from microalgae to flowering plants. Graduates contribute to conservation, agriculture, pharmaceuticals, and environmental management in Bangladesh.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Biology", "Chemistry"],
+    "hsc_subjects_preferred": ["Physics", "Mathematics"],
+    "jobs": ["botanist", "plant-ecologist", "conservation-officer", "agricultural-researcher", "herbarium-curator"],
+    "curriculum": {
+      "year1": [
+        "General Microbiology",
+        "Lower Fungi",
+        "General Phycology (Algae)",
+        "Bryophyta (Mosses and Liverworts)",
+        "Angiosperm Taxonomy",
+        "Biodiversity",
+        "Basic Biochemistry",
+        "Animal Diversity (Allied)",
+        "Practical Laboratory I",
+        "Viva-Voce"
+      ],
+      "year2": [
+        "Higher Fungi",
+        "Gymnosperms, Paleobotany and Economic Botany",
+        "Plant Anatomy",
+        "Fundamental Ecology",
+        "Cytology",
+        "Fundamental Plant Physiology",
+        "Fundamental Genetics",
+        "Elementary Plant Breeding",
+        "Biostatistics",
+        "Soil Chemistry and Soil Fertility (Allied)"
+      ],
+      "year3": [
+        "Environmental Microbiology",
+        "Plant Pathology",
+        "Advanced Phycology",
+        "Synecology",
+        "Advanced Plant Physiology",
+        "Molecular Genetics",
+        "Plant Morphogenesis and Development",
+        "Pteridophyta",
+        "Practical Laboratory III"
+      ],
+      "year4": [
+        "Microbiological Techniques",
+        "Marine Botany",
+        "Ethnobotany",
+        "Climate Change Biology",
+        "Autecology and Environment",
+        "Genomics, Proteomics and Bioinformatics",
+        "Plant Tissue Culture and Biotechnology",
+        "Horticulture and Agronomy",
+        "Biological Limnology",
+        "Microbial Plant Pathology",
+        "Plant Physiology and Plant Nutrition",
+        "Thesis / Research Project",
+        "Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — BS in Botany Programme", "url": "https://www.du.ac.bd/programDetails/BOT/202"},
+      {"source": "Department of Botany, University of Dhaka — Curriculum", "url": "https://duap.du.ac.bd/upload/download/Curriculum_25-11-18_pdf.pdf"},
+      {"source": "Jahangirnagar University — Department of Botany", "url": "https://juniv.edu/department/30/file/5199"}
+    ]
+  },
+  {
+    "slug": "chemical-engineering",
+    "name": "Chemical Engineering",
+    "degree": "B.Sc. Engineering (Chemical Engineering)",
+    "duration_years": 4,
+    "field": "Engineering & Technology",
+    "desc": "Chemical Engineering deals with the design and operation of industrial processes that transform raw materials into useful products through chemical, physical, and biological changes. BUET's flagship programme covers process design, thermodynamics, reaction engineering, and industrial safety.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Physics", "Chemistry", "Mathematics"],
+    "hsc_subjects_preferred": ["Higher Mathematics"],
+    "jobs": ["chemical-engineer", "process-engineer", "refinery-engineer", "polymer-technologist", "environmental-engineer"],
+    "curriculum": {
+      "year1": [
+        "Engineering Mathematics I (Calculus)",
+        "Engineering Physics I",
+        "Engineering Chemistry I",
+        "Introduction to Chemical Engineering",
+        "Computer Programming",
+        "Engineering Drawing",
+        "English",
+        "Physics Sessional",
+        "Chemistry Sessional",
+        "Workshop Practice"
+      ],
+      "year2": [
+        "Engineering Mathematics II (Differential Equations)",
+        "Chemical Engineering Thermodynamics I",
+        "Fluid Mechanics",
+        "Heat Transfer",
+        "Mass Transfer",
+        "Organic Chemistry",
+        "Chemical Process Industries",
+        "Numerical Methods",
+        "Fluid Mechanics Laboratory",
+        "Heat and Mass Transfer Laboratory"
+      ],
+      "year3": [
+        "Chemical Engineering Thermodynamics II",
+        "Chemical Reaction Engineering",
+        "Process Control and Instrumentation",
+        "Separation Processes I (Distillation, Absorption)",
+        "Separation Processes II (Extraction, Adsorption)",
+        "Polymer Science and Technology",
+        "Petroleum Refining",
+        "Environmental Engineering and Pollution Control",
+        "Chemical Engineering Laboratory",
+        "Process Economics and Plant Design"
+      ],
+      "year4": [
+        "Plant Design and Engineering",
+        "Safety, Health and Environment in Chemical Plants",
+        "Biochemical Engineering",
+        "Food Engineering",
+        "Elective I (Natural Gas Engineering / Fertiliser Technology)",
+        "Elective II (Pharmaceutical Engineering / Electrochemical Engineering)",
+        "Design Project",
+        "Thesis / Research Project",
+        "Industrial Training"
+      ]
+    },
+    "references": [
+      {"source": "BUET Department of Chemical Engineering — Undergraduate", "url": "https://che.buet.ac.bd/undergraduate/"},
+      {"source": "BUET ChE Undergraduate Calendar 2022", "url": "https://che.buet.ac.bd/wp-content/uploads/2022/03/ChE-Calendar-2022_V4.pdf"}
+    ]
+  },
+  {
+    "slug": "demographics",
+    "name": "Population Science & Demography",
+    "degree": "B.S.S. (Hons.) in Population Sciences",
+    "duration_years": 4,
+    "field": "Social Science",
+    "desc": "Population Science studies the dynamics of human populations including fertility, mortality, migration, and their interrelation with development, health, and environment. The programme at Dhaka University trains students in demographic methods, policy analysis, and population programme management.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["Mathematics", "Statistics", "Sociology"],
+    "jobs": ["demographer", "population-analyst", "health-program-officer", "census-specialist", "development-planner"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Population Sciences",
+        "Basic Demography (Fertility, Mortality, Migration)",
+        "Family Demography",
+        "Introduction to Sociology",
+        "Social Psychology",
+        "Communicative English",
+        "Fundamentals of Economics",
+        "Bangladesh Studies",
+        "Mathematics and Statistics I"
+      ],
+      "year2": [
+        "Population and Gender",
+        "Demographic Methods I (Life Tables, Standardisation)",
+        "Population Health",
+        "Urbanisation and Urban Studies",
+        "Population and Environment",
+        "Reproductive Health",
+        "Research Methods in Population Science",
+        "Mathematics and Statistics II",
+        "Computer Applications in Population Studies"
+      ],
+      "year3": [
+        "Demographic Methods II (Indirect Estimation)",
+        "Population Ageing",
+        "Population Economics",
+        "Population Policy and Programme",
+        "Migration and Displacement",
+        "Bangladesh Population and Development",
+        "GIS and Spatial Demography",
+        "Survey Design and Data Collection",
+        "Quantitative Methods in Population Research"
+      ],
+      "year4": [
+        "Advanced Demographic Analysis",
+        "Population Projections and Forecasting",
+        "Global Population Issues",
+        "Maternal and Child Health",
+        "HIV/AIDS and Sexually Transmitted Infections",
+        "Population, Poverty and Development",
+        "Research Monograph / Dissertation",
+        "Seminar and Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — BS (Hons) in Population Sciences", "url": "https://www.du.ac.bd/undergrad/POPS"},
+      {"source": "University of Dhaka — Master of Population Sciences", "url": "https://www.du.ac.bd/programDetails/POPS/467"}
+    ]
+  },
+  {
+    "slug": "development-studies",
+    "name": "Development Studies",
+    "degree": "B.S.S. (Hons.) in Development Studies",
+    "duration_years": 4,
+    "field": "Social Science",
+    "desc": "Development Studies is an interdisciplinary field that examines the economic, political, social, and environmental dimensions of development processes in the Global South. Students analyse poverty, governance, gender, and sustainability with a strong focus on Bangladesh.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["Economics", "Sociology", "History"],
+    "jobs": ["development-practitioner", "ngo-program-manager", "policy-analyst", "social-researcher", "international-development-consultant"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Development Studies: Theories and Approaches",
+        "Microeconomics",
+        "Introduction to Politics and Political Thought",
+        "Introduction to Anthropology and Sociology",
+        "Bangladesh Studies",
+        "English Composition",
+        "Macroeconomics",
+        "Introduction to Public Administration",
+        "Linear Algebra and Calculus"
+      ],
+      "year2": [
+        "Anthropology of Development",
+        "Political Economy of Development",
+        "Gender and Development",
+        "Agriculture and Rural Development",
+        "Urban Development",
+        "Environmental Studies and Sustainable Development",
+        "Development Finance and Aid",
+        "Introduction to Research Methods",
+        "Statistics for Social Scientists"
+      ],
+      "year3": [
+        "State, Democracy and Governance",
+        "Health, Education and Human Development",
+        "Poverty Analysis and Social Protection",
+        "Disaster Risk Reduction and Development",
+        "Civil Society and NGOs in Bangladesh",
+        "Globalisation and Development",
+        "Project Planning and Management",
+        "Qualitative Research Methods",
+        "Quantitative Research Methods"
+      ],
+      "year4": [
+        "Political Economy and History of Bangladesh",
+        "History of Economic Thought",
+        "Understanding Public Policy Process",
+        "Inclusive Finance and Microfinance",
+        "Climate Change and Development",
+        "Labour and Migration",
+        "Research Paper / Dissertation",
+        "Seminar and Presentation"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — BSS (Honours) in Development Studies Prospectus 2021", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/1713430028BSSProspectus2021.pdf"},
+      {"source": "University of Dhaka — Department of Development Studies", "url": "https://duap.du.ac.bd/upload/download/New_Undergraduate_Prospectus.pdf"}
+    ]
+  },
+  {
+    "slug": "energy-engineering",
+    "name": "Energy Science & Engineering",
+    "degree": "B.Sc. Engineering (Energy Science and Engineering)",
+    "duration_years": 4,
+    "field": "Engineering & Technology",
+    "desc": "Energy Science and Engineering is a multidisciplinary field that addresses the generation, conversion, storage, and efficient use of energy from conventional and renewable sources. KUET's programme prepares graduates to address Bangladesh's power sector challenges and transition to sustainable energy.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Physics", "Chemistry", "Mathematics"],
+    "hsc_subjects_preferred": ["Higher Mathematics"],
+    "jobs": ["energy-engineer", "power-plant-engineer", "renewable-energy-consultant", "energy-auditor", "petroleum-engineer"],
+    "curriculum": {
+      "year1": [
+        "Engineering Mathematics I",
+        "Engineering Physics",
+        "Engineering Chemistry",
+        "Introduction to Energy Science and Engineering",
+        "Computer Programming",
+        "Engineering Drawing",
+        "English",
+        "Electrical Fundamentals",
+        "Thermodynamics I",
+        "Workshop Practice"
+      ],
+      "year2": [
+        "Engineering Mathematics II",
+        "Thermodynamics II",
+        "Fluid Mechanics",
+        "Heat and Mass Transfer",
+        "Electrical Machines",
+        "Electronics",
+        "Numerical Methods",
+        "Strength of Materials",
+        "Introduction to Chemical Engineering",
+        "Environmental Science"
+      ],
+      "year3": [
+        "Solar PV and Solar Thermal Systems",
+        "Wind Energy Systems",
+        "Biomass and Biogas Energy",
+        "Power Plant Engineering",
+        "Fuel and Engine Combustion",
+        "Coal and Gas Power Generation",
+        "Petroleum and Natural Gas Engineering",
+        "Nuclear Power Engineering",
+        "Energy Audit and Management",
+        "Instrumentation and Control"
+      ],
+      "year4": [
+        "Hydrogen Energy and Fuel Cells",
+        "Energy Systems in Buildings",
+        "Energy and Process Integration",
+        "Industrial Hazard and Safety Management",
+        "Energy System Design and Optimisation",
+        "Renewable Energy Grid Integration",
+        "LNG and LPG Technology",
+        "Cryogenic Engineering (Elective)",
+        "Thesis / Capstone Project",
+        "Industrial Training"
+      ]
+    },
+    "references": [
+      {"source": "KUET — Department of Energy Science and Engineering", "url": "https://www.kuet.ac.bd/ese"},
+      {"source": "KUET ESE Academic Program", "url": "https://www.kuet.ac.bd/department/ESE/index.php/welcome/academicprogram"}
+    ]
+  },
+  {
+    "slug": "fine-arts",
+    "name": "Fine Arts",
+    "degree": "B.F.A. (Hons.) in Fine Arts",
+    "duration_years": 4,
+    "field": "Arts & Humanities",
+    "desc": "Fine Arts encompasses drawing, painting, sculpture, printmaking, ceramics, graphic design, and art history, nurturing creative practitioners and art professionals. The Faculty of Fine Arts at Dhaka University (Charukala) is the premier institution for fine arts education in Bangladesh.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": [],
+    "jobs": ["visual-artist", "graphic-designer", "art-educator", "illustrator", "art-director"],
+    "curriculum": {
+      "year1": [
+        "Foundation Drawing and Sketching",
+        "History of Art I (Ancient and Medieval)",
+        "Colour Theory and Composition",
+        "Two-Dimensional Design",
+        "Three-Dimensional Design / Sculpture Basics",
+        "Bangladesh Studies",
+        "Communicative English",
+        "Introduction to Art and Aesthetics",
+        "Studio Practice I"
+      ],
+      "year2": [
+        "History of Art II (Renaissance to Modern)",
+        "Life Drawing and Figure Study",
+        "Printmaking Techniques",
+        "Ceramics and Craft Processes",
+        "Photography and Visual Literacy",
+        "Oriental Art and Bengali Folk Tradition",
+        "Typography and Lettering",
+        "Studio Practice II",
+        "Art and Society"
+      ],
+      "year3": [
+        "History of Art III (Contemporary and Postmodern)",
+        "Advanced Painting Techniques",
+        "Advanced Sculpture",
+        "Digital Art and Computer Graphics",
+        "Art Criticism and Curatorial Practice",
+        "Bengali Art and Culture",
+        "Specialisation Studio I (Painting / Sculpture / Printmaking / Graphic Design)",
+        "Research Methods in Fine Arts"
+      ],
+      "year4": [
+        "Contemporary Art Practices",
+        "Exhibition Design and Management",
+        "Art Business and Gallery Management",
+        "Specialisation Studio II (Advanced)",
+        "Independent Studio Project",
+        "Dissertation / Research Paper",
+        "Final Exhibition / Portfolio Presentation"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — Faculty of Fine Arts", "url": "https://www.du.ac.bd/faculty/FACFART"},
+      {"source": "Faculty of Fine Arts, University of Dhaka — Wikipedia", "url": "https://en.wikipedia.org/wiki/Faculty_of_Fine_Arts,_University_of_Dhaka"},
+      {"source": "DU — BFA Honours Graphic Design Curriculum 2023", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/1679131982ApprovedCurriculumBFAHonoursGraphicDesign1March2023.pdf"}
+    ]
+  },
+  {
+    "slug": "food-technology",
+    "name": "Food Technology & Engineering",
+    "degree": "B.Sc. Engineering (Food Engineering) / B.Sc. (Hons.) in Food Technology",
+    "duration_years": 4,
+    "field": "Engineering & Technology",
+    "desc": "Food Technology and Engineering combines biological sciences and engineering to develop safe, nutritious, and commercially viable food products through processing, preservation, and quality control. Bangladesh Agricultural University and SUST are leading providers of this programme.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Biology", "Chemistry"],
+    "hsc_subjects_preferred": ["Physics", "Mathematics"],
+    "jobs": ["food-technologist", "food-safety-officer", "quality-control-manager", "food-processing-engineer", "nutritionist"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Food Science and Engineering",
+        "Engineering Mathematics",
+        "Engineering Physics",
+        "Engineering Chemistry",
+        "Principles of Food Chemistry",
+        "Food Microbiology Basics",
+        "Agricultural Botany",
+        "Engineering Drawing",
+        "Computer Applications",
+        "Communicative English"
+      ],
+      "year2": [
+        "Food Chemistry (Carbohydrates, Proteins, Lipids, Vitamins, Minerals)",
+        "Unit Operations in Food Processing I (Heat and Mass Transfer)",
+        "Food Microbiology",
+        "Nutrition and Dietetics",
+        "Postharvest Technology of Horticultural Crops",
+        "Food Engineering and Process Design",
+        "Statistics and Experimental Design",
+        "Cereal, Pulse and Oilseed Technology",
+        "Food Packaging Technology"
+      ],
+      "year3": [
+        "Unit Operations in Food Processing II (Drying, Freezing, Evaporation)",
+        "Dairy Technology",
+        "Fish and Seafood Technology",
+        "Meat and Poultry Technology",
+        "Fruit and Vegetable Technology",
+        "Beverage Technology",
+        "Food Quality Assurance and Standards (HACCP, ISO)",
+        "Sensory Evaluation of Food",
+        "Food Fermentation and Biotechnology"
+      ],
+      "year4": [
+        "Food Plant Design and Economics",
+        "Novel Food Processing Technologies",
+        "Food Additives and Preservatives",
+        "Food Safety and Regulation (BSTI, Codex Alimentarius)",
+        "Functional Foods and Nutraceuticals",
+        "Bakery and Confectionery Technology",
+        "Industrial Attachment / Internship",
+        "Thesis / Research Project"
+      ]
+    },
+    "references": [
+      {"source": "BAU — B.Sc. Food Engineering Curricular Layout", "url": "https://bau.edu.bd/public/file_manager/ft.pdf"},
+      {"source": "SUST — Department of Food Engineering and Tea Technology", "url": "https://www.sust.edu/departments/fet"}
+    ]
+  },
+  {
+    "slug": "geography",
+    "name": "Geography & Environment",
+    "degree": "B.S. (Hons.) in Geography and Environment",
+    "duration_years": 4,
+    "field": "Natural Sciences",
+    "desc": "Geography and Environment integrates physical geography, human geography, and environmental science to understand the Earth's surface, ecosystems, and human-environment interactions. DU's programme covers geospatial technologies, environmental impact assessment, and Bangladesh's distinctive delta environment.",
+    "hsc_groups": ["science", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["Mathematics", "Physics", "Sociology"],
+    "jobs": ["geographer", "environmental-consultant", "gis-analyst", "urban-planner", "disaster-management-officer"],
+    "curriculum": {
+      "year1": [
+        "Fundamental Concepts in Geography and Environment",
+        "Introduction to Physical Geography",
+        "Introduction to Human Geography",
+        "Geomorphology (Landforms and Processes)",
+        "Climatology and Meteorology",
+        "Map Reading and Cartography",
+        "Bangladesh Studies",
+        "Communicative English",
+        "Fieldwork I",
+        "Practical I (Map Work and Laboratory)"
+      ],
+      "year2": [
+        "Soil Geography",
+        "Biogeography",
+        "Hydrology and Water Resources",
+        "Population Geography",
+        "Economic Geography",
+        "Urban Geography",
+        "Remote Sensing Principles",
+        "Geographic Information Systems (GIS) I",
+        "Research Methods in Geography",
+        "Fieldwork II"
+      ],
+      "year3": [
+        "Environmental Impact Assessment",
+        "Coastal and Delta Geography (Bangladesh Delta)",
+        "Disaster Risk and Vulnerability",
+        "Political Geography",
+        "Agricultural Geography",
+        "GIS II — Spatial Analysis",
+        "Environmental Pollution and Management",
+        "Climate Change and Adaptation",
+        "Social Survey Methods",
+        "Fieldwork III"
+      ],
+      "year4": [
+        "Advanced GIS and Geostatistics",
+        "Marine and Coastal Management",
+        "Urban and Regional Planning",
+        "Health Geography",
+        "Historical Geography of Bangladesh",
+        "Tourism Geography",
+        "Environmental Governance and Policy",
+        "Fieldwork IV",
+        "Dissertation / Research Project",
+        "Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — Department of Geography and Environment, Undergraduate Overview", "url": "http://geoenv.du.ac.bd/undergraduate-overview/"},
+      {"source": "University of Dhaka — BS in Geography and Environment", "url": "https://www.du.ac.bd/undergrad/GEN"}
+    ]
+  },
+  {
+    "slug": "history",
+    "name": "History",
+    "degree": "B.A. (Hons.) in History",
+    "duration_years": 4,
+    "field": "Arts & Humanities",
+    "desc": "History at Bangladeshi universities examines the evolution of societies, cultures, and political systems from antiquity to the present, with particular emphasis on South Asian and Bangladeshi history including the 1971 Liberation War. Students develop critical thinking, archival research, and analytical writing skills.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["History", "Bangla", "Social Science"],
+    "jobs": ["historian", "archivist", "museum-curator", "educator", "journalist"],
+    "curriculum": {
+      "year1": [
+        "Introduction to History and Historiography",
+        "Ancient Civilisations (Mesopotamia, Egypt, Greece, Rome)",
+        "History of the Indian Subcontinent (1206–1707)",
+        "History of Bengal (1204–1765)",
+        "History of Medieval Europe (476–1453)",
+        "Bangladesh Studies",
+        "Communicative English",
+        "Introduction to Social Sciences"
+      ],
+      "year2": [
+        "History of the Indian Subcontinent (1707–1947)",
+        "History of Bengal (1765–1947)",
+        "Emergence of Bangladesh (Liberation War 1971)",
+        "History of the Modern World (1789–1919)",
+        "History of South and Southeast Asia",
+        "Historical Methods and Sources",
+        "History of Islam and Islamic Civilisation",
+        "Economic History of Bengal"
+      ],
+      "year3": [
+        "Bangladesh: Archaeology, Heritage, and Culture",
+        "Partition of India and Its Aftermath",
+        "Cold War and International Relations",
+        "History of the United States",
+        "History of Modern Europe (1919–present)",
+        "History of Science and Technology",
+        "Oral History and Memory Studies",
+        "Gender in History"
+      ],
+      "year4": [
+        "Postcolonial History",
+        "Environmental History",
+        "History of Political Ideas",
+        "Contemporary Bangladesh (1971–present)",
+        "Global History and World Systems",
+        "Advanced Historical Research Methods",
+        "Special Topics in South Asian History",
+        "Thesis / Dissertation",
+        "Seminar and Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — Department of History (BA Honours Programme)", "url": "https://old.du.ac.bd/academic/department_item/HIS"},
+      {"source": "DU History BA Honours Curriculum Final Press Copy", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/16201637742.%20History.%20DU.%20Directory.%20BA%20Honours.%20Final%20Draft.%20Press%20Copy.pdf"}
+    ]
+  },
+  {
+    "slug": "industrial-engineering",
+    "name": "Industrial & Production Engineering",
+    "degree": "B.Sc. Engineering (Industrial and Production Engineering)",
+    "duration_years": 4,
+    "field": "Engineering & Technology",
+    "desc": "Industrial and Production Engineering optimises complex systems involving people, materials, equipment, and information in manufacturing and service industries. BUET's IPE department produces graduates skilled in operations management, quality engineering, and supply chain optimisation.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Physics", "Chemistry", "Mathematics"],
+    "hsc_subjects_preferred": ["Higher Mathematics"],
+    "jobs": ["industrial-engineer", "production-manager", "operations-analyst", "quality-engineer", "supply-chain-manager"],
+    "curriculum": {
+      "year1": [
+        "Engineering Mathematics I",
+        "Engineering Physics",
+        "Engineering Chemistry",
+        "Engineering Graphics and Drawing",
+        "Computer Programming",
+        "Fundamentals of Industrial Engineering",
+        "English",
+        "Workshop Practice",
+        "Physics Sessional",
+        "Chemistry Sessional"
+      ],
+      "year2": [
+        "Engineering Mathematics II",
+        "Mechanics of Solids",
+        "Fluid Mechanics",
+        "Manufacturing Processes I (Casting, Forming, Welding)",
+        "Manufacturing Processes II (Machining)",
+        "Engineering Materials",
+        "Electrical Technology",
+        "Electronics",
+        "Engineering Thermodynamics",
+        "Manufacturing Processes Laboratory"
+      ],
+      "year3": [
+        "Operations Research",
+        "Production Planning and Control",
+        "Quality Engineering and Statistical Process Control",
+        "Machine Design",
+        "Industrial Management and Engineering Economics",
+        "Ergonomics and Work Study",
+        "Inventory Management and Supply Chain",
+        "Facilities Planning and Plant Layout",
+        "Cost Accounting and Financial Management",
+        "Simulation of Industrial Systems"
+      ],
+      "year4": [
+        "Advanced Manufacturing Systems (CAD/CAM/CIM)",
+        "Project Management",
+        "Lean Manufacturing and Kaizen",
+        "Human Factors Engineering",
+        "Safety Engineering and Risk Analysis",
+        "Elective I (Robotics / Six Sigma / ERP Systems)",
+        "Elective II (Maintenance Engineering / SCM Analytics)",
+        "Industrial Training",
+        "Thesis / Capstone Project"
+      ]
+    },
+    "references": [
+      {"source": "BUET — Department of Industrial and Production Engineering Undergraduate", "url": "https://ipe.buet.ac.bd/page/undergraduate-program"},
+      {"source": "BUET IPE Syllabus 6th Edition", "url": "https://ipe.buet.ac.bd/public/storage/media-files/IPE_BUET%20Syllabus_6th%20Ed.pdf"}
+    ]
+  },
+  {
+    "slug": "international-relations",
+    "name": "International Relations",
+    "degree": "B.S.S. (Hons.) in International Relations",
+    "duration_years": 4,
+    "field": "Social Science",
+    "desc": "International Relations examines interactions between states, international organisations, and non-state actors in the global arena, covering diplomacy, security, trade, and global governance. DU's programme includes foreign language training and has a strong focus on Bangladesh's foreign policy.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["History", "Economics", "Sociology"],
+    "jobs": ["diplomat", "foreign-policy-analyst", "international-ngo-officer", "journalist", "trade-specialist"],
+    "curriculum": {
+      "year1": [
+        "Introduction to International Relations",
+        "International Relations in History",
+        "Fundamentals of Political Science",
+        "Introduction to Sociology",
+        "Fundamentals of Economics",
+        "Political Geography",
+        "History and Politics of Bangladesh",
+        "Contemporary Global Issues",
+        "Foundation Course: English Language Skills",
+        "Foreign Language I (Arabic / French / Chinese)"
+      ],
+      "year2": [
+        "International Political Economy",
+        "Comparative Politics",
+        "History of the United Nations",
+        "Bangladesh in Global Affairs",
+        "South Asia: Politics and International Relations",
+        "Major Power Relations (USA, China, Russia, EU)",
+        "Research Methods in Social Science",
+        "Foreign Language II",
+        "Introduction to International Law"
+      ],
+      "year3": [
+        "Theories of International Relations (Realism, Liberalism, Constructivism)",
+        "International Law",
+        "Strategic Studies and Security",
+        "Foreign Policy Analysis",
+        "Comparative Foreign Policies",
+        "International Diplomacy and Negotiations",
+        "Global Environmental Politics",
+        "Foreign Language III",
+        "Human Rights in International Relations"
+      ],
+      "year4": [
+        "Globalisation, Development and Governance",
+        "Maritime Affairs and the Bay of Bengal",
+        "Gender in International Relations",
+        "Refugees, Migrants and the Displaced",
+        "State, Civil Society and Human Rights",
+        "South-South Cooperation and Development",
+        "Special Topics: Rohingya Crisis / Belt and Road Initiative",
+        "Dissertation / Research Project",
+        "Seminar and Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — Department of International Relations, Syllabi and Curricula BSS Honours", "url": "https://www.duir.ac.bd/syllabi-and-curricula/"},
+      {"source": "DU IR Curricula PDF 2019", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/1683726219DUIRCurricula-7-7-2019.pdf"}
+    ]
+  },
+  {
+    "slug": "islamic-studies",
+    "name": "Islamic Studies",
+    "degree": "B.A. (Hons.) in Islamic Studies",
+    "duration_years": 4,
+    "field": "Arts & Humanities",
+    "desc": "Islamic Studies provides a comprehensive understanding of Islam's sacred texts, theology, jurisprudence, history, and civilisation. The programme at Dhaka University covers the Quran, Hadith, Fiqh, Islamic philosophy, and contemporary issues facing Muslim societies.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["Arabic", "Bangla"],
+    "jobs": ["islamic-scholar", "madrasa-teacher", "religious-affairs-officer", "journalist", "ngo-worker"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Islam and Islamic Dawah",
+        "Quranic Studies I (Tafsir — Exegesis)",
+        "Hadith Studies I (Introduction to Prophetic Traditions)",
+        "Sirah — Life of Prophet Muhammad (PBUH)",
+        "Aqidah (Islamic Theology and Creed)",
+        "Introduction to Islamic Jurisprudence (Fiqh)",
+        "Bangladesh Studies",
+        "Communicative English",
+        "Arabic Language I"
+      ],
+      "year2": [
+        "Quranic Studies II (Advanced Tafsir)",
+        "Hadith Studies II (Hadith Criticism and Methodology)",
+        "Islamic Jurisprudence II (Usul al-Fiqh — Principles of Law)",
+        "Islamic History and Civilisation I (Early Period)",
+        "Islamic Philosophy and Ethics",
+        "Sociology and Anthropology",
+        "Arabic Language II",
+        "Economics (Islamic Perspective)"
+      ],
+      "year3": [
+        "Islamic History and Civilisation II (Medieval Period)",
+        "Comparative Religion",
+        "Contemporary Issues in Islam",
+        "Islamic Political Thought",
+        "Islamic Banking and Finance",
+        "Islamic Education and Curriculum",
+        "Islamisation of Knowledge",
+        "Research Methods"
+      ],
+      "year4": [
+        "Islam in Bangladesh: History and Society",
+        "Modern Islamic Movements and Reform",
+        "Human Rights in Islamic Perspective",
+        "Islamic Aesthetics and Fine Arts",
+        "Islamic International Relations",
+        "Special Topics in Quranic Science or Hadith",
+        "Dissertation / Research Project",
+        "Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — BA Honours in Islamic Studies Programme", "url": "https://www.du.ac.bd/programDetails/IST/200"},
+      {"source": "DU Islamic Studies BA Honours Curriculum 2018–2023", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/1620541305BA%20Honours%20curiculum%20final%202018-2019%20to%202022,2023.pdf"}
+    ]
+  },
+  {
+    "slug": "journalism",
+    "name": "Journalism & Mass Communication",
+    "degree": "B.S.S. (Hons.) in Mass Communication and Journalism",
+    "duration_years": 4,
+    "field": "Social Science",
+    "desc": "Mass Communication and Journalism prepares students for careers in media by developing skills in news reporting, broadcasting, digital journalism, and media ethics. DU's Department of Mass Communication and Journalism is the leading institution of its kind in Bangladesh.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["Bangla", "English", "Social Science"],
+    "jobs": ["journalist", "broadcast-presenter", "media-researcher", "public-relations-officer", "content-producer"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Mass Communication and Journalism",
+        "History of the Press",
+        "Bangladesh Culture and Heritage",
+        "Theories of Communication",
+        "Introduction to Sociology",
+        "Fundamentals of Economics",
+        "Bangladesh Studies",
+        "Journalistic Writing Skills: Bangla",
+        "Journalistic Writing Skills: English",
+        "Communicative English"
+      ],
+      "year2": [
+        "Reporting and News Writing",
+        "Feature Writing and Magazine Journalism",
+        "Editorial Writing and Column",
+        "Radio Broadcasting",
+        "Television Journalism and Production",
+        "Photography and Photojournalism",
+        "Media Law and Ethics",
+        "Advertising and Public Relations",
+        "Political Communication"
+      ],
+      "year3": [
+        "Online Journalism and Digital Media",
+        "Data Journalism",
+        "Development Journalism",
+        "Media Management and Economics",
+        "Public Speaking and Broadcast Presentation",
+        "Business Communication and Corporate Social Responsibility",
+        "Film Studies and Criticism",
+        "Research Methods in Mass Communication",
+        "International Communication"
+      ],
+      "year4": [
+        "Social Media and New Media Studies",
+        "Investigative Journalism",
+        "Health Journalism",
+        "Science and Environmental Journalism",
+        "Community Radio and Alternative Media",
+        "Media in Bangladesh: History and Practice",
+        "Media Internship",
+        "Dissertation / Research Project"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — Department of Mass Communication and Journalism", "url": "https://www.mcj.du.ac.bd/"},
+      {"source": "DU MCJ BSS Syllabuses 2016-2017", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/1616478341SYLLABUSES%20MCJ%20BSS-2016-2017.pdf"}
+    ]
+  },
+  {
+    "slug": "language-studies",
+    "name": "Language Studies (Modern Languages)",
+    "degree": "B.A. (Hons.) in Linguistics / Modern Languages",
+    "duration_years": 4,
+    "field": "Arts & Humanities",
+    "desc": "Language Studies and Modern Languages programmes explore the structure, history, and use of human languages, combining linguistics theory with proficiency in foreign languages. DU's Linguistics department and Institute of Modern Languages (IML) offer pathways in Bangla, English, Arabic, French, and other languages.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["Bangla", "English"],
+    "jobs": ["translator", "language-teacher", "interpreter", "content-writer", "foreign-language-specialist"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Linguistics",
+        "Historical Linguistics and Language Families",
+        "Academic Bangla",
+        "Academic English",
+        "Phonetics and Phonology I",
+        "Introduction to Foreign Language I (Arabic / French / Chinese / Japanese)",
+        "Bangladesh Studies",
+        "Sociolinguistics Basics",
+        "Language Laboratory Practice I"
+      ],
+      "year2": [
+        "Morphology and Syntax",
+        "Semantics and Pragmatics",
+        "Phonetics and Phonology II",
+        "History of the Bangla Language",
+        "Foreign Language II (Intermediate)",
+        "Language Acquisition",
+        "Discourse Analysis",
+        "Applied Linguistics: Language Teaching Methods",
+        "Language Laboratory Practice II"
+      ],
+      "year3": [
+        "Psycholinguistics",
+        "Sociolinguistics: Language and Society",
+        "Computational Linguistics and NLP Basics",
+        "Translation Theory and Practice",
+        "Interpreting Studies",
+        "Foreign Language III (Advanced)",
+        "Language Policy and Planning",
+        "Corpus Linguistics",
+        "Research Methods in Linguistics"
+      ],
+      "year4": [
+        "Bilingualism and Multilingualism",
+        "Forensic Linguistics",
+        "Language and Gender",
+        "Language and Technology",
+        "Bangla Linguistics: Dialects and Variation",
+        "Advanced Translation Workshop",
+        "Literature in the Target Language",
+        "Dissertation / Research Project",
+        "Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — Department of Linguistics", "url": "https://www.du.ac.bd/programDetails/LIN/103"},
+      {"source": "DU Linguistics OBE Curriculum 2022-23", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/1758167399OBEcurriculum2022-2023_Correctioncopy17.07.2025.pdf"},
+      {"source": "BRAC Institute of Languages", "url": "https://www.bracu.ac.bd/academics/institutes-and-schools/brac-institute-languages"}
+    ]
+  },
+  {
+    "slug": "leather-engineering",
+    "name": "Leather Engineering",
+    "degree": "B.Sc. Engineering (Leather Engineering)",
+    "duration_years": 4,
+    "field": "Engineering & Technology",
+    "desc": "Leather Engineering covers the science and technology of converting raw hides and skins into leather and leather-based products such as footwear, bags, and accessories. DU's Institute of Leather Engineering and KUET offer this specialised programme critical to Bangladesh's leather export industry.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Physics", "Chemistry", "Mathematics"],
+    "hsc_subjects_preferred": ["Biology"],
+    "jobs": ["leather-engineer", "tannery-manager", "footwear-designer", "leather-chemist", "quality-assurance-officer"],
+    "curriculum": {
+      "year1": [
+        "Engineering Mathematics I",
+        "Engineering Physics",
+        "Engineering Chemistry I (Inorganic Chemistry for Leather)",
+        "Introduction to Leather Engineering",
+        "Computer Programming",
+        "Engineering Drawing",
+        "English",
+        "Workshop Practice",
+        "Structure and Composition of Hides and Skins",
+        "Laboratory I"
+      ],
+      "year2": [
+        "Engineering Mathematics II",
+        "Organic Chemistry for Leather",
+        "Physical Chemistry for Leather",
+        "Pre-Tanning Processes (Beamhouse Operations: Soaking, Liming, Bating, Pickling)",
+        "Tanning Technology (Chrome Tanning, Vegetable Tanning)",
+        "Fluid Mechanics",
+        "Leather Machinery and Equipment",
+        "Electrical Technology",
+        "Environmental Science for Leather Industry",
+        "Laboratory II"
+      ],
+      "year3": [
+        "Post-Tanning Processes (Neutralisation, Retanning, Fatliquoring, Dyeing)",
+        "Finishing Technology",
+        "Leather Chemicals and Auxiliaries",
+        "Leather Quality Assessment and Testing",
+        "Footwear Design and Technology",
+        "Leather Goods and Accessories Technology",
+        "Leather Biotechnology",
+        "Effluent Treatment in Tannery",
+        "Production Management",
+        "Laboratory III"
+      ],
+      "year4": [
+        "Natural and Synthetic Polymers in Leather",
+        "Collagen Chemistry and Molecular Structure",
+        "Leather Industry Economics and Trade",
+        "Product Development and Innovation",
+        "Export-Oriented Leather Industry of Bangladesh",
+        "Environmental Regulations and Compliance",
+        "Entrepreneurship in Leather Business",
+        "Industrial Attachment",
+        "Thesis / Design Project"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — B.Sc. in Leather Engineering (ILET)", "url": "https://du.ac.bd/undergrad/ILET"},
+      {"source": "KUET — Department of Leather Engineering Syllabus", "url": "https://www.kuet.ac.bd/department/LE/index.php/welcome/syllabus"}
+    ]
+  },
+  {
+    "slug": "linguistics",
+    "name": "Linguistics",
+    "degree": "B.A. (Hons.) in Linguistics",
+    "duration_years": 4,
+    "field": "Arts & Humanities",
+    "desc": "Linguistics is the scientific study of language, encompassing phonetics, phonology, morphology, syntax, semantics, and pragmatics, as well as the social and cognitive dimensions of language use. DU's Department of Linguistics is the oldest in Bangladesh, offering a rigorous four-year honours programme.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["Bangla", "English"],
+    "jobs": ["linguist", "language-researcher", "speech-therapist", "translator", "language-policy-officer"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Linguistics",
+        "Historical Linguistics and Language Families",
+        "Phonetics and Phonology I",
+        "Academic Bangla",
+        "Academic English",
+        "Bangladesh Studies",
+        "Introduction to Bangla Morphology",
+        "Language and Society Basics",
+        "Language Laboratory I"
+      ],
+      "year2": [
+        "Morphology",
+        "Syntax",
+        "Semantics",
+        "Phonetics and Phonology II",
+        "History and Structure of Bangla",
+        "Sociolinguistics",
+        "Language Acquisition and Development",
+        "Introduction to Applied Linguistics",
+        "Research Methods I"
+      ],
+      "year3": [
+        "Pragmatics",
+        "Discourse Analysis",
+        "Psycholinguistics",
+        "Computational Linguistics",
+        "Stylistics",
+        "Language Planning and Policy",
+        "Translation Theory",
+        "South Asian Linguistic Area",
+        "Research Methods II"
+      ],
+      "year4": [
+        "Advanced Syntax (Generative Grammar)",
+        "Language and Cognition",
+        "Corpus Linguistics",
+        "Forensic Linguistics",
+        "Endangered Languages and Language Documentation",
+        "Dialects and Dialectology of Bangla",
+        "Special Topics (Sign Language / Neurolinguistics)",
+        "Dissertation / Research Project",
+        "Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — Department of Linguistics, BA Honours Programme", "url": "https://www.du.ac.bd/programDetails/LIN/103"},
+      {"source": "DU Linguistics OBE Curriculum 2022-23", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/1758167399OBEcurriculum2022-2023_Correctioncopy17.07.2025.pdf"}
+    ]
+  },
+  {
+    "slug": "marine-sciences",
+    "name": "Marine Sciences",
+    "degree": "B.Sc. (Hons.) in Marine Science / Oceanography",
+    "duration_years": 4,
+    "field": "Natural Sciences",
+    "desc": "Marine Sciences studies the physical, chemical, geological, and biological aspects of oceans and coastal environments, with Bangladesh's extensive Bay of Bengal coastline making this especially relevant. The Institute of Marine Sciences and Fisheries at the University of Chittagong and Bangladesh Maritime University are the leading providers.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Biology", "Chemistry"],
+    "hsc_subjects_preferred": ["Physics", "Mathematics", "Geography"],
+    "jobs": ["marine-scientist", "oceanographer", "fisheries-officer", "coastal-zone-manager", "environmental-consultant"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Marine Sciences",
+        "Physical Oceanography Basics",
+        "Marine Biology I (Marine Invertebrates)",
+        "Marine Ecology",
+        "Mathematics and Statistics for Marine Sciences",
+        "Chemistry I",
+        "Communicative English",
+        "Computer Applications",
+        "Bangladesh Studies",
+        "Laboratory I"
+      ],
+      "year2": [
+        "Chemical Oceanography",
+        "Biological Oceanography",
+        "Marine Botany (Algae, Seagrasses, Mangroves)",
+        "Marine Microbiology",
+        "Marine Chordates and Ichthyology",
+        "Planktology",
+        "Geological Oceanography",
+        "Estuarine Processes",
+        "Research Methods and Biostatistics",
+        "Laboratory II"
+      ],
+      "year3": [
+        "Physical Oceanography (Advanced)",
+        "Fisheries Resource Management",
+        "Fish Breeding and Genetics",
+        "Marine Pollution and Environmental Assessment",
+        "Coastal and Mangrove Ecosystem Management",
+        "Wetland and Lake Management",
+        "Biodiversity and Conservation",
+        "Remote Sensing and GIS for Marine Studies",
+        "Aquaculture Principles",
+        "Laboratory III"
+      ],
+      "year4": [
+        "Fisheries Oceanography (Bay of Bengal)",
+        "Fish and Shrimp Post-Harvest Technology",
+        "Marine Biotechnology",
+        "Climate Change and Ocean",
+        "Sustainable Coastal Livelihoods",
+        "Maritime Law and Policy",
+        "Environmental Impact Assessment",
+        "Fish Health Management",
+        "Industrial Attachment / Fieldwork",
+        "Thesis / Research Project"
+      ]
+    },
+    "references": [
+      {"source": "University of Chittagong — B.Sc. Honours in Marine Science Syllabus 2023-24", "url": "https://cu.ac.bd/assets/sectionacademicinfo/162_1720626904_0_EFCTN2DT0G.pdf"},
+      {"source": "Institute of Marine Sciences, University of Chittagong — Wikipedia", "url": "https://en.wikipedia.org/wiki/Institute_of_Marine_Sciences,_University_of_Chittagong"},
+      {"source": "Bangladesh Maritime University — BSc Honours in Oceanography Curriculum", "url": "https://bmu.edu.bd/public/files/contents/657ed50410956Oceanography-BSc-Curriculum-Final-Reviewed.pdf"}
+    ]
+  },
+  {
+    "slug": "materials-engineering",
+    "name": "Materials & Metallurgical Engineering",
+    "degree": "B.Sc. Engineering (Materials and Metallurgical Engineering)",
+    "duration_years": 4,
+    "field": "Engineering & Technology",
+    "desc": "Materials and Metallurgical Engineering focuses on the structure, properties, processing, and performance of metals, ceramics, polymers, composites, and nanomaterials. BUET's MME department trains engineers to develop and improve materials for aerospace, construction, electronics, and biomedical applications.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Physics", "Chemistry", "Mathematics"],
+    "hsc_subjects_preferred": ["Higher Mathematics"],
+    "jobs": ["materials-engineer", "metallurgist", "quality-inspector", "materials-researcher", "corrosion-engineer"],
+    "curriculum": {
+      "year1": [
+        "Electrical Engineering Fundamentals",
+        "Calculus and Ordinary Differential Equations",
+        "Materials Engineering Fundamentals",
+        "Physics I and II",
+        "Physical Chemistry",
+        "Inorganic Chemistry",
+        "English",
+        "Engineering Mechanics",
+        "Machine Shop and Workshop Practice",
+        "Chemistry and Physics Sessionals"
+      ],
+      "year2": [
+        "Crystallography and Structure of Materials",
+        "Thermodynamics of Materials",
+        "Phase Diagrams and Transformations",
+        "Kinetics and Transport Phenomena in Materials",
+        "Corrosion and Degradation of Metals and Alloys",
+        "Computer Programming",
+        "Engineering Graphics and CAD",
+        "Matrices, Series Solutions and Fourier Analysis",
+        "Probability and Statistics",
+        "Professional Communication Skills"
+      ],
+      "year3": [
+        "Metal Casting and Powder Processes",
+        "Ferrous Production Metallurgy",
+        "Electrical, Optical and Magnetic Properties of Materials",
+        "Mechanical Behaviour of Materials",
+        "Metal Joining and Forming Processes",
+        "Glass and Ceramic Materials",
+        "Polymeric Materials and Composites",
+        "Characterisation of Materials (XRD, SEM, TEM)",
+        "Materials Laboratory I",
+        "Capstone Project (Part I)"
+      ],
+      "year4": [
+        "Physical Metallurgy of Ferrous Alloys",
+        "Nanostructured Materials and Thin Films",
+        "Failure Analysis and Artefact Study",
+        "Materials Selection and Design",
+        "Industrial Management",
+        "Materials Laboratory II",
+        "Elective I (Biomaterials / Semiconductor Materials / Welding Metallurgy)",
+        "Elective II (Additive Manufacturing / Surface Engineering)",
+        "Thesis / Project and Capstone Project"
+      ]
+    },
+    "references": [
+      {"source": "BUET — Department of Materials and Metallurgical Engineering, Course List", "url": "https://mme.buet.ac.bd/academics/undergraduate-programme/course-list/"},
+      {"source": "BUET MME Information Booklet", "url": "https://mme.buet.ac.bd/wp-content/uploads/2023/03/MME_Booklet_Old_Partial.pdf"},
+      {"source": "CUET — Department of Materials Science and Engineering", "url": "https://www.cuet.ac.bd/dept/mse"}
+    ]
+  },
+  {
+    "slug": "microbiology",
+    "name": "Microbiology",
+    "degree": "B.S. (Hons.) in Microbiology",
+    "duration_years": 4,
+    "field": "Life & Earth Sciences",
+    "desc": "Microbiology is the study of microorganisms including bacteria, viruses, fungi, protozoa, and algae, examining their biology, ecology, and applications in medicine, food, and biotechnology. Bangladesh faces significant public health challenges that make trained microbiologists essential.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Biology", "Chemistry"],
+    "hsc_subjects_preferred": ["Physics", "Mathematics"],
+    "jobs": ["microbiologist", "clinical-lab-scientist", "food-safety-analyst", "public-health-researcher", "pharmaceutical-scientist"],
+    "curriculum": {
+      "year1": [
+        "Introductory Microbiology",
+        "Basic Techniques in Microbiology",
+        "Basic Biochemistry",
+        "Computer Applications for Life Sciences",
+        "Communicative English",
+        "Bangladesh Studies",
+        "Mathematics and Biostatistics",
+        "Laboratory Works I",
+        "Viva-Voce"
+      ],
+      "year2": [
+        "General Microbiology",
+        "Fundamental Cell Biology",
+        "Environmental Microbiology",
+        "Bacterial Metabolism",
+        "Basic Microbial Genetics",
+        "Medical Microbiology I",
+        "Food Microbiology",
+        "Fundamentals of Enzymology",
+        "Biostatistics and Calculus",
+        "Laboratory Works II"
+      ],
+      "year3": [
+        "Microbial Chemistry",
+        "Human Physiology",
+        "Microbial Metabolism (Advanced)",
+        "Principles of Biological Techniques",
+        "Food, Fisheries and Beverage Microbiology",
+        "Pharmaceutical Microbiology",
+        "Analytical Microbiology",
+        "Medical Microbiology II (Virology and Mycology)",
+        "Industrial Microbiology",
+        "Laboratory Works III"
+      ],
+      "year4": [
+        "Molecular Microbiology and Genomics",
+        "Immunology",
+        "Environmental Pollution Microbiology",
+        "Introduction to Molecular Biology and Genetic Engineering",
+        "Bioinformatics",
+        "Epidemiology and Public Health Microbiology",
+        "Biosafety and Bioethics",
+        "Research Methods",
+        "Laboratory Works IV",
+        "Thesis / Research Project",
+        "Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — Bachelor of Science in Microbiology", "url": "https://du.ac.bd/undergrad/MBI"},
+      {"source": "BRAC University — BSc Microbiology", "url": "https://www.bracu.ac.bd/avilable-program/bachelor-science-microbiology-mic"},
+      {"source": "North South University — BS in Microbiology", "url": "https://www.northsouth.edu/academic/programs-18022021/bachelor/bs-in-microbiology.html"}
+    ]
+  },
+  {
+    "slug": "naval-architecture",
+    "name": "Naval Architecture & Marine Engineering",
+    "degree": "B.Sc. Engineering (Naval Architecture and Marine Engineering)",
+    "duration_years": 4,
+    "field": "Engineering & Technology",
+    "desc": "Naval Architecture and Marine Engineering covers the design, construction, and operation of ships, boats, and offshore platforms, combining hydrodynamics, structural engineering, and marine systems. BUET's NAME department is the only such programme at a public university in Bangladesh.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Physics", "Chemistry", "Mathematics"],
+    "hsc_subjects_preferred": ["Higher Mathematics"],
+    "jobs": ["naval-architect", "marine-engineer", "ship-designer", "offshore-engineer", "port-and-shipping-manager"],
+    "curriculum": {
+      "year1": [
+        "Engineering Mathematics I (Calculus)",
+        "Engineering Physics",
+        "Engineering Chemistry",
+        "Engineering Drawing and Graphics",
+        "Introduction to Naval Architecture",
+        "Computer Programming",
+        "English",
+        "Workshop Practice",
+        "Engineering Mechanics",
+        "Sessionals (Physics, Chemistry, Drawing)"
+      ],
+      "year2": [
+        "Engineering Mathematics II",
+        "Fluid Mechanics",
+        "Strength of Materials",
+        "Ship Hydrostatics and Stability",
+        "Thermodynamics",
+        "Engineering Materials",
+        "Electrical Technology",
+        "Ship Geometry and Lines Plan",
+        "Resistance and Propulsion Basics",
+        "Laboratory Sessionals"
+      ],
+      "year3": [
+        "Marine Hydrodynamics",
+        "Ship Structures",
+        "Ship Resistance and Propulsion",
+        "Machinery and Marine Systems",
+        "Ship Design and Economics",
+        "Computational Fluid Dynamics (CFD) for Ships",
+        "Manoeuvring and Seakeeping",
+        "Maritime Regulations (SOLAS, MARPOL, Load Line)",
+        "Ship Production and Construction",
+        "Marine Engineering Laboratory"
+      ],
+      "year4": [
+        "Offshore Structures",
+        "Ship Repair and Maintenance",
+        "Advanced Ship Structural Analysis",
+        "Port Engineering and Harbour Design",
+        "Specialisation in Hydrodynamics and Structures or Design and Production",
+        "Naval Architecture Elective (Fast Craft / Submarine / Composite Vessels)",
+        "Marine Engineering Elective",
+        "Thesis / Capstone Design Project",
+        "Industrial Training"
+      ]
+    },
+    "references": [
+      {"source": "BUET — Department of Naval Architecture and Marine Engineering, Course Curriculum", "url": "https://name.buet.ac.bd/course-curriculum"},
+      {"source": "BUET NAME Undergraduate Courses", "url": "https://name.buet.ac.bd/undergraduate-courses"},
+      {"source": "BSMRMU — Department of Naval Architecture and Offshore Engineering", "url": "https://bsmrmu.edu.bd/content/department-of-naval-architecture-and-offshore-engineering"}
+    ]
+  },
+  {
+    "slug": "performing-arts",
+    "name": "Performing Arts (Theatre & Drama)",
+    "degree": "B.A. (Hons.) in Drama and Dramatics / Theatre and Performance Studies",
+    "duration_years": 4,
+    "field": "Arts & Humanities",
+    "desc": "Performing Arts programmes in Bangladesh focus on theatre, drama, music, and dance performance, integrating theory, history, and practical studio training. Jahangirnagar University's Department of Drama and Dramatics and DU's Department of Theatre and Performance Studies are the premier institutions.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": [],
+    "jobs": ["theatre-artist", "drama-director", "performing-arts-educator", "cultural-officer", "media-performer"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Theatre and Performance",
+        "Training the Physical Apparatus: Voice, Body, Speech",
+        "Improvisation and Theatre Games",
+        "History of Theatre I (Ancient Greece, Rome, Medieval)",
+        "Bangladesh Studies",
+        "Introduction to Music and Dance",
+        "Communicative English",
+        "Script Reading and Play Analysis",
+        "Studio Practice I"
+      ],
+      "year2": [
+        "Acting Techniques (Stanislavski Method)",
+        "History of Theatre II (Renaissance to Modern)",
+        "Theatre of Bangladesh and South Asia",
+        "Stage Design: Set, Lighting, Costume",
+        "Dramaturgy",
+        "Directing Principles and Techniques",
+        "Introduction to Playwriting",
+        "Music Theory for Theatre",
+        "Studio Practice II"
+      ],
+      "year3": [
+        "Theatre Making Principles",
+        "Advanced Acting and Character Development",
+        "Theatre Direction Workshop",
+        "Contemporary World Theatre",
+        "Applied Theatre (Theatre in Education, Forum Theatre)",
+        "Film and Theatre",
+        "Dance and Movement for Performance",
+        "Theatre Management and Production",
+        "Research Methods in Performing Arts"
+      ],
+      "year4": [
+        "Advanced Playwriting",
+        "Contemporary Theatre Practice",
+        "Indigenous and Folk Performance of Bangladesh",
+        "Theatre Criticism and Reviews",
+        "Community Theatre",
+        "Television and Screen Acting",
+        "Senior Thesis Production / Final Performance",
+        "Dissertation / Research Project"
+      ]
+    },
+    "references": [
+      {"source": "Jahangirnagar University — Department of Drama and Dramatics", "url": "https://juniv.edu/department/drama"},
+      {"source": "University of Dhaka — BA Honours in Theatre and Performance Studies", "url": "https://www.du.ac.bd/programDetails/TMU/66"}
+    ]
+  },
+  {
+    "slug": "petroleum-engineering",
+    "name": "Petroleum & Mining Engineering",
+    "degree": "B.Sc. Engineering (Petroleum and Mining Engineering)",
+    "duration_years": 4,
+    "field": "Engineering & Technology",
+    "desc": "Petroleum and Mining Engineering deals with the exploration, extraction, and production of oil, gas, and mineral resources from the earth. SUST launched Bangladesh's first undergraduate programme in this field in 2005, training engineers for the country's growing energy and mining sector.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Physics", "Chemistry", "Mathematics"],
+    "hsc_subjects_preferred": ["Geography", "Higher Mathematics"],
+    "jobs": ["petroleum-engineer", "drilling-engineer", "reservoir-engineer", "geologist", "mining-engineer"],
+    "curriculum": {
+      "year1": [
+        "Engineering Mathematics I",
+        "Engineering Physics",
+        "Engineering Chemistry",
+        "Introduction to Petroleum and Mining Engineering",
+        "Computer Programming",
+        "Engineering Drawing",
+        "English",
+        "Introduction to Geology and Geophysics",
+        "Engineering Mechanics",
+        "Sessionals"
+      ],
+      "year2": [
+        "Engineering Mathematics II",
+        "Fluid Mechanics",
+        "Thermodynamics",
+        "Petroleum Geology and Geophysics",
+        "Drilling Engineering",
+        "Reservoir Engineering I",
+        "Engineering Materials",
+        "Electrical Technology",
+        "Stratigraphy and Palaeontology",
+        "Numerical Methods"
+      ],
+      "year3": [
+        "Reservoir Engineering II",
+        "Well Logging and Formation Evaluation",
+        "Well Completion and Workover",
+        "Natural Gas Engineering",
+        "Petroleum Production Engineering",
+        "Mining Engineering Principles",
+        "Rock Mechanics",
+        "Pipeline Engineering",
+        "Petroleum Economics and Project Management",
+        "Environmental Aspects of Petroleum Engineering"
+      ],
+      "year4": [
+        "Enhanced Oil Recovery",
+        "Offshore Drilling and Production",
+        "Petroleum Refining and Processing",
+        "Mineral Processing",
+        "Coal and Non-metallic Minerals Engineering",
+        "Occupational Health and Safety in Mining",
+        "Bangladesh Energy Sector — Case Studies",
+        "Industrial Training",
+        "Thesis / Research Project"
+      ]
+    },
+    "references": [
+      {"source": "SUST — Department of Petroleum and Mining Engineering", "url": "https://www.sust.edu/departments/pme"},
+      {"source": "SUST — PME Curriculum", "url": "https://www.sust.edu/departments/pme/curriculum"},
+      {"source": "MIST — Department of Petroleum and Mining Engineering", "url": "https://mist.ac.bd/department/pme"}
+    ]
+  },
+  {
+    "slug": "philosophy",
+    "name": "Philosophy",
+    "degree": "B.A. (Hons.) in Philosophy",
+    "duration_years": 4,
+    "field": "Arts & Humanities",
+    "desc": "Philosophy develops critical reasoning, logical analysis, and ethical judgement through the study of fundamental questions about knowledge, reality, mind, and morality. DU's Department of Philosophy offers 23 core and 5 area courses spanning classical and contemporary philosophical traditions.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["Logic", "Bangla", "History"],
+    "jobs": ["educator", "civil-servant", "journalist", "legal-professional", "social-researcher"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Philosophy",
+        "Logic I (Deductive Logic)",
+        "Epistemology: Theory of Knowledge",
+        "Greek Philosophy (Pre-Socratics, Socrates, Plato, Aristotle)",
+        "Introduction to Ethics",
+        "Bangladesh Studies",
+        "Communicative English",
+        "Psychology (Allied)",
+        "Introduction to Sociology"
+      ],
+      "year2": [
+        "Logic II (Inductive Logic and Scientific Method)",
+        "Modern Western Philosophy (Descartes to Kant)",
+        "Metaphysics",
+        "Philosophy of Religion",
+        "Islamic Philosophy",
+        "Indian Philosophy (Hindu and Buddhist)",
+        "Social and Political Philosophy",
+        "History of Science"
+      ],
+      "year3": [
+        "Contemporary Western Philosophy (Hegel, Marx, Nietzsche, Existentialism)",
+        "Analytic Philosophy and Philosophy of Language",
+        "Philosophy of Mind",
+        "Ethical Theory (Utilitarianism, Deontology, Virtue Ethics)",
+        "Applied Ethics (Bioethics, Environmental Ethics, Business Ethics)",
+        "Philosophy of Science",
+        "Feminist Philosophy",
+        "Research Methods in Philosophy"
+      ],
+      "year4": [
+        "Postmodern Philosophy",
+        "Philosophy of Law",
+        "Aesthetics and Philosophy of Art",
+        "Philosophy of Education",
+        "Comparative Philosophy (East-West)",
+        "Bengali Philosophy and Intellectuals",
+        "Special Topics (Philosophy of AI / Political Theory)",
+        "Dissertation / Research Paper",
+        "Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — Department of Philosophy, BA Honours Syllabus 2018-2022", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/1616595162BA%20Hons%20Syllabus%202018-2022%20(Final).pdf"},
+      {"source": "University of Dhaka — Bachelor of Arts in Philosophy", "url": "https://www.du.ac.bd/programDetails/PHI/68"}
+    ]
+  },
+  {
+    "slug": "psychology",
+    "name": "Psychology",
+    "degree": "B.S. (Hons.) in Psychology",
+    "duration_years": 4,
+    "field": "Social Science",
+    "desc": "Psychology is the scientific study of behaviour and mental processes, covering cognitive, social, developmental, clinical, and biological dimensions of human experience. Bangladesh universities including DU, JU, and CU offer rigorous programmes preparing graduates for counselling, research, and applied fields.",
+    "hsc_groups": ["science", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["Biology", "Sociology"],
+    "jobs": ["psychologist", "counsellor", "clinical-psychologist", "hr-specialist", "researcher"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Psychology I",
+        "Introduction to Psychology II",
+        "Experimental Psychology",
+        "Biological Psychology",
+        "Psychological Statistics I",
+        "History of Psychology",
+        "Principles of Sociology",
+        "Introduction to Human Physiology",
+        "Fundamentals of English",
+        "Practical (Experiments) and Viva-Voce"
+      ],
+      "year2": [
+        "Abnormal Psychology I",
+        "Social Psychology",
+        "Child Development and Developmental Psychology",
+        "Learning and Memory",
+        "Cognitive Psychology",
+        "Psychological Statistics II",
+        "Sensation and Perception",
+        "Personality Theories",
+        "Practical Laboratory II"
+      ],
+      "year3": [
+        "Abnormal Psychology II (Psychopathology)",
+        "Clinical Psychology",
+        "Counselling Psychology",
+        "Industrial and Organisational Psychology",
+        "Educational Psychology",
+        "Psychological Testing and Assessment",
+        "Motivation and Emotion",
+        "Health Psychology",
+        "Research Methods in Psychology"
+      ],
+      "year4": [
+        "Neuropsychology",
+        "Forensic Psychology",
+        "Community Psychology",
+        "Geriatric Psychology (Ageing)",
+        "Cross-Cultural Psychology",
+        "Positive Psychology and Well-being",
+        "Advanced Statistical Methods",
+        "Advanced Psychological Testing",
+        "Dissertation / Research Project",
+        "Internship / Field Placement"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — BS (Hons) in Psychology Syllabus 1st–4th Year, 2020-2021 Onwards", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/16764429451st-4thYear,Hons2020-2021andOnwards(2).pdf"},
+      {"source": "Jahangirnagar University — Department of Psychology", "url": "https://jnu.ac.bd/department/portal/psychology"},
+      {"source": "Department of Psychology, University of Chittagong — Syllabus", "url": "https://www.psycu.net/syllabus/"}
+    ]
+  },
+  {
+    "slug": "public-administration",
+    "name": "Public Administration",
+    "degree": "B.S.S. (Hons.) in Public Administration",
+    "duration_years": 4,
+    "field": "Social Science",
+    "desc": "Public Administration prepares students for careers in government service, policy-making, and governance by combining theories of public management with practical knowledge of Bangladesh's administrative system. DU's department produces graduates for the BCS and other civil service roles.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["Economics", "Political Science", "History"],
+    "jobs": ["civil-servant", "local-government-officer", "policy-analyst", "ngo-administrator", "development-planner"],
+    "curriculum": {
+      "year1": [
+        "Public Administration in Bangladesh",
+        "Human Resource Management: Concepts and Theories",
+        "Local Government and Development Management",
+        "Fundamentals of Economics",
+        "Introduction to Political Science",
+        "Bangladesh Studies",
+        "Communicative English",
+        "Introduction to Sociology",
+        "Statistics for Public Administration"
+      ],
+      "year2": [
+        "Governance: Theories and Application",
+        "Administrative Law",
+        "Human Resource Management in Bangladesh Civil Service",
+        "Gender, Administration and Development",
+        "Public Financial Management",
+        "Project Management",
+        "Management of Banks and Financial Institutions",
+        "Environment and Disaster Management",
+        "Public Policy Analysis"
+      ],
+      "year3": [
+        "Introduction to Social Research",
+        "Land Administration in Bangladesh",
+        "Urban Governance and Development",
+        "Emergency and Security Management",
+        "E-Governance and Digital Administration",
+        "Public Service Ethics and Accountability",
+        "Comparative Public Administration",
+        "International Development and Aid Management",
+        "Quantitative Research Methods"
+      ],
+      "year4": [
+        "Introduction to Public Management",
+        "Performance Management: Theory and Practice",
+        "Ethics and Professionalism in Public Administration",
+        "Introduction to Public Policy",
+        "International Trade and Political Economy",
+        "Bangladesh Civil Service: Structure and Reform",
+        "Administrative Reform and Governance",
+        "Dissertation / Research Project",
+        "Seminar and Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — Department of Public Administration, BSS Honours Syllabus", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/1663090321SyllabusFinalJune152015(1)(2).pdf"},
+      {"source": "Bangladesh University of Professionals — BSS (Hons) in Public Administration", "url": "https://bup.edu.bd/academics/academic_details/457"}
+    ]
+  },
+  {
+    "slug": "social-work",
+    "name": "Social Work",
+    "degree": "B.S.S. (Hons.) in Social Welfare / Social Work",
+    "duration_years": 4,
+    "field": "Social Science",
+    "desc": "Social Work prepares students to support individuals, families, and communities facing social challenges through case work, group work, and community organisation. DU's Institute of Social Welfare and Research is the oldest institution of its kind in Bangladesh.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": ["Sociology", "Psychology", "Economics"],
+    "jobs": ["social-worker", "community-development-officer", "ngo-field-worker", "child-protection-officer", "probation-officer"],
+    "curriculum": {
+      "year1": [
+        "History and Philosophy of Social Welfare",
+        "Fundamentals of Social Work",
+        "Introduction to Sociology",
+        "Psychology and Human Behaviour",
+        "Bangladesh Studies",
+        "Communicative English",
+        "Fundamentals of Economics",
+        "Introduction to Anthropology",
+        "Statistics for Social Sciences"
+      ],
+      "year2": [
+        "Social Work Methods I: Case Work",
+        "Social Work Methods II: Group Work",
+        "Social Work Methods III: Community Organisation",
+        "Public Health Issues and Services",
+        "Social Welfare Administration",
+        "Social Legislation in Bangladesh",
+        "Gender and Social Welfare",
+        "Child and Family Welfare",
+        "Research Methods in Social Work"
+      ],
+      "year3": [
+        "Social Action and Advocacy",
+        "Poverty and Social Exclusion",
+        "Disability and Rehabilitation",
+        "Mental Health and Social Work",
+        "Rural Community Development",
+        "Urban Social Problems",
+        "NGO Management and Development",
+        "Gerontology: Ageing and Social Work",
+        "Juvenile Justice and Correctional Services"
+      ],
+      "year4": [
+        "Social Policy and Planning",
+        "Disaster Management and Social Work",
+        "Ethical Issues in Social Work",
+        "Environmental Justice and Social Work",
+        "Human Rights and Social Work",
+        "Social Work in Healthcare Settings",
+        "Field Practicum / Supervised Internship",
+        "Dissertation / Research Project",
+        "Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — BSS Honours in Social Welfare", "url": "https://www.du.ac.bd/programDetails/ISW/280"},
+      {"source": "Asian University of Bangladesh — Undergraduate Social Work", "url": "https://aub.ac.bd/undergraduate/social-work"}
+    ]
+  },
+  {
+    "slug": "textile-engineering",
+    "name": "Textile Engineering",
+    "degree": "B.Sc. Engineering (Textile Engineering)",
+    "duration_years": 4,
+    "field": "Engineering & Technology",
+    "desc": "Textile Engineering covers the science and technology of converting fibres into yarn, fabric, and finished textile products through processes of spinning, weaving, knitting, dyeing, and finishing. Bangladesh University of Textiles (BUTEX) is the premier dedicated institution for this critical sector of Bangladesh's economy.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Physics", "Chemistry", "Mathematics"],
+    "hsc_subjects_preferred": ["Biology"],
+    "jobs": ["textile-engineer", "garments-production-manager", "fabric-technologist", "textile-quality-controller", "fashion-merchandiser"],
+    "curriculum": {
+      "year1": [
+        "Engineering Mathematics I",
+        "Engineering Physics",
+        "Engineering Chemistry",
+        "Introduction to Textile Technology",
+        "Computer Programming",
+        "Engineering Drawing",
+        "English",
+        "Fibre Science (Natural and Synthetic Fibres)",
+        "Workshop Practice",
+        "Textile Laboratory I"
+      ],
+      "year2": [
+        "Engineering Mathematics II",
+        "Yarn Manufacturing I (Opening, Cleaning, Carding)",
+        "Yarn Manufacturing II (Combing, Drawing, Roving, Ring Spinning)",
+        "Fabric Manufacturing I (Weaving Principles)",
+        "Fabric Manufacturing II (Knitting Technology)",
+        "Textile Testing and Quality Control",
+        "Electrical Technology",
+        "Elements of Industrial Engineering",
+        "Textile Laboratory II"
+      ],
+      "year3": [
+        "Wet Processing I (Pretreatment: Scouring, Bleaching)",
+        "Wet Processing II (Dyeing Technology — Reactive, Disperse, Acid Dyes)",
+        "Wet Processing III (Finishing)",
+        "Apparel Manufacturing Technology I",
+        "Apparel Manufacturing Technology II",
+        "Textile Machinery Design and Maintenance",
+        "Environmental Management in Textile Industry",
+        "Colour Science and Technology",
+        "Textile Laboratory III"
+      ],
+      "year4": [
+        "Technical Textiles and Nonwovens",
+        "Textile and Garment Merchandising",
+        "Textile Management and Economics",
+        "Industrial Wastewater Treatment",
+        "Fashion Design and Textile Product Development",
+        "Automation and Industry 4.0 in Textiles",
+        "Export-Oriented RMG Industry of Bangladesh",
+        "Industrial Attachment",
+        "Thesis / Design Project"
+      ]
+    },
+    "references": [
+      {"source": "Bangladesh University of Textiles (BUTEX) — Undergraduate Programs", "url": "https://www.butex.edu.bd/undergraduate-programs/"},
+      {"source": "Bangladesh University of Textiles — Homepage", "url": "https://www.butex.edu.bd/homepage/"},
+      {"source": "Bangladesh University of Textiles — Wikipedia", "url": "https://en.wikipedia.org/wiki/Bangladesh_University_of_Textiles"}
+    ]
+  },
+  {
+    "slug": "uiux",
+    "name": "Graphic Design & UI/UX",
+    "degree": "B.F.A. (Hons.) in Graphic Design",
+    "duration_years": 4,
+    "field": "Design",
+    "desc": "Graphic Design and UI/UX programmes develop creative professionals skilled in visual communication, branding, digital interface design, and user experience research. DU's Faculty of Fine Arts offers the most established Graphic Design honours programme in Bangladesh.",
+    "hsc_groups": ["science", "commerce", "arts"],
+    "hsc_subjects_required": [],
+    "hsc_subjects_preferred": [],
+    "jobs": ["graphic-designer", "ui-ux-designer", "brand-designer", "art-director", "web-designer"],
+    "curriculum": {
+      "year1": [
+        "Foundation Drawing and Visual Perception",
+        "Colour Theory and Application",
+        "Typography I (Letterform and Type Anatomy)",
+        "Two-Dimensional Design Principles",
+        "History of Art and Design I",
+        "Bangladesh Studies",
+        "Communicative English",
+        "Introduction to Graphic Design",
+        "Basic Computer Graphics (Raster and Vector Tools)",
+        "Studio Practice I"
+      ],
+      "year2": [
+        "Typography II (Type Hierarchy, Layout, and Grid Systems)",
+        "Illustration Techniques (Digital and Analogue)",
+        "Photography for Designers",
+        "Brand Identity and Logo Design",
+        "Print Production and Prepress",
+        "History of Art and Design II",
+        "Advertising Design",
+        "Publication Design (Books, Magazines, Editorial)",
+        "Digital Design Tools (Adobe Creative Suite)",
+        "Studio Practice II"
+      ],
+      "year3": [
+        "UI/UX Design Principles (User Research, Wireframing, Prototyping)",
+        "Web Design and Front-End Basics",
+        "Motion Graphics and Animation",
+        "Packaging Design",
+        "Environmental and Wayfinding Design",
+        "Design Thinking and Human-Centred Design",
+        "Infographics and Data Visualisation",
+        "Creative Direction and Portfolio Development",
+        "Research Methods in Design"
+      ],
+      "year4": [
+        "Advanced UI/UX Design (Interaction Design, Usability Testing)",
+        "Mobile App Design",
+        "Design for Social Change",
+        "Design Entrepreneurship and Freelancing",
+        "Art Direction and Campaign Design",
+        "Bangla Typography and Script Design",
+        "Capstone Design Project / Thesis",
+        "Professional Portfolio Presentation and Exhibition"
+      ]
+    },
+    "references": [
+      {"source": "University of Dhaka — BFA Honours Graphic Design Curriculum 2023", "url": "https://ssl.du.ac.bd/fontView/images/syllabus/1679131982ApprovedCurriculumBFAHonoursGraphicDesign1March2023.pdf"},
+      {"source": "University of Dhaka — Faculty of Fine Arts", "url": "https://www.du.ac.bd/faculty/FACFART"},
+      {"source": "University of Dhaka — Bachelor of Fine Art in Graphic Design", "url": "https://www.du.ac.bd/undergrad/HIART"}
+    ]
+  },
+  {
+    "slug": "urban-planning",
+    "name": "Urban & Regional Planning",
+    "degree": "B. Urban and Regional Planning",
+    "duration_years": 4,
+    "field": "Social Science",
+    "desc": "Urban and Regional Planning addresses the spatial organisation of human settlements through land use, transportation, housing, and infrastructure planning. BUET's Department of Urban and Regional Planning, established in 1962, is the oldest planning school in Bangladesh and a regional leader.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Mathematics"],
+    "hsc_subjects_preferred": ["Physics", "Geography"],
+    "jobs": ["urban-planner", "regional-planner", "gis-analyst", "housing-policy-officer", "transport-planner"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Urban and Regional Planning",
+        "History of Cities and Urban Development",
+        "Physical Geography and Environment",
+        "Engineering Mathematics",
+        "Engineering Drawing and Graphics",
+        "Computer Applications in Planning (GIS Basics)",
+        "Bangladesh Studies",
+        "Communicative English",
+        "Social Sciences for Planners",
+        "Planning Studio I"
+      ],
+      "year2": [
+        "Urban Land Use Planning",
+        "Transportation Planning and Traffic Engineering",
+        "Urban Economy and Demography",
+        "Housing and Urban Development",
+        "Urban Infrastructure (Water, Sanitation, Utilities)",
+        "Surveying and Planning Data Collection",
+        "Environmental Planning",
+        "Remote Sensing for Urban Studies",
+        "Planning Law and Regulations in Bangladesh",
+        "Planning Studio II"
+      ],
+      "year3": [
+        "Master Planning and Site Planning",
+        "Rural and Regional Development Planning",
+        "Urban Renewal and Redevelopment",
+        "Disaster Risk Reduction in Urban Areas",
+        "Planning for Climate Change Adaptation",
+        "Advanced GIS and Spatial Analysis",
+        "Urban Governance and Management",
+        "Historical Preservation and Heritage Planning",
+        "Research Methods in Planning",
+        "Planning Studio III"
+      ],
+      "year4": [
+        "Metropolitan and Megacity Planning",
+        "Planning for Dhaka and Secondary Cities of Bangladesh",
+        "Participatory Planning and Community Engagement",
+        "Smart City and Digital Planning",
+        "International Development Planning",
+        "Infrastructure Economics and Public Finance",
+        "Planning Studio IV (Comprehensive Plan)",
+        "Dissertation / Research Project",
+        "Seminar and Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "BUET — Department of Urban and Regional Planning", "url": "https://urp.buet.ac.bd/"},
+      {"source": "BUET URP Undergraduate Curriculum PDF", "url": "https://urp.buet.ac.bd/UploadedPDFs/Pdf637911016921281954.pdf"},
+      {"source": "Bangladesh Institute of Planners — Planning Education", "url": "https://www.bip.org.bd/planning-education"}
+    ]
+  },
+  {
+    "slug": "zoology",
+    "name": "Zoology",
+    "degree": "B.S. (Hons.) in Zoology",
+    "duration_years": 4,
+    "field": "Life & Earth Sciences",
+    "desc": "Zoology is the branch of biology that studies the animal kingdom — their structure, physiology, ecology, evolution, classification, and behaviour. Graduates from DU, RU, CU, and JU work in biodiversity conservation, fisheries, wildlife management, and biomedical research.",
+    "hsc_groups": ["science"],
+    "hsc_subjects_required": ["Biology", "Chemistry"],
+    "hsc_subjects_preferred": ["Physics", "Mathematics"],
+    "jobs": ["zoologist", "wildlife-biologist", "fisheries-officer", "conservation-officer", "parasitologist"],
+    "curriculum": {
+      "year1": [
+        "Introduction to Zoology and Protista",
+        "Invertebrate Zoology I (Protozoa to Platyhelminthes)",
+        "Invertebrate Zoology II (Aschelminthes to Mollusca)",
+        "Invertebrate Zoology III (Arthropoda and Echinodermata)",
+        "Introduction to Plant Kingdom (Allied Botany)",
+        "Basic Biochemistry (Allied)",
+        "Bangladesh Studies",
+        "Communicative English",
+        "Zoology Practical I",
+        "Viva-Voce"
+      ],
+      "year2": [
+        "Vertebrate Zoology I (Pisces and Amphibia)",
+        "Vertebrate Zoology II (Reptilia and Aves)",
+        "Vertebrate Zoology III (Mammalia)",
+        "Cell Biology and Cell Physiology",
+        "Genetics and Heredity",
+        "Animal Ecology",
+        "Biostatistics",
+        "Taxonomy and Economic Botany (Allied)",
+        "Zoology Practical II"
+      ],
+      "year3": [
+        "Parasitology",
+        "Entomology (Insects)",
+        "Animal Behaviour (Ethology)",
+        "Evolution and Palaeontology",
+        "Physiology I (Digestion, Circulation, Respiration)",
+        "Physiology II (Excretion, Nervous System, Reproduction)",
+        "Microbiology (Allied)",
+        "Biochemistry and Molecular Biology",
+        "Zoology Practical III"
+      ],
+      "year4": [
+        "Wildlife Biology and Conservation",
+        "Fisheries Science and Aquaculture",
+        "Immunology",
+        "Developmental Biology (Embryology)",
+        "Environmental Biology and Ecotoxicology",
+        "Molecular Genetics and Genomics",
+        "Health Biology and Epidemiology",
+        "Biosafety, Biosecurity and Bioethics",
+        "Research Methodology",
+        "Zoology Practical IV",
+        "Thesis / Research Project",
+        "Viva-Voce"
+      ]
+    },
+    "references": [
+      {"source": "University of Rajshahi — Department of Zoology, BSc Honours Curriculum 2023-24", "url": "https://www.ru.ac.bd/zoology/wp-content/uploads/sites/48/2025/04/B.Sc_.-curriculum-2023-24.pdf"},
+      {"source": "University of Rajshahi — Department of Zoology, Curriculum 2020", "url": "https://www.ru.ac.bd/zoology/wp-content/uploads/sites/48/2022/07/Curriculum_GF_2020_Final-by-Fazlul.pdf"},
+      {"source": "University of Dhaka — Department of Zoology", "url": "https://du.ac.bd/webPost/176/1239"}
+    ]
+  }
+]

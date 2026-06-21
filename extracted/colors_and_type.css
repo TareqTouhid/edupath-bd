@@ -1,0 +1,318 @@
+/* ============================================================
+   EduPath BD — Design Tokens
+   colors_and_type.css
+   ============================================================ */
+
+/* Fonts — self-hosted variable TTFs.
+   Fraunces is loaded with its full opsz (9–144) + wght (100–900) axes,
+   so font-optical-sizing: auto picks the right cut at every scale and
+   the gold-italic accent word in headlines uses the true italic. */
+@font-face {
+  font-family: "Fraunces";
+  src: url("fonts/Fraunces-VariableFont_SOFT_WONK_opsz_wght.ttf") format("truetype-variations"),
+       url("fonts/Fraunces-VariableFont_SOFT_WONK_opsz_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Fraunces";
+  src: url("fonts/Fraunces-Italic-VariableFont_SOFT_WONK_opsz_wght.ttf") format("truetype-variations"),
+       url("fonts/Fraunces-Italic-VariableFont_SOFT_WONK_opsz_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype-variations"),
+       url("fonts/PlusJakartaSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf") format("truetype-variations"),
+       url("fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 200 800;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* ---------- COLOR (8 brand tokens + 2 derived overlays) ---------- */
+  --bg:           #F5EFE4;
+  --surface:      #FFFFFF;
+  --surface-alt:  #EDE8DF;
+  --green:        #006A4E;
+  --green-dark:   #004D38;
+  --gold:         #F4A823;
+  --terracotta:   #C8553D;
+  --text:         #1A1714;
+  --text-muted:   #7A6E65;
+
+  --green-12:     color-mix(in oklab, #006A4E 12%, transparent);
+  --green-24:     color-mix(in oklab, #006A4E 24%, transparent);
+  --ink-08:       color-mix(in oklab, #1A1714 8%, transparent);
+  --ink-16:       color-mix(in oklab, #1A1714 16%, transparent);
+  --gold-16:      color-mix(in oklab, #F4A823 16%, transparent);
+  --terracotta-16:color-mix(in oklab, #C8553D 16%, transparent);
+
+  /* Field accent colors (subject categories) */
+  --field-technology:      #2A6FDB;
+  --field-business:        #B07A1F;
+  --field-science:         #5C8C3E;
+  --field-social-science:  #8E5BB7;
+  --field-humanities:      #C8553D;
+  --field-environmental:   #2F8F6A;
+  --field-design:          #D97757;
+  --field-applied:         #4F5D75;
+
+  /* ---------- TYPOGRAPHY ---------- */
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-body:    "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Type scale tokens */
+  --display-1-size:   72px;  --display-1-line:   76px;
+  --display-2-size:   56px;  --display-2-line:   60px;
+  --h1-size:          40px;  --h1-line:          48px;
+  --h2-size:          32px;  --h2-line:          40px;
+  --h3-size:          24px;  --h3-line:          32px;
+  --lead-size:        20px;  --lead-line:        30px;
+  --body-size:        16px;  --body-line:        26px;
+  --small-size:       14px;  --small-line:       22px;
+  --micro-size:       12px;  --micro-line:       16px;
+  --quote-size:       28px;  --quote-line:       40px;
+
+  /* ---------- SPACING (4px grid) ---------- */
+  --s-1:   4px;
+  --s-2:   8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  20px;
+  --s-6:  24px;
+  --s-7:  32px;
+  --s-8:  40px;
+  --s-9:  48px;
+  --s-10: 64px;
+  --s-11: 96px;
+  --s-12: 128px;
+
+  /* ---------- RADIUS ---------- */
+  --r-card:  16px;
+  --r-modal: 24px;
+  --r-pill:  100px;
+  --r-input: 12px;
+  --r-image: 12px;
+
+  /* ---------- SHADOWS ---------- */
+  --shadow-1: 0 1px 2px rgba(26,23,20,0.06), 0 4px 12px rgba(26,23,20,0.04);
+  --shadow-2: 0 4px 8px rgba(26,23,20,0.08), 0 12px 28px rgba(26,23,20,0.08);
+  --shadow-3: 0 24px 64px rgba(26,23,20,0.18), 0 8px 16px rgba(26,23,20,0.08);
+
+  /* ---------- MOTION ---------- */
+  --ease-editorial: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --t-fast: 120ms;
+  --t-mid:  240ms;
+  --t-slow: 400ms;
+
+  /* ---------- LAYOUT ---------- */
+  --container-marketing: 1200px;
+  --container-product:    960px;
+  --container-matcher:    720px;
+  --nav-h:                72px;
+  --sticky-filter-h:      64px;
+}
+
+/* ============================================================
+   Base resets + global type
+   ============================================================ */
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--body-size);
+  line-height: var(--body-line);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--gold); color: var(--text); }
+
+/* ============================================================
+   Semantic type classes
+   ============================================================ */
+
+.display-1, h1.display-1 {
+  font-family: var(--font-display);
+  font-size: var(--display-1-size);
+  line-height: var(--display-1-line);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+  margin: 0;
+}
+.display-2 {
+  font-family: var(--font-display);
+  font-size: var(--display-2-size);
+  line-height: var(--display-2-line);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+  margin: 0;
+}
+h1, .h1 {
+  font-family: var(--font-display);
+  font-size: var(--h1-size);
+  line-height: var(--h1-line);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  text-wrap: pretty;
+  margin: 0;
+}
+h2, .h2 {
+  font-family: var(--font-display);
+  font-size: var(--h2-size);
+  line-height: var(--h2-line);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  text-wrap: pretty;
+  margin: 0;
+}
+h3, .h3 {
+  font-family: var(--font-display);
+  font-size: var(--h3-size);
+  line-height: var(--h3-line);
+  font-weight: 600;
+  text-wrap: pretty;
+  margin: 0;
+}
+.lead {
+  font-size: var(--lead-size);
+  line-height: var(--lead-line);
+  color: var(--text-muted);
+}
+p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0; }
+.small  { font-size: var(--small-size); line-height: var(--small-line); font-weight: 500; }
+.micro  {
+  font-size: var(--micro-size);
+  line-height: var(--micro-line);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+.quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--quote-size);
+  line-height: var(--quote-line);
+  font-weight: 400;
+  color: var(--text);
+  text-wrap: pretty;
+}
+
+/* Gold-italic accent word inside a headline */
+.gold-em {
+  font-style: italic;
+  color: var(--gold);
+  /* Optical bump — italic Fraunces benefits from a touch more weight */
+  font-weight: 500;
+}
+
+/* ============================================================
+   Buttons
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 14px 24px;
+  border-radius: var(--r-pill);
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background var(--t-fast) ease, color var(--t-fast) ease, transform var(--t-fast) ease, box-shadow var(--t-fast) ease;
+  white-space: nowrap;
+}
+.btn:active { transform: scale(0.98); }
+.btn-primary { background: var(--green); color: #fff; }
+.btn-primary:hover { background: var(--green-dark); }
+.btn-ghost { background: transparent; color: var(--green); box-shadow: inset 0 0 0 1.5px var(--green); }
+.btn-ghost:hover { background: var(--green-12); }
+.btn-gold { background: var(--gold); color: var(--text); }
+.btn-gold:hover { background: #DC9614; }
+.btn-on-green { background: var(--gold); color: var(--text); }
+
+/* ============================================================
+   Pills / Chips
+   ============================================================ */
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  background: transparent;
+  color: var(--text);
+  font-size: var(--small-size);
+  font-weight: 500;
+  line-height: 1;
+  box-shadow: inset 0 0 0 1px var(--ink-16);
+  cursor: pointer;
+  transition: background var(--t-fast) ease, color var(--t-fast) ease, box-shadow var(--t-fast) ease;
+}
+.pill.is-active {
+  background: var(--green);
+  color: #fff;
+  box-shadow: none;
+}
+.pill-gold {
+  background: var(--gold-16);
+  color: var(--text);
+  box-shadow: none;
+}
+
+/* ============================================================
+   Card
+   ============================================================ */
+
+.card {
+  background: var(--surface);
+  border-radius: var(--r-card);
+  box-shadow: var(--shadow-1);
+  transition: transform var(--t-mid) var(--ease-editorial), box-shadow var(--t-mid) var(--ease-editorial);
+}
+.card:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
+
+/* Honesty box — terracotta-bordered callout */
+.honesty {
+  border-left: 4px solid var(--terracotta);
+  background: var(--terracotta-16);
+  border-radius: var(--r-input);
+  padding: var(--s-4) var(--s-5);
+  color: var(--text);
+}
+
+/* Focus ring */
+:where(button, a, input, [tabindex]):focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+  border-radius: 4px;
+}

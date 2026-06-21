@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EduPath BD — Data Viewer</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: system-ui, sans-serif; background: #f5f5f0; color: #1a1a1a; }
+  header { background: #1a3a2a; color: white; padding: 16px 24px; display: flex; gap: 16px; align-items: center; }
+  header h1 { font-size: 18px; }
+  nav { display: flex; gap: 8px; margin-left: auto; }
+  nav button { background: rgba(255,255,255,0.15); border: none; color: white; padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 13px; }
+  nav button.active { background: #4caf82; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 24px; }
+  .search { width: 100%; padding: 10px 16px; font-size: 14px; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 20px; }
+  .card { background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px; border: 1px solid #e0e0e0; }
+  .card h2 { font-size: 16px; color: #1a3a2a; margin-bottom: 4px; }
+  .badge { display: inline-block; background: #e8f5ee; color: #2d7a55; font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-right: 4px; margin-bottom: 8px; }
+  .year { margin-top: 12px; }
+  .year h4 { font-size: 12px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px; }
+  .courses { display: flex; flex-wrap: wrap; gap: 4px; }
+  .course { background: #f0f4f8; color: #334; font-size: 12px; padding: 3px 8px; border-radius: 4px; }
+  .salary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 12px; }
+  .salary-box { background: #f9fafb; border-radius: 8px; padding: 12px; }
+  .salary-box h4 { font-size: 12px; color: #666; margin-bottom: 8px; text-transform: uppercase; }
+  .salary-row { display: flex; justify-content: space-between; font-size: 13px; padding: 3px 0; border-bottom: 1px solid #eee; }
+  .salary-row:last-child { border: none; }
+  .ref { font-size: 11px; color: #888; margin-top: 8px; }
+  .ref a { color: #2d7a55; }
+  .hsc-group { margin-bottom: 20px; }
+  .hsc-group h3 { font-size: 15px; font-weight: 600; color: #1a3a2a; margin-bottom: 10px; border-bottom: 2px solid #e8f5ee; padding-bottom: 6px; }
+  .hsc-subject { background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; }
+  .hsc-subject h4 { font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+  .maps { display: flex; flex-wrap: wrap; gap: 4px; }
+  .maps span { background: #e8f5ee; color: #2d7a55; font-size: 11px; padding: 2px 8px; border-radius: 10px; }
+  #count { color: #666; font-size: 13px; margin-bottom: 12px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>📊 EduPath BD — Data Viewer</h1>
+  <nav>
+    <button class="active" onclick="show('subjects')">📚 Subjects (20)</button>
+    <button onclick="show('jobs')">💼 Jobs (20)</button>
+    <button onclick="show('hsc')">🎓 HSC Mapping</button>
+  </nav>
+</header>
+
+<div class="container">
+  <input class="search" type="text" id="search" placeholder="Search..." oninput="render()">
+  <div id="count"></div>
+  <div id="content"></div>
+</div>
+
+<script src="subjects_db.js"></script>
+<script src="jobs_db.js"></script>
+<script src="hsc_mapping.js"></script>
+<script>
+let currentTab = 'subjects';
+
+function show(tab) {
+  currentTab = tab;
+  document.querySelectorAll('nav button').forEach((b,i) => b.classList.toggle('active', ['subjects','jobs','hsc'][i] === tab));
+  document.getElementById('search').value = '';
+  render();
+}
+
+function render() {
+  const q = document.getElementById('search').value.toLowerCase();
+  const el = document.getElementById('content');
+
+  if (currentTab === 'subjects') {
+    const items = (window.DB_Subjects || []).filter(s =>
+      !q || s.name.toLowerCase().includes(q) || s.slug.includes(q) || s.field?.toLowerCase().includes(q)
+    );
+    document.getElementById('count').textContent = items.length + ' subjects';
+    el.innerHTML = items.map(s => `
+      <div class="card">
+        <h2>${s.name}</h2>
+        <span class="badge">${s.slug}</span>
+        <span class="badge">${s.field || ''}</span>
+        <span class="badge">${s.degree || ''}</span>
+        ${(s.hsc_groups||[]).map(g=>`<span class="badge" style="background:#fff3e0;color:#e65100">${g}</span>`).join('')}
+        ${(s.related_interests||[]).map(i=>`<span class="badge" style="background:#e3f2fd;color:#1565c0">${i}</span>`).join('')}
+        ${['year1','year2','year3','year4'].map(yr => s.curriculum?.[yr] ? `
+          <div class="year">
+            <h4>${yr.replace('year','Year ')}</h4>
+            <div class="courses">${s.curriculum[yr].map(c=>`<span class="course">${c}</span>`).join('')}</div>
+          </div>` : '').join('')}
+      </div>`).join('');
+  }
+
+  else if (currentTab === 'jobs') {
+    const items = (window.DB_Jobs || []).filter(j =>
+      !q || j.title.toLowerCase().includes(q) || (j.related_subjects||[]).join(' ').includes(q)
+    );
+    document.getElementById('count').textContent = items.length + ' jobs';
+    el.innerHTML = items.map(j => {
+      const bd = j.salary?.bd;
+      const ab = j.salary?.abroad || {};
+      return `
+      <div class="card">
+        <h2>${j.title}</h2>
+        ${(j.related_subjects||[]).map(s=>`<span class="badge">${s}</span>`).join('')}
+        <div class="salary-grid">
+          <div class="salary-box">
+            <h4>🇧🇩 Bangladesh (BDT/month)</h4>
+            ${bd?.entry ? `<div class="salary-row"><span>Entry</span><span>${bd.entry.min.toLocaleString()}–${bd.entry.max.toLocaleString()}</span></div>` : ''}
+            ${bd?.mid ? `<div class="salary-row"><span>Mid</span><span>${bd.mid.min.toLocaleString()}–${bd.mid.max.toLocaleString()}</span></div>` : ''}
+            ${bd?.senior ? `<div class="salary-row"><span>Senior</span><span>${bd.senior.min.toLocaleString()}–${bd.senior.max.toLocaleString()}</span></div>` : ''}
+          </div>
+          <div class="salary-box">
+            <h4>🌍 Abroad (yearly, entry level)</h4>
+            ${ab.usa ? `<div class="salary-row"><span>🇺🇸 USA</span><span>$${ab.usa.entry_min?.toLocaleString()}–$${ab.usa.entry_max?.toLocaleString()} USD</span></div>` : ''}
+            ${ab.uk ? `<div class="salary-row"><span>🇬🇧 UK</span><span>£${ab.uk.entry_min?.toLocaleString()}–£${ab.uk.entry_max?.toLocaleString()} GBP</span></div>` : ''}
+            ${ab.canada ? `<div class="salary-row"><span>🇨🇦 Canada</span><span>$${ab.canada.entry_min?.toLocaleString()}–$${ab.canada.entry_max?.toLocaleString()} CAD</span></div>` : ''}
+            ${ab.australia ? `<div class="salary-row"><span>🇦🇺 Australia</span><span>$${ab.australia.entry_min?.toLocaleString()}–$${ab.australia.entry_max?.toLocaleString()} AUD</span></div>` : ''}
+            ${ab.uae ? `<div class="salary-row"><span>🇦🇪 UAE</span><span>${ab.uae.entry_min?.toLocaleString()}–${ab.uae.entry_max?.toLocaleString()} AED</span></div>` : ''}
+            ${ab.germany ? `<div class="salary-row"><span>🇩🇪 Germany</span><span>€${ab.germany.entry_min?.toLocaleString()}–€${ab.germany.entry_max?.toLocaleString()} EUR</span></div>` : ''}
+          </div>
+        </div>
+        <div class="ref">Sources: ${(j.salary?.references||[]).map(r=>`<a href="${r.url}" target="_blank">${r.source}</a>`).join(' · ')}</div>
+      </div>`;
+    }).join('');
+  }
+
+  else if (currentTab === 'hsc') {
+    const mapping = window.DB_HSCMapping || {};
+    document.getElementById('count').textContent = '3 HSC groups';
+    el.innerHTML = Object.entries(mapping).map(([group, data]) => `
+      <div class="hsc-group">
+        <h3>${data.label} Group</h3>
+        ${Object.entries(data.maps_to || {}).filter(([subj]) => !q || subj.toLowerCase().includes(q)).map(([subj, info]) => `
+          <div class="hsc-subject">
+            <h4>${subj} <span style="color:#999;font-weight:400;font-size:12px">→ ${info.subjects?.length} undergrad subjects</span></h4>
+            <div class="maps">${(info.subjects||[]).map(s=>`<span>${s}</span>`).join('')}</div>
+          </div>`).join('')}
+      </div>`).join('');
+  }
+}
+
+render();
+</script>
+</body>
+</html>

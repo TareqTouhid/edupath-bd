@@ -1,0 +1,596 @@
+[
+  {
+    "slug": "software-engineer",
+    "title": "Software Engineer",
+    "related_subjects": ["cse", "eee"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 30000, "max": 60000},
+        "mid": {"min": 60000, "max": 150000},
+        "senior": {"min": 150000, "max": 400000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Entry: fresh graduate at local firm. Senior: 5+ years, MNC/product company or remote."
+      },
+      "abroad": {
+        "usa": {"entry_min": 75000, "entry_max": 110000, "currency": "USD", "unit": "yearly", "notes": "BLS median $132,270 (all levels); entry-level typically $75k–$110k"},
+        "canada": {"entry_min": 65000, "entry_max": 90000, "currency": "CAD", "unit": "yearly", "notes": "Glassdoor/PayScale Canada average ~CAD 85k"},
+        "uk": {"entry_min": 35000, "entry_max": 55000, "currency": "GBP", "unit": "yearly", "notes": "Average UK software engineer £70k all levels; entry £35k–£55k"},
+        "australia": {"entry_min": 75000, "entry_max": 100000, "currency": "AUD", "unit": "yearly", "notes": "SEEK Australia average; graduate engineers start AUD 75k–100k"},
+        "uae": {"entry_min": 120000, "entry_max": 200000, "currency": "AED", "unit": "yearly", "notes": "Tax-free; senior roles AED 220k+; UAE entry range AED 10k–17k/month"},
+        "germany": {"entry_min": 45000, "entry_max": 65000, "currency": "EUR", "unit": "yearly", "notes": "Ravio/Glassdoor Germany; mid-level €60k–€70k"}
+      },
+      "references": [
+        {"source": "Glassdoor — Software Engineer Salary Dhaka, Bangladesh", "url": "https://www.glassdoor.com/Salaries/dhaka-software-engineer-salary-SRCH_IL.0,5_IM1237_KO6,23.htm"},
+        {"source": "PayScale — Software Engineer Salary Bangladesh 2026", "url": "https://www.payscale.com/research/BD/Job=Software_Engineer/Salary"},
+        {"source": "World Salaries — Average Software Engineer Salary Bangladesh 2025", "url": "https://worldsalaries.com/average-software-engineer-salary-in-bangladesh/"},
+        {"source": "Gini Talent — Global Software Engineer Salary Guide 2025", "url": "https://ginitalent.com/global-software-engineer-salary-guide-2025/"},
+        {"source": "Ravio — Software Engineer Salary Trends 2026", "url": "https://ravio.com/blog/software-engineer-salary-trends"},
+        {"source": "US News — Software Developer Salary (BLS data)", "url": "https://money.usnews.com/careers/best-jobs/software-developer/salary"}
+      ]
+    }
+  },
+  {
+    "slug": "data-scientist",
+    "title": "Data Scientist / Data Analyst",
+    "related_subjects": ["cse", "statistics", "mathematics", "economics"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 30000, "max": 60000},
+        "mid": {"min": 60000, "max": 140000},
+        "senior": {"min": 140000, "max": 350000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Glassdoor Dhaka average BDT 60k/month; senior roles at MNCs significantly higher."
+      },
+      "abroad": {
+        "usa": {"entry_min": 85000, "entry_max": 110000, "currency": "USD", "unit": "yearly", "notes": "US entry-level data scientist $95k–$110k; BLS/Glassdoor median ~$108k all levels"},
+        "canada": {"entry_min": 65000, "entry_max": 90000, "currency": "CAD", "unit": "yearly", "notes": "Canada average ~CAD $106k (all levels); entry-level CAD $65k–$90k"},
+        "uk": {"entry_min": 35000, "entry_max": 55000, "currency": "GBP", "unit": "yearly", "notes": "UK average £52k–£67k all levels; entry £35k–£55k"},
+        "australia": {"entry_min": 70000, "entry_max": 95000, "currency": "AUD", "unit": "yearly", "notes": "Australia data scientist average AUD ~$79k; entry range AUD $70k–$95k"},
+        "uae": {"entry_min": 120000, "entry_max": 200000, "currency": "AED", "unit": "yearly", "notes": "UAE average AED 122,678/year; tax-free compensation"},
+        "germany": {"entry_min": 50000, "entry_max": 70000, "currency": "EUR", "unit": "yearly", "notes": "Germany average $85k USD (~€78k) all levels; entry €50k–€70k"}
+      },
+      "references": [
+        {"source": "Glassdoor — Data Scientist Salary Dhaka Bangladesh 2026", "url": "https://www.glassdoor.com/Salaries/dhaka-bangladesh-data-scientist-salary-SRCH_IL.0,16_IM1237_KO17,31.htm"},
+        {"source": "World Salaries — Average Data Scientist Salary Bangladesh 2025", "url": "https://worldsalaries.com/average-data-scientist-salary-in-bangladesh/"},
+        {"source": "DataMites — Data Scientist Job Opportunities & Salary Bangladesh", "url": "https://datamites.com/blog/data-scientist-job-opportunities-salary-package-and-course-fee-in-bangladesh/"},
+        {"source": "365 Data Science — Data Science Salaries 2025 by Country", "url": "https://365datascience.com/career-advice/data-science-salaries-around-the-world/"},
+        {"source": "Code Labs Academy — Data Scientist Salary 2025 Country Benchmarks", "url": "https://codelabsacademy.com/en/blog/data-scientist-salary-2025-country-benchmarks/"},
+        {"source": "Country Tax Calc — Data Scientist Salary Take-Home by Country 2026", "url": "https://www.countrytaxcalc.com/tax-guides/data-scientist-salary-take-home-pay-by-country-2026/"}
+      ]
+    }
+  },
+  {
+    "slug": "electrical-engineer",
+    "title": "Electrical Engineer",
+    "related_subjects": ["eee"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 25000, "max": 50000},
+        "mid": {"min": 50000, "max": 100000},
+        "senior": {"min": 100000, "max": 250000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Glassdoor Bangladesh EEE engineer average BDT ~42k/month; REB, BPDB govt engineers grade-based."
+      },
+      "abroad": {
+        "usa": {"entry_min": 70000, "entry_max": 95000, "currency": "USD", "unit": "yearly", "notes": "BLS median $111,910/yr; entry-level $70k–$95k. Top 10% earn >$166k."},
+        "canada": {"entry_min": 60000, "entry_max": 85000, "currency": "CAD", "unit": "yearly", "notes": "Engineers Canada reports average CAD $85k; entry CAD $60k–$85k"},
+        "uk": {"entry_min": 28000, "entry_max": 42000, "currency": "GBP", "unit": "yearly", "notes": "Indeed UK average £42,619/yr; entry-level £28k–£42k"},
+        "australia": {"entry_min": 70000, "entry_max": 90000, "currency": "AUD", "unit": "yearly", "notes": "SEEK AU average $101,500/yr; graduate range AUD $70k–$90k"},
+        "uae": {"entry_min": 96000, "entry_max": 180000, "currency": "AED", "unit": "yearly", "notes": "AED 8,000–15,000/month entry; oil & gas EEE AED 15k–30k/month"},
+        "germany": {"entry_min": 45000, "entry_max": 60000, "currency": "EUR", "unit": "yearly", "notes": "Germany engineer average €55k–€65k; entry €45k–€60k"}
+      },
+      "references": [
+        {"source": "Glassdoor — Electrical Engineer Salary Dhaka Bangladesh", "url": "https://www.glassdoor.com/Salaries/dhaka-electrical-engineer-salary-SRCH_IL.0,5_IM1237_KO6,25.htm"},
+        {"source": "Coursera — Electrical Engineer Salary 2026 Guide", "url": "https://www.coursera.org/articles/electrical-engineer-salary"},
+        {"source": "US News — Electrical Engineer Salary (BLS)", "url": "https://careers.usnews.com/best-jobs/electrical-engineer/salary"},
+        {"source": "SEEK Australia — Electrical Engineer Salary", "url": "https://au.seek.com/career-advice/role/electrical-engineer/salary"},
+        {"source": "Indeed UK — Electrical Engineer Salary", "url": "https://uk.indeed.com/career/entry-level-electrical-engineer/salaries"},
+        {"source": "Engineer Adeel Arif — Engineer Salary UAE 2025", "url": "https://engineeradeelarif.com/engineer-salary-in-uae-2025/"}
+      ]
+    }
+  },
+  {
+    "slug": "civil-engineer",
+    "title": "Civil Engineer / Structural Engineer",
+    "related_subjects": ["civil-engineering"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 25000, "max": 45000},
+        "mid": {"min": 45000, "max": 100000},
+        "senior": {"min": 100000, "max": 250000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Fresh graduates BDT 25k–40k; experienced structural engineers leading projects BDT 80k–130k+."
+      },
+      "abroad": {
+        "usa": {"entry_min": 55000, "entry_max": 80000, "currency": "USD", "unit": "yearly", "notes": "BLS median civil engineer $95,890/yr; entry $55k–$80k"},
+        "canada": {"entry_min": 55000, "entry_max": 75000, "currency": "CAD", "unit": "yearly", "notes": "Engineers Canada; entry range CAD $55k–$75k"},
+        "uk": {"entry_min": 25000, "entry_max": 35000, "currency": "GBP", "unit": "yearly", "notes": "Indeed UK average £44k; entry £25k–£35k for graduates"},
+        "australia": {"entry_min": 65000, "entry_max": 90000, "currency": "AUD", "unit": "yearly", "notes": "Glassdoor AU average $84k–$114k; entry AUD $65k–$90k"},
+        "uae": {"entry_min": 96000, "entry_max": 192000, "currency": "AED", "unit": "yearly", "notes": "AED 8,000–16,000/month entry; senior AED 18k–35k/month"},
+        "germany": {"entry_min": 40000, "entry_max": 58000, "currency": "EUR", "unit": "yearly", "notes": "Germany civil engineer average ~€50k–€65k; entry €40k–€58k"}
+      },
+      "references": [
+        {"source": "ArchiConnect — Structural Engineer Salary Bangladesh 2025", "url": "https://archiconnect.homes/blog/post/salary-of-structural-engineer-in-bangladesh"},
+        {"source": "Bhadanis — Average Civil Engineer Salary USA, UK, Middle East", "url": "https://www.bhadanisrecordedlectures.com/blog/average-civil-engineer-salary-in-the-usa-uk-and-middle-east"},
+        {"source": "Civinnovate — Civil Engineer Salary USA, Canada, UAE 2025", "url": "https://civinnovate.com/2025/07/21/civil-engineer-salary-in-usa-canada-and-uae-in-2025/"},
+        {"source": "SEEK AU — Civil Engineer Salary", "url": "https://au.seek.com/career-advice/role/civil-engineer/salary"},
+        {"source": "PayScale UK — Civil Engineer Salary", "url": "https://www.payscale.com/research/UK/Job=Civil_Engineer/Salary"},
+        {"source": "Indeed UK — Civil Engineer Salary", "url": "https://uk.indeed.com/career/civil-engineer/salaries"}
+      ]
+    }
+  },
+  {
+    "slug": "mechanical-engineer",
+    "title": "Mechanical Engineer",
+    "related_subjects": ["mechanical-engineering"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 25000, "max": 45000},
+        "mid": {"min": 45000, "max": 100000},
+        "senior": {"min": 100000, "max": 250000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "RMG, manufacturing & energy sector employers. Senior project engineers in multinationals earn significantly more."
+      },
+      "abroad": {
+        "usa": {"entry_min": 65000, "entry_max": 90000, "currency": "USD", "unit": "yearly", "notes": "BLS median $102,320/yr (May 2024); entry-level $65k–$90k"},
+        "canada": {"entry_min": 58000, "entry_max": 80000, "currency": "CAD", "unit": "yearly", "notes": "Engineers Canada; entry CAD $58k–$80k"},
+        "uk": {"entry_min": 28000, "entry_max": 40000, "currency": "GBP", "unit": "yearly", "notes": "Indeed UK mechanical engineer average £38k–£50k; entry £28k–£40k"},
+        "australia": {"entry_min": 65000, "entry_max": 90000, "currency": "AUD", "unit": "yearly", "notes": "SEEK AU; graduate mechanical engineers start AUD $65k–$90k"},
+        "uae": {"entry_min": 96000, "entry_max": 180000, "currency": "AED", "unit": "yearly", "notes": "AED 8,000–15,000/month; oil & gas mechanical engineers higher"},
+        "germany": {"entry_min": 45000, "entry_max": 60000, "currency": "EUR", "unit": "yearly", "notes": "PayScale Germany average €52,595/yr; vehicle manufacturing €65k+ median"}
+      },
+      "references": [
+        {"source": "US News — Mechanical Engineer Salary 2026", "url": "https://careers.usnews.com/best-jobs/mechanical-engineer/salary"},
+        {"source": "UpGrad — Mechanical Engineer Salary USA 2026", "url": "https://www.upgrad.com/study-abroad/articles/mechanical-engineer-salary-usa/"},
+        {"source": "PayScale Germany — Mechanical Engineer", "url": "https://www.payscale.com/research/DE/Job=Mechanical_Engineer/Salary"},
+        {"source": "SalaryExpert — Mechanical Engineer Salaries by Country", "url": "https://www.salaryexpert.com/salary/browse/countries/mechanical-engineer"},
+        {"source": "MTU Engineering — 2026 Engineering Salary Statistics", "url": "https://www.mtu.edu/engineering/about/salary/"},
+        {"source": "World Salaries — Average Engineer Salary Bangladesh", "url": "https://worldsalaries.com/average-engineer-salary-in-bangladesh/"}
+      ]
+    }
+  },
+  {
+    "slug": "architect",
+    "title": "Architect",
+    "related_subjects": ["architecture"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 25000, "max": 50000},
+        "mid": {"min": 50000, "max": 120000},
+        "senior": {"min": 120000, "max": 300000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Entry-level private firm ~BDT 25k–40k; senior architects at large firms or government projects earn significantly more. Freelance/per-project fees can be BDT 150k+ per project."
+      },
+      "abroad": {
+        "usa": {"entry_min": 55000, "entry_max": 80000, "currency": "USD", "unit": "yearly", "notes": "BLS median architect $103,390/yr; US News median $96,690/yr; entry $55k–$80k"},
+        "canada": {"entry_min": 55000, "entry_max": 75000, "currency": "CAD", "unit": "yearly", "notes": "Canada architect entry range CAD $55k–$75k"},
+        "uk": {"entry_min": 28000, "entry_max": 40000, "currency": "GBP", "unit": "yearly", "notes": "RIBA UK survey; architects with 5+ yrs median £38k; principals £43k+"},
+        "australia": {"entry_min": 55000, "entry_max": 80000, "currency": "AUD", "unit": "yearly", "notes": "SEEK AU architect; graduate AUD $55k–$80k; senior $100k+"},
+        "uae": {"entry_min": 96000, "entry_max": 180000, "currency": "AED", "unit": "yearly", "notes": "AED 8,000–15,000/month for architects in UAE; varies by firm size"},
+        "germany": {"entry_min": 42000, "entry_max": 60000, "currency": "EUR", "unit": "yearly", "notes": "Germany architect range EUR 58,049–EUR 102,489/yr; entry €42k–€60k"}
+      },
+      "references": [
+        {"source": "US News — Architect Salary 2026", "url": "https://careers.usnews.com/best-jobs/architect/salary"},
+        {"source": "Archipreneur — Architect Salaries by Country", "url": "https://archipreneur.com/architect-salaries-by-country-where-architects-earn-highest-salaries/"},
+        {"source": "Instarem — 10 Highest Paying Countries for Architects", "url": "https://www.instarem.com/blog/highest-paying-countries-for-architects/"},
+        {"source": "Leverage Edu — Architect Salary Germany 2025", "url": "https://leverageedu.com/learn/career-abroad-architect-salary-in-germany/"},
+        {"source": "mypihr.com — Average Salary in Bangladesh", "url": "https://mypihr.com/average-salary-in-bangladesh/"}
+      ]
+    }
+  },
+  {
+    "slug": "bank-officer",
+    "title": "Bank Officer / Banking Professional",
+    "related_subjects": ["finance-banking", "economics", "accounting", "bba"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 20000, "max": 40000},
+        "mid": {"min": 40000, "max": 80000},
+        "senior": {"min": 80000, "max": 200000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "State-owned banks (Sonali, Janata) follow government pay scale. Private banks (BRAC, Dutch-Bangla) pay more. Entry: probationary officer BDT 25k–40k. Paylab BD banking sector 80% earn BDT 12k–54k/month."
+      },
+      "abroad": {
+        "usa": {"entry_min": 45000, "entry_max": 75000, "currency": "USD", "unit": "yearly", "notes": "BLS Bank Examiner/Financial Officer median varies; retail banking entry $45k–$75k"},
+        "canada": {"entry_min": 40000, "entry_max": 65000, "currency": "CAD", "unit": "yearly", "notes": "Canadian bank officer entry CAD $40k–$65k"},
+        "uk": {"entry_min": 25000, "entry_max": 40000, "currency": "GBP", "unit": "yearly", "notes": "UK entry-level bank officer £25k–£40k; senior managers £60k+"},
+        "australia": {"entry_min": 55000, "entry_max": 75000, "currency": "AUD", "unit": "yearly", "notes": "Australia bank officer graduate entry AUD $55k–$75k"},
+        "uae": {"entry_min": 72000, "entry_max": 144000, "currency": "AED", "unit": "yearly", "notes": "UAE banking entry AED 6,000–12,000/month; no income tax"},
+        "germany": {"entry_min": 35000, "entry_max": 50000, "currency": "EUR", "unit": "yearly", "notes": "Germany bank officer entry €35k–€50k"}
+      },
+      "references": [
+        {"source": "Paylab BD — Salaries in Banking Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/banking"},
+        {"source": "Glassdoor — Officer Salary Bangladesh 2024", "url": "https://www.glassdoor.com/Salaries/bangladesh-officer-salary-SRCH_IL.0,10_IN27_KO11,18.htm"},
+        {"source": "mypihr.com — Average Salary in Bangladesh", "url": "https://mypihr.com/average-salary-in-bangladesh/"},
+        {"source": "Bangladesh National Pay Scale 2025", "url": "https://blog.allbanglanewspaper.org/bangladesh-national-pay-scale/"}
+      ]
+    }
+  },
+  {
+    "slug": "accountant-ca",
+    "title": "Accountant / Chartered Accountant (CA)",
+    "related_subjects": ["accounting", "finance-banking", "bba"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 20000, "max": 45000},
+        "mid": {"min": 45000, "max": 120000},
+        "senior": {"min": 120000, "max": 400000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "General accountant BDT 8.5k–29.7k/month (Salary Explorer). CA-qualified: average BDT ~42,670/month; senior CA partners earn significantly more. Big 4 firm partners: BDT 200k–500k+."
+      },
+      "abroad": {
+        "usa": {"entry_min": 55000, "entry_max": 80000, "currency": "USD", "unit": "yearly", "notes": "Workday/Robert Half: staff accountant median $75k; senior $93k; manager $127k. Entry $55k–$80k."},
+        "canada": {"entry_min": 48000, "entry_max": 70000, "currency": "CAD", "unit": "yearly", "notes": "CPA Canada; entry-level accountant CAD $48k–$70k"},
+        "uk": {"entry_min": 28000, "entry_max": 42000, "currency": "GBP", "unit": "yearly", "notes": "ACCA UK average £50k all levels; entry £28k–£42k"},
+        "australia": {"entry_min": 55000, "entry_max": 75000, "currency": "AUD", "unit": "yearly", "notes": "CPA Australia; entry AUD $55k–$75k; mid-level $80k–$100k"},
+        "uae": {"entry_min": 72000, "entry_max": 130000, "currency": "AED", "unit": "yearly", "notes": "UAE accountant entry AED 6,000–11,000/month; CA-qualified higher"},
+        "germany": {"entry_min": 38000, "entry_max": 55000, "currency": "EUR", "unit": "yearly", "notes": "Germany accountant entry €38k–€55k; Steuerberater (tax advisor) higher"}
+      },
+      "references": [
+        {"source": "HSB BD — Chartered Accountant Salary Bangladesh", "url": "https://hsbbd.com/chartered-accountant-salary-in-bangladesh/"},
+        {"source": "PayScale BD — Chartered Accountant Salary Bangladesh 2026", "url": "https://www.payscale.com/research/BD/Job=Chartered_Accountant/Salary"},
+        {"source": "Salary Explorer — Accountant Average Salary Bangladesh 2024", "url": "https://www.salaryexplorer.com/average-salary-wage-comparison-bangladesh-accountant-c18j998"},
+        {"source": "Workday — The Ultimate 2026 Accounting Salary Guide", "url": "https://blog.workday.com/en-us/ultimate-2026-accounting-salary-guide.html"},
+        {"source": "Triple ICA — ACCA Salary Worldwide 2025", "url": "https://www.tripleica.com/blog/acca-salary"},
+        {"source": "Career Addict — Top 15 Highest-Paying Countries for Accountants", "url": "https://www.careeraddict.com/top-5-countries-with-the-highest-paid-salaries-for-accountants"}
+      ]
+    }
+  },
+  {
+    "slug": "economist",
+    "title": "Economist / Research Economist",
+    "related_subjects": ["economics", "statistics", "mathematics"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 25000, "max": 50000},
+        "mid": {"min": 50000, "max": 100000},
+        "senior": {"min": 100000, "max": 300000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Government economists (BCS Economic Cadre) follow national pay scale. Research institutes (BIDS, CPD) and international organizations (World Bank, ADB) pay significantly more."
+      },
+      "abroad": {
+        "usa": {"entry_min": 65000, "entry_max": 95000, "currency": "USD", "unit": "yearly", "notes": "BLS median economist $125,900/yr; entry-level $65k–$95k"},
+        "canada": {"entry_min": 55000, "entry_max": 80000, "currency": "CAD", "unit": "yearly", "notes": "StatsCan/government economist entry CAD $55k–$80k"},
+        "uk": {"entry_min": 28000, "entry_max": 45000, "currency": "GBP", "unit": "yearly", "notes": "UK economist entry £28k–£45k; senior £60k–£100k+"},
+        "australia": {"entry_min": 60000, "entry_max": 85000, "currency": "AUD", "unit": "yearly", "notes": "ABS/Treasury Australia; entry AUD $60k–$85k"},
+        "uae": {"entry_min": 84000, "entry_max": 180000, "currency": "AED", "unit": "yearly", "notes": "Economic research roles UAE AED 7,000–15,000/month"},
+        "germany": {"entry_min": 40000, "entry_max": 58000, "currency": "EUR", "unit": "yearly", "notes": "Germany economist Bundesbank/research entry €40k–€58k"}
+      },
+      "references": [
+        {"source": "BLS — Economists Occupational Outlook", "url": "https://www.bls.gov/ooh/life-physical-and-social-science/economists.htm"},
+        {"source": "Glassdoor — Officer Salary Bangladesh (BCS cadre)", "url": "https://www.glassdoor.com/Salaries/bangladesh-officer-salary-SRCH_IL.0,10_IN27_KO11,18.htm"},
+        {"source": "Bangladesh National Pay Scale 2025", "url": "https://blog.allbanglanewspaper.org/bangladesh-national-pay-scale/"},
+        {"source": "mypihr.com — Salary Scale in Bangladesh 2026", "url": "https://mypihr.com/salary-scale-in-bangladesh/"}
+      ]
+    }
+  },
+  {
+    "slug": "finance-analyst",
+    "title": "Finance Analyst / Financial Analyst",
+    "related_subjects": ["finance-banking", "accounting", "economics", "bba"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 25000, "max": 50000},
+        "mid": {"min": 50000, "max": 100000},
+        "senior": {"min": 100000, "max": 300000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Glassdoor Dhaka: financial analyst average BDT ~44,583/yr (very low; market actual higher). PayScale BD shows BDT 25k–100k range."
+      },
+      "abroad": {
+        "usa": {"entry_min": 60000, "entry_max": 85000, "currency": "USD", "unit": "yearly", "notes": "BLS median financial analyst $99,890/yr; entry $60k–$85k. CFA-qualified earn more."},
+        "canada": {"entry_min": 52000, "entry_max": 75000, "currency": "CAD", "unit": "yearly", "notes": "Canada financial analyst entry CAD $52k–$75k"},
+        "uk": {"entry_min": 28000, "entry_max": 45000, "currency": "GBP", "unit": "yearly", "notes": "UK financial analyst entry £28k–£45k; CFA premium"},
+        "australia": {"entry_min": 60000, "entry_max": 85000, "currency": "AUD", "unit": "yearly", "notes": "Australia financial analyst entry AUD $60k–$85k"},
+        "uae": {"entry_min": 84000, "entry_max": 160000, "currency": "AED", "unit": "yearly", "notes": "UAE finance analyst AED 7,000–13,000/month; tax-free"},
+        "germany": {"entry_min": 42000, "entry_max": 60000, "currency": "EUR", "unit": "yearly", "notes": "Germany financial analyst entry €42k–€60k"}
+      },
+      "references": [
+        {"source": "Glassdoor — Financial Analyst Salary Dhaka Bangladesh 2026", "url": "https://www.glassdoor.com/Salaries/dhaka-bangladesh-financial-analyst-salary-SRCH_IL.0,16_IM1237_KO17,34.htm"},
+        {"source": "PayScale BD — Financial Analyst Salary Bangladesh 2026", "url": "https://www.payscale.com/research/BD/Job=Financial_Analyst/Salary"},
+        {"source": "BLS — Financial Analysts", "url": "https://www.bls.gov/ooh/business-and-financial/financial-analysts.htm"},
+        {"source": "Robert Half — 2025 Finance & Accounting Salary Guide", "url": "https://www.roberthalf.com/us/en/insights/salary-guide/finance-and-accounting"}
+      ]
+    }
+  },
+  {
+    "slug": "lawyer",
+    "title": "Lawyer / Legal Advisor",
+    "related_subjects": ["law"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 20000, "max": 40000},
+        "mid": {"min": 40000, "max": 120000},
+        "senior": {"min": 120000, "max": 400000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Freshly called-to-bar lawyers earn very little initially. Private practice income highly variable. Corporate legal officer BDT 80k–150k/month. Senior partners at law firms BDT 200k–500k+."
+      },
+      "abroad": {
+        "usa": {"entry_min": 75000, "entry_max": 120000, "currency": "USD", "unit": "yearly", "notes": "BLS median lawyer $126,930/yr (May 2023); BigLaw entry $215k+; public interest $55k–$75k. Entry average $75k–$120k."},
+        "canada": {"entry_min": 65000, "entry_max": 95000, "currency": "CAD", "unit": "yearly", "notes": "Law Society of Canada; entry CAD $65k–$95k"},
+        "uk": {"entry_min": 25000, "entry_max": 50000, "currency": "GBP", "unit": "yearly", "notes": "UK solicitor trainee £25k–£40k; qualified solicitor £45k–£90k; Magic Circle firms higher"},
+        "australia": {"entry_min": 65000, "entry_max": 95000, "currency": "AUD", "unit": "yearly", "notes": "Taylor Root AU law salary guide; junior solicitor AUD $65k–$95k; senior $100k–$150k"},
+        "uae": {"entry_min": 100000, "entry_max": 200000, "currency": "AED", "unit": "yearly", "notes": "UAE lawyer AED 8,000–17,000/month; international law firms higher"},
+        "germany": {"entry_min": 40000, "entry_max": 65000, "currency": "EUR", "unit": "yearly", "notes": "Germany Rechtsanwalt entry €40k–€65k; average €82,606/yr all levels"}
+      },
+      "references": [
+        {"source": "Legal Alphabet — Legal Salary Guide Bangladesh 2026", "url": "https://legalalphabet.com/blog/legal-salary-guide-bangladesh-2026-what-lawyers-earn"},
+        {"source": "Salary Explorer — Lawyer Average Salary Bangladesh 2024", "url": "https://www.salaryexplorer.com/average-salary-wage-comparison-bangladesh-lawyer-c18j10607"},
+        {"source": "Paylab BD — Lawyer Salary Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/law-legislation/lawyer"},
+        {"source": "BLS — Lawyers Occupational Outlook", "url": "https://www.bls.gov/ooh/legal/lawyers.htm"},
+        {"source": "Taylor Root — Australia Law Firm Salary Guide 2024-2025", "url": "https://www.taylorroot.com/report/australia-law-firm-salary-guide-2024-2025/"},
+        {"source": "Leverage Edu — Lawyer Salary Germany 2024", "url": "https://leverageedu.com/learn/career-abroad-lawyer-salary-in-germany/"}
+      ]
+    }
+  },
+  {
+    "slug": "pharmacist",
+    "title": "Pharmacist",
+    "related_subjects": ["pharmacy", "chemistry"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 20000, "max": 40000},
+        "mid": {"min": 40000, "max": 80000},
+        "senior": {"min": 80000, "max": 200000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Pharmaceutical industry (BEXIMCO, Square Pharma) entry BDT 20k–40k. Hospital/clinical pharmacists at private hospitals BDT 30k–60k. Senior quality assurance/regulatory roles BDT 80k–200k."
+      },
+      "abroad": {
+        "usa": {"entry_min": 100000, "entry_max": 130000, "currency": "USD", "unit": "yearly", "notes": "BLS median pharmacist $137,480/yr (2025); retail and hospital pharmacist; entry $100k–$130k"},
+        "canada": {"entry_min": 80000, "entry_max": 110000, "currency": "CAD", "unit": "yearly", "notes": "Canada pharmacist $80k–$110k entry; provincially licensed"},
+        "uk": {"entry_min": 32000, "entry_max": 50000, "currency": "GBP", "unit": "yearly", "notes": "NHS Band 6 pharmacist starts £35,392; entry range £32k–£50k"},
+        "australia": {"entry_min": 70000, "entry_max": 95000, "currency": "AUD", "unit": "yearly", "notes": "Pharmacy Guild AU; graduate pharmacist AUD $70k–$95k"},
+        "uae": {"entry_min": 96000, "entry_max": 180000, "currency": "AED", "unit": "yearly", "notes": "UAE pharmacist AED 8,000–15,000/month; DHA/HAAD licensed"},
+        "germany": {"entry_min": 42000, "entry_max": 55000, "currency": "EUR", "unit": "yearly", "notes": "Germany Apotheker (pharmacist) entry €42k–€55k; hospital pharmacist higher"}
+      },
+      "references": [
+        {"source": "Glassdoor — Pharmacist Salary Dhaka Bangladesh 2025", "url": "https://www.glassdoor.com/Salaries/dhaka-bangladesh-area-pharmacist-salary-SRCH_IL.0,21_IM1237_KO22,32.htm"},
+        {"source": "Drug Channels — Pharmacist Salaries & Employment 2024", "url": "https://www.drugchannels.net/2025/06/pharmacist-salaries-and-employment-in.html"},
+        {"source": "Coursera — Pharmacist Salary 2026 Guide", "url": "https://www.coursera.org/articles/pharmacist-salary"},
+        {"source": "Pharmacist Migration — Top 10 Countries Highest Pharmacist Salary", "url": "https://pharmacistmigration.com/highest-wage-countries-for-pharmacists/"},
+        {"source": "Instarem — 10 Highest Paying Countries for Pharmacists", "url": "https://www.instarem.com/blog/highest-paying-countries-for-pharmacists/"}
+      ]
+    }
+  },
+  {
+    "slug": "university-lecturer",
+    "title": "University Teacher / Lecturer",
+    "related_subjects": ["cse", "eee", "civil-engineering", "mechanical-engineering", "physics", "chemistry", "mathematics", "statistics", "economics", "bangla", "english", "political-science", "sociology"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 35000, "max": 60000},
+        "mid": {"min": 60000, "max": 120000},
+        "senior": {"min": 120000, "max": 220000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Public universities follow UGC/government pay scale. Entry lecturer (Grade 10) ~BDT 35k–50k. Associate professor BDT 75k+. Private university lecturers: BDT 25k–60k. Professors at public universities BDT 120k–220k+ (basic + allowances)."
+      },
+      "abroad": {
+        "usa": {"entry_min": 55000, "entry_max": 85000, "currency": "USD", "unit": "yearly", "notes": "BLS: postsecondary teachers median $84,380/yr; community college entry $55k; R1 universities $85k+"},
+        "canada": {"entry_min": 65000, "entry_max": 95000, "currency": "CAD", "unit": "yearly", "notes": "CAUT Canada; assistant professor entry CAD $65k–$95k"},
+        "uk": {"entry_min": 35000, "entry_max": 50000, "currency": "GBP", "unit": "yearly", "notes": "UCEA UK pay spine; lecturer entry £35k–£45k; senior lecturer £45k–£60k"},
+        "australia": {"entry_min": 80000, "entry_max": 110000, "currency": "AUD", "unit": "yearly", "notes": "NTEU Australia Level B (lecturer) AUD $108k; Level A (associate lecturer) AUD $80k–$96k"},
+        "uae": {"entry_min": 120000, "entry_max": 240000, "currency": "AED", "unit": "yearly", "notes": "UAE university lecturer AED 10,000–20,000/month; public university higher"},
+        "germany": {"entry_min": 50000, "entry_max": 70000, "currency": "EUR", "unit": "yearly", "notes": "Germany Akademischer Rat / Juniorprofessor entry €50k–€70k (W1/W2 scale)"}
+      },
+      "references": [
+        {"source": "Glassdoor — Lecturer Salary Bangladesh 2024", "url": "https://www.glassdoor.com/Salaries/bangladesh-lecturer-salary-SRCH_IL.0,10_IN27_KO11,19.htm"},
+        {"source": "PayScale — Lecturer/Speaker Salary Bangladesh 2024", "url": "https://www.payscale.com/research/BD/Job=Lecturer_%2F_Speaker/Salary"},
+        {"source": "Quora — DU Lecturer/Professor Monthly Salary", "url": "https://www.quora.com/How-much-does-a-Bangladeshi-public-university-especially-Dhaka-University-lecturer-or-professor-earn-monthly"},
+        {"source": "Bangladesh National Pay Scale 2025", "url": "https://blog.allbanglanewspaper.org/bangladesh-national-pay-scale/"},
+        {"source": "BLS — Postsecondary Teachers", "url": "https://www.bls.gov/ooh/education-training-and-library/postsecondary-teachers.htm"}
+      ]
+    }
+  },
+  {
+    "slug": "government-officer-bcs",
+    "title": "Government Officer (BCS Cadre)",
+    "related_subjects": ["political-science", "economics", "sociology", "law", "bba", "physics", "chemistry", "mathematics", "statistics", "agriculture"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 22000, "max": 35000},
+        "mid": {"min": 35000, "max": 56000},
+        "senior": {"min": 56000, "max": 78000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "National Pay Scale 2015 (revised). Grade 9 (entry BCS): basic BDT 22,000. Grade 5 (senior officer): BDT 43,000. Grade 1 (Secretary): BDT 78,000. Additional allowances (house rent, medical, festival) significantly increase total package."
+      },
+      "abroad": {
+        "usa": null,
+        "canada": null,
+        "uk": null,
+        "australia": null,
+        "uae": null,
+        "germany": null
+      },
+      "references": [
+        {"source": "BCS Cadre Salary Scale Bangladesh 2025", "url": "https://www.allbanglanewspaper.co/blog/bcs-cadre-salary-scale-in-bangladesh/"},
+        {"source": "Bangladesh National Pay Scale 2025 — Allbanglanewspaper Blog", "url": "https://blog.allbanglanewspaper.org/bangladesh-national-pay-scale/"},
+        {"source": "The Daily Star — How much do government employees get paid?", "url": "https://www.thedailystar.net/tech-startup/news/how-much-do-government-employees-get-paid-3050446"},
+        {"source": "mypihr.com — Salary Scale in Bangladesh 2026", "url": "https://mypihr.com/salary-scale-in-bangladesh/"}
+      ]
+    }
+  },
+  {
+    "slug": "marketing-manager",
+    "title": "Marketing Manager",
+    "related_subjects": ["bba", "economics"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 20000, "max": 40000},
+        "mid": {"min": 40000, "max": 100000},
+        "senior": {"min": 100000, "max": 300000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Entry-level marketing executive BDT 15k–30k; marketing manager (3–5 yrs) BDT 40k–100k; director-level BDT 150k–300k+. MNCs pay significantly more."
+      },
+      "abroad": {
+        "usa": {"entry_min": 55000, "entry_max": 80000, "currency": "USD", "unit": "yearly", "notes": "BLS median marketing manager $156,580/yr; entry-level marketing specialist $55k–$80k"},
+        "canada": {"entry_min": 48000, "entry_max": 70000, "currency": "CAD", "unit": "yearly", "notes": "Canada marketing manager entry CAD $48k–$70k"},
+        "uk": {"entry_min": 28000, "entry_max": 42000, "currency": "GBP", "unit": "yearly", "notes": "UK marketing exec entry £28k–£42k; manager £45k–£65k"},
+        "australia": {"entry_min": 55000, "entry_max": 80000, "currency": "AUD", "unit": "yearly", "notes": "SEEK AU marketing coordinator/manager entry AUD $55k–$80k"},
+        "uae": {"entry_min": 84000, "entry_max": 168000, "currency": "AED", "unit": "yearly", "notes": "UAE marketing manager AED 7,000–14,000/month"},
+        "germany": {"entry_min": 38000, "entry_max": 55000, "currency": "EUR", "unit": "yearly", "notes": "Germany marketing manager entry €38k–€55k"}
+      },
+      "references": [
+        {"source": "PayScale BD — Marketing Manager Salary Bangladesh 2026", "url": "https://www.payscale.com/research/BD/Job=Marketing_Manager/Salary"},
+        {"source": "mypihr.com — Average Salary in Bangladesh", "url": "https://mypihr.com/average-salary-in-bangladesh/"},
+        {"source": "BLS — Advertising, Promotions & Marketing Managers", "url": "https://www.bls.gov/ooh/management/advertising-promotions-and-marketing-managers.htm"}
+      ]
+    }
+  },
+  {
+    "slug": "hr-manager",
+    "title": "HR Manager / Human Resources Professional",
+    "related_subjects": ["bba", "economics", "sociology"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 18000, "max": 35000},
+        "mid": {"min": 35000, "max": 80000},
+        "senior": {"min": 80000, "max": 200000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Paylab BD: 80% of HR Managers earn BDT 16,158–61,957/month. Entry HR executive BDT 15k–30k. HR Manager 5+ yrs: BDT 50k–100k+."
+      },
+      "abroad": {
+        "usa": {"entry_min": 50000, "entry_max": 75000, "currency": "USD", "unit": "yearly", "notes": "BLS median HR managers $136,350/yr; HR specialist entry $50k–$75k"},
+        "canada": {"entry_min": 45000, "entry_max": 65000, "currency": "CAD", "unit": "yearly", "notes": "HRPA Canada; HR coordinator entry CAD $45k–$65k"},
+        "uk": {"entry_min": 25000, "entry_max": 40000, "currency": "GBP", "unit": "yearly", "notes": "CIPD UK; HR advisor entry £25k–£40k; HR manager £45k–£65k"},
+        "australia": {"entry_min": 55000, "entry_max": 80000, "currency": "AUD", "unit": "yearly", "notes": "SEEK AU HR advisor entry AUD $55k–$80k"},
+        "uae": {"entry_min": 72000, "entry_max": 144000, "currency": "AED", "unit": "yearly", "notes": "UAE HR manager AED 6,000–12,000/month"},
+        "germany": {"entry_min": 38000, "entry_max": 52000, "currency": "EUR", "unit": "yearly", "notes": "Germany HR Referent entry €38k–€52k"}
+      },
+      "references": [
+        {"source": "Paylab BD — HR Manager Salary Bangladesh", "url": "https://www.paylab.com/bd/salaryinfo/management/hr-manager"},
+        {"source": "Glassdoor — HR Manager Salary Bangladesh 2025", "url": "https://www.glassdoor.com/Salaries/bangladesh-hr-manager-salary-SRCH_IL.0,10_IN27_KO11,21.htm"},
+        {"source": "PayScale BD — Human Resources Manager Salary Bangladesh 2026", "url": "https://www.payscale.com/research/BD/Job=Human_Resources_(HR)_Manager/Salary"},
+        {"source": "BLS — Human Resources Managers", "url": "https://www.bls.gov/ooh/management/human-resources-managers.htm"}
+      ]
+    }
+  },
+  {
+    "slug": "journalist",
+    "title": "Journalist / Content Creator / Media Professional",
+    "related_subjects": ["bangla", "english", "political-science", "sociology"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 12000, "max": 25000},
+        "mid": {"min": 25000, "max": 60000},
+        "senior": {"min": 60000, "max": 150000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Wage Board for journalists sets minimum wages. Private TV/newspaper reporters BDT 15k–40k entry. Senior correspondents/editors BDT 60k–150k. Digital/content creators income highly variable."
+      },
+      "abroad": {
+        "usa": {"entry_min": 35000, "entry_max": 55000, "currency": "USD", "unit": "yearly", "notes": "BLS median reporters $55,960/yr; entry-level $35k–$55k. Digital media higher."},
+        "canada": {"entry_min": 38000, "entry_max": 55000, "currency": "CAD", "unit": "yearly", "notes": "Canada journalist entry CAD $38k–$55k"},
+        "uk": {"entry_min": 22000, "entry_max": 35000, "currency": "GBP", "unit": "yearly", "notes": "NUJ UK rates; trainee journalist £22k–£30k; experienced £35k–£55k"},
+        "australia": {"entry_min": 50000, "entry_max": 70000, "currency": "AUD", "unit": "yearly", "notes": "MEAA AU; graduate journalist AUD $50k–$70k"},
+        "uae": {"entry_min": 60000, "entry_max": 120000, "currency": "AED", "unit": "yearly", "notes": "UAE media professional AED 5,000–10,000/month"},
+        "germany": {"entry_min": 30000, "entry_max": 45000, "currency": "EUR", "unit": "yearly", "notes": "Germany journalist entry €30k–€45k; public broadcaster (ARD/ZDF) higher"}
+      },
+      "references": [
+        {"source": "Paylab BD — Salaries in Bangladesh", "url": "https://www.paylab.com/bd/salaries-in-country"},
+        {"source": "BLS — Reporters, Correspondents & Broadcast News Analysts", "url": "https://www.bls.gov/ooh/media-and-communication/reporters-correspondents-and-broadcast-news-analysts.htm"},
+        {"source": "mypihr.com — Average Salary in Bangladesh", "url": "https://mypihr.com/average-salary-in-bangladesh/"}
+      ]
+    }
+  },
+  {
+    "slug": "urban-planner",
+    "title": "Urban Planner / Town Planner",
+    "related_subjects": ["architecture", "civil-engineering", "economics", "sociology"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 20000, "max": 40000},
+        "mid": {"min": 40000, "max": 80000},
+        "senior": {"min": 80000, "max": 180000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "RAJUK, CDA, and local government employ most urban planners. Government grade-based salary. NGOs and international development organizations pay more. Glassdoor Dhaka: BDT 38,833–61,563/yr (likely underreported)."
+      },
+      "abroad": {
+        "usa": {"entry_min": 50000, "entry_max": 72000, "currency": "USD", "unit": "yearly", "notes": "BLS median urban planner $81,800/yr; entry $50k–$72k"},
+        "canada": {"entry_min": 55000, "entry_max": 75000, "currency": "CAD", "unit": "yearly", "notes": "PIBC/OPPI Canada; urban planner entry CAD $55k–$75k"},
+        "uk": {"entry_min": 25000, "entry_max": 38000, "currency": "GBP", "unit": "yearly", "notes": "RTPI UK; graduate planner £25k–£38k; principal planner £45k+"},
+        "australia": {"entry_min": 65000, "entry_max": 90000, "currency": "AUD", "unit": "yearly", "notes": "SEEK AU town planner entry AUD $65k–$90k"},
+        "uae": {"entry_min": 84000, "entry_max": 168000, "currency": "AED", "unit": "yearly", "notes": "UAE urban planner AED 7,000–14,000/month"},
+        "germany": {"entry_min": 38000, "entry_max": 55000, "currency": "EUR", "unit": "yearly", "notes": "Germany Stadtplaner entry €38k–€55k"}
+      },
+      "references": [
+        {"source": "Glassdoor — Urban Planner Salary Dhaka Bangladesh 2026", "url": "https://www.glassdoor.com/Salaries/dhaka-bangladesh-urban-planner-salary-SRCH_IL.0,16_IM1237_KO17,30.htm"},
+        {"source": "BLS — Urban and Regional Planners", "url": "https://www.bls.gov/ooh/life-physical-and-social-science/urban-and-regional-planners.htm"},
+        {"source": "Bangladesh National Pay Scale 2025", "url": "https://blog.allbanglanewspaper.org/bangladesh-national-pay-scale/"}
+      ]
+    }
+  },
+  {
+    "slug": "agricultural-officer",
+    "title": "Agricultural Officer / Agronomist",
+    "related_subjects": ["agriculture", "chemistry", "statistics"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 22000, "max": 40000},
+        "mid": {"min": 40000, "max": 75000},
+        "senior": {"min": 75000, "max": 150000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "Government: DAE (Department of Agriculture Extension) Sub-Assistant Agriculture Officers BDT 22k–35k entry. NGOs (BRAC, CARE) and agribusiness companies pay more. International development (FAO, IFAD) significantly higher."
+      },
+      "abroad": {
+        "usa": {"entry_min": 45000, "entry_max": 65000, "currency": "USD", "unit": "yearly", "notes": "BLS median agricultural & food scientists $74,160/yr; entry $45k–$65k. USDA roles higher."},
+        "canada": {"entry_min": 45000, "entry_max": 65000, "currency": "CAD", "unit": "yearly", "notes": "Agriculture & Agri-Food Canada; entry CAD $45k–$65k"},
+        "uk": {"entry_min": 25000, "entry_max": 38000, "currency": "GBP", "unit": "yearly", "notes": "UK agricultural consultant/advisor entry £25k–£38k"},
+        "australia": {"entry_min": 60000, "entry_max": 85000, "currency": "AUD", "unit": "yearly", "notes": "SEEK AU agronomist entry AUD $60k–$85k; rural sector competitive"},
+        "uae": {"entry_min": 60000, "entry_max": 120000, "currency": "AED", "unit": "yearly", "notes": "UAE Ministry of Climate & Environment agronomist AED 5,000–10,000/month"},
+        "germany": {"entry_min": 35000, "entry_max": 50000, "currency": "EUR", "unit": "yearly", "notes": "Germany Agrarwissenschaftler entry €35k–€50k"}
+      },
+      "references": [
+        {"source": "Bangladesh National Pay Scale 2025", "url": "https://blog.allbanglanewspaper.org/bangladesh-national-pay-scale/"},
+        {"source": "BLS — Agricultural and Food Scientists", "url": "https://www.bls.gov/ooh/life-physical-and-social-science/agricultural-and-food-scientists.htm"},
+        {"source": "mypihr.com — Average Salary in Bangladesh", "url": "https://mypihr.com/average-salary-in-bangladesh/"}
+      ]
+    }
+  },
+  {
+    "slug": "statistician",
+    "title": "Statistician / Research Analyst",
+    "related_subjects": ["statistics", "mathematics", "economics", "cse"],
+    "salary": {
+      "bd": {
+        "entry": {"min": 25000, "max": 50000},
+        "mid": {"min": 50000, "max": 100000},
+        "senior": {"min": 100000, "max": 250000},
+        "currency": "BDT",
+        "unit": "monthly",
+        "notes": "BBS (Bangladesh Bureau of Statistics), NIPORT, research institutes. Government grade-based; NGOs and international organizations pay significantly more. Data/analytics roles in private sector growing rapidly."
+      },
+      "abroad": {
+        "usa": {"entry_min": 65000, "entry_max": 90000, "currency": "USD", "unit": "yearly", "notes": "BLS median statistician $104,860/yr; entry $65k–$90k. Biostatistics and data science roles higher."},
+        "canada": {"entry_min": 55000, "entry_max": 80000, "currency": "CAD", "unit": "yearly", "notes": "StatsCan; statistician entry CAD $55k–$80k"},
+        "uk": {"entry_min": 28000, "entry_max": 45000, "currency": "GBP", "unit": "yearly", "notes": "ONS UK; statistical researcher entry £28k–£45k; RSS survey data"},
+        "australia": {"entry_min": 65000, "entry_max": 90000, "currency": "AUD", "unit": "yearly", "notes": "ABS Australia; statistician entry AUD $65k–$90k"},
+        "uae": {"entry_min": 84000, "entry_max": 168000, "currency": "AED", "unit": "yearly", "notes": "UAE research analyst / data scientist AED 7,000–14,000/month"},
+        "germany": {"entry_min": 42000, "entry_max": 60000, "currency": "EUR", "unit": "yearly", "notes": "Germany statistician/analyst entry €42k–€60k; biometry/data science premium"}
+      },
+      "references": [
+        {"source": "BLS — Statisticians", "url": "https://www.bls.gov/ooh/math/statisticians.htm"},
+        {"source": "DU ISRT Undergraduate Program", "url": "https://isrt.ac.bd/academics/undergraduate/"},
+        {"source": "Bangladesh National Pay Scale 2025", "url": "https://blog.allbanglanewspaper.org/bangladesh-national-pay-scale/"},
+        {"source": "Paylab BD — Salaries in Bangladesh", "url": "https://www.paylab.com/bd/salaries-in-country"},
+        {"source": "SalaryExpert — Data Scientist Salaries by Country", "url": "https://www.salaryexpert.com/salary/browse/countries/data-scientist"}
+      ]
+    }
+  }
+]

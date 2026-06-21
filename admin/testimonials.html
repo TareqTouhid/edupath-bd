@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <title>EduPath BD - Testimonial Review</title>
+  <style>
+    :root {
+      --bg: #f5efe4;
+      --surface: #fff;
+      --text: #1e1a16;
+      --muted: #756b61;
+      --green: #006a4e;
+      --line: rgba(30, 26, 22, .12);
+      --bad: #c8553d;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    main {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 32px 20px 80px;
+    }
+    header {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 18px;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    p { color: var(--muted); line-height: 1.5; }
+    .panel, .card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      box-shadow: 0 8px 22px rgba(30, 26, 22, .06);
+    }
+    .panel { padding: 18px; margin-bottom: 18px; }
+    .controls {
+      display: grid;
+      grid-template-columns: minmax(220px, 1fr) auto;
+      gap: 10px;
+    }
+    input {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 12px 14px;
+      font-size: 14px;
+      background: #fff;
+    }
+    button {
+      border: 0;
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-weight: 700;
+      cursor: pointer;
+      background: var(--green);
+      color: #fff;
+    }
+    button.secondary { background: #e8e0d3; color: var(--text); }
+    button.danger { background: var(--bad); }
+    button:disabled { opacity: .55; cursor: not-allowed; }
+    .status {
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+    .card {
+      padding: 18px;
+      display: grid;
+      gap: 14px;
+    }
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+    .pill {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 8px;
+      background: #faf7f1;
+    }
+    .story {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .story div {
+      border-top: 1px solid var(--line);
+      padding-top: 10px;
+      min-width: 0;
+    }
+    h3, h4 { margin: 0; }
+    h4 { font-size: 12px; color: var(--green); text-transform: uppercase; letter-spacing: .06em; }
+    .actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    .empty {
+      text-align: center;
+      padding: 48px 20px;
+      color: var(--muted);
+    }
+    @media (max-width: 760px) {
+      header, .controls { grid-template-columns: 1fr; display: grid; align-items: start; }
+      .story { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div>
+        <h1>Testimonial Review</h1>
+        <p>Approve anonymous Share My Experience submissions into the public EduPath BD story stream.</p>
+      </div>
+      <div class="actions">
+        <a href="/admin/"><button class="secondary" type="button">Admin portal</button></a>
+        <a href="/"><button class="secondary" type="button">Public site</button></a>
+        <button id="logout" class="secondary" type="button">Logout</button>
+      </div>
+    </header>
+
+    <section class="panel">
+      <div class="controls">
+        <button id="load">Load pending</button>
+      </div>
+      <div id="status" class="status">Signed in. Load pending submissions to review.</div>
+    </section>
+
+    <section id="list" class="grid"></section>
+  </main>
+
+  <script src="/admin/auth.js"></script>
+  <script>
+    window.EduPathAdminAuth.requireLogin();
+    window.EduPathAdminAuth.attachLogout("logout");
+
+    const loadBtn = document.getElementById("load");
+    const statusEl = document.getElementById("status");
+    const listEl = document.getElementById("list");
+
+    function setStatus(text) {
+      statusEl.textContent = text;
+    }
+
+    function escapeText(value) {
+      return String(value || "").replace(/[&<>"']/g, c => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+      })[c]);
+    }
+
+    function storyBlock(label, text) {
+      return `<div><h4>${label}</h4><p>${escapeText(text)}</p></div>`;
+    }
+
+    function valueOr(value, fallback) {
+      return value == null || value === "" ? fallback : value;
+    }
+
+    function render(rows) {
+      if (!rows.length) {
+        listEl.innerHTML = '<div class="panel empty">No pending testimonials.</div>';
+        return;
+      }
+      listEl.innerHTML = rows.map((row, index) => {
+        const t = row.testimonial || {};
+        const university = t.undergradUniversity || t.university || "Unknown university";
+        const subject = t.undergradSubjectName || t.subjectName || t.subjectSlug || "Unknown subject";
+        const careerLine = [t.designation, t.profession].filter(Boolean).join(" · ");
+        return `
+          <article class="card" data-path="${escapeText(row.pathname)}">
+            <div>
+              <h3>${escapeText(subject)}</h3>
+              <div class="meta">
+                <span class="pill">${escapeText(university)}</span>
+                <span class="pill">Session: ${escapeText(valueOr(t.session, "n/a"))}</span>
+                <span class="pill">HSC: ${escapeText(valueOr(t.hscGroup, "n/a"))}</span>
+                <span class="pill">${escapeText(t.currentStatus || "Unknown status")}</span>
+                <span class="pill">${escapeText([t.currentCity, t.currentCountry].filter(Boolean).join(", ") || "Location n/a")}</span>
+                <span class="pill">Choose again: ${escapeText(t.wouldChooseAgain || "n/a")}</span>
+                <span class="pill">Worth ${escapeText(valueOr(t.subjectWorthRating, "n/a"))}/5</span>
+                <span class="pill">Pressure ${escapeText(t.academicPressure)}</span>
+                <span class="pill">Faculty ${escapeText(t.facultyQuality)}</span>
+                <span class="pill">Jobs ${escapeText(t.jobReality)}</span>
+                ${t.universityNeedsReview ? `<span class="pill" style="border-color: var(--bad); color: var(--bad);">New university pending DB review</span>` : ""}
+                ${t.subjectNeedsReview ? `<span class="pill" style="border-color: var(--bad); color: var(--bad);">New subject pending DB review</span>` : ""}
+              </div>
+            </div>
+            ${careerLine ? `<p><strong>Current context:</strong> ${escapeText(careerLine)}</p>` : ""}
+            <div class="story">
+              ${storyBlock("Good experiences", t.goodExperience || t.bestPart)}
+              ${storyBlock("Bad experiences", t.badExperience || t.worstPart)}
+              ${storyBlock("Who should take", t.whoShouldTake || t.wishKnew)}
+              ${storyBlock("Who should not take", t.whoShouldNotTake)}
+              ${storyBlock("Future opportunities", t.futureOpportunities || t.jobTitle)}
+              ${storyBlock("If no, why", t.chooseAgainReason)}
+            </div>
+            <div class="actions">
+              <button data-action="approve" data-index="${index}">Approve</button>
+              <button class="secondary" data-action="copy" data-index="${index}">Copy JSON</button>
+            </div>
+          </article>
+        `;
+      }).join("");
+    }
+
+    let currentRows = [];
+
+    async function loadPending() {
+      const token = window.EduPathAdminAuth.token();
+      if (!token) {
+        window.EduPathAdminAuth.requireLogin();
+        return;
+      }
+      loadBtn.disabled = true;
+      setStatus("Loading pending testimonials...");
+      try {
+        const res = await fetch("/api/admin/testimonials-pending", {
+          headers: { Authorization: `Bearer ${token}` }
+        });
+        const json = await res.json();
+        if (!res.ok) throw new Error(json.error || "Could not load pending testimonials.");
+        currentRows = json.rows || [];
+        render(currentRows);
+        setStatus(`${currentRows.length} pending testimonial(s).`);
+      } catch (err) {
+        setStatus(err.message);
+      } finally {
+        loadBtn.disabled = false;
+      }
+    }
+
+    async function approve(index) {
+      const token = window.EduPathAdminAuth.token();
+      const row = currentRows[index];
+      if (!row) return;
+      setStatus("Approving testimonial...");
+      try {
+        const res = await fetch("/api/admin/testimonials-approve", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`
+          },
+          body: JSON.stringify({ pathname: row.pathname })
+        });
+        const json = await res.json();
+        if (!res.ok) throw new Error(json.error || "Approval failed.");
+        currentRows.splice(index, 1);
+        render(currentRows);
+        setStatus(`Approved ${json.approved.subjectName || json.approved.subjectSlug}.`);
+      } catch (err) {
+        setStatus(err.message);
+      }
+    }
+
+    listEl.addEventListener("click", async event => {
+      const button = event.target.closest("button");
+      if (!button) return;
+      const index = Number(button.dataset.index);
+      if (button.dataset.action === "approve") approve(index);
+      if (button.dataset.action === "copy") {
+        await navigator.clipboard.writeText(JSON.stringify(currentRows[index]?.testimonial || {}, null, 2));
+        setStatus("Copied testimonial JSON.");
+      }
+    });
+
+    loadBtn.addEventListener("click", loadPending);
+  </script>
+</body>
+</html>
