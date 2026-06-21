@@ -93,15 +93,19 @@
           onClick: () => go("contribute")
         })),
       E("style", null, `
-        .pf-nav__inner {
-          display: grid !important;
-          grid-template-columns: auto 1fr auto !important;
-        }
-        .pf-nav__links {
-          justify-content: center !important;
-        }
         .pf-nav__actions {
           display: none !important;
+        }
+        .pf-nav__inner {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+        }
+        .pf-nav__links {
+          display: flex !important;
+          justify-content: flex-end !important;
+          gap: 8px !important;
+          margin-left: auto !important;
         }
         .ep-landing-shell,
         .ep-landing-split,
