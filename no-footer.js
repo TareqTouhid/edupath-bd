@@ -7,7 +7,7 @@
       ".pf-footer,.pf-cta-strip{display:none!important}",
       ".pf-nav__actions{display:none!important}",
       ".pf-nav__inner{display:flex!important;align-items:center!important;justify-content:space-between!important}",
-      ".pf-nav__links{display:flex!important;justify-content:flex-end!important;gap:8px!important;margin-left:auto!important}"
+      ".pf-nav__links{display:flex!important;justify-content:flex-end!important;gap:32px!important;margin-left:auto!important}"
     ].join("\n");
     document.head.appendChild(style);
   }
