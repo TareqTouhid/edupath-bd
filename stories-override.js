@@ -171,5 +171,72 @@
     );
   }
 
-  Object.assign(window, { ScreenStories });
+  // Fixed flagFor — original in index.html has corrupted emoji bytes
+  function flagFor(country) {
+    var FLAGS = {
+      BD: [0x1F1E7, 0x1F1E9],
+      US: [0x1F1FA, 0x1F1F8],
+      CA: [0x1F1E8, 0x1F1E6],
+      GB: [0x1F1EC, 0x1F1E7],
+      AU: [0x1F1E6, 0x1F1FA],
+      AE: [0x1F1E6, 0x1F1EA],
+      DE: [0x1F1E9, 0x1F1EA],
+      IN: [0x1F1EE, 0x1F1F3],
+      MY: [0x1F1F2, 0x1F1FE],
+      SG: [0x1F1F8, 0x1F1EC],
+      QA: [0x1F1F6, 0x1F1E6],
+      SA: [0x1F1F8, 0x1F1E6],
+      JP: [0x1F1EF, 0x1F1F5],
+      KR: [0x1F1F0, 0x1F1F7],
+      NL: [0x1F1F3, 0x1F1F1],
+      SE: [0x1F1F8, 0x1F1EA],
+      NO: [0x1F1F3, 0x1F1F4],
+      FI: [0x1F1EB, 0x1F1EE],
+      NZ: [0x1F1F3, 0x1F1FF],
+    };
+    var pts = FLAGS[country];
+    return pts ? String.fromCodePoint(pts[0], pts[1]) : String.fromCodePoint(0x1F30D);
+  }
+
+  // Fixed TestimonialCard — removes "age undefined", fixes encoding on arrows/dots/flags
+  function TestimonialCard({ t, expanded, onToggle, compact }) {
+    var subj = PFData.subjects.find(function (s) { return s.slug === t.subjectSlug; });
+    var fieldKey = subj ? subj.field : (t.field || "social-science");
+    var subjName = t.subjectName || (subj && subj.name) || t.subjectSlug;
+    var whoLine = t.name ? t.name : ("Class of " + (t.session || "—"));
+    return E("div", { className: "pf-tcard" },
+      E("div", { className: "pf-tcard__head" },
+        E("div", { className: "pf-tcard__who" },
+          E(window.Avatar, { name: t.name, subjectName: subjName, field: fieldKey, size: 36 }),
+          E("div", null,
+            E("div", { className: "pf-tcard__name" }, whoLine),
+            E("div", { className: "pf-tcard__location" },
+              flagFor(t.country), " ", t.city || (t.country === "BD" ? "Bangladesh" : "Abroad")
+            )
+          )
+        ),
+        E("span", { className: "pf-tcard__subj" }, window.shortSubject(subjName))
+      ),
+      E("div", { className: "pf-tcard__uni" },
+        t.uni,
+        t.role ? E("span", { className: "pf-tcard__role" }, " · ", t.role) : null
+      ),
+      E("div", { className: "pf-tcard__quote" + (expanded ? " pf-tcard__quote--open" : "") }, t.good),
+      expanded ? E("div", { className: "pf-tcard__expand" },
+        t.bad ? E("div", null, E("h5", null, "What was hard"), E("p", null, t.bad)) : null,
+        t.whoShould ? E("div", null, E("h5", null, "Who should study this"), E("p", null, t.whoShould)) : null,
+        t.whoShouldnt ? E("div", null, E("h5", null, "Who shouldn't"), E("p", null, t.whoShouldnt)) : null,
+        t.opportunities ? E("div", null, E("h5", null, "Career paths seen"), E("p", null, t.opportunities)) : null,
+        t.alternative ? E("div", null, E("h5", null, "If choosing again"), E("p", { style: { fontStyle: "italic" } }, "“", t.alternative, "”")) : null
+      ) : null,
+      !compact && onToggle ? E("div", { className: "pf-tcard__foot" },
+        E("span", null),
+        E("button", { className: "pf-link", onClick: onToggle, style: { fontSize: 12, whiteSpace: "nowrap" } },
+          expanded ? "Show less ↑" : "Read more →"
+        )
+      ) : null
+    );
+  }
+
+  Object.assign(window, { ScreenStories, TestimonialCard, flagFor });
 })();
