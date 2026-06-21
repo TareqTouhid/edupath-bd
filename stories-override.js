@@ -143,7 +143,7 @@
           }),
           E("div", { className: "pf-stories-nudge" },
             E("span", null, "A graduate? Your experience helps the next student."),
-            E("button", { className: "pf-link", onClick: function () { go("contribute"); }, style: { fontSize: 13, whiteSpace: "nowrap", flexShrink: 0 } }, "Share my experience →")
+            E("button", { type: "button", className: "btn btn-primary", onClick: function () { go("contribute"); }, style: { flexShrink: 0 } }, "Share My Experience")
           ),
           filtered.length === 0
             ? E("div", { style: { padding: 48, textAlign: "center", background: "var(--surface)", borderRadius: 14, border: "1px solid var(--ink-08)" } },
@@ -163,7 +163,7 @@
               ),
           filtered.length > 0 && E("div", { className: "pf-stories-bottom" },
             E("div", { style: { fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 600, lineHeight: 1.2 } }, "Add your experience."),
-            E("button", { className: "pf-link", onClick: function () { go("contribute"); }, style: { flexShrink: 0 } }, "Share my experience →")
+            E("button", { type: "button", className: "btn btn-primary", onClick: function () { go("contribute"); }, style: { flexShrink: 0 } }, "Share My Experience")
           )
         )
       ),
