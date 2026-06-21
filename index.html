@@ -1,26 +1,26 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-  <title>EduPath BD — Find the degree you were made for.</title>
+  <title>EduPath BD â€” Find the degree you were made for.</title>
 
   <!-- SEO + Social sharing -->
-  <meta name="description" content="56 Bangladeshi graduates answered honestly — what their subject was really like, and whether they'd choose it again. Use their data to choose yours."/>
+  <meta name="description" content="56 Bangladeshi graduates answered honestly â€” what their subject was really like, and whether they'd choose it again. Use their data to choose yours."/>
   <meta name="keywords" content="Bangladesh university, HSC subject choice, CSE Bangladesh, BBA Bangladesh, admission guidance BD, EduPath BD"/>
   <meta name="author" content="EduPath BD"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://edupath-bd.vercel.app"/>
-  <meta property="og:title" content="EduPath BD — Find the degree you were made for."/>
+  <meta property="og:title" content="EduPath BD â€” Find the degree you were made for."/>
   <meta property="og:description" content="56 Bangladeshi graduates answered honestly about their subject. Use their data. Free forever."/>
   <meta property="og:image" content="https://edupath-bd.vercel.app/og-image.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="EduPath BD — Find the degree you were made for."/>
+  <meta name="twitter:title" content="EduPath BD â€” Find the degree you were made for."/>
   <meta name="twitter:description" content="56 real responses. 31 subjects. 15 countries of salary data. Free forever."/>
   <link rel="canonical" href="https://edupath-bd.vercel.app"/>
 
-  <!-- Analytics — replace 'YOUR-DOMAIN.com' with your Plausible domain, or remove if not needed -->
+  <!-- Analytics â€” replace 'YOUR-DOMAIN.com' with your Plausible domain, or remove if not needed -->
   <!-- <script defer data-domain="YOUR-DOMAIN.com" src="https://plausible.io/js/script.js"></script> -->
 
   <!-- Fonts via Google Fonts (Fraunces + Plus Jakarta Sans variable) -->
@@ -30,12 +30,12 @@
 
   <style>
 /* ============================================================
-   EduPath BD — Design Tokens
+   EduPath BD â€” Design Tokens
    colors_and_type.css
    ============================================================ */
 
-/* Fonts — self-hosted variable TTFs.
-   Fraunces is loaded with its full opsz (9–144) + wght (100–900) axes,
+/* Fonts â€” self-hosted variable TTFs.
+   Fraunces is loaded with its full opsz (9â€“144) + wght (100â€“900) axes,
    so font-optical-sizing: auto picks the right cut at every scale and
    the gold-italic accent word in headlines uses the true italic. */
 
@@ -227,7 +227,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 .gold-em {
   font-style: italic;
   color: var(--gold);
-  /* Optical bump — italic Fraunces benefits from a touch more weight */
+  /* Optical bump â€” italic Fraunces benefits from a touch more weight */
   font-weight: 500;
 }
 
@@ -308,7 +308,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
 
-/* Honesty box — terracotta-bordered callout */
+/* Honesty box â€” terracotta-bordered callout */
 .honesty {
   border-left: 4px solid var(--terracotta);
   background: var(--terracotta-16);
@@ -325,7 +325,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 }
 
 /* ============================================================
-   EduPath BD UI Kit — layout + component styles
+   EduPath BD UI Kit â€” layout + component styles
    ============================================================ */
 
 /* ---------- App scaffold ---------- */
@@ -368,7 +368,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 }
 .pf-nav__link:hover { color: var(--green); }
 .pf-nav__link.is-active { color: var(--green); font-weight: 600; }
-/* Both nav buttons — identical size, only fill differs */
+/* Both nav buttons â€” identical size, only fill differs */
 .pf-nav__btn { font-size: 13px !important; padding: 0 22px !important; min-width: 168px !important; min-height: 44px !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; }
 
 /* ---------- Hero ---------- */
@@ -421,7 +421,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
   font-weight: 600; color: var(--text-muted); margin-top: 8px;
 }
 
-/* Who strip — compact persona chips below hero */
+/* Who strip â€” compact persona chips below hero */
 .pf-who-strip {
   background: var(--bg);
   border-bottom: 1px solid var(--ink-08);
@@ -547,13 +547,13 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 }
 button { cursor: pointer; }
 
-/* ---------- Testimonial card — strict 4-layer hierarchy ----------
+/* ---------- Testimonial card â€” strict 4-layer hierarchy ----------
    Layer 1 (identity):  avatar + name/age + location chip  [compact]
-   Layer 2 (context):   university · role                  [muted, small]
+   Layer 2 (context):   university Â· role                  [muted, small]
    Layer 3 (content):   the quote                          [display font, hero]
    Layer 4 (verdict):   recommend signal + expand toggle   [separated footer]
    ------------------------------------------------------------------ */
-/* ── Testimonial card — uniform, minimal, no colored borders ── */
+/* â”€â”€ Testimonial card â€” uniform, minimal, no colored borders â”€â”€ */
 .pf-tcard {
   background: var(--surface);
   border-radius: 14px;
@@ -572,7 +572,7 @@ button { cursor: pointer; }
 .pf-tcard__name { font-weight: 600; font-size: 13px; line-height: 1.3; color: var(--text); }
 .pf-tcard__location { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
 
-/* Subject pill — neutral gray, no field color */
+/* Subject pill â€” neutral gray, no field color */
 .pf-tcard__subj {
   flex-shrink: 0;
   display: inline-block; padding: 3px 9px; border-radius: 100px;
@@ -588,7 +588,7 @@ button { cursor: pointer; }
 }
 .pf-tcard__role { opacity: 0.75; }
 
-/* Quote — clamped to 3 lines by default */
+/* Quote â€” clamped to 3 lines by default */
 .pf-tcard__quote {
   font-family: var(--font-display); font-size: 15px;
   line-height: 1.65; color: var(--text); font-style: italic;
@@ -646,7 +646,7 @@ button { cursor: pointer; }
 }
 .pf-av--lg { width: 64px; height: 64px; font-size: 24px; }
 
-/* ---------- Recommendation chips — no emoji, pure semantic color ---------- */
+/* ---------- Recommendation chips â€” no emoji, pure semantic color ---------- */
 .pill-ok   { background: #E2F1EA; color: #0A5E44; box-shadow: none; font-weight: 600; font-size: 11px; }
 .pill-sw   { background: #FDECEA; color: #922820; box-shadow: none; font-weight: 600; font-size: 11px; }
 .pill-note { background: #FBEFD0; color: #7A5400; box-shadow: none; font-weight: 600; font-size: 11px; }
@@ -678,7 +678,7 @@ button { cursor: pointer; }
 .pf-tphase__yr-label { font-family: var(--font-display); font-weight: 600; font-size: 18px; }
 .pf-tphase h4 { font-family: var(--font-display); font-weight: 600; font-size: 16px; margin: 0 0 10px; }
 .pf-tphase ul { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; line-height: 1.4; color: var(--text); }
-.pf-tphase li::before { content: "•  "; color: var(--green); }
+.pf-tphase li::before { content: "â€¢  "; color: var(--green); }
 .pf-tphase__note {
   font-size: 12px; color: var(--terracotta);
   background: var(--terracotta-16); padding: 8px 10px; border-radius: 8px; line-height: 1.4;
@@ -703,9 +703,9 @@ button { cursor: pointer; }
 .pf-vphase__year { font-family: var(--font-body); font-weight: 700; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
 .pf-vphase__body h4 { font-family: var(--font-display); font-weight: 600; font-size: 22px; line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.01em; }
 .pf-vphase__body ul { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.5; }
-.pf-vphase__body li::before { content: "•  "; color: var(--green); }
+.pf-vphase__body li::before { content: "â€¢  "; color: var(--green); }
 
-/* Verified badge — minimal, doesn't compete with content */
+/* Verified badge â€” minimal, doesn't compete with content */
 .pf-verified {
   display: inline-flex; align-items: center; gap: 4px;
   padding: 2px 0; border-radius: 0;
@@ -713,14 +713,14 @@ button { cursor: pointer; }
   color: var(--text-muted); font-size: 10px; font-weight: 500;
   letter-spacing: 0.03em; line-height: 1;
 }
-.pf-verified::before { content:"✓ "; }
+.pf-verified::before { content:"âœ“ "; }
 
 /* Career columns */
 .pf-careers { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
 .pf-career-col { background: var(--surface); border-radius: 14px; padding: 22px 24px; box-shadow: var(--shadow-1); }
 .pf-career-col h3 { font-family: var(--font-display); font-size: 20px; font-weight: 600; margin-bottom: 14px; display:flex;align-items:center;gap:8px;}
 .pf-career-col ul { list-style: none; padding: 0; margin: 0 0 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
-.pf-career-col ul li::before { content: "·  "; color: var(--green); }
+.pf-career-col ul li::before { content: "Â·  "; color: var(--green); }
 .pf-career-col .sal { font-weight: 600; font-size: 16px; margin-bottom: 6px; }
 .pf-career-col .src { font-size: 12px; color: var(--text-muted); }
 
@@ -847,7 +847,7 @@ button { cursor: pointer; }
 /* Tags row */
 .pf-tagrow { display: flex; gap: 8px; flex-wrap: wrap; }
 
-/* Responsive — collapse */
+/* Responsive â€” collapse */
 @media (max-width: 880px) {
   .pf-hero__grid, .pf-features__grid, .pf-how__grid, .pf-careers, .pf-grid-3, .pf-timeline, .pf-stats__grid, .pf-footer__grid, .pf-matcher__chips, .pf-matcher__cards, .pf-grid-2 { grid-template-columns: 1fr; }
   .pf-hero__viz { height: 360px; }
@@ -880,7 +880,7 @@ button { cursor: pointer; }
 .pf-col-2  { grid-column: span 2; }
 .pf-col-1  { grid-column: span 1; }
 
-/* Tablet — 8-col grid */
+/* Tablet â€” 8-col grid */
 @media (max-width: 1100px) {
   .pf-grid { grid-template-columns: repeat(8, 1fr); gap: 20px; }
   /* Web-12 spans map onto the 8-col grid */
@@ -896,7 +896,7 @@ button { cursor: pointer; }
   .pf-col-2  { grid-column: span 2; }
 }
 
-/* Mobile — 4-col grid */
+/* Mobile â€” 4-col grid */
 @media (max-width: 700px) {
   .pf-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .pf-col-12, .pf-col-10, .pf-col-9, .pf-col-8, .pf-col-7, .pf-col-6, .pf-col-5, .pf-col-4, .pf-col-3 { grid-column: span 4; }
@@ -939,8 +939,8 @@ button { cursor: pointer; }
 .pf-section--alt { background: var(--surface-alt); }
 .pf-narrow { max-width: 960px !important; margin: 0 auto; padding: 0 24px; }
 
-/* ── Editorial hero ── */
-/* ── Editorial hero — full-screen, cream, massive type ── */
+/* â”€â”€ Editorial hero â”€â”€ */
+/* â”€â”€ Editorial hero â€” full-screen, cream, massive type â”€â”€ */
 .pf-hero--editorial {
   min-height: 100vh;
   padding: clamp(120px, 18vh, 200px) 0 clamp(80px, 10vh, 120px);
@@ -949,7 +949,7 @@ button { cursor: pointer; }
   background: var(--bg);
 }
 
-/* ── Headline — editorial, tight, not overwhelming ── */
+/* â”€â”€ Headline â€” editorial, tight, not overwhelming â”€â”€ */
 .pf-hero__h1 {
   font-family: var(--font-display);
   font-size: clamp(44px, 6vw, 80px);
@@ -963,7 +963,7 @@ button { cursor: pointer; }
 }
 .pf-hero__h1 em.gold-em { font-style: italic; color: var(--gold); font-weight: 500; }
 
-/* Sub — more prominent, darker */
+/* Sub â€” more prominent, darker */
 .pf-hero--editorial .pf-hero__sub {
   font-size: clamp(18px, 1.8vw, 22px);
   line-height: 1.6; color: var(--text);
@@ -971,7 +971,7 @@ button { cursor: pointer; }
   max-width: 580px; margin: 0 0 32px;
 }
 
-/* Eyebrow — plain label, no pill */
+/* Eyebrow â€” plain label, no pill */
 .pf-hero--editorial .pf-hero__eyebrow {
   background: none; padding: 0; border-radius: 0;
   font-size: 11px; font-weight: 700; letter-spacing: .1em;
@@ -979,19 +979,19 @@ button { cursor: pointer; }
   margin-bottom: 28px; display: block;
 }
 
-/* Trust line — more visible */
+/* Trust line â€” more visible */
 .pf-hero--editorial .pf-hero__trust {
   display: flex; gap: 0; flex-wrap: wrap;
   font-size: 14px; font-weight: 500; color: var(--text-muted); margin-top: 24px;
 }
 .pf-hero--editorial .pf-hero__trust span { margin-right: 24px; margin-bottom: 4px; }
-.pf-hero--editorial .pf-hero__trust span::before { content: "· "; }
+.pf-hero--editorial .pf-hero__trust span::before { content: "Â· "; }
 .pf-hero--editorial .pf-hero__trust span:first-child::before { display: none; }
 
-/* Particle canvas opacity for cream bg — visible but not distracting */
+/* Particle canvas opacity for cream bg â€” visible but not distracting */
 .pf-hero--editorial .pf-starfield { opacity: 0.42; }
 
-/* Route preview pills — fills hero dead space, previews 3-route concept */
+/* Route preview pills â€” fills hero dead space, previews 3-route concept */
 .pf-hero__routes {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
   margin-top: 40px; padding-top: 32px;
@@ -1016,12 +1016,12 @@ button { cursor: pointer; }
   .pf-hero__routes { grid-template-columns: 1fr; }
 }
 
-/* Lenis smooth scroll — prevent double-scroll on html/body */
+/* Lenis smooth scroll â€” prevent double-scroll on html/body */
 html.lenis { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 
-/* ── Human-first hero — light, two-column ── */
+/* â”€â”€ Human-first hero â€” light, two-column â”€â”€ */
 .pf-hero--human {
   background: var(--bg);
   padding: 72px 0 64px;
@@ -1037,7 +1037,7 @@ html.lenis { height: auto; }
 
 /* Eyebrow on light bg */
 .pf-hero--human .pf-hero__eyebrow {
-  /* strip the gold pill — plain label only */
+  /* strip the gold pill â€” plain label only */
   background: none;
   padding: 0;
   border-radius: 0;
@@ -1061,7 +1061,7 @@ html.lenis { height: auto; }
   font-size: 12px; color: var(--text-muted); margin-top: 24px;
 }
 .pf-hero__trust--dark span { margin-right: 18px; margin-bottom: 4px; }
-.pf-hero__trust--dark span::before { content: "· "; }
+.pf-hero__trust--dark span::before { content: "Â· "; }
 .pf-hero__trust--dark span:first-child::before { display: none; }
 
 /* University strip */
@@ -1123,7 +1123,7 @@ html.lenis { height: auto; }
 }
 .pf-hero__alumni-more:hover { border-color: var(--green); background: #E2F1EA22; }
 
-/* Journey strip — dark green, below hero */
+/* Journey strip â€” dark green, below hero */
 .pf-journey-strip {
   background: #0A1A12;
   padding: 36px 0;
@@ -1144,7 +1144,7 @@ html.lenis { height: auto; }
 @media (max-width: 560px) {
   .pf-hero__alumni { grid-template-columns: 1fr; }
 }
-/* Hero split grid — left: copy, right: demo */
+/* Hero split grid â€” left: copy, right: demo */
 .pf-hero__editorial { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 720px; margin: 0 auto; }
 .pf-hero__demo-panel { display: none !important;
   background: var(--surface);
@@ -1168,14 +1168,14 @@ html.lenis { height: auto; }
   .pf-hero__demo-panel { display: none; }
 }
 
-/* SplitText mask container — each line is masked, the inner span animates up from below */
+/* SplitText mask container â€” each line is masked, the inner span animates up from below */
 .pf-mask { overflow: hidden; display: block; padding-bottom: 0.08em; }
 .pf-mask > span { display: inline-block; will-change: transform; }
 
 .pf-hero--editorial .pf-hero__sub { font-size: clamp(17px, 1.6vw, 20px); line-height: 1.6; color: var(--text); opacity: 0.78; max-width: 520px; margin: 0 0 32px; }
 .pf-hero--editorial .pf-hero__trust { display: flex; gap: 0; flex-wrap: wrap; font-size: 13px; font-weight: 500; color: var(--text-muted); margin-top: 20px; }
 .pf-hero--editorial .pf-hero__trust span { margin-right: 20px; margin-bottom: 4px; }
-.pf-hero--editorial .pf-hero__trust span::before { content: "· "; }
+.pf-hero--editorial .pf-hero__trust span::before { content: "Â· "; }
 .pf-hero--editorial .pf-hero__trust span:first-child::before { display: none; }
 .pf-hero--editorial .pf-hero__ctas { justify-content: flex-start; }
 
@@ -1192,11 +1192,11 @@ html.lenis { height: auto; }
 }
 @keyframes pf-scroll-pulse { 0%,100% { transform: scaleY(0.4); opacity:0.4;} 50% { transform: scaleY(1); opacity: 0.9; } }
 
-/* ── Three.js starfield host ── */
+/* â”€â”€ Three.js starfield host â”€â”€ */
 .pf-starfield { position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0.6; }
 .pf-hero > .pf-container { position: relative; z-index: 1; }
 
-/* ── PINNED BRUTAL REALITY ── */
+/* â”€â”€ PINNED BRUTAL REALITY â”€â”€ */
 .pf-reality {
   position: relative;
   height: 380vh; /* gives ScrollTrigger room to advance through the three stats */
@@ -1315,7 +1315,7 @@ html.lenis { height: auto; }
   margin-top: 4px;
 }
 
-/* ── 31-dot grid (kept for any usage; not on landing anymore) ── */
+/* â”€â”€ 31-dot grid (kept for any usage; not on landing anymore) â”€â”€ */
 .pf-dotgrid { display: grid; grid-template-columns: repeat(10, 1fr); gap: 14px; max-width: 720px; margin: 48px 0 32px; }
 .pf-dot { width: 100%; aspect-ratio: 1; border-radius: 8px; background: transparent; box-shadow: inset 0 0 0 1.5px var(--ink-16); }
 .pf-dot--filled { background: var(--green); box-shadow: 0 1px 2px rgba(26,23,20,0.06); }
@@ -1323,12 +1323,12 @@ html.lenis { height: auto; }
 .pf-dotgrid__row { display: flex; align-items: center; gap: 14px; font-size: 14px; color: var(--text-muted); }
 .pf-dotgrid__row .pf-dot { width: 16px; height: 16px; flex-shrink: 0; }
 
-/* ── Featured testimonial pull-quote ── */
+/* â”€â”€ Featured testimonial pull-quote â”€â”€ */
 .pf-feature-quote-mark { font-family: var(--font-display); font-size: 200px; line-height: 0.6; color: var(--gold); height: 80px; margin-bottom: -16px; margin-left: -8px; opacity: 0.5; }
 .pf-feature-quote { font-family: var(--font-display); font-size: clamp(22px, 2.5vw, 34px); line-height: 1.35; font-weight: 500; font-style: italic; letter-spacing: -0.015em; color: var(--text); margin: 0 0 36px; text-wrap: pretty; max-width: 760px; }
 .pf-feature-attribution { display: flex; gap: 18px; align-items: center; border-top: 1px solid var(--ink-08); padding-top: 24px; }
 
-/* ── Confidence tier cards ── */
+/* â”€â”€ Confidence tier cards â”€â”€ */
 .pf-tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .pf-tier-card { background: var(--surface); border-radius: var(--r-card); padding: 28px 24px 24px; box-shadow: var(--shadow-1); display: flex; flex-direction: column; gap: 12px; position: relative; overflow: hidden; }
 .pf-tier-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; }
@@ -1343,9 +1343,9 @@ html.lenis { height: auto; }
 .pf-tier-criteria { font-family: var(--font-body); font-weight: 600; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
 .pf-tier-body { font-size: 14.5px; line-height: 1.5; color: var(--text); }
 
-/* ── HORIZONTAL SCROLL — featured subjects ── */
-/* Subject grid — replaces horizontal scroll */
-/* Subject grid — landing page only; scoped to avoid clash with explore pf-scard */
+/* â”€â”€ HORIZONTAL SCROLL â€” featured subjects â”€â”€ */
+/* Subject grid â€” replaces horizontal scroll */
+/* Subject grid â€” landing page only; scoped to avoid clash with explore pf-scard */
 .pf-subject-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
 }
@@ -1400,7 +1400,7 @@ html.lenis { height: auto; }
   box-shadow: var(--shadow-1);
 }
 
-/* ── Four pillars ── */
+/* â”€â”€ Four pillars â”€â”€ */
 .pf-pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
 .pf-pillar { background: var(--surface); border-radius: var(--r-card); padding: 28px 24px 24px; box-shadow: var(--shadow-1); cursor: pointer; text-align: left; font-family: inherit; border: none; display: flex; flex-direction: column; gap: 12px; transition: transform var(--t-mid) var(--ease-editorial), box-shadow var(--t-mid) var(--ease-editorial); position: relative; min-height: 280px; }
 .pf-pillar:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
@@ -1410,7 +1410,7 @@ html.lenis { height: auto; }
 .pf-pillar p { font-size: 14px; line-height: 1.5; color: var(--text-muted); flex: 1; }
 .pf-pillar__arr { color: var(--green); font-weight: 600; font-size: 13px; margin-top: auto; }
 
-/* ── Masonry voices ── */
+/* â”€â”€ Masonry voices â”€â”€ */
 .pf-masonry {
   column-count: 3;
   column-gap: 20px;
@@ -1421,7 +1421,7 @@ html.lenis { height: auto; }
   will-change: transform;
 }
 
-/* ── Universities row ── */
+/* â”€â”€ Universities row â”€â”€ */
 .pf-unirow {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1438,7 +1438,7 @@ html.lenis { height: auto; }
 .pf-unirow__name { font-family: var(--font-display); font-weight: 600; font-size: 18px; letter-spacing: -0.01em; color: var(--text); }
 .pf-unirow__count { font-size: 12px; color: var(--text-muted); font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; }
 
-/* ── For parents two-column ── */
+/* â”€â”€ For parents two-column â”€â”€ */
 .pf-twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
 
 /* Responsive collapse */
@@ -1463,7 +1463,7 @@ html.lenis { height: auto; }
   .pf-pathways { grid-template-columns: 1fr; }
 }
 
-/* ── Journey entry cards — hero widget ── */
+/* â”€â”€ Journey entry cards â€” hero widget â”€â”€ */
 .pf-journey {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1508,7 +1508,7 @@ html.lenis { height: auto; }
   .pf-journey { grid-template-columns: 1fr; }
 }
 
-/* ── Pathway cards — matcher results ── */
+/* â”€â”€ Pathway cards â€” matcher results â”€â”€ */
 .pf-pathways {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1561,7 +1561,7 @@ html.lenis { height: auto; }
   font-style: italic; margin-top: auto; padding-top: 4px;
 }
 
-/* ── Outcome strip — above pathway cards ── */
+/* â”€â”€ Outcome strip â€” above pathway cards â”€â”€ */
 .pf-outcome-strip {
   background: var(--surface-alt); border-radius: 14px;
   padding: 18px 22px; margin-bottom: 24px;
@@ -1583,7 +1583,7 @@ html.lenis { height: auto; }
   font-size: 12px; color: var(--text-muted); line-height: 1.3;
 }
 
-/* ── Feature card SVG icon ── */
+/* â”€â”€ Feature card SVG icon â”€â”€ */
 .pf-feature__icon {
   width: 48px; height: 48px;
   display: flex; align-items: center; justify-content: center;
@@ -1592,7 +1592,7 @@ html.lenis { height: auto; }
   color: var(--green);
 }
 
-/* ── Real questions section ── */
+/* â”€â”€ Real questions section â”€â”€ */
 .pf-section--questions { background: var(--bg); }
 .pf-questions {
   display: grid;
@@ -1632,7 +1632,7 @@ html.lenis { height: auto; }
   margin-top: 6px;
 }
 
-/* ── Simulation preview section ── */
+/* â”€â”€ Simulation preview section â”€â”€ */
 .pf-section--sim { background: var(--surface-alt); }
 
 .pf-sim-profile {
@@ -1680,7 +1680,7 @@ html.lenis { height: auto; }
 .pf-sim-row__k { color: var(--text-muted); flex-shrink: 0; }
 .pf-sim-row__v { font-weight: 600; color: var(--text); text-align: right; }
 
-/* ── Career salary guide ── */
+/* â”€â”€ Career salary guide â”€â”€ */
 .pf-careers-fields {
   display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px;
 }
@@ -1758,7 +1758,7 @@ html.lenis { height: auto; }
   border-top: 1px solid var(--ink-06); padding-top: 8px; margin-top: 2px;
 }
 
-/* ── Global type scale upgrade — editorial contrast ── */
+/* â”€â”€ Global type scale upgrade â€” editorial contrast â”€â”€ */
 .display-2 {
   font-size: clamp(32px, 4.8vw, 54px) !important;
   letter-spacing: -0.025em !important;
@@ -1771,7 +1771,7 @@ html.lenis { height: auto; }
   font-weight: 700 !important;
 }
 
-/* ── Matcher teaser split-screen ── */
+/* â”€â”€ Matcher teaser split-screen â”€â”€ */
 .pf-teaser-split {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1810,7 +1810,7 @@ html.lenis { height: auto; }
   .pf-teaser-left { position: static; }
 }
 
-/* ── University marquee ── */
+/* â”€â”€ University marquee â”€â”€ */
 .pf-marquee-section {
   padding: 52px 0;
   overflow: hidden;
@@ -1852,7 +1852,7 @@ html.lenis { height: auto; }
   to   { transform: translateX(-50%); }
 }
 
-/* ── Search input ── */
+/* â”€â”€ Search input â”€â”€ */
 .pf-search-wrap { position: relative; display: inline-flex; align-items: center; }
 .pf-search {
   padding: 8px 14px 8px 34px;
@@ -1869,7 +1869,7 @@ html.lenis { height: auto; }
 .pf-search--sm:focus { width: 200px; }
 .pf-search::placeholder { color: var(--text-muted); }
 
-/* ── Bookmark button on subject cards ── */
+/* â”€â”€ Bookmark button on subject cards â”€â”€ */
 .pf-bookmark {
   position: absolute; top: 10px; right: 10px; z-index: 2;
   width: 30px; height: 30px; border-radius: 8px;
@@ -1892,7 +1892,7 @@ html.lenis { height: auto; }
   font-size: 13px; color: #0A5E44; font-weight: 500;
 }
 
-/* ── Share / WhatsApp buttons in matcher results ── */
+/* â”€â”€ Share / WhatsApp buttons in matcher results â”€â”€ */
 .pf-share-btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 6px;
   min-height: 44px; padding: 0 20px; border-radius: var(--r-pill);
@@ -1908,27 +1908,27 @@ html.lenis { height: auto; }
 .pf-share-btn--wa { border-color: var(--green); color: var(--green); }
 .pf-share-btn--wa:hover { background: var(--green-12); }
 
-/* ── Mobile responsive fixes ── */
+/* â”€â”€ Mobile responsive fixes â”€â”€ */
 @media (max-width: 640px) {
-  /* Hero headline — readable on 375px */
+  /* Hero headline â€” readable on 375px */
   .pf-hero__h1 { font-size: clamp(38px, 11vw, 60px) !important; }
   .pf-hero--editorial { padding: 100px 0 60px; }
 
-  /* Journey cards — 2 columns on small screens */
+  /* Journey cards â€” 2 columns on small screens */
   .pf-journey { grid-template-columns: repeat(2, 1fr); }
 
-  /* Stats grid → 2 col on mobile */
+  /* Stats grid â†’ 2 col on mobile */
   .pf-stats__grid { grid-template-columns: repeat(2, 1fr); }
 
-  /* Subject grid → single column */
+  /* Subject grid â†’ single column */
   .pf-grid-3 { grid-template-columns: 1fr; }
   .pf-grid-2 { grid-template-columns: 1fr; }
 
-  /* Simulation grid → single column */
+  /* Simulation grid â†’ single column */
   .pf-sim-grid { grid-template-columns: 1fr; }
   .pf-pathways { grid-template-columns: 1fr; }
 
-  /* Matcher card — full width with smaller padding */
+  /* Matcher card â€” full width with smaller padding */
   .pf-matcher__card { padding: 24px 18px; margin: 0 12px; }
   .pf-matcher__chips { grid-template-columns: 1fr 1fr !important; }
   .pf-matcher__cards { grid-template-columns: 1fr !important; }
@@ -1940,14 +1940,14 @@ html.lenis { height: auto; }
   /* Section heads */
   .display-2 { font-size: clamp(26px, 7vw, 38px) !important; }
 
-  /* Careers grid → 1 col */
+  /* Careers grid â†’ 1 col */
   .pf-careers-grid { grid-template-columns: 1fr; }
 
-  /* Search — full width */
+  /* Search â€” full width */
   .pf-search { width: 100% !important; }
   .pf-search-wrap { width: 100%; }
 
-  /* Nav — hide extra links */
+  /* Nav â€” hide extra links */
   .pf-nav__inner { padding: 0 16px; gap: 12px; }
   .pf-nav__links, .pf-nav__actions { display: none !important; }
   .pf-nav__menu-toggle {
@@ -1967,9 +1967,9 @@ html.lenis { height: auto; }
     grid-column: 1 / -1; justify-content: center; width: 100%;
   }
 
-  /* Share buttons — wrap */
+  /* Share buttons â€” wrap */
 
-  /* Stories nudge — stack */
+  /* Stories nudge â€” stack */
   .pf-stories-nudge { flex-direction: column; align-items: flex-start; }
 }
 
@@ -1979,22 +1979,22 @@ html.lenis { height: auto; }
 }
 
 
-/* ── Self-contained mode overrides ── */
+/* â”€â”€ Self-contained mode overrides â”€â”€ */
 .pf-hero--editorial { padding-top: 120px; }
 </style>
 
-  <!-- React 18 production builds — 10x smaller than dev builds -->
+  <!-- React 18 production builds â€” 10x smaller than dev builds -->
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
 
-  <!-- Animation libs removed — 835KB saved. CSS handles transitions. -->
+  <!-- Animation libs removed â€” 835KB saved. CSS handles transitions. -->
 </head>
 <body>
 <div id="root">
-  <!-- Inline loading screen — visible immediately before Babel transpiles React -->
+  <!-- Inline loading screen â€” visible immediately before Babel transpiles React -->
   <div id="pf-boot" style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:#F5EFE4;flex-direction:column;gap:16px;font-family:system-ui,sans-serif;">
     <div style="width:40px;height:40px;border:3px solid #E8E2D9;border-top-color:#006A4E;border-radius:50%;animation:pf-spin 0.8s linear infinite;"></div>
-    <p style="color:#7A6E65;font-size:14px;margin:0;">Loading EduPath BD…</p>
+    <p style="color:#7A6E65;font-size:14px;margin:0;">Loading EduPath BDâ€¦</p>
     <style>@keyframes pf-spin{to{transform:rotate(360deg)}}</style>
   </div>
 </div>
@@ -2012,18 +2012,18 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      DATA  (subjects + testimonials + FIELDS)
-     ═══════════════════════════════════════════════════════════ -->
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script>
-/* EduPath BD — Demo data
+/* EduPath BD â€” Demo data
    56 verified testimonials from the cleaned 2024 student/graduate survey.
    15 subjects with full profiles (Verified or Emerging tier).
    16 additional subjects appear in Stories only (Listed-only tier; no profile card).
    Source files:
      - uploads/testimonials_clean.json
      - uploads/EduPathBD_Cleaned_Dataset.xlsx
-   Schema mirrors the build plan §5.3 (subjects, testimonials, fields). */
+   Schema mirrors the build plan Â§5.3 (subjects, testimonials, fields). */
 
 window.PFData = (function () {
   const FIELDS = {
@@ -2037,10 +2037,10 @@ window.PFData = (function () {
     applied:          { label: "Health & Medicine",         color: "#4F5D75" },
   };
 
-  // Confidence tier names follow the EduPath BD Build Plan §4.1:
-  //   verified   — verified course profile + 8+ approved testimonials
-  //   emerging   — profile present OR 3–7 testimonials
-  //   listed     — fewer than 3 testimonials, no verified profile
+  // Confidence tier names follow the EduPath BD Build Plan Â§4.1:
+  //   verified   â€” verified course profile + 8+ approved testimonials
+  //   emerging   â€” profile present OR 3â€“7 testimonials
+  //   listed     â€” fewer than 3 testimonials, no verified profile
   // Computed on the fly in computeConfidence(); the value stamped on each subject
   // is the EXPECTED tier at the current dataset size, kept honest with the data.
 
@@ -2050,7 +2050,7 @@ window.PFData = (function () {
       slug: "cse",
       name: "Computer Science & Engineering",
       field: "technology",
-      desc: "Software, systems, AI — the backbone of modern work.",
+      desc: "Software, systems, AI â€” the backbone of modern work.",
       hsc: ["Science"],
       math: true,
       difficulty: 3,
@@ -2058,17 +2058,17 @@ window.PFData = (function () {
       regional: {
         dhaka: {
           careers: ["Software Engineer", "Data Scientist", "IT Manager", "Cybersecurity Analyst"],
-          salary: "৳30k–2L+/mo",
-          note: "85% of BD software roles are in Dhaka. Outside-Dhaka graduates report a 30–40% initial salary gap. Remote work is growing but not standard.",
+          salary: "à§³30kâ€“2L+/mo",
+          note: "85% of BD software roles are in Dhaka. Outside-Dhaka graduates report a 30â€“40% initial salary gap. Remote work is growing but not standard.",
         },
         outside: {
           careers: ["Govt IT officer (BCS)", "Lecturer / Teacher", "NGO field coordinator", "Local startup / freelance"],
-          salary: "৳15k–80k/mo",
+          salary: "à§³15kâ€“80k/mo",
           note: "Outside Dhaka, CSE graduates typically target BCS, teaching, or build local freelance practices. Remote work for Dhaka/global companies is rising but requires portfolio strength.",
         },
         intl: {
           careers: ["ML Research Scientist", "Cloud Architect", "Silicon Valley SWE", "Tech Entrepreneur"],
-          salary: "$80k–$180k/yr",
+          salary: "$80kâ€“$180k/yr",
         },
       },
       curriculum: [
@@ -2091,19 +2091,19 @@ window.PFData = (function () {
       difficulty: 2,
       trend: "stable",
       regional: {
-        dhaka: { careers: ["Agritech analyst", "Research assistant", "Govt agriculture officer"], salary: "৳25k–70k/mo",
+        dhaka: { careers: ["Agritech analyst", "Research assistant", "Govt agriculture officer"], salary: "à§³25kâ€“70k/mo",
           note: "Most senior research and agritech roles still cluster around Dhaka and Gazipur. Field roles are equally distributed nationally."},
-        outside: { careers: ["BCS Agriculture cadre", "NGO field officer (BRAC, Grameen)", "Cooperative agronomist", "Local farm tech consultant"], salary: "৳18k–55k/mo",
-          note: "Outside Dhaka is the natural home for this subject — most jobs ARE outside Dhaka. The BCS Agriculture cadre is a strong public-sector path."},
-        intl: { careers: ["Food systems researcher", "FAO / WFP analyst", "Agronomy PhD pathways"], salary: "$45k–$95k/yr" },
+        outside: { careers: ["BCS Agriculture cadre", "NGO field officer (BRAC, Grameen)", "Cooperative agronomist", "Local farm tech consultant"], salary: "à§³18kâ€“55k/mo",
+          note: "Outside Dhaka is the natural home for this subject â€” most jobs ARE outside Dhaka. The BCS Agriculture cadre is a strong public-sector path."},
+        intl: { careers: ["Food systems researcher", "FAO / WFP analyst", "Agronomy PhD pathways"], salary: "$45kâ€“$95k/yr" },
       },
       curriculum: [
-        { year: "Year 1", title: "Foundation",   items: ["Plant biology", "Soil basics", "Field methods"], note: "Field work starts in week 3 — be ready", noteTone: "good" },
+        { year: "Year 1", title: "Foundation",   items: ["Plant biology", "Soil basics", "Field methods"], note: "Field work starts in week 3 â€” be ready", noteTone: "good" },
         { year: "Year 2", title: "Core Systems", items: ["Crop sciences", "Animal husbandry", "Genetics"], note: null },
         { year: "Year 3", title: "Specialisation", items: ["Agribusiness", "Horticulture", "Aquaculture"], note: null },
         { year: "Year 4", title: "Capstone",     items: ["Thesis project", "Internship", "BCS preparation"], note: "Strong public-sector outcomes", noteTone: "good" },
       ],
-      unis: { public: ["BAU (Mymensingh)", "SAU (Dhaka)", "BSMRAU", "PSTU"], private: ["—"] },
+      unis: { public: ["BAU (Mymensingh)", "SAU (Dhaka)", "BSMRAU", "PSTU"], private: ["â€”"] },
       alts: ["environmental", "biology"],
       confidence: "emerging",
     },
@@ -2111,17 +2111,17 @@ window.PFData = (function () {
       slug: "bba",
       name: "Business Administration (BBA)",
       field: "business",
-      desc: "Management, finance, marketing — broad, applied, employable.",
+      desc: "Management, finance, marketing â€” broad, applied, employable.",
       hsc: ["Science", "Commerce"],
       math: false,
       difficulty: 2,
       trend: "stable",
       regional: {
-        dhaka: { careers: ["Management trainee", "Brand executive", "Bank officer", "Consultant"], salary: "৳25k–1L+/mo",
+        dhaka: { careers: ["Management trainee", "Brand executive", "Bank officer", "Consultant"], salary: "à§³25kâ€“1L+/mo",
           note: "Top private universities recruit heavily for management trainee programs in Dhaka. Network effects compound here." },
-        outside: { careers: ["Local bank officer", "MFI manager", "Family business operator", "Sales lead"], salary: "৳18k–60k/mo",
+        outside: { careers: ["Local bank officer", "MFI manager", "Family business operator", "Sales lead"], salary: "à§³18kâ€“60k/mo",
           note: "Outside Dhaka, BBA is most useful for joining local banks, MFIs, and helping run family businesses." },
-        intl: { careers: ["MBA pathway (post-3yr work)", "Multinational management programs"], salary: "$60k–$150k/yr" },
+        intl: { careers: ["MBA pathway (post-3yr work)", "Multinational management programs"], salary: "$60kâ€“$150k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Principles of Mgmt", "Financial Accounting", "Microeconomics"], note: null },
@@ -2143,11 +2143,11 @@ window.PFData = (function () {
       difficulty: 3,
       trend: "rising",
       regional: {
-        dhaka: { careers: ["Policy analyst", "Research economist", "Bank economist", "Think tank associate"], salary: "৳30k–1.2L+/mo",
+        dhaka: { careers: ["Policy analyst", "Research economist", "Bank economist", "Think tank associate"], salary: "à§³30kâ€“1.2L+/mo",
           note: "Most policy think tanks (CPD, PRI, BIDS) are Dhaka-centred." },
-        outside: { careers: ["BCS economic cadre", "NGO researcher", "Local research assistant", "University teaching"], salary: "৳18k–60k/mo",
+        outside: { careers: ["BCS economic cadre", "NGO researcher", "Local research assistant", "University teaching"], salary: "à§³18kâ€“60k/mo",
           note: "Outside Dhaka, the BCS economic cadre and NGO research roles dominate. Academic pathway is realistic." },
-        intl: { careers: ["IMF / World Bank associate", "Economics PhD", "Quant researcher"], salary: "$70k–$160k/yr" },
+        intl: { careers: ["IMF / World Bank associate", "Economics PhD", "Quant researcher"], salary: "$70kâ€“$160k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Micro", "Macro", "Math for Economists"], note: "Math is heavier than students expect", noteTone: "warn" },
@@ -2169,11 +2169,11 @@ window.PFData = (function () {
       difficulty: 2,
       trend: "rising",
       regional: {
-        dhaka: { careers: ["UI/UX designer", "Brand designer", "Product designer", "Agency creative"], salary: "৳25k–1.5L+/mo",
+        dhaka: { careers: ["UI/UX designer", "Brand designer", "Product designer", "Agency creative"], salary: "à§³25kâ€“1.5L+/mo",
           note: "Dhaka's product/agency scene hires strongly on portfolio, weakly on degree. Show work, not transcripts." },
-        outside: { careers: ["Freelance designer", "Local print/agency work", "Remote contract design"], salary: "৳15k–80k/mo",
+        outside: { careers: ["Freelance designer", "Local print/agency work", "Remote contract design"], salary: "à§³15kâ€“80k/mo",
           note: "Outside Dhaka, freelance + remote contract work is the realistic path. Portfolio strength matters more than location." },
-        intl: { careers: ["Remote product designer", "Studio designer (Dribbble-pipeline)", "EU/US design teams"], salary: "$55k–$140k/yr" },
+        intl: { careers: ["Remote product designer", "Studio designer (Dribbble-pipeline)", "EU/US design teams"], salary: "$55kâ€“$140k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Drawing", "Type & Color", "Composition"], note: null },
@@ -2195,11 +2195,11 @@ window.PFData = (function () {
       difficulty: 2,
       trend: "stable",
       regional: {
-        dhaka: { careers: ["Editor / Sub-editor", "Content strategist", "Communications lead", "Teacher"], salary: "৳18k–80k/mo",
+        dhaka: { careers: ["Editor / Sub-editor", "Content strategist", "Communications lead", "Teacher"], salary: "à§³18kâ€“80k/mo",
           note: "Most publishing, NGO communications, and content roles are Dhaka-based." },
-        outside: { careers: ["Secondary / college teacher", "BCS education cadre", "NGO communications"], salary: "৳15k–45k/mo",
+        outside: { careers: ["Secondary / college teacher", "BCS education cadre", "NGO communications"], salary: "à§³15kâ€“45k/mo",
           note: "Teaching and government cadre are the dominant outside-Dhaka pathways." },
-        intl: { careers: ["MA pathway abroad", "Editorial assistant", "Localization specialist"], salary: "$35k–$70k/yr" },
+        intl: { careers: ["MA pathway abroad", "Editorial assistant", "Localization specialist"], salary: "$35kâ€“$70k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Survey of literature", "Composition", "Linguistics"], note: null },
@@ -2221,11 +2221,11 @@ window.PFData = (function () {
       difficulty: 2,
       trend: "rising",
       regional: {
-        dhaka: { careers: ["NGO program officer", "Policy research", "Donor agency role"], salary: "৳25k–80k/mo",
-          note: "Bangladesh is a global NGO hub — BRAC, Grameen, donor agencies all hire heavily in Dhaka." },
-        outside: { careers: ["NGO field officer", "Local government", "Microfinance"], salary: "৳18k–50k/mo",
-          note: "Outside Dhaka is where the actual development work happens — most field roles are here." },
-        intl: { careers: ["UN agency", "World Bank consultant", "MA Development abroad"], salary: "$50k–$110k/yr" },
+        dhaka: { careers: ["NGO program officer", "Policy research", "Donor agency role"], salary: "à§³25kâ€“80k/mo",
+          note: "Bangladesh is a global NGO hub â€” BRAC, Grameen, donor agencies all hire heavily in Dhaka." },
+        outside: { careers: ["NGO field officer", "Local government", "Microfinance"], salary: "à§³18kâ€“50k/mo",
+          note: "Outside Dhaka is where the actual development work happens â€” most field roles are here." },
+        intl: { careers: ["UN agency", "World Bank consultant", "MA Development abroad"], salary: "$50kâ€“$110k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Theories of development", "Sociology", "Stats basics"], note: null },
@@ -2247,11 +2247,11 @@ window.PFData = (function () {
       difficulty: 2,
       trend: "rising",
       regional: {
-        dhaka: { careers: ["GIS analyst", "Climate research", "Urban planning consultant"], salary: "৳25k–75k/mo",
+        dhaka: { careers: ["GIS analyst", "Climate research", "Urban planning consultant"], salary: "à§³25kâ€“75k/mo",
           note: "Urban planning, climate adaptation, and donor-funded GIS work is concentrated in Dhaka." },
-        outside: { careers: ["BCS administration / forest cadre", "NGO climate field officer", "Local planning office"], salary: "৳18k–55k/mo",
+        outside: { careers: ["BCS administration / forest cadre", "NGO climate field officer", "Local planning office"], salary: "à§³18kâ€“55k/mo",
           note: "Coastal and northern districts have growing climate-adaptation roles funded by international donors." },
-        intl: { careers: ["GIS specialist", "Climate research abroad", "Remote-sensing analyst"], salary: "$50k–$95k/yr" },
+        intl: { careers: ["GIS specialist", "Climate research abroad", "Remote-sensing analyst"], salary: "$50kâ€“$95k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Physical geography", "Cartography", "Earth systems"], note: null },
@@ -2259,7 +2259,7 @@ window.PFData = (function () {
         { year: "Year 3", title: "Specialisation", items: ["Remote sensing", "Urban", "Environmental policy"], note: null },
         { year: "Year 4", title: "Capstone",     items: ["Field study", "Thesis"], note: null },
       ],
-      unis: { public: ["DU", "JU", "RU", "CU", "NSTU"], private: ["—"] },
+      unis: { public: ["DU", "JU", "RU", "CU", "NSTU"], private: ["â€”"] },
       alts: ["agriculture", "development-studies"],
       confidence: "emerging",
     },
@@ -2267,17 +2267,17 @@ window.PFData = (function () {
       slug: "finance-banking",
       name: "Finance & Banking",
       field: "business",
-      desc: "Capital markets, banking, risk — quantitative, structured, employable.",
+      desc: "Capital markets, banking, risk â€” quantitative, structured, employable.",
       hsc: ["Science", "Commerce"],
       math: true,
       difficulty: 3,
       trend: "stable",
       regional: {
-        dhaka: { careers: ["Investment analyst", "Risk officer", "Treasury", "Audit"], salary: "৳30k–1.2L+/mo",
+        dhaka: { careers: ["Investment analyst", "Risk officer", "Treasury", "Audit"], salary: "à§³30kâ€“1.2L+/mo",
           note: "All major banks, brokerages, and asset managers are headquartered in Dhaka." },
-        outside: { careers: ["Branch banking", "BCS administration", "Local audit firm"], salary: "৳20k–55k/mo",
+        outside: { careers: ["Branch banking", "BCS administration", "Local audit firm"], salary: "à§³20kâ€“55k/mo",
           note: "Outside Dhaka, branch banking and BCS administration are the dominant paths." },
-        intl: { careers: ["CFA pathway", "International audit", "Risk analyst abroad"], salary: "$60k–$140k/yr" },
+        intl: { careers: ["CFA pathway", "International audit", "Risk analyst abroad"], salary: "$60kâ€“$140k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Accounting", "Microeconomics", "Quant methods"], note: null },
@@ -2293,7 +2293,7 @@ window.PFData = (function () {
       slug: "physics",
       name: "Physics",
       field: "science",
-      desc: "Classical mechanics, quantum, electrodynamics — pure science with a heavy theory load.",
+      desc: "Classical mechanics, quantum, electrodynamics â€” pure science with a heavy theory load.",
       hsc: ["Science"],
       math: true,
       difficulty: 4,
@@ -2301,17 +2301,17 @@ window.PFData = (function () {
       curriculumStyle: "vertical",
       regretSignal: { rate: 50, note: "Half of the Physics respondents in our dataset explicitly regret the choice. The single recurring complaint: the national curriculum never teaches the computational programming you need to actually do modern physics." },
       regional: {
-        dhaka: { careers: ["Private tutor (high-paying)", "Research assistant (university)", "Corporate analytics generalist"], salary: "৳25k–65k/mo",
+        dhaka: { careers: ["Private tutor (high-paying)", "Research assistant (university)", "Corporate analytics generalist"], salary: "à§³25kâ€“65k/mo",
           note: "Research infrastructure and serious physics-track tutoring is concentrated at DU/BUET. Most Dhaka-based Physics graduates pivot into private tutoring or generalist analytics; pure-physics roles are rare outside academia." },
-        outside: { careers: ["College / school teacher", "BCS general cadre"], salary: "৳15k–40k/mo",
+        outside: { careers: ["College / school teacher", "BCS general cadre"], salary: "à§³15kâ€“40k/mo",
           note: "Outside Dhaka, college teaching and BCS general cadre are essentially the only paths. Industry rarely hires Physics graduates as Physics graduates." },
-        intl: { careers: ["MS / PhD pathway (the dominant route)", "Computational physics / quant adjacent"], salary: "$45k–$130k/yr (post-PhD)" },
+        intl: { careers: ["MS / PhD pathway (the dominant route)", "Computational physics / quant adjacent"], salary: "$45kâ€“$130k/yr (post-PhD)" },
       },
       curriculum: [
-        { year: "Years 1–2", title: "Classical frameworks & calculus", items: ["Vector analysis & Newtonian mechanics", "Waves and optics", "Multivariable calculus, ODEs"], note: "Heavily theoretical. No programming taught — you'll need to learn it on your own", noteTone: "warn" },
-        { year: "Years 3–4", title: "Advanced quantum dynamics", items: ["Statistical mechanics", "Modern electrodynamics", "Solid state, lab thesis modules"], note: "Computational gap becomes painful here — most research now requires Python/MATLAB", noteTone: "warn" },
+        { year: "Years 1â€“2", title: "Classical frameworks & calculus", items: ["Vector analysis & Newtonian mechanics", "Waves and optics", "Multivariable calculus, ODEs"], note: "Heavily theoretical. No programming taught â€” you'll need to learn it on your own", noteTone: "warn" },
+        { year: "Years 3â€“4", title: "Advanced quantum dynamics", items: ["Statistical mechanics", "Modern electrodynamics", "Solid state, lab thesis modules"], note: "Computational gap becomes painful here â€” most research now requires Python/MATLAB", noteTone: "warn" },
       ],
-      unis: { public: ["DU", "JU", "CU", "RU", "BUET (Physics dept.)"], private: ["—"] },
+      unis: { public: ["DU", "JU", "CU", "RU", "BUET (Physics dept.)"], private: ["â€”"] },
       alts: ["cse", "agriculture"],
       confidence: "listed",
     },
@@ -2319,7 +2319,7 @@ window.PFData = (function () {
       slug: "journalism",
       name: "Journalism & Media Studies",
       field: "humanities",
-      desc: "Reporting, broadcasting, content production — creatively rich, financially precarious.",
+      desc: "Reporting, broadcasting, content production â€” creatively rich, financially precarious.",
       hsc: ["Science", "Commerce", "Arts"],
       math: false,
       difficulty: 2,
@@ -2327,15 +2327,15 @@ window.PFData = (function () {
       curriculumStyle: "vertical",
       regretSignal: { rate: 60, note: "Multiple respondents say flatly: don't take this subject in Bangladesh until media wages improve. The creative work is real; the pay isn't." },
       regional: {
-        dhaka: { careers: ["TV reporter / producer", "Online news editor", "Brand content / agency creative"], salary: "৳18k–60k/mo",
-          note: "All major TV networks and newspapers are headquartered in Dhaka. Baseline wages are persistently low — the creative ceiling is high but pay rarely matches." },
-        outside: { careers: ["Local stringer", "District correspondent", "Freelance content"], salary: "৳10k–25k/mo",
+        dhaka: { careers: ["TV reporter / producer", "Online news editor", "Brand content / agency creative"], salary: "à§³18kâ€“60k/mo",
+          note: "All major TV networks and newspapers are headquartered in Dhaka. Baseline wages are persistently low â€” the creative ceiling is high but pay rarely matches." },
+        outside: { careers: ["Local stringer", "District correspondent", "Freelance content"], salary: "à§³10kâ€“25k/mo",
           note: "Outside Dhaka, journalism is almost entirely stringer work and underpaid. Most graduates pivot out within five years." },
-        intl: { careers: ["MA in media abroad", "Production / content roles overseas", "Freelance + remote"], salary: "$35k–$70k/yr" },
+        intl: { careers: ["MA in media abroad", "Production / content roles overseas", "Freelance + remote"], salary: "$35kâ€“$70k/yr" },
       },
       curriculum: [
-        { year: "Years 1–2", title: "Foundation — reporting & media theory", items: ["News writing & reporting basics", "Media history & ethics", "Camera and field exercises"], note: "The practical labs are genuinely good", noteTone: "good" },
-        { year: "Years 3–4", title: "Specialisation — production & projects", items: ["TV / broadcast production", "Specialised reporting beats", "Capstone documentary / thesis"], note: "The career gap shows up around graduation — wages start so low that most pivot", noteTone: "warn" },
+        { year: "Years 1â€“2", title: "Foundation â€” reporting & media theory", items: ["News writing & reporting basics", "Media history & ethics", "Camera and field exercises"], note: "The practical labs are genuinely good", noteTone: "good" },
+        { year: "Years 3â€“4", title: "Specialisation â€” production & projects", items: ["TV / broadcast production", "Specialised reporting beats", "Capstone documentary / thesis"], note: "The career gap shows up around graduation â€” wages start so low that most pivot", noteTone: "warn" },
       ],
       unis: { public: ["DU", "JU", "RU", "CU"], private: ["ULAB", "DIU"] },
       alts: ["english-lit", "uiux", "development-studies"],
@@ -2345,17 +2345,17 @@ window.PFData = (function () {
       slug: "psychology",
       name: "Psychology",
       field: "social-science",
-      desc: "How minds and behaviour work — clinical, research, and applied.",
+      desc: "How minds and behaviour work â€” clinical, research, and applied.",
       hsc: ["Science", "Commerce", "Arts"],
       math: false,
       difficulty: 2,
       trend: "rising",
       regional: {
-        dhaka: { careers: ["Clinical counsellor", "Therapist (post-MA)", "UX researcher", "HR specialist"], salary: "৳25k–80k/mo",
+        dhaka: { careers: ["Clinical counsellor", "Therapist (post-MA)", "UX researcher", "HR specialist"], salary: "à§³25kâ€“80k/mo",
           note: "Mental health is a rapidly growing field in Dhaka, but most clinical practice requires an MA." },
-        outside: { careers: ["School counsellor", "NGO mental health field officer"], salary: "৳18k–45k/mo",
-          note: "Outside Dhaka, school counselling and NGO field work are the main openings — clinical practice is sparse." },
-        intl: { careers: ["MA / PhD pathway abroad", "Research assistant"], salary: "$45k–$95k/yr" },
+        outside: { careers: ["School counsellor", "NGO mental health field officer"], salary: "à§³18kâ€“45k/mo",
+          note: "Outside Dhaka, school counselling and NGO field work are the main openings â€” clinical practice is sparse." },
+        intl: { careers: ["MA / PhD pathway abroad", "Research assistant"], salary: "$45kâ€“$95k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Intro psych", "Stats", "Biological basis"], note: null },
@@ -2372,24 +2372,24 @@ window.PFData = (function () {
       slug: "bangla",
       name: "Bangla",
       field: "humanities",
-      desc: "Literature, language, criticism — the national tongue, studied seriously.",
+      desc: "Literature, language, criticism â€” the national tongue, studied seriously.",
       hsc: ["Science", "Commerce", "Arts"],
       math: false,
       difficulty: 2,
       trend: "stable",
       curriculumStyle: "vertical",
       regional: {
-        dhaka: { careers: ["Editorial / publishing", "School & college teaching", "NGO communications", "Cultural sector"], salary: "৳15k–60k/mo",
+        dhaka: { careers: ["Editorial / publishing", "School & college teaching", "NGO communications", "Cultural sector"], salary: "à§³15kâ€“60k/mo",
           note: "Most respondents work as teachers or in publishing. The Bangla literary scene is Dhaka-centred but the teaching path is national." },
-        outside: { careers: ["BCS education cadre", "College / school teacher", "Local publishing & culture work"], salary: "৳12k–40k/mo",
+        outside: { careers: ["BCS education cadre", "College / school teacher", "Local publishing & culture work"], salary: "à§³12kâ€“40k/mo",
           note: "Outside Dhaka, teaching and BCS education cadre are the dominant pathways. Stable, modest, respected work." },
-        intl: { careers: ["MA in Bangla / South Asian studies abroad", "Translation / language work"], salary: "$25k–$55k/yr" },
+        intl: { careers: ["MA in Bangla / South Asian studies abroad", "Translation / language work"], salary: "$25kâ€“$55k/yr" },
       },
       curriculum: [
-        { year: "Years 1–2", title: "Foundation — language & history", items: ["Bangla grammar & linguistics", "Survey of Bangla literature", "Poetry & prose traditions"], note: null },
-        { year: "Years 3–4", title: "Specialisation & thesis", items: ["Modernist & post-colonial criticism", "Comparative literature options", "Capstone thesis"], note: "Strong fit for teaching-track aspirants", noteTone: "good" },
+        { year: "Years 1â€“2", title: "Foundation â€” language & history", items: ["Bangla grammar & linguistics", "Survey of Bangla literature", "Poetry & prose traditions"], note: null },
+        { year: "Years 3â€“4", title: "Specialisation & thesis", items: ["Modernist & post-colonial criticism", "Comparative literature options", "Capstone thesis"], note: "Strong fit for teaching-track aspirants", noteTone: "good" },
       ],
-      unis: { public: ["DU", "JU", "RU", "CU", "Jagannath University"], private: ["—"] },
+      unis: { public: ["DU", "JU", "RU", "CU", "Jagannath University"], private: ["â€”"] },
       alts: ["english-lit", "development-studies"],
       confidence: "emerging",
     },
@@ -2397,22 +2397,22 @@ window.PFData = (function () {
       slug: "civil-engineering",
       name: "Civil Engineering",
       field: "technology",
-      desc: "Structures, transport, water — the physical infrastructure of the country.",
+      desc: "Structures, transport, water â€” the physical infrastructure of the country.",
       hsc: ["Science"],
       math: true,
       difficulty: 4,
       trend: "stable",
       curriculumStyle: "vertical",
       regional: {
-        dhaka: { careers: ["Structural / site engineer", "Consulting firm", "Real-estate developer", "Govt PWD"], salary: "৳35k–1.2L+/mo",
+        dhaka: { careers: ["Structural / site engineer", "Consulting firm", "Real-estate developer", "Govt PWD"], salary: "à§³35kâ€“1.2L+/mo",
           note: "Dhaka has the largest concentration of consulting firms and high-rise developers. Site work is national." },
-        outside: { careers: ["Site engineer (national rotation)", "LGED / PWD postings", "BCS engineering cadre", "Local contractor"], salary: "৳25k–70k/mo",
+        outside: { careers: ["Site engineer (national rotation)", "LGED / PWD postings", "BCS engineering cadre", "Local contractor"], salary: "à§³25kâ€“70k/mo",
           note: "Civil engineering is one of the few subjects where outside-Dhaka work is the norm, not a fallback. National infrastructure work pays decently." },
-        intl: { careers: ["MS abroad (structural / transportation)", "Gulf / Middle East site work"], salary: "$45k–$110k/yr" },
+        intl: { careers: ["MS abroad (structural / transportation)", "Gulf / Middle East site work"], salary: "$45kâ€“$110k/yr" },
       },
       curriculum: [
-        { year: "Years 1–2", title: "Foundation — mechanics & math", items: ["Engineering mechanics", "Strength of materials", "Calculus & numerical methods"], note: "Theory load is heavy — the math doesn't let up", noteTone: "warn" },
-        { year: "Years 3–4", title: "Specialisation & site work", items: ["Structural / geotechnical / transport", "Hydraulics & water resources", "Capstone design project"], note: "Final-year placement is the most career-defining moment", noteTone: "good" },
+        { year: "Years 1â€“2", title: "Foundation â€” mechanics & math", items: ["Engineering mechanics", "Strength of materials", "Calculus & numerical methods"], note: "Theory load is heavy â€” the math doesn't let up", noteTone: "warn" },
+        { year: "Years 3â€“4", title: "Specialisation & site work", items: ["Structural / geotechnical / transport", "Hydraulics & water resources", "Capstone design project"], note: "Final-year placement is the most career-defining moment", noteTone: "good" },
       ],
       unis: { public: ["BUET", "KUET", "RUET", "CUET", "IUT"], private: ["AIUB", "BRAC University", "IUB"] },
       alts: ["cse", "geography"],
@@ -2428,17 +2428,17 @@ window.PFData = (function () {
       difficulty: 4,
       trend: "rising",
       curriculumStyle: "vertical",
-      regretSignal: { rate: 33, note: "One of our three Mathematics respondents flatly says: 'I would choose Computer Science. Because of demand in higher studies.' The pure-math route is a respected academic path — but the demand gap with CSE is real, and worth knowing before you sign up." },
+      regretSignal: { rate: 33, note: "One of our three Mathematics respondents flatly says: 'I would choose Computer Science. Because of demand in higher studies.' The pure-math route is a respected academic path â€” but the demand gap with CSE is real, and worth knowing before you sign up." },
       regional: {
-        dhaka: { careers: ["Quant / data analyst (pivot)", "Actuarial / risk", "University teaching (post-MS)", "Statistical consulting"], salary: "৳25k–80k/mo",
+        dhaka: { careers: ["Quant / data analyst (pivot)", "Actuarial / risk", "University teaching (post-MS)", "Statistical consulting"], salary: "à§³25kâ€“80k/mo",
           note: "Most Math graduates in Dhaka pivot into data, finance, or actuarial roles. Pure-math jobs are essentially academia." },
-        outside: { careers: ["College / school teacher", "BCS education / general cadre", "Statistics-adjacent govt roles"], salary: "৳15k–45k/mo",
+        outside: { careers: ["College / school teacher", "BCS education / general cadre", "Statistics-adjacent govt roles"], salary: "à§³15kâ€“45k/mo",
           note: "Outside Dhaka, teaching and BCS are the dominant paths. Stable but slow-growing." },
-        intl: { careers: ["MS / PhD abroad", "Quant / data science globally"], salary: "$60k–$160k/yr" },
+        intl: { careers: ["MS / PhD abroad", "Quant / data science globally"], salary: "$60kâ€“$160k/yr" },
       },
       curriculum: [
-        { year: "Years 1–2", title: "Foundation — calculus & algebra", items: ["Single & multivariable calculus", "Linear algebra & ODEs", "Discrete math & logic"], note: null },
-        { year: "Years 3–4", title: "Specialisation — pure or applied", items: ["Topology, analysis, group theory (pure)", "Probability, statistics, numerical methods (applied)", "Thesis"], note: "Topology and fuzzy mathematics are the recurring pain points in our data", noteTone: "warn" },
+        { year: "Years 1â€“2", title: "Foundation â€” calculus & algebra", items: ["Single & multivariable calculus", "Linear algebra & ODEs", "Discrete math & logic"], note: null },
+        { year: "Years 3â€“4", title: "Specialisation â€” pure or applied", items: ["Topology, analysis, group theory (pure)", "Probability, statistics, numerical methods (applied)", "Thesis"], note: "Topology and fuzzy mathematics are the recurring pain points in our data", noteTone: "warn" },
       ],
       unis: { public: ["DU", "BUET (Math)", "JU", "CU", "RU"], private: ["BRAC University"] },
       alts: ["cse", "finance-banking", "economics"],
@@ -2544,7 +2544,7 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "Bangladesh University of Professionals (BUP)",
         "session": "2015",
-        "role": "Senior Officer · Rupali Bank PLC",
+        "role": "Senior Officer Â· Rupali Bank PLC",
         "good": "Learning new tech",
         "bad": "Too much monotonous",
         "whoShould": "People who wants to have a tech career",
@@ -2565,7 +2565,7 @@ window.PFData = (function () {
         "field": "business",
         "uni": "East West University",
         "session": "Fall24",
-        "role": "N/a · N/a",
+        "role": "N/a Â· N/a",
         "good": "Will get the chance to work with Grameenphone and Pran soon so it will be a great experience",
         "bad": "While reading BBA we have to do a course named CSE. It isn't necessary. Cause there is actually lack of resources. We are just memorizing things",
         "whoShould": "Those people who want to be an entrepreneur or want to go for banking sector",
@@ -2586,7 +2586,7 @@ window.PFData = (function () {
         "field": "humanities",
         "uni": "Jagannath University",
         "session": "2016",
-        "role": "Lecturer · Milestone College",
+        "role": "Lecturer Â· Milestone College",
         "good": "This subject helped me to understand others perspection and natural beauty as well.",
         "bad": "Presentation lacking, pretty tough to get tuitions",
         "whoShould": "who loves nature, love and sit on BCS in the future",
@@ -2607,7 +2607,7 @@ window.PFData = (function () {
         "field": "environmental",
         "uni": "University of Dhaka",
         "session": "2012",
-        "role": "Senior officer · Meghna Bank",
+        "role": "Senior officer Â· Meghna Bank",
         "good": "Get to understand how life and nature work intertwinedly",
         "bad": "Primitive curriculum.less opportunity of career choice",
         "whoShould": "Who has passion for life science and from a well off family",
@@ -2628,7 +2628,7 @@ window.PFData = (function () {
         "field": "business",
         "uni": "American International University-Bangladesh (AIUB)",
         "session": "2013",
-        "role": "Director · Capital Builders",
+        "role": "Director Â· Capital Builders",
         "good": "Fun Projects",
         "bad": "Lack of structures",
         "whoShould": "Who are willing to do job in future",
@@ -2649,7 +2649,7 @@ window.PFData = (function () {
         "field": "environmental",
         "uni": "University of Dhaka",
         "session": "2014",
-        "role": "Sales Engineer · SLB",
+        "role": "Sales Engineer Â· SLB",
         "good": "Field Work",
         "bad": "Not Recognized properly",
         "whoShould": "One who have the Passion to know about the Earth Processes",
@@ -2691,11 +2691,11 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "University of Liberal Arts Bangladesh (ULAB)",
         "session": "2019",
-        "role": "Student · University of liberal arts",
-        "good": "1. Problem-Solving and Creativity • Debugging Challenges: Solving a bug after hours of work is immensely satisfying. • Building Projects: Creating something from scratch, like apps, websites, or algorithms, allows for creativity and hands-on learning. 2. Collaborative Learning • Team Projects: Working with peers to build solutions or complete assignments fosters teamwork. • Hackathons: These events push you to think innovatively under pressure and are great learning experiences.",
-        "bad": "1. Steep Learning Curve • Overwhelming Complexity: Understanding advanced concepts like machine learning, operating systems, or algorithms can be daunting. • Syntax Errors: Hours spent fixing small errors in code can be frustrating. 2. High Expectations • Heavy Workload: Balancing multiple assignments, projects, and exams can lead to burnout. • Unrealistic Deadlines: Meeting tight deadlines in both coursework and personal projects can feel overwhelming.",
-        "whoShould": "Those uninterested in logical problem-solving or abstract thinking. • Individuals who dislike constant learning and adapting to new tools and technologies. • Students with little patience for trial and error, as coding and debugging often require persistence.",
-        "whoShouldnt": "Choosing CSE—or any field—should depend on your interests, strengths, and long-term goals. If you’re unsure, exploring beginner programming courses or talking to current students can help you decide.",
+        "role": "Student Â· University of liberal arts",
+        "good": "1. Problem-Solving and Creativity â€¢ Debugging Challenges: Solving a bug after hours of work is immensely satisfying. â€¢ Building Projects: Creating something from scratch, like apps, websites, or algorithms, allows for creativity and hands-on learning. 2. Collaborative Learning â€¢ Team Projects: Working with peers to build solutions or complete assignments fosters teamwork. â€¢ Hackathons: These events push you to think innovatively under pressure and are great learning experiences.",
+        "bad": "1. Steep Learning Curve â€¢ Overwhelming Complexity: Understanding advanced concepts like machine learning, operating systems, or algorithms can be daunting. â€¢ Syntax Errors: Hours spent fixing small errors in code can be frustrating. 2. High Expectations â€¢ Heavy Workload: Balancing multiple assignments, projects, and exams can lead to burnout. â€¢ Unrealistic Deadlines: Meeting tight deadlines in both coursework and personal projects can feel overwhelming.",
+        "whoShould": "Those uninterested in logical problem-solving or abstract thinking. â€¢ Individuals who dislike constant learning and adapting to new tools and technologies. â€¢ Students with little patience for trial and error, as coding and debugging often require persistence.",
+        "whoShouldnt": "Choosing CSEâ€”or any fieldâ€”should depend on your interests, strengths, and long-term goals. If youâ€™re unsure, exploring beginner programming courses or talking to current students can help you decide.",
         "opportunities": "There are many opportunities",
         "again": "yes",
         "alternative": null
@@ -2712,7 +2712,7 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "Khulna University of Engineering & Technology (KUET)",
         "session": "2013",
-        "role": "Lecturer · DCGPSC",
+        "role": "Lecturer Â· DCGPSC",
         "good": "Field survey",
         "bad": "Structure lab",
         "whoShould": "Who are skilled in math+phy",
@@ -2733,7 +2733,7 @@ window.PFData = (function () {
         "field": "social-science",
         "uni": "University of Dhaka",
         "session": "2016",
-        "role": "Stormwater GIS analyst · Hamilton County Government Administration",
+        "role": "Stormwater GIS analyst Â· Hamilton County Government Administration",
         "good": "Fieldwork",
         "bad": "Absence of technical and contemporary curriculum.",
         "whoShould": "Whoever has interest in Geography",
@@ -2754,7 +2754,7 @@ window.PFData = (function () {
         "field": "humanities",
         "uni": "University of Dhaka",
         "session": "2016",
-        "role": "Art teacher · Springdale International school",
+        "role": "Art teacher Â· Springdale International school",
         "good": "Realistic projects like making an entirw pop up book, illustrating everything and all of it was a great experience",
         "bad": "Lack of good printing materials and lack of clear instructions",
         "whoShould": "Anyone and everyone",
@@ -2775,7 +2775,7 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "American International University-Bangladesh (AIUB)",
         "session": "2010",
-        "role": "Architect · Design education for youngsters of Bangladesh",
+        "role": "Architect Â· Design education for youngsters of Bangladesh",
         "good": "Lot of things to learn,inspired by great teachers & discover new myself.",
         "bad": "We dont have campus back then, but still system was good.",
         "whoShould": "Who is passionate enough to learn.",
@@ -2796,7 +2796,7 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "Ahsanullah University of Science & Technology (AUST)",
         "session": "2011",
-        "role": "Senior Engineer, Windows Infrastructure Operations · bKash Limited",
+        "role": "Senior Engineer, Windows Infrastructure Operations Â· bKash Limited",
         "good": "Learned about how physics works by applying it in practical projects. Met some amazing professors who were like mentors.Learned a lot of basics that later helped me in my professional career.",
         "bad": "Lack of research facility, lack of funding for more complex projects.",
         "whoShould": "Those who are passionate about engineering and want to make a career out of it.",
@@ -2817,7 +2817,7 @@ window.PFData = (function () {
         "field": "environmental",
         "uni": "Noakhali Science & Technology University",
         "session": "2016",
-        "role": "M.Sc in Plant Pathology · Bangladesh Agricultural University",
+        "role": "M.Sc in Plant Pathology Â· Bangladesh Agricultural University",
         "good": "It allowed me to connect more closely with nature and apply my knowledge practically at the field level, which is essential for promoting sustainable agriculture.",
         "bad": "If resources could be developed, students would have more potential in research projects.",
         "whoShould": "Students those are creative to think, interested in research.",
@@ -2838,7 +2838,7 @@ window.PFData = (function () {
         "field": "business",
         "uni": "Jagannath University",
         "session": "2014",
-        "role": "Officer · Quality Feeds Ltd.",
+        "role": "Officer Â· Quality Feeds Ltd.",
         "good": "Fun coursework",
         "bad": "challenging topics",
         "whoShould": "who interest accept the challenge",
@@ -2859,11 +2859,11 @@ window.PFData = (function () {
         "field": "humanities",
         "uni": "Jagannath University",
         "session": "2016",
-        "role": "Officer · PDS International",
+        "role": "Officer Â· PDS International",
         "good": "There were some fun courses included. And some of our professors are really very cool. They made the journey more smooth and memorable.",
         "bad": "Literature part was not my thing",
         "whoShould": "Who really likes literature stuff",
-        "whoShouldnt": "Who thinks, he/she loves English subject on the basis of their SSC and HSC curriculum 🤦‍♀️",
+        "whoShouldnt": "Who thinks, he/she loves English subject on the basis of their SSC and HSC curriculum ðŸ¤¦â€â™€ï¸",
         "opportunities": "Teacher, Researchers",
         "again": "yes",
         "alternative": null
@@ -2880,7 +2880,7 @@ window.PFData = (function () {
         "field": "humanities",
         "uni": "Jagannath University",
         "session": "2017",
-        "role": "Lecturer · Uttara University",
+        "role": "Lecturer Â· Uttara University",
         "good": "I have been inspired to move forward despite all the adversities. I have been able to reduce greed and excessive expectations and make life easier, more beautiful, and more humane.",
         "bad": "There were some limitations in the field of research. I had fewer opportunities to conduct social research at the field level.",
         "whoShould": "I love literature, so I studied this subject.",
@@ -2901,7 +2901,7 @@ window.PFData = (function () {
         "field": "business",
         "uni": "Jahangirnagar University",
         "session": "2012",
-        "role": "Executive Officer · Private commerical Bank",
+        "role": "Executive Officer Â· Private commerical Bank",
         "good": "related to economy",
         "bad": "Some topics are not related to our economic system.",
         "whoShould": "Those who want to build career in financial organization.",
@@ -2922,7 +2922,7 @@ window.PFData = (function () {
         "field": "social-science",
         "uni": "University of Dhaka",
         "session": "2013",
-        "role": "Psychological Counselor · IUBAT",
+        "role": "Psychological Counselor Â· IUBAT",
         "good": "Freud's theory",
         "bad": "Poor course structure and less applicability",
         "whoShould": "Who has passion about it",
@@ -2964,7 +2964,7 @@ window.PFData = (function () {
         "field": "social-science",
         "uni": "East West University",
         "session": "2015",
-        "role": "Sr executive · PORCELANOSA",
+        "role": "Sr executive Â· PORCELANOSA",
         "good": "Interesting subject, good career potential",
         "bad": "A bit difficult on the mathematics, but EWU optimised course materials in a very good way. Sometimes faculties were a bit challenging more than subject",
         "whoShould": "Who are good at mathematics, has Patience for r&d job field, can do attitude is much needed",
@@ -2985,7 +2985,7 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "Bangladesh University of Business & Technology (BUBT)",
         "session": "2020",
-        "role": "Graphic Designer · Navana Group",
+        "role": "Graphic Designer Â· Navana Group",
         "good": "Feeling proud after learning tough topics and certifications.",
         "bad": "Trouble balancing theory and practical work.",
         "whoShould": "Who looking for diverse tech career options.",
@@ -3006,7 +3006,7 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "Southeast University",
         "session": "2022",
-        "role": "UI/UX Desigenr · One Information and Communication Technology",
+        "role": "UI/UX Desigenr Â· One Information and Communication Technology",
         "good": "Real life implementation",
         "bad": "semester length and resources are not enough",
         "whoShould": "Any one who has interest in software programming , good at match and like analytics",
@@ -3027,7 +3027,7 @@ window.PFData = (function () {
         "field": "humanities",
         "uni": "Jagannath University",
         "session": "2016",
-        "role": "Medical information officer · Popular pharmaceutical",
+        "role": "Medical information officer Â· Popular pharmaceutical",
         "good": "Inspiring Professor",
         "bad": "All",
         "whoShould": "All",
@@ -3090,7 +3090,7 @@ window.PFData = (function () {
         "field": "science",
         "uni": "University of Dhaka",
         "session": "2008",
-        "role": "CEO · Hit the trail",
+        "role": "CEO Â· Hit the trail",
         "good": "Calculus is good topics for a student.",
         "bad": "Topology, fuzzy mathematics are hard topics.. And teachers are not fully efficient to teach",
         "whoShould": "Whose basic knowledge about math is very good.",
@@ -3111,11 +3111,11 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "American International University-Bangladesh (AIUB)",
         "session": "15-1",
-        "role": "Senior Video Editor · BongoBd",
+        "role": "Senior Video Editor Â· BongoBd",
         "good": "Making the App for Aiub Canteen Management",
         "bad": "Coding has no color in back end So, It's boring sometime",
         "whoShould": "Who likes mathematics a lot.",
-        "whoShouldnt": "Who doesn’t like mathematics.",
+        "whoShouldnt": "Who doesnâ€™t like mathematics.",
         "opportunities": "Canbt explain in words coz the world is moving with Computer so that opportunities are it's limitless.",
         "again": "yes",
         "alternative": null
@@ -3136,7 +3136,7 @@ window.PFData = (function () {
         "good": "Getting scholarship from university",
         "bad": "Lackings of lab facilities",
         "whoShould": "Those really want to do hard work, passionate to their work and capable to handle a lot of work pressure and can sacrifice endless weekend",
-        "whoShouldnt": "Those aren’t willing to work without time limitations and can't cope up with work load",
+        "whoShouldnt": "Those arenâ€™t willing to work without time limitations and can't cope up with work load",
         "opportunities": "Can make a great career if anyone can sacrifice their first few years without expectations and learn everything with sincerity",
         "again": "yes",
         "alternative": null
@@ -3154,10 +3154,10 @@ window.PFData = (function () {
         "uni": "University of Dhaka",
         "session": "2012",
         "role": "Housewife",
-        "good": "I don’t have any good experiences",
+        "good": "I donâ€™t have any good experiences",
         "bad": "Challenging topics",
         "whoShould": "Who is interested in physics in their school or college days and also good in mathematics",
-        "whoShouldnt": "Who isn’t good in mathematics",
+        "whoShouldnt": "Who isnâ€™t good in mathematics",
         "opportunities": "Research opportunities, foreign job opportunities",
         "again": "yes",
         "alternative": null
@@ -3195,7 +3195,7 @@ window.PFData = (function () {
         "field": "business",
         "uni": "Stamford University Bangladesh",
         "session": "2015",
-        "role": "Full-Stack Developer {Laravel (PHP), ReactJS (JavaScript), WordPress (PHP)} · I prefer not to disclose",
+        "role": "Full-Stack Developer {Laravel (PHP), ReactJS (JavaScript), WordPress (PHP)} Â· I prefer not to disclose",
         "good": "I was very interested in CA (Chartered Accountant); therefore, I picked accounting as a major subject, and I had some external/internal desire related to accounting. Well, I was good in math at an early age, and it was easy to solve issues and manipulate leading places. I want to say a good, honest, and hard-working person can change a company's financial status, except if he/she is not.",
         "bad": "Sorry to say: 1. We do not have much good teachers to teach accounting 2. Education institutions still follow the theoretical case study 3. Teachers and authorities are arrogant 4. Teachers and people think accounting is an easy subject but accounting is one of the world's hardest subject 5. Education institutions and organizations are not well concerned about accounts, and that's one of the reasons we are falling Some points: Resources come from experience and willingness; if you don't have them, then a \"lack of resources\" will arise. \"Challenging topics\" are most welcome, but who will bring them to students? While some of us (we know who they are) have destroyed our system. No doubt, our country is just focusing on marks like 4/4, 3.8/4, and so on. So what do we expect except for the \"poor course structure\"?",
         "whoShould": "If you have your own and your parents' business, go for it without hesitation. If you are a good, honest, hard-working person and good at math, then go for it.",
@@ -3216,7 +3216,7 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "BRAC University",
         "session": "2017",
-        "role": "Graduate Research Assistant · Kennesaw state university",
+        "role": "Graduate Research Assistant Â· Kennesaw state university",
         "good": "it has been highly rewarding, with highlights including becoming a semi-finalist in Esho Robot Banai, Bangladesh's first robotics reality show, and competing against top universities. I earned a merit-based scholarship and High Distinction at BRAC University, secured top positions in programming contests, and published a paper, all of which enriched my knowledge and skills.",
         "bad": "should increase involvement with industry",
         "whoShould": "Anyone with the interest",
@@ -3258,11 +3258,11 @@ window.PFData = (function () {
         "field": "social-science",
         "uni": "Lalmatia Mahila College",
         "session": "2016",
-        "role": "Brand and groth manager · Inception group",
-        "good": "One of the best experiences while studying this subject was working on collaborative projects that highlighted the differences between centralized and decentralized education systems. These projects encouraged teamwork and critical thinking, making the learning process enjoyable. Additionally, discussions led by inspiring professors who shared real-life examples of policy impacts made the subject more relatable and engaging. The coursework often included case studies and creative assignments, which made it both fun and intellectually rewarding…",
+        "role": "Brand and groth manager Â· Inception group",
+        "good": "One of the best experiences while studying this subject was working on collaborative projects that highlighted the differences between centralized and decentralized education systems. These projects encouraged teamwork and critical thinking, making the learning process enjoyable. Additionally, discussions led by inspiring professors who shared real-life examples of policy impacts made the subject more relatable and engaging. The coursework often included case studies and creative assignments, which made it both fun and intellectually rewardingâ€¦",
         "bad": "A challenging aspect was the lack of practical application in some coursework, which made it feel disconnected from real-world scenarios. Additionally, the heavy focus on memorization over critical thinking sometimes reduced engagement and understanding.",
-        "whoShould": "This subject is ideal for students passionate about education reform, policy-making, or understanding the broader impact of centralized systems on society. It’s especially suited for those aspiring to work in education administration, public policy, or social development sectors.",
-        "whoShouldnt": "Students who prefer hands-on, technical fields or are not interested in theoretical discussions about education systems might find this subject less engaging. It’s not ideal for those looking for immediate practical applications or careers unrelated to education or policy-making.",
+        "whoShould": "This subject is ideal for students passionate about education reform, policy-making, or understanding the broader impact of centralized systems on society. Itâ€™s especially suited for those aspiring to work in education administration, public policy, or social development sectors.",
+        "whoShouldnt": "Students who prefer hands-on, technical fields or are not interested in theoretical discussions about education systems might find this subject less engaging. Itâ€™s not ideal for those looking for immediate practical applications or careers unrelated to education or policy-making.",
         "opportunities": "Studying this subject can open doors to careers in education policy-making, school administration, curriculum development, and academic research. Graduates can also work with NGOs, government organizations, or international bodies focused on educational reform and development. Additionally, it provides a strong foundation for further studies in education, sociology, or public policy.",
         "again": "yes",
         "alternative": null
@@ -3279,7 +3279,7 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "Southeast University",
         "session": "2016",
-        "role": "MBA · European Business Management Academy",
+        "role": "MBA Â· European Business Management Academy",
         "good": "- Solving engineering problems - Reading books - Doing maths",
         "bad": "- Poor course structure - No professional courses that will be helpful for further career - No inspiring professors, all seems to choose teaching profession so that they can show off or get advantage when going for foreign degrees - No investment lessons or guideline - Lack of interest in solving real problems, just some knowledge from books published before world war 2",
         "whoShould": "- Those who is up to gain some technical knowledge - Who is up for getting an engineering degree - Who wants to get into a university and pass time - Who wants to make sure s/he wants to fullfil the basic criteria of Bangladesh job marketplace that you need to be graduated to get this job",
@@ -3300,7 +3300,7 @@ window.PFData = (function () {
         "field": "business",
         "uni": "Bangladesh University of Professionals (BUP)",
         "session": "2021",
-        "role": "Content Marketing Intern · Sheba.Xyz",
+        "role": "Content Marketing Intern Â· Sheba.Xyz",
         "good": "Inspiring Professors",
         "bad": "Poor Course Structure",
         "whoShould": "Creative Person",
@@ -3321,7 +3321,7 @@ window.PFData = (function () {
         "field": "business",
         "uni": "Bangladesh Maritime University",
         "session": "2022",
-        "role": "Project Manager · Genius Prep Academy",
+        "role": "Project Manager Â· Genius Prep Academy",
         "good": "Specialized field gives you an advantage along with the general ones.",
         "bad": "Many unexplored factors & lack of resources to dig into them.",
         "whoShould": "Specialized BBA, Specified job fields along with the general ones, Interesting studies, Scopes for research, these are one the reasons for choosing this subject.",
@@ -3342,7 +3342,7 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "University of Asia Pacific",
         "session": "2015",
-        "role": "Designer · PDS International",
+        "role": "Designer Â· PDS International",
         "good": "Learning about new technologies with potential applications, learning and improvement in problem-solving skills.",
         "bad": "Too much thinking for Coding.",
         "whoShould": "Critical thinker and problem solver.",
@@ -3363,7 +3363,7 @@ window.PFData = (function () {
         "field": "science",
         "uni": "University of Dhaka",
         "session": "2013",
-        "role": "Frontend Developer (ReactJS) · Wellmax IT Ltd.",
+        "role": "Frontend Developer (ReactJS) Â· Wellmax IT Ltd.",
         "good": "Got relieved from DU Physics Department",
         "bad": "Unfortunately read Physics throughout 4 years of Bachelor Degree",
         "whoShould": "Any student who are enthusiastic in both Mathematics and Physics",
@@ -3405,7 +3405,7 @@ window.PFData = (function () {
         "field": "business",
         "uni": "East West University",
         "session": "2016",
-        "role": "Managing director · Koli Agro Farm Includes Limited",
+        "role": "Managing director Â· Koli Agro Farm Includes Limited",
         "good": "Inspiring proffer was Zohur sir he motivate us every single time",
         "bad": "My most challenging topic was economics",
         "whoShould": "Who has the passion to do business",
@@ -3447,7 +3447,7 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "Daffodil International University",
         "session": "2018",
-        "role": "Master's in Information Technology · Central Queensland University",
+        "role": "Master's in Information Technology Â· Central Queensland University",
         "good": "Research papers articles, advance computing projects and so on",
         "bad": "Lack of international resources and weak curse structure",
         "whoShould": "A person who is enthusiastic about computer science and algorithms",
@@ -3468,7 +3468,7 @@ window.PFData = (function () {
         "field": "humanities",
         "uni": "Jagannath University",
         "session": "2016",
-        "role": "Lecturer · Milestone college",
+        "role": "Lecturer Â· Milestone college",
         "good": "This subject gives me the motivation to live",
         "bad": "I am in financial trouble to teach in Bengali",
         "whoShould": "Who are Rich",
@@ -3489,7 +3489,7 @@ window.PFData = (function () {
         "field": "science",
         "uni": "Jagannath University",
         "session": "2011",
-        "role": "SENIOR OFFICER · SONALI BANK PLC",
+        "role": "SENIOR OFFICER Â· SONALI BANK PLC",
         "good": "Inspiring Professors",
         "bad": "Lack of resources",
         "whoShould": "Because Mathematics is the mother of Science",
@@ -3510,7 +3510,7 @@ window.PFData = (function () {
         "field": "technology",
         "uni": "Stamford University Bangladesh",
         "session": "2013",
-        "role": "SOFTWARE ENGINEER · AQUALINK BANGLADESH",
+        "role": "SOFTWARE ENGINEER Â· AQUALINK BANGLADESH",
         "good": "fun coursework",
         "bad": "poor course structure",
         "whoShould": "tech-savvy people",
@@ -3531,7 +3531,7 @@ window.PFData = (function () {
         "field": "business",
         "uni": "Bangladesh University of Business & Technology (BUBT)",
         "session": "2021",
-        "role": "Visa processing officer · PDS International",
+        "role": "Visa processing officer Â· PDS International",
         "good": "Making advertisement based on assigned product while in a group project and getting highly praised for it by my favourite teacher",
         "bad": "As marketing requires interaction with people, it was quite challenging do survey for class assignments.",
         "whoShould": "People who are confident and can communicate well. A strong convincing mindset will help you a lot",
@@ -3552,11 +3552,11 @@ window.PFData = (function () {
         "field": "science",
         "uni": "University of Dhaka",
         "session": "2013",
-        "role": "Graduate Student · Old Dominion University",
+        "role": "Graduate Student Â· Old Dominion University",
         "good": "Some of our professors were very helpful, inspiring and down to earth. Doing the experiments in lab courses were very exciting to me as we could gather practical experience of what we were learning in theoretical courses.",
-        "bad": "It’s undoubtedly a very hard subject. And most of the lectures were not at all organized. A large number of Professors used to demotivate students and scare the shit out them.",
+        "bad": "Itâ€™s undoubtedly a very hard subject. And most of the lectures were not at all organized. A large number of Professors used to demotivate students and scare the shit out them.",
         "whoShould": "If you are very passionate about knowing the cause of how everything works and love mathematics as well, this is the subject for you. You need to hard working and have very good analytical skills.",
-        "whoShouldnt": "Don’t take it if you are not a fan of Physics and Math",
+        "whoShouldnt": "Donâ€™t take it if you are not a fan of Physics and Math",
         "opportunities": "Plenty. You can go anywhere in academia or industry. You can switch to any other related subjects.",
         "again": "yes",
         "alternative": null
@@ -3573,7 +3573,7 @@ window.PFData = (function () {
         "field": "science",
         "uni": "University of Dhaka",
         "session": "2013",
-        "role": "Teaching Assistant · University of Nevada Reno",
+        "role": "Teaching Assistant Â· University of Nevada Reno",
         "good": "Interesting topics and fun coursework",
         "bad": "Poor course structure",
         "whoShould": "Anyone interested in Physics",
@@ -3594,7 +3594,7 @@ window.PFData = (function () {
         "field": "science",
         "uni": "University of Dhaka",
         "session": "2013",
-        "role": "Graduate Research Assistant · Syracuse University",
+        "role": "Graduate Research Assistant Â· Syracuse University",
         "good": "Had some really good professors",
         "bad": "Course structure was a bit off, e.g., we never received proper training in programming which is a prerequisite for solving Physics problems while we had to study random subjects which we never required in the end.",
         "whoShould": "Someone who has a proper understanding of what draws them towards this subject and are truly passionate about it.",
@@ -3615,7 +3615,7 @@ window.PFData = (function () {
         "field": "social-science",
         "uni": "Jahangirnagar University",
         "session": "45",
-        "role": "Student · Ajou university",
+        "role": "Student Â· Ajou university",
         "good": "Fun to work with camera, scope of being creative with content creation",
         "bad": "Lack of professional recognition and opportunity with a bare minimum salary",
         "whoShould": "Nobody should take it in Bangladesh so that tv channel authorities prioritize giving a better wage to journalists, also the life security of journalists is also a concern.",
@@ -3626,7 +3626,7 @@ window.PFData = (function () {
     }
 ];
 
-  // Helper — compute confidence tier from current testimonial count.
+  // Helper â€” compute confidence tier from current testimonial count.
   // Use the static `confidence` field on each subject for SSR/initial render;
   // re-derive at runtime if data grows.
   function computeConfidence(slug, hasProfile) {
@@ -3642,12 +3642,12 @@ window.PFData = (function () {
 
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      COMPONENTS  (Nav, Footer, Avatar, HonestyBox, primitives)
-     ═══════════════════════════════════════════════════════════ -->
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
-  // EduPath BD — Shared components
+  // EduPath BD â€” Shared components
   // Nav, Footer, primitives (Pill, Avatar, HonestyBox, StatsStrip, SectionHead)
 
   const {
@@ -3899,7 +3899,7 @@ window.PFData = (function () {
     }, children));
   }
 
-  // Initials avatar — gradient circle.
+  // Initials avatar â€” gradient circle.
   // Use `name` if given; otherwise derive initials from subject (first letter of each word, up to 2).
   function Avatar({
     name,
@@ -3914,7 +3914,7 @@ window.PFData = (function () {
       const words = subjectName.split(/[\s&()]+/).filter(w => w.length > 0 && /^[A-Z]/.test(w[0]));
       initials = words.slice(0, 2).map(w => w[0]).join("").toUpperCase() || subjectName.slice(0, 2).toUpperCase();
     } else {
-      initials = "··";
+      initials = "Â·Â·";
     }
     const color = PFData.FIELDS[field] && PFData.FIELDS[field].color || "#006A4E";
     return /*#__PURE__*/React.createElement("div", {
@@ -3972,7 +3972,7 @@ window.PFData = (function () {
     }, "\u25CE Niche");
   }
 
-  // Confidence-tier badge — names match the EduPath BD Build Plan §4.1.
+  // Confidence-tier badge â€” names match the EduPath BD Build Plan Â§4.1.
   function ConfidencePill({
     tier
   }) {
@@ -3980,7 +3980,7 @@ window.PFData = (function () {
       listed: {
         bg: "#FBEFD0",
         fg: "#7A5400",
-        label: "Listed only — limited evidence"
+        label: "Listed only â€” limited evidence"
       },
       emerging: {
         bg: "#DCEAF7",
@@ -4023,9 +4023,9 @@ window.PFData = (function () {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      CARDS  (SubjectCard, TestimonialCard, flagFor, shortSubject)
-     ═══════════════════════════════════════════════════════════ -->
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const {
@@ -4036,7 +4036,7 @@ window.PFData = (function () {
     useMemo
   } = React;
 
-  // EduPath BD — SubjectCard + TestimonialCard (minimal, uniform)
+  // EduPath BD â€” SubjectCard + TestimonialCard (minimal, uniform)
 
   function SubjectCard({
     subject,
@@ -4105,12 +4105,12 @@ window.PFData = (function () {
   }
   function flagFor(country) {
     return {
-      BD: "🇧🇩",
-      US: "🇺🇸",
-      KR: "🇰🇷",
-      AU: "🇦🇺",
-      OTHER: "🌐"
-    }[country] || "🌐";
+      BD: "ðŸ‡§ðŸ‡©",
+      US: "ðŸ‡ºðŸ‡¸",
+      KR: "ðŸ‡°ðŸ‡·",
+      AU: "ðŸ‡¦ðŸ‡º",
+      OTHER: "ðŸŒ"
+    }[country] || "ðŸŒ";
   }
   function TestimonialCard({
     t,
@@ -4121,7 +4121,7 @@ window.PFData = (function () {
     const subj = PFData.subjects.find(s => s.slug === t.subjectSlug);
     const fieldKey = subj ? subj.field : t.field || "social-science";
     const subjName = t.subjectName || subj && subj.name || t.subjectSlug;
-    const whoLine = t.name ? `${t.name} · age ${t.age}` : `Class of ${t.session || "—"} · age ${t.age}`;
+    const whoLine = t.name ? `${t.name} Â· age ${t.age}` : `Class of ${t.session || "â€”"} Â· age ${t.age}`;
     return /*#__PURE__*/React.createElement("div", {
       className: "pf-tcard"
     }, /*#__PURE__*/React.createElement("div", {
@@ -4160,7 +4160,7 @@ window.PFData = (function () {
         fontSize: 12,
         whiteSpace: "nowrap"
       }
-    }, expanded ? "Show less ↑" : "Read more ↓")) : null);
+    }, expanded ? "Show less â†‘" : "Read more â†“")) : null);
   }
   Object.assign(window, {
     SubjectCard,
@@ -4171,12 +4171,12 @@ window.PFData = (function () {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      LANDING EXTRAS
      (PinnedReality, FeaturedTestimonial, ConfidenceTiers,
       FeaturedSubjects, FourPillars, SampleResult,
       MasonryVoices, Universities, ForParents)
-     ═══════════════════════════════════════════════════════════ -->
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const {
@@ -4187,45 +4187,45 @@ window.PFData = (function () {
     useMemo
   } = React;
 
-  // EduPath BD — Additional landing sections
+  // EduPath BD â€” Additional landing sections
   // Composed by screen-landing.jsx into a 14-section editorial scroll.
 
-  // ── 1. Pinned "brutal reality" — three stats appear sequentially over a
-  //        cream→green background transition, with floating quote snippets behind ──
+  // â”€â”€ 1. Pinned "brutal reality" â€” three stats appear sequentially over a
+  //        creamâ†’green background transition, with floating quote snippets behind â”€â”€
   function PinnedRealitySection() {
     const fragments = [{
       q: "All bad experience.",
-      who: "Physics · DU · class of 2013",
+      who: "Physics Â· DU Â· class of 2013",
       x: "12%",
       y: "18%",
       r: -8
     }, {
-      q: "Topology, fuzzy mathematics are hard topics… and teachers are not fully efficient.",
-      who: "Mathematics · DU · 2008",
+      q: "Topology, fuzzy mathematics are hard topicsâ€¦ and teachers are not fully efficient.",
+      who: "Mathematics Â· DU Â· 2008",
       x: "62%",
       y: "24%",
       r: 4
     }, {
       q: "Outside Dhaka, no jobs really.",
-      who: "Civil Eng. · 2017",
+      who: "Civil Eng. Â· 2017",
       x: "8%",
       y: "62%",
       r: 6
     }, {
       q: "I wish someone had told me the math gets like this in year 2.",
-      who: "CSE · BUET · 2018",
+      who: "CSE Â· BUET Â· 2018",
       x: "70%",
       y: "70%",
       r: -3
     }, {
-      q: "Course structure was a bit off — we never received proper training in programming.",
-      who: "Physics · DU · 2013 · now Syracuse",
+      q: "Course structure was a bit off â€” we never received proper training in programming.",
+      who: "Physics Â· DU Â· 2013 Â· now Syracuse",
       x: "44%",
       y: "8%",
       r: 2
     }, {
       q: "Lack of professional recognition and opportunity with a bare minimum salary.",
-      who: "Journalism · JU · 2014",
+      who: "Journalism Â· JU Â· 2014",
       x: "38%",
       y: "82%",
       r: -5
@@ -4302,7 +4302,7 @@ window.PFData = (function () {
     }, "\u2014 Core design rule, Build Plan \xA71"))))));
   }
 
-  // ── 2. Featured testimonial at editorial scale ──
+  // â”€â”€ 2. Featured testimonial at editorial scale â”€â”€
   function FeaturedTestimonialSection() {
     const t = PFData.testimonials.find(t => t.id === "resp_017"); // EEE graduate, bKash engineer
     if (!t) return null;
@@ -4353,7 +4353,7 @@ window.PFData = (function () {
     }, "Would choose again")))))));
   }
 
-  // ── 3. Confidence tier explainer ──
+  // â”€â”€ 3. Confidence tier explainer â”€â”€
   function ConfidenceTierSection() {
     return /*#__PURE__*/React.createElement("section", {
       className: "pf-landing-section"
@@ -4418,7 +4418,7 @@ window.PFData = (function () {
     }, "Appears in the directory and Stories. The matcher mentions it only as \"worth investigating\" and ", /*#__PURE__*/React.createElement("strong", null, "never ranks it #1"), ". Today: 16 of 31 subjects sit here.")))));
   }
 
-  // ── 4. Featured subjects — static 3×2 grid ──
+  // â”€â”€ 4. Featured subjects â€” static 3Ã—2 grid â”€â”€
   function FeaturedSubjectsSection({
     go,
     setSubjectSlug
@@ -4485,13 +4485,13 @@ window.PFData = (function () {
         className: "pf-scard__lbl"
       }, "Universities"), /*#__PURE__*/React.createElement("span", {
         className: "pf-scard__val"
-      }, uniCount || "—")), /*#__PURE__*/React.createElement("div", {
+      }, uniCount || "â€”")), /*#__PURE__*/React.createElement("div", {
         className: "pf-scard__row"
       }, /*#__PURE__*/React.createElement("span", {
         className: "pf-scard__lbl"
       }, "Career paths"), /*#__PURE__*/React.createElement("span", {
         className: "pf-scard__val"
-      }, jobCount || "—"))));
+      }, jobCount || "â€”"))));
     })), /*#__PURE__*/React.createElement("div", {
       style: {
         marginTop: 32
@@ -4506,7 +4506,7 @@ window.PFData = (function () {
     }, "See all 31 subjects \u2192"))));
   }
 
-  // ── 5. Real questions from real students ──
+  // â”€â”€ 5. Real questions from real students â”€â”€
   function RealQuestionsSection({
     go
   }) {
@@ -4514,44 +4514,44 @@ window.PFData = (function () {
       q: "Should I choose CSE or EEE? I like both equally.",
       tag: "Science group",
       route: "matcher",
-      cta: "Run the matcher →"
+      cta: "Run the matcher â†’"
     }, {
       q: "I'm in Commerce. Can I still get into a good university with a strong future?",
       tag: "Commerce group",
       route: "explore",
-      cta: "Explore commerce paths →"
+      cta: "Explore commerce paths â†’"
     }, {
-      q: "What do CSE graduates actually earn — in Dhaka and outside?",
+      q: "What do CSE graduates actually earn â€” in Dhaka and outside?",
       tag: "Salary reality",
       route: "detail",
       slug: "cse",
-      cta: "See salary data →"
+      cta: "See salary data â†’"
     }, {
       q: "I want to end up in Korea or Australia within 5 years. Which subject opens the most doors?",
       tag: "Study abroad",
       route: "matcher",
-      cta: "Find abroad-friendly subjects →"
+      cta: "Find abroad-friendly subjects â†’"
     }, {
       q: "Is a private university worth the cost if I can't get into a public one?",
       tag: "Budget decision",
       route: "matcher",
-      cta: "Compare public vs private →"
+      cta: "Compare public vs private â†’"
     }, {
       q: "My family wants MBBS. I want design or tech. What are my real options?",
       tag: "Family pressure",
       route: "matcher",
-      cta: "See what fits you →"
+      cta: "See what fits you â†’"
     }, {
       q: "I'm in Arts. Which subjects lead to government jobs and a stable career?",
       tag: "Arts group",
       route: "explore",
-      cta: "Explore arts paths →"
+      cta: "Explore arts paths â†’"
     }, {
       q: "What do BBA graduates from private universities actually do for work?",
       tag: "Career reality",
       route: "detail",
       slug: "bba",
-      cta: "See BBA career data →"
+      cta: "See BBA career data â†’"
     }];
     return /*#__PURE__*/React.createElement("section", {
       className: "pf-landing-section pf-section--questions"
@@ -4609,10 +4609,10 @@ window.PFData = (function () {
     }, item.cta))))));
   }
 
-  // ── 6. Full simulation preview — shows what you ACTUALLY get ──
+  // â”€â”€ 6. Full simulation preview â€” shows what you ACTUALLY get â”€â”€
   function SimulationPreviewSection() {
     return null;
-  } // removed — replaced by live matcher output
+  } // removed â€” replaced by live matcher output
 
   function _SimulationPreviewSection_UNUSED({
     go
@@ -4620,56 +4620,56 @@ window.PFData = (function () {
     const routes = [{
       id: "A",
       variant: "public",
-      label: "Route A — CSE at a public university",
+      label: "Route A â€” CSE at a public university",
       fit: "Best fit for this profile",
       rows: [{
         k: "4-year total cost",
-        v: "BDT 60,000–100,000"
+        v: "BDT 60,000â€“100,000"
       }, {
         k: "Key universities",
-        v: "BUET · RUET · DU · KUET"
+        v: "BUET Â· RUET Â· DU Â· KUET"
       }, {
         k: "Starting salary",
-        v: "BDT 35,000–55,000/mo in Dhaka"
+        v: "BDT 35,000â€“55,000/mo in Dhaka"
       }, {
         k: "Abroad pathway",
-        v: "Very strong — highest int'l demand"
+        v: "Very strong â€” highest int'l demand"
       }, {
         k: "Admission odds",
-        v: "~3–8% at top public universities"
+        v: "~3â€“8% at top public universities"
       }],
-      risk: "Year 2–3 math workload surprises almost everyone. Ask anyone who's done it.",
+      risk: "Year 2â€“3 math workload surprises almost everyone. Ask anyone who's done it.",
       quote: "I wish someone told me the math gets this intense in year 2.",
-      who: "CSE · BUET · class of 2018"
+      who: "CSE Â· BUET Â· class of 2018"
     }, {
       id: "B",
       variant: "private",
-      label: "Route B — UI/UX at a private university",
-      fit: "Strong alternative · portfolio-based",
+      label: "Route B â€” UI/UX at a private university",
+      fit: "Strong alternative Â· portfolio-based",
       rows: [{
         k: "4-year total cost",
-        v: "BDT 700k–900k (merit waiver: −30%)"
+        v: "BDT 700kâ€“900k (merit waiver: âˆ’30%)"
       }, {
         k: "Key universities",
-        v: "BRAC · NSU · UIU · Daffodil"
+        v: "BRAC Â· NSU Â· UIU Â· Daffodil"
       }, {
         k: "Starting salary",
-        v: "BDT 25,000–60,000/mo · remote USD 800–2,000"
+        v: "BDT 25,000â€“60,000/mo Â· remote USD 800â€“2,000"
       }, {
         k: "Remote probability",
         v: "High after 2 years of strong portfolio"
       }, {
         k: "Admission odds",
-        v: "High — portfolio matters more than GPA"
+        v: "High â€” portfolio matters more than GPA"
       }],
       risk: "Bangladesh's local design job market is still thin. Strong English is non-negotiable for remote.",
       quote: "The degree matters less than the portfolio. Start building from semester one.",
-      who: "UI/UX · NSU · class of 2021"
+      who: "UI/UX Â· NSU Â· class of 2021"
     }, {
       id: "C",
       variant: "abroad",
-      label: "Route C — Korea (GKS Scholarship)",
-      fit: "Matches abroad goal · fully-funded option",
+      label: "Route C â€” Korea (GKS Scholarship)",
+      fit: "Matches abroad goal Â· fully-funded option",
       rows: [{
         k: "Cost if scholarship",
         v: "Full tuition + BDT 80,000/mo stipend"
@@ -4678,7 +4678,7 @@ window.PFData = (function () {
         v: "4-yr Bachelor's at a Korean university"
       }, {
         k: "Requirements",
-        v: "TOPIK L3 or English track · SOP · transcripts"
+        v: "TOPIK L3 or English track Â· SOP Â· transcripts"
       }, {
         k: "Settlement",
         v: "F-series work visa after graduation"
@@ -4686,9 +4686,9 @@ window.PFData = (function () {
         k: "Competition",
         v: "~200 GKS seats/year for Bangladesh"
       }],
-      risk: "Highly competitive. Applications open Oct–Dec. Language prep takes 12–18 months.",
+      risk: "Highly competitive. Applications open Octâ€“Dec. Language prep takes 12â€“18 months.",
       quote: "Start the TOPIK prep in HSC year 2. Most people who miss the scholarship waited too long.",
-      who: "Korean alumni · GKS batch of 2022"
+      who: "Korean alumni Â· GKS batch of 2022"
     }];
     const variantColor = {
       public: "var(--green)",
@@ -4848,11 +4848,11 @@ window.PFData = (function () {
     }, "3 minutes \xB7 No sign-up \xB7 Honest about uncertainty"))));
   }
 
-  // ── 7. Masonry of real voices with parallax ──
+  // â”€â”€ 7. Masonry of real voices with parallax â”€â”€
   function MasonryVoicesSection({
     go
   }) {
-    // Three voices with complete, standalone quotes — one per HSC group
+    // Three voices with complete, standalone quotes â€” one per HSC group
     const ids = ["resp_018", "resp_043", "resp_003"];
     const picks = ids.map(id => PFData.testimonials.find(t => t.id === id)).filter(Boolean);
     return /*#__PURE__*/React.createElement("section", {
@@ -4912,13 +4912,13 @@ window.PFData = (function () {
     }))))));
   }
 
-  // ── 8. Universities row — quiet, with response counts ──
+  // â”€â”€ 8. Universities row â€” quiet, with response counts â”€â”€
   function UniversitiesSection() {
     // Aggregate from testimonials
     const counts = {};
     PFData.testimonials.forEach(t => {
       const k = (t.uni || "").trim();
-      if (!k || k === "—") return;
+      if (!k || k === "â€”") return;
       counts[k] = (counts[k] || 0) + 1;
     });
     const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).filter(([k]) => !k.toLowerCase().includes("anonymised")).slice(0, 12);
@@ -4952,7 +4952,7 @@ window.PFData = (function () {
     }, n, " ", n === 1 ? "voice" : "voices"))))));
   }
 
-  // ── 9. For parents / teachers callout — brief ──
+  // â”€â”€ 9. For parents / teachers callout â€” brief â”€â”€
   function ForParentsSection({
     go
   }) {
@@ -4995,26 +4995,26 @@ window.PFData = (function () {
     }, "Help your child choose with facts, not pressure \u2192")));
   }
 
-  // ── Matcher Teaser — split-screen, sticky left / animated right ──
+  // â”€â”€ Matcher Teaser â€” split-screen, sticky left / animated right â”€â”€
   function MatcherTeaserSection({
     go
   }) {
     const steps = [{
-      label: "Step 1 — Your signal",
+      label: "Step 1 â€” Your signal",
       card: {
         text: "Interest detected: Physics + problem-solving",
         type: "signal"
       }
     }, {
-      label: "Step 2 — Reality check",
+      label: "Step 2 â€” Reality check",
       card: {
         text: "Arts HSC group detected. Direct entry to Physics at DU is restricted. This path is blocked for you.",
         type: "warning"
       }
     }, {
-      label: "Step 3 — Rerouted",
+      label: "Step 3 â€” Rerouted",
       card: {
-        text: "Suggested instead: Economics & Data Analytics — same analytical drive, open to all HSC groups.",
+        text: "Suggested instead: Economics & Data Analytics â€” same analytical drive, open to all HSC groups.",
         type: "success"
       }
     }];
@@ -5079,7 +5079,7 @@ window.PFData = (function () {
     }, s.card.text)))))));
   }
 
-  // ── University Marquee — infinite CSS scroll ──
+  // â”€â”€ University Marquee â€” infinite CSS scroll â”€â”€
   function UniversityMarqueeSection() {
     const unis = ["University of Dhaka", "BUET", "Jahangirnagar University", "BRAC University", "North South University", "IUT", "Rajshahi University", "SUST", "Chittagong University", "RUET", "KUET", "DUET", "Daffodil International University", "East West University", "United International University"];
     // Duplicate for seamless loop
@@ -5117,10 +5117,10 @@ window.PFData = (function () {
 </script>
 
 
-<!-- ═══════════════════════════════════════════════════════════
-     SEARCH INFRASTRUCTURE — buildSearchIndex, searchIndex, SearchBar
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SEARCH INFRASTRUCTURE â€” buildSearchIndex, searchIndex, SearchBar
      Runs before ScreenLanding which uses <SearchBar>
-     ═══════════════════════════════════════════════════════════ -->
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   function buildSearchIndex() {
@@ -5176,7 +5176,7 @@ window.PFData = (function () {
         slug: job.slug,
         related_subjects: job.related_subjects || [],
         searchText: (job.title + " " + (job.related_subjects || []).join(" ")).toLowerCase(),
-        salary: job.salary?.bd?.entry ? { range: `৳${job.salary.bd.entry.min}–${job.salary.bd.entry.max}/${job.salary.bd.unit || "month"}` } : null
+        salary: job.salary?.bd?.entry ? { range: `à§³${job.salary.bd.entry.min}â€“${job.salary.bd.entry.max}/${job.salary.bd.unit || "month"}` } : null
       }));
     } else if (window.CareerData?.jobs) {
       const jobSet = new Set();
@@ -5364,7 +5364,7 @@ window.PFData = (function () {
       },
       onMouseOver: e => e.currentTarget.style.background = "var(--surface-alt)",
       onMouseOut: e => e.currentTarget.style.background = "none"
-    }, u.subjectCount > 0 ? u.name + " · "+u.subjectCount+" subjects" : u.name))), suggestions.jobs.length > 0 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
+    }, u.subjectCount > 0 ? u.name + " Â· "+u.subjectCount+" subjects" : u.name))), suggestions.jobs.length > 0 && /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("div", {
       style: {
         padding: "8px 12px",
         fontSize: 11,
@@ -5396,12 +5396,12 @@ window.PFData = (function () {
 })();
 </script>
 
-<!-- ═══ AI MATCHER (auto-generated) ═══ -->
+<!-- â•â•â• AI MATCHER (auto-generated) â•â•â• -->
 <script type="text/javascript">
-// EduPath BD — Smart Matcher (local, free — no API calls)
+// EduPath BD â€” Smart Matcher (local, free â€” no API calls)
 // Uses keyword extraction + weighted scoring against subjects in PFData
 
-// ── Subject signal weights ────────────────────────────────────────
+// â”€â”€ Subject signal weights â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const SUBJECT_SIGNALS = {
   "cse": {
     keywords: ["code", "coding", "programming", "computer", "software", "app", "game", "tech", "ai", "data", "algorithm", "build"],
@@ -5697,7 +5697,7 @@ function scoreLocal({
     let score = 30;
     let matchedKeywords = [];
 
-    // HSC eligibility — hard filter
+    // HSC eligibility â€” hard filter
     if (!sig.group.includes(hscGroup)) {
       return {
         slug,
@@ -5720,10 +5720,10 @@ function scoreLocal({
     if (mathHate && sig.math >= 0.7) score -= 18;
     if (mathHate && sig.math <= 0.3) score += 8;
 
-    // Money signal — boost CSE, Finance, Pharmacy, BBA
+    // Money signal â€” boost CSE, Finance, Pharmacy, BBA
     if (wantsMoney && ["cse", "finance-banking", "pharmacy", "bba", "accounting", "eee"].includes(slug)) score += 6;
 
-    // Abroad signal — boost CSE, research-track subjects
+    // Abroad signal â€” boost CSE, research-track subjects
     if (wantsAbroad && ["cse", "physics", "mathematics", "statistics", "economics", "biochemistry"].includes(slug)) score += 5;
     score = Math.min(100, Math.max(0, score));
     return {
@@ -5747,29 +5747,29 @@ function buildWhy(slug, matched, profile) {
     return `Based on your HSC group and priorities, ${subj} aligns with several signals in your profile. Worth exploring the subject detail page for honest alumni reviews.`;
   }
   const top = matched.slice(0, 3).join(", ");
-  return `Your profile mentions ${top} — strong alignment with what ${subj} actually involves day-to-day. The skills you described transfer directly to this field.`;
+  return `Your profile mentions ${top} â€” strong alignment with what ${subj} actually involves day-to-day. The skills you described transfer directly to this field.`;
 }
 function buildWatchouts(slug) {
   const w = {
     "cse": "Highly competitive market; constant learning required. Good teachers are rare in BD.",
-    "eee": "Core electronics jobs are limited locally — many graduates pivot to CSE or go abroad.",
+    "eee": "Core electronics jobs are limited locally â€” many graduates pivot to CSE or go abroad.",
     "physics": "Very few research roles in BD. Most graduates become teachers or pivot to data/CSE.",
     "mathematics": "Limited direct industry roles in BD; usually leads to teaching, data, or higher studies abroad.",
-    "bba": "Saturated market — degree alone isn't enough. Internships, networking, and a niche skill matter most.",
+    "bba": "Saturated market â€” degree alone isn't enough. Internships, networking, and a niche skill matter most.",
     "marketing": "Salary entry-points are low. Real income comes 5+ years in or through brand-side roles.",
     "journalism": "Pay is modest unless you reach senior editorial roles. Skills transfer to PR and content.",
     "bangla": "Strong path to teaching/civil service; international career options limited.",
-    "history": "Mostly leads to teaching, BCS, or research — narrow industry track.",
+    "history": "Mostly leads to teaching, BCS, or research â€” narrow industry track.",
     "agriculture": "Excellent if you join government or BAU research; private agribusiness scene is small.",
-    "pharmacy": "Strong demand, good salaries — but the coursework is heavy and competitive.",
-    "law": "Long path to earning well — 3-5 years before independent practice pays off.",
+    "pharmacy": "Strong demand, good salaries â€” but the coursework is heavy and competitive.",
+    "law": "Long path to earning well â€” 3-5 years before independent practice pays off.",
     "uiux": "BD market still maturing; most high-paying clients are international.",
     "architecture": "5-year program, low entry salary, intense workload. Long-term ceiling is high."
   };
-  return w[slug] || "Read full alumni testimonials on the subject page before committing — every subject has trade-offs.";
+  return w[slug] || "Read full alumni testimonials on the subject page before committing â€” every subject has trade-offs.";
 }
 
-// ── React component ──────────────────────────────────────────────
+// â”€â”€ React component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 function ScreenAIMatcher({
   go,
   setSubjectSlug
@@ -5806,7 +5806,7 @@ function ScreenAIMatcher({
         careerPaths: SUBJECT_CAREERS[s.slug] || [],
         topUniversities: SUBJECT_UNIS[s.slug] || []
       }));
-      const summary = recs.length > 0 ? `Based on your ${hscGroup.toUpperCase()} background and the interests you described, here are the 5 subjects that best align with your profile — ranked by fit, with honest trade-offs for each.` : "We couldn't find strong matches with the inputs given — try adding more detail about your interests and try again.";
+      const summary = recs.length > 0 ? `Based on your ${hscGroup.toUpperCase()} background and the interests you described, here are the 5 subjects that best align with your profile â€” ranked by fit, with honest trade-offs for each.` : "We couldn't find strong matches with the inputs given â€” try adding more detail about your interests and try again.";
       setResults({
         summary,
         recommendations: recs
@@ -5815,7 +5815,7 @@ function ScreenAIMatcher({
     }, 800);
   };
 
-  // ─── Results ─────────────────────────────────────────────────
+  // â”€â”€â”€ Results â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   if (results) {
     return /*#__PURE__*/React.createElement("div", {
       style: {
@@ -5928,12 +5928,12 @@ function ScreenAIMatcher({
         color: "var(--text-muted)",
         marginBottom: 6
       }
-    }, /*#__PURE__*/React.createElement("strong", null, "Career paths: "), r.careerPaths.join(" · ")), r.topUniversities?.length > 0 && /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("strong", null, "Career paths: "), r.careerPaths.join(" Â· ")), r.topUniversities?.length > 0 && /*#__PURE__*/React.createElement("div", {
       style: {
         fontSize: 13,
         color: "var(--text-muted)"
       }
-    }, /*#__PURE__*/React.createElement("strong", null, "Top universities: "), r.topUniversities.join(" · "))))), /*#__PURE__*/React.createElement("div", {
+    }, /*#__PURE__*/React.createElement("strong", null, "Top universities: "), r.topUniversities.join(" Â· "))))), /*#__PURE__*/React.createElement("div", {
       style: {
         marginTop: 32,
         display: "flex",
@@ -5954,7 +5954,7 @@ function ScreenAIMatcher({
     }, "Back to home \u2192")));
   }
 
-  // ─── Loading ────────────────────────────────────────────────
+  // â”€â”€â”€ Loading â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   if (loading) {
     return /*#__PURE__*/React.createElement("div", {
       style: {
@@ -6001,7 +6001,7 @@ function ScreenAIMatcher({
     }, "Matching against 34 subjects \xB7 56 alumni voices \xB7 BD job market"));
   }
 
-  // ─── Form ──────────────────────────────────────────────────
+  // â”€â”€â”€ Form â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
   const HSC_GROUPS = [{
     id: "science",
     label: "Science",
@@ -6197,18 +6197,18 @@ Object.assign(window, {
   ScreenAIMatcher
 });
 </script>
-<!-- ═══ END AI MATCHER ═══ -->
-<!-- ═══════════════════════════════════════════════════════════
-     SCREEN — LANDING
-     ═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â• END AI MATCHER â•â•â• -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SCREEN â€” LANDING
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const { useState, useEffect, useRef, useCallback, useMemo } = React;
   const SearchBar = window.SearchBar;
 
-  // EduPath BD — Landing (editorial narrative scroll)
+  // EduPath BD â€” Landing (editorial narrative scroll)
 
-  // EduPath BD — ScreenLanding (source JSX, compiled by _compile_landing.js)
+  // EduPath BD â€” ScreenLanding (source JSX, compiled by _compile_landing.js)
   
   // University data: image + abbreviation + accent color
   const UNI_META = {
@@ -6752,7 +6752,7 @@ Object.assign(window, {
           color: "var(--text-muted)",
           margin: 0
         }
-      }, "Class of ", t.session || "—"))));
+      }, "Class of ", t.session || "â€”"))));
     })), /*#__PURE__*/React.createElement("div", {
       style: {
         marginTop: 24
@@ -6882,9 +6882,9 @@ Object.assign(window, {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     SCREEN — EXPLORE  (subject grid + regional lens + filters)
-     ═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SCREEN â€” EXPLORE  (subject grid + regional lens + filters)
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const {
@@ -6895,9 +6895,9 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD — Explore (subject grid + search + regional lens + bookmarks)
+  // EduPath BD â€” Explore (subject grid + search + regional lens + bookmarks)
 
-  // ── localStorage bookmark helpers (no React state needed) ──
+  // â”€â”€ localStorage bookmark helpers (no React state needed) â”€â”€
   function getSaved() {
     try {
       return new Set(JSON.parse(localStorage.getItem("pf-saved") || "[]"));
@@ -7048,7 +7048,7 @@ Object.assign(window, {
         setQuery("");
         setField("all");
         const slugs = [...saved];
-        // highlight saved ones — just scroll to first
+        // highlight saved ones â€” just scroll to first
         const firstCard = document.querySelector(`[data-slug="${slugs[0]}"]`);
         if (firstCard) firstCard.scrollIntoView({
           behavior: "smooth",
@@ -7144,9 +7144,9 @@ Object.assign(window, {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     SCREEN — DETAIL  (full subject profile + timeline)
-     ═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SCREEN â€” DETAIL  (full subject profile + timeline)
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const {
@@ -7157,7 +7157,7 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD — Subject Detail
+  // EduPath BD â€” Subject Detail
 
   function ScreenDetail({
     go,
@@ -7213,7 +7213,7 @@ Object.assign(window, {
       className: "pf-detail-head__desc"
     }, subj.desc), /*#__PURE__*/React.createElement("div", {
       className: "pf-detail-head__facts"
-    }, /*#__PURE__*/React.createElement("span", null, "HSC: ", subj.hsc.join(" · ")), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("span", null, "Difficulty: ", ["Low", "Moderate", "High", "Very High"][subj.difficulty - 1]), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("span", null, "Math required: ", subj.math ? "Yes" : "No"), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("span", null, myStories.length, " ", myStories.length === 1 ? "voice" : "voices")))), subj.regretSignal ? /*#__PURE__*/React.createElement("section", {
+    }, /*#__PURE__*/React.createElement("span", null, "HSC: ", subj.hsc.join(" Â· ")), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("span", null, "Difficulty: ", ["Low", "Moderate", "High", "Very High"][subj.difficulty - 1]), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("span", null, "Math required: ", subj.math ? "Yes" : "No"), /*#__PURE__*/React.createElement("span", null, "\xB7"), /*#__PURE__*/React.createElement("span", null, myStories.length, " ", myStories.length === 1 ? "voice" : "voices")))), subj.regretSignal ? /*#__PURE__*/React.createElement("section", {
       style: {
         padding: "32px 0 0"
       }
@@ -7359,7 +7359,7 @@ Object.assign(window, {
         marginTop: 18
       }
     }, /*#__PURE__*/React.createElement(HonestyBox, {
-      label: lens === "dhaka" ? "Regional reality — Dhaka" : "Regional reality — Outside Dhaka"
+      label: lens === "dhaka" ? "Regional reality â€” Dhaka" : "Regional reality â€” Outside Dhaka"
     }, region.note)))), /*#__PURE__*/React.createElement("section", {
       className: "pf-detail-section"
     }, /*#__PURE__*/React.createElement("div", {
@@ -7559,9 +7559,9 @@ Object.assign(window, {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     SCREEN — UNIVERSITY DETAIL
-     ═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SCREEN â€” UNIVERSITY DETAIL
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const {
@@ -7659,7 +7659,7 @@ Object.assign(window, {
         fontSize: 16,
         fontWeight: 500
       }
-    }, university.type === "public" ? "🏛️ Public" : "🎓 Private")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
+    }, university.type === "public" ? "ðŸ›ï¸ Public" : "ðŸŽ“ Private")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("p", {
       style: {
         fontSize: 12,
         fontWeight: 600,
@@ -7839,9 +7839,9 @@ Object.assign(window, {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     SCREEN — JOB DETAIL
-     ═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SCREEN â€” JOB DETAIL
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const {
@@ -8188,9 +8188,9 @@ Object.assign(window, {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     SCREEN — ALL UNIVERSITIES
-     ═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SCREEN â€” ALL UNIVERSITIES
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const { useState, useEffect, useMemo } = React;
@@ -8249,11 +8249,11 @@ Object.assign(window, {
     const sel = { padding:'10px 14px', fontSize:14, border:'1px solid var(--ink-08)', borderRadius:'var(--r-pill)', fontFamily:'var(--font-body)', cursor:'pointer', background:'var(--surface)' };
     return React.createElement('div', { style: { padding: '48px 0 80px' } },
       React.createElement('div', { className: 'pf-container' },
-        React.createElement('button', { className:'pf-link', onClick:()=>go('landing'), style:{fontSize:13,marginBottom:24} }, '← Back to home'),
+        React.createElement('button', { className:'pf-link', onClick:()=>go('landing'), style:{fontSize:13,marginBottom:24} }, 'â† Back to home'),
         React.createElement('h1', { className:'display-2', style:{fontSize:40,marginBottom:8} }, allUnis.length + '+ universities in Bangladesh'),
-        React.createElement('p', { style:{fontSize:14,color:'var(--text-muted)',marginBottom:32} }, listed + ' with subject data · ' + (allUnis.length-listed) + ' not yet listed'),
+        React.createElement('p', { style:{fontSize:14,color:'var(--text-muted)',marginBottom:32} }, listed + ' with subject data Â· ' + (allUnis.length-listed) + ' not yet listed'),
         React.createElement('div', { style:{display:'flex',gap:12,marginBottom:32,flexWrap:'wrap'} },
-          React.createElement('input', { type:'text', placeholder:'Search by name, short code, or city…', value:searchQuery, onChange:e=>setSearchQuery(e.target.value), style:inp }),
+          React.createElement('input', { type:'text', placeholder:'Search by name, short code, or cityâ€¦', value:searchQuery, onChange:e=>setSearchQuery(e.target.value), style:inp }),
           React.createElement('select', { value:typeFilter, onChange:e=>setTypeFilter(e.target.value), style:sel },
             React.createElement('option', {value:'all'}, 'All types'),
             React.createElement('option', {value:'public'}, 'Public'),
@@ -8278,9 +8278,9 @@ Object.assign(window, {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     SCREEN — ALL SUBJECTS
-     ═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SCREEN â€” ALL SUBJECTS
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const {
@@ -8466,9 +8466,9 @@ Object.assign(window, {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     SCREEN — STORIES  (testimonials wall, masonry)
-     ═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SCREEN â€” STORIES  (testimonials wall, masonry)
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const {
@@ -8479,7 +8479,7 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD — Stories wall
+  // EduPath BD â€” Stories wall
 
   function ScreenStories({
     go
@@ -8668,9 +8668,9 @@ Object.assign(window, {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     SCREEN — MATCHER  (7-step dual-layer questionnaire)
-     ═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SCREEN â€” MATCHER  (7-step dual-layer questionnaire)
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const {
@@ -8681,49 +8681,49 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD — Matcher
-  // 7-step questionnaire covering the AI Matcher Spec's 14 questions (A1–A7, B1–B7).
-  // Steps 1–4 = Layer 01 (Interest & working style). Steps 5–7 = Layer 02 (Constraints).
+  // EduPath BD â€” Matcher
+  // 7-step questionnaire covering the AI Matcher Spec's 14 questions (A1â€“A7, B1â€“B7).
+  // Steps 1â€“4 = Layer 01 (Interest & working style). Steps 5â€“7 = Layer 02 (Constraints).
   // The scoring heuristic remains intentionally lightweight; the spec describes the
   // real retrieval-grounded model that lives server-side in production.
 
-  // ── A1: Activities that genuinely hold attention (multi-select, max 5) ──
-  const INTERESTS = [["building", "🔧", "Building & fixing", "Hardware, construction, hands-on systems"], ["puzzles", "🧩", "Puzzles & math", "Rules, algorithms, optimization"], ["writing", "✍️", "Writing & language", "Stories, prose, communication"], ["people", "🤝", "Helping people", "Counseling, teaching, social impact"], ["art", "🎨", "Art, design & visuals", "Drawing, branding, products"], ["nature", "🌿", "Nature & living things", "Biology, environment, agriculture"], ["business", "💰", "Business & markets", "Money, trade, organisations"], ["lab", "🧪", "Experiments & lab work", "Hypotheses, data, the bench"], ["computers", "💻", "Computers & software", "Programming, products, the web"], ["society", "🏛️", "Law, society & policy", "How things are governed"]];
+  // â”€â”€ A1: Activities that genuinely hold attention (multi-select, max 5) â”€â”€
+  const INTERESTS = [["building", "ðŸ”§", "Building & fixing", "Hardware, construction, hands-on systems"], ["puzzles", "ðŸ§©", "Puzzles & math", "Rules, algorithms, optimization"], ["writing", "âœï¸", "Writing & language", "Stories, prose, communication"], ["people", "ðŸ¤", "Helping people", "Counseling, teaching, social impact"], ["art", "ðŸŽ¨", "Art, design & visuals", "Drawing, branding, products"], ["nature", "ðŸŒ¿", "Nature & living things", "Biology, environment, agriculture"], ["business", "ðŸ’°", "Business & markets", "Money, trade, organisations"], ["lab", "ðŸ§ª", "Experiments & lab work", "Hypotheses, data, the bench"], ["computers", "ðŸ’»", "Computers & software", "Programming, products, the web"], ["society", "ðŸ›ï¸", "Law, society & policy", "How things are governed"]];
 
-  // ── A2: What keeps you going when a task is hard? ──
-  const DRIVERS = [["logic", "🧠", "Cracking the logic of it"], ["aesthetic", "🎨", "Creating something good-looking"], ["impact", "🤲", "The impact on people"], ["payoff", "💰", "The money / career payoff"], ["curiosity", "🔍", "Pure curiosity"]];
+  // â”€â”€ A2: What keeps you going when a task is hard? â”€â”€
+  const DRIVERS = [["logic", "ðŸ§ ", "Cracking the logic of it"], ["aesthetic", "ðŸŽ¨", "Creating something good-looking"], ["impact", "ðŸ¤²", "The impact on people"], ["payoff", "ðŸ’°", "The money / career payoff"], ["curiosity", "ðŸ”", "Pure curiosity"]];
 
-  // ── A3: Mathematics comfort ──
-  const MATH_OPTS = [["love", "❤️", "I enjoy it", "Calculus, proofs, problems all feel satisfying."], ["ok", "👍", "I can handle it", "Applied math is fine when the goal is clear."], ["avoid", "🙅", "I'd rather not", "I'd prefer a path with minimal calculation."]];
+  // â”€â”€ A3: Mathematics comfort â”€â”€
+  const MATH_OPTS = [["love", "â¤ï¸", "I enjoy it", "Calculus, proofs, problems all feel satisfying."], ["ok", "ðŸ‘", "I can handle it", "Applied math is fine when the goal is clear."], ["avoid", "ðŸ™…", "I'd rather not", "I'd prefer a path with minimal calculation."]];
 
-  // ── A4: Memorization tolerance ──
-  const MEMORIZATION = [["fine", "📚", "Fine with it", "Memorising names, dates, facts is okay."], ["mid", "🆗", "Tolerable in doses", "I can do it but it's not enjoyable."], ["reason", "💡", "Strongly prefer reasoning", "I want to work things out, not memorise them."]];
+  // â”€â”€ A4: Memorization tolerance â”€â”€
+  const MEMORIZATION = [["fine", "ðŸ“š", "Fine with it", "Memorising names, dates, facts is okay."], ["mid", "ðŸ†—", "Tolerable in doses", "I can do it but it's not enjoyable."], ["reason", "ðŸ’¡", "Strongly prefer reasoning", "I want to work things out, not memorise them."]];
 
-  // ── A5: Open vs closed problems ──
-  const PROBLEM_STYLE = [["closed", "🎯", "A clear right answer"], ["open", "🌫️", "Open problems with many answers"], ["mix", "⚖️", "A mix of both"]];
+  // â”€â”€ A5: Open vs closed problems â”€â”€
+  const PROBLEM_STYLE = [["closed", "ðŸŽ¯", "A clear right answer"], ["open", "ðŸŒ«ï¸", "Open problems with many answers"], ["mix", "âš–ï¸", "A mix of both"]];
 
-  // ── A6: Working environment ──
-  const WORK_ENV = [["desk", "💻", "At a desk / on a computer"], ["lab", "🔬", "In a lab or in the field"], ["people", "🗣️", "With and among people"], ["site", "🏗️", "On a site / hands-on"], ["flex", "🌀", "Flexible / varied"]];
+  // â”€â”€ A6: Working environment â”€â”€
+  const WORK_ENV = [["desk", "ðŸ’»", "At a desk / on a computer"], ["lab", "ðŸ”¬", "In a lab or in the field"], ["people", "ðŸ—£ï¸", "With and among people"], ["site", "ðŸ—ï¸", "On a site / hands-on"], ["flex", "ðŸŒ€", "Flexible / varied"]];
 
-  // ── B1: HSC group ──
-  const HSC = [["science", "🔬", "Science", "Opens CSE, Engineering, Physics, Architecture, Agriculture, Medicine, Geography, Psychology"], ["commerce", "📊", "Commerce / Business Studies", "Opens BBA, Finance & Banking, Economics, Accounting, Management"], ["arts", "🎭", "Humanities / Arts", "Opens Bangla, English Lit, History, Philosophy, Development Studies, Social Work, Geography"], ["any", "🤔", "Not sure / different board", "Show me all paths — I'll filter by interest only"]];
+  // â”€â”€ B1: HSC group â”€â”€
+  const HSC = [["science", "ðŸ”¬", "Science", "Opens CSE, Engineering, Physics, Architecture, Agriculture, Medicine, Geography, Psychology"], ["commerce", "ðŸ“Š", "Commerce / Business Studies", "Opens BBA, Finance & Banking, Economics, Accounting, Management"], ["arts", "ðŸŽ­", "Humanities / Arts", "Opens Bangla, English Lit, History, Philosophy, Development Studies, Social Work, Geography"], ["any", "ðŸ¤”", "Not sure / different board", "Show me all paths â€” I'll filter by interest only"]];
 
-  // ── B2: Results band ──
+  // â”€â”€ B2: Results band â”€â”€
   const RESULTS_BAND = [["strong", "Strong results", "GPA close to the top of my college"], ["average", "Average", "Around the middle of my class"], ["below", "Below what I hoped", "I want a realistic path given where I am"]];
 
-  // ── B3: Family budget ──
+  // â”€â”€ B3: Family budget â”€â”€
   const BUDGET = [["public", "Public university only", "Cost is a real constraint"], ["private", "Private is an option", "We can stretch if the path is right"], ["unsure", "Not sure yet", "Don't filter on this yet"]];
 
-  // ── B4: Where you can study ──
-  const LOCATION = [["home", "Home division only", "I can't relocate yet"], ["national", "Anywhere in Bangladesh", "I can move within the country"], ["global", "Anywhere — including abroad", "Open to studying outside BD"]];
+  // â”€â”€ B4: Where you can study â”€â”€
+  const LOCATION = [["home", "Home division only", "I can't relocate yet"], ["national", "Anywhere in Bangladesh", "I can move within the country"], ["global", "Anywhere â€” including abroad", "Open to studying outside BD"]];
 
-  // ── B5: Abroad intent ──
-  const ABROAD = [["yes", "✈️", "Yes — it's a goal", "Boosts subjects with strong abroad pathways"], ["maybe", "🤔", "Maybe", "Treat it as a soft preference"], ["stay", "🏠", "No — I plan to stay", "Local opportunities ranked higher"]];
+  // â”€â”€ B5: Abroad intent â”€â”€
+  const ABROAD = [["yes", "âœˆï¸", "Yes â€” it's a goal", "Boosts subjects with strong abroad pathways"], ["maybe", "ðŸ¤”", "Maybe", "Treat it as a soft preference"], ["stay", "ðŸ ", "No â€” I plan to stay", "Local opportunities ranked higher"]];
 
-  // ── B6: Career risk appetite ──
-  const RISK = [["stable", "🛡️", "Stable, predictable", "Banking, govt, established sectors"], ["upside", "🚀", "Trade some stability for upside", "Tech, startups, finance"], ["unsure", "🤷", "Unsure yet", "Show me both"]];
+  // â”€â”€ B6: Career risk appetite â”€â”€
+  const RISK = [["stable", "ðŸ›¡ï¸", "Stable, predictable", "Banking, govt, established sectors"], ["upside", "ðŸš€", "Trade some stability for upside", "Tech, startups, finance"], ["unsure", "ðŸ¤·", "Unsure yet", "Show me both"]];
 
-  // ── Reusable sub-question chip-row component ──
+  // â”€â”€ Reusable sub-question chip-row component â”€â”€
   function MatcherChip({
     emo,
     label,
@@ -8766,7 +8766,7 @@ Object.assign(window, {
       className: "desc"
     }, desc) : null);
   }
-  // Sub-question wrapper — a small label + the chip row below
+  // Sub-question wrapper â€” a small label + the chip row below
   function SubQ({
     label,
     hint,
@@ -8796,7 +8796,7 @@ Object.assign(window, {
     const [step, setStep] = useState(1); // 1..7
     const [phase, setPhase] = useState("step"); // step | processing | results
 
-    // Layer 01 — interests & working style
+    // Layer 01 â€” interests & working style
     const [interests, setInterests] = useState(new Set());
     const [driver, setDriver] = useState(null);
     const [math, setMath] = useState(null);
@@ -8805,7 +8805,7 @@ Object.assign(window, {
     const [workEnv, setWorkEnv] = useState(null);
     const [curiosity, setCuriosity] = useState("");
 
-    // Layer 02 — constraints
+    // Layer 02 â€” constraints
     const [hsc, setHsc] = useState(null);
     const [resultsBand, setResultsBand] = useState(null);
     const [budget, setBudget] = useState(null);
@@ -8876,10 +8876,10 @@ Object.assign(window, {
     let hscPreview = null;
     if (step === 5 && hsc) {
       const map = {
-        science: "✓ You're eligible for the widest range of subjects. You can access all profiled subjects in our database.",
-        commerce: "✓ You're eligible for Business, Economics, Finance and most Arts subjects. ⚠ Engineering, Physics, Architecture, Agriculture, Medicine typically require Science group admission.",
-        arts: "✓ You're eligible for most Arts and Social Science subjects. ⚠ CSE, Engineering, Physics, Architecture, Agriculture, Medicine, Geography typically require Science group admission.",
-        any: "We'll filter by your interest signals alone — and surface subjects with the lowest HSC-group friction first."
+        science: "âœ“ You're eligible for the widest range of subjects. You can access all profiled subjects in our database.",
+        commerce: "âœ“ You're eligible for Business, Economics, Finance and most Arts subjects. âš  Engineering, Physics, Architecture, Agriculture, Medicine typically require Science group admission.",
+        arts: "âœ“ You're eligible for most Arts and Social Science subjects. âš  CSE, Engineering, Physics, Architecture, Agriculture, Medicine, Geography typically require Science group admission.",
+        any: "We'll filter by your interest signals alone â€” and surface subjects with the lowest HSC-group friction first."
       };
       hscPreview = /*#__PURE__*/React.createElement(HonestyBox, {
         label: "Eligibility preview"
@@ -8904,7 +8904,7 @@ Object.assign(window, {
       }
     }))), /*#__PURE__*/React.createElement("div", {
       className: "pf-matcher__layer" + (layer2 ? " l2" : "")
-    }, layer2 ? "Part 2 · Real-world constraints" : "Part 1 · What makes you tick"), step === 1 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h2", {
+    }, layer2 ? "Part 2 Â· Real-world constraints" : "Part 1 Â· What makes you tick"), step === 1 && /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("h2", {
       className: "pf-matcher__q"
     }, "Four free hours on a Sunday. No obligation. What do you actually do?"), /*#__PURE__*/React.createElement("p", {
       className: "pf-matcher__sub"
@@ -9150,10 +9150,10 @@ Object.assign(window, {
         opacity: canNext() ? 1 : 0.5,
         cursor: canNext() ? "pointer" : "not-allowed"
       }
-    }, step < TOTAL ? "Continue →" : "See my matches →"))));
+    }, step < TOTAL ? "Continue â†’" : "See my matches â†’"))));
   }
   function Processing() {
-    const lines = [`Scoring ${window.EduPathDB?.subjects?.length || 34} subjects against your profile…`, "Checking HSC eligibility gates…", "Matching universities and salary data…", "Building your subject report…"];
+    const lines = [`Scoring ${window.EduPathDB?.subjects?.length || 34} subjects against your profileâ€¦`, "Checking HSC eligibility gatesâ€¦", "Matching universities and salary dataâ€¦", "Building your subject reportâ€¦"];
     const [i, setI] = useState(0);
     useEffect(() => {
       const ts = [setTimeout(() => setI(1), 500), setTimeout(() => setI(2), 1000), setTimeout(() => setI(3), 1500)];
@@ -9198,11 +9198,11 @@ Object.assign(window, {
     }, lines[i])));
   }
 
-  // ── Scoring heuristic v3 — all 34 subjects, weighted features + hard gates ──
+  // â”€â”€ Scoring heuristic v3 â€” all 34 subjects, weighted features + hard gates â”€â”€
   function scoreSubject(s, inputs) {
     let score = 50;
 
-    // ── Feature 1: Interest overlap ──
+    // â”€â”€ Feature 1: Interest overlap â”€â”€
     const interestMap = {
       // Engineering & Technology
       "cse": {
@@ -9401,7 +9401,7 @@ Object.assign(window, {
       if (inputs.interests.has(tag)) score += w;
     }
 
-    // ── Feature 2: Math tolerance ──
+    // â”€â”€ Feature 2: Math tolerance â”€â”€
     const mathHeavy = ["cse", "eee", "civil-engineering", "mechanical-engineering", "physics", "mathematics", "statistics", "finance-banking", "economics", "chemistry", "pharmacy", "architecture"];
     const mathLight = ["bangla", "english-lit", "history", "islamic-studies", "philosophy", "social-work", "nursing", "journalism", "sociology", "political-science", "public-administration", "development-studies", "graphic-design"];
     if (mathHeavy.includes(s.slug)) {
@@ -9413,14 +9413,14 @@ Object.assign(window, {
       if (inputs.math === "avoid") score += 6;
     }
 
-    // ── Feature 3: Memorization tolerance ──
+    // â”€â”€ Feature 3: Memorization tolerance â”€â”€
     const heavyMem = ["bangla", "english-lit", "history", "islamic-studies", "philosophy", "law", "mbbs", "pharmacy", "nursing", "public-administration", "political-science", "sociology", "development-studies", "journalism"];
     if (heavyMem.includes(s.slug)) {
       if (inputs.memorization === "fine") score += 8;
       if (inputs.memorization === "reason") score -= 12;
     }
 
-    // ── Feature 4: Primary driver ──
+    // â”€â”€ Feature 4: Primary driver â”€â”€
     const driverFit = {
       "logic": {
         cse: 14,
@@ -9480,7 +9480,7 @@ Object.assign(window, {
     };
     score += (driverFit[inputs.driver] || {})[s.slug] || 0;
 
-    // ── Feature 5: Problem style ──
+    // â”€â”€ Feature 5: Problem style â”€â”€
     const closedSubjects = ["cse", "eee", "civil-engineering", "mechanical-engineering", "mathematics", "finance-banking", "physics", "chemistry", "statistics", "accounting", "pharmacy", "mbbs"];
     const openSubjects = ["development-studies", "journalism", "graphic-design", "english-lit", "bangla", "sociology", "social-work", "history", "islamic-studies", "philosophy", "nursing", "architecture", "political-science", "public-administration", "forestry"];
     if (inputs.problemStyle === "closed" && closedSubjects.includes(s.slug)) score += 8;
@@ -9488,7 +9488,7 @@ Object.assign(window, {
     if (inputs.problemStyle === "closed" && openSubjects.includes(s.slug)) score -= 5;
     if (inputs.problemStyle === "open" && closedSubjects.includes(s.slug)) score -= 5;
 
-    // ── Feature 6: Work environment ──
+    // â”€â”€ Feature 6: Work environment â”€â”€
     const envFit = {
       "desk": {
         cse: 12,
@@ -9549,7 +9549,7 @@ Object.assign(window, {
     };
     score += (envFit[inputs.workEnv] || {})[s.slug] || 0;
 
-    // ── Feature 7: HSC group — hard gate ──
+    // â”€â”€ Feature 7: HSC group â€” hard gate â”€â”€
     const groupMap = {
       science: "Science",
       commerce: "Commerce",
@@ -9565,17 +9565,17 @@ Object.assign(window, {
       eligibility = "note";
     }
 
-    // ── Feature 8: Results band ──
+    // â”€â”€ Feature 8: Results band â”€â”€
     const veryCompetitive = ["cse", "eee", "physics", "mathematics", "mbbs", "pharmacy", "civil-engineering", "mechanical-engineering"];
     const accessible = ["bangla", "history", "islamic-studies", "philosophy", "social-work", "public-administration", "sociology", "political-science", "development-studies", "fisheries", "forestry", "botany", "zoology"];
     if (inputs.resultsBand === "strong" && veryCompetitive.includes(s.slug)) score += 10;
     if (inputs.resultsBand === "below" && veryCompetitive.includes(s.slug)) score -= 12;
     if (inputs.resultsBand === "below" && accessible.includes(s.slug)) score += 6;
 
-    // ── Feature 9: Budget ──
+    // â”€â”€ Feature 9: Budget â”€â”€
     if (inputs.budget === "public" && s.confidence === "verified") score += 4;
 
-    // ── Feature 10: Abroad intent ──
+    // â”€â”€ Feature 10: Abroad intent â”€â”€
     const abroadHigh = ["cse", "eee", "physics", "mathematics", "nursing", "mbbs", "pharmacy", "finance-banking", "economics", "graphic-design", "development-studies", "mechanical-engineering"];
     const abroadMedium = ["architecture", "chemistry", "statistics", "law", "journalism", "accounting", "agriculture", "fisheries", "forestry"];
     const bdPreferred = ["bangla", "public-administration", "political-science", "social-work", "history", "islamic-studies"];
@@ -9589,7 +9589,7 @@ Object.assign(window, {
       if (abroadHigh.includes(s.slug)) score -= 3;
     }
 
-    // ── Feature 11: Risk appetite ──
+    // â”€â”€ Feature 11: Risk appetite â”€â”€
     const stableCareer = ["bba", "accounting", "law", "mbbs", "nursing", "pharmacy", "civil-engineering", "public-administration", "bangla", "agriculture", "eee", "statistics"];
     const upsideCareer = ["cse", "graphic-design", "finance-banking", "economics", "architecture", "journalism"];
     const volatileMarket = ["graphic-design", "journalism", "philosophy", "history"];
@@ -9602,7 +9602,7 @@ Object.assign(window, {
       if (stableCareer.includes(s.slug)) score -= 4;
     }
 
-    // ── Feature 12: Free-text curiosity ──
+    // â”€â”€ Feature 12: Free-text curiosity â”€â”€
     if (inputs.curiosity) {
       const curio = inputs.curiosity.toLowerCase();
       const curioBoosters = {
@@ -9646,7 +9646,7 @@ Object.assign(window, {
       }
     }
 
-    // ── Guard: confidence tier ──
+    // â”€â”€ Guard: confidence tier â”€â”€
     if (s.confidence === "listed") score -= 8;
     if (s.confidence === "emerging") score -= 2;
     score = Math.max(28, Math.min(96, Math.round(score)));
@@ -9656,7 +9656,7 @@ Object.assign(window, {
     };
   }
 
-  // ── Results v3 — full subject report ──────────────────────────────────────
+  // â”€â”€ Results v3 â€” full subject report â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
   function whyItFits(s, inputs) {
     const lines = [];
@@ -9688,8 +9688,8 @@ Object.assign(window, {
       return w > 0;
     });
     if (matched.length) lines.push("Your interest in " + matched.slice(0, 2).map(t => imap[t] || t).join(" and ") + " aligns with the core work of this field.");
-    if (inputs.math === "love" && s.math) lines.push("You said you enjoy math — this subject is math-heavy, which is a positive signal.");
-    if (inputs.math === "avoid" && !s.math) lines.push("You prefer to avoid heavy math — this subject keeps it light.");
+    if (inputs.math === "love" && s.math) lines.push("You said you enjoy math â€” this subject is math-heavy, which is a positive signal.");
+    if (inputs.math === "avoid" && !s.math) lines.push("You prefer to avoid heavy math â€” this subject keeps it light.");
     if (inputs.driver === "payoff" && ["cse", "finance-banking", "law", "mbbs", "pharmacy", "accounting"].includes(s.slug)) lines.push("Your priority on career payoff matches this field's salary ceiling in Bangladesh.");
     if (inputs.driver === "impact" && ["social-work", "nursing", "mbbs", "development-studies"].includes(s.slug)) lines.push("Your drive to make an impact on people is central to this career.");
     if (inputs.driver === "aesthetic" && ["graphic-design", "architecture", "journalism"].includes(s.slug)) lines.push("Your appreciation for creating something good-looking fits this field's core output.");
@@ -9742,14 +9742,14 @@ Object.assign(window, {
       public: coreOfferings.filter(o => o.university_type === "public").map(o => ({
         id: o.university_id,
         tier: "good",
-        note: `${o.degree_name || o.subject_name}${o.seats ? ` · ${o.seats} seats` : ""}`
+        note: `${o.degree_name || o.subject_name}${o.seats ? ` Â· ${o.seats} seats` : ""}`
       })),
       private: coreOfferings.filter(o => o.university_type === "private").map(o => ({
         id: o.university_id,
         tier: "good",
-        note: `${o.degree_name || o.subject_name}${o.seats ? ` · ${o.seats} seats` : ""}`
+        note: `${o.degree_name || o.subject_name}${o.seats ? ` Â· ${o.seats} seats` : ""}`
       })),
-      admissionNote: `${coreOfferings.length} mapped offerings · ${coreOfferings.reduce((sum, o) => sum + (Number(o.seats) || 0), 0)} known seats`
+      admissionNote: `${coreOfferings.length} mapped offerings Â· ${coreOfferings.reduce((sum, o) => sum + (Number(o.seats) || 0), 0)} known seats`
     } : (window.SubjectUniversities || {})[slug];
     if (!data) return null;
     const pub = (data.public || []).slice(0, 5);
@@ -9777,7 +9777,7 @@ Object.assign(window, {
         color: "var(--green)",
         marginBottom: 8
       }
-    }, "Public universities ", budgetIsPublic ? "✓ Fits your budget" : ""), /*#__PURE__*/React.createElement("div", {
+    }, "Public universities ", budgetIsPublic ? "âœ“ Fits your budget" : ""), /*#__PURE__*/React.createElement("div", {
       style: {
         display: "flex",
         flexDirection: "column",
@@ -9948,13 +9948,13 @@ Object.assign(window, {
             fontSize: 12,
             color: "var(--text)"
           }
-        }, /*#__PURE__*/React.createElement("strong", null, "BDT ", bd.min, "–", bd.max), "/", j.salary.bd.unit || "month"), abroad.map(([country, r]) => /*#__PURE__*/React.createElement("span", {
+        }, /*#__PURE__*/React.createElement("strong", null, "BDT ", bd.min, "â€“", bd.max), "/", j.salary.bd.unit || "month"), abroad.map(([country, r]) => /*#__PURE__*/React.createElement("span", {
           key: country,
           style: {
             fontSize: 12,
             color: "var(--text-muted)"
           }
-        }, country.toUpperCase(), ": ", r.currency, " ", r.entry_min, "–", r.entry_max))));
+        }, country.toUpperCase(), ": ", r.currency, " ", r.entry_min, "â€“", r.entry_max))));
       })), /*#__PURE__*/React.createElement("div", {
         style: {
           marginTop: 8,
@@ -10097,7 +10097,7 @@ Object.assign(window, {
         color: "var(--terracotta)",
         fontWeight: 600
       }
-    }, "\u2717 Would not recommend"), " · ", t.uni, " ", t.country !== "BD" ? "→ now in " + t.country : "")))), /*#__PURE__*/React.createElement("button", {
+    }, "\u2717 Would not recommend"), " Â· ", t.uni, " ", t.country !== "BD" ? "â†’ now in " + t.country : "")))), /*#__PURE__*/React.createElement("button", {
       className: "pf-link",
       onClick: () => go("stories"),
       style: {
@@ -10158,7 +10158,7 @@ Object.assign(window, {
         fontSize: 11,
         color: "var(--text-muted)"
       }
-    }, open ? "▲ collapse" : "▼ expand")), /*#__PURE__*/React.createElement("div", {
+    }, open ? "â–² collapse" : "â–¼ expand")), /*#__PURE__*/React.createElement("div", {
       style: {
         fontFamily: "var(--font-display)",
         fontSize: 22,
@@ -10462,9 +10462,9 @@ Object.assign(window, {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     SCREEN — CONTRIBUTE  (full-page submission form)
-     ═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SCREEN â€” CONTRIBUTE  (full-page submission form)
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const {
@@ -10475,11 +10475,11 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD — Contribute screen
+  // EduPath BD â€” Contribute screen
   // Full-page destination for people sharing their experience.
-  // No personal fields are mandatory — only the two consent checkboxes.
+  // No personal fields are mandatory â€” only the two consent checkboxes.
 
-  // ── Replace with your Formspree form ID: https://formspree.io/forms ──
+  // â”€â”€ Replace with your Formspree form ID: https://formspree.io/forms â”€â”€
   const FORMSPREE_ENDPOINT = "https://formspree.io/f/mqeozapo";
   function ScreenContribute({
     go
@@ -10730,25 +10730,25 @@ Object.assign(window, {
         gap: 0
       }
     }, [{
-      icon: "✍️",
+      icon: "âœï¸",
       step: "1",
       title: "You share",
       desc: "Fill in what you're comfortable with. Nothing personal is required."
     }, {
-      icon: "🔍",
+      icon: "ðŸ”",
       step: "2",
       title: "We review",
-      desc: "Every response is read by a human before publishing — within 48 hrs."
+      desc: "Every response is read by a human before publishing â€” within 48 hrs."
     }, {
-      icon: "📖",
+      icon: "ðŸ“–",
       step: "3",
       title: "Published",
       desc: "Your story appears on the Real Stories wall and subject profiles."
     }, {
-      icon: "🧠",
+      icon: "ðŸ§ ",
       step: "4",
       title: "Model trains",
-      desc: "Your data improves the 7-step matcher's scoring — anonymised, never sold."
+      desc: "Your data improves the 7-step matcher's scoring â€” anonymised, never sold."
     }].map((s, i) => /*#__PURE__*/React.createElement("div", {
       key: i,
       style: {
@@ -10990,7 +10990,7 @@ Object.assign(window, {
         flexWrap: "wrap",
         marginTop: 4
       }
-    }, ["1 — Not at all", "2", "3", "4", "5 — Very satisfied"].map((o, i) => /*#__PURE__*/React.createElement("label", {
+    }, ["1 â€” Not at all", "2", "3", "4", "5 â€” Very satisfied"].map((o, i) => /*#__PURE__*/React.createElement("label", {
       key: i,
       style: {
         display: "flex",
@@ -11072,7 +11072,7 @@ Object.assign(window, {
     }, loading ? "Submitting..." : "Submit")))))));
   }
 
-  // ── Contribute-screen-local sub-components ──
+  // â”€â”€ Contribute-screen-local sub-components â”€â”€
 
   const cInputStyle = {
     width: "100%",
@@ -11166,11 +11166,11 @@ Object.assign(window, {
 <script src="matcher-override.js?v=202606130115"></script>
 <script src="no-footer.js?v=202606071345"></script>
 <script src="share-override.js?v=202606211300"></script>
-<script src="stories-override.js?v=202606211000"></script>
+<script src="stories-override.js?v=202606220001"></script>
 
-<!-- ═══════════════════════════════════════════════════════════
-     SCREEN — CAREERS  (salary guide across 15 countries)
-     ═══════════════════════════════════════════════════════════ -->
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     SCREEN â€” CAREERS  (salary guide across 15 countries)
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const {
@@ -11181,143 +11181,143 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD — Career Salary Guide
+  // EduPath BD â€” Career Salary Guide
   // Starting salaries by field across 15 countries relevant to BD graduates.
   // All figures: starting/entry-level, 0-3 years experience.
   // Sources: Glassdoor, LinkedIn Salary, Levels.fyi, BBS, World Bank job portals.
 
   const CAREER_COUNTRIES = [{
     id: "us",
-    flag: "🇺🇸",
+    flag: "ðŸ‡ºðŸ‡¸",
     name: "USA",
     unit: "USD/yr",
-    visa: "H-1B · OPT",
+    visa: "H-1B Â· OPT",
     note: "Highest absolute pay. Very competitive visa."
   }, {
     id: "uk",
-    flag: "🇬🇧",
+    flag: "ðŸ‡¬ðŸ‡§",
     name: "United Kingdom",
     unit: "GBP/yr",
     visa: "Skilled Worker visa",
     note: "Strong for Finance, Law, Engineering."
   }, {
     id: "ca",
-    flag: "🇨🇦",
+    flag: "ðŸ‡¨ðŸ‡¦",
     name: "Canada",
     unit: "CAD/yr",
-    visa: "Express Entry · PNP",
+    visa: "Express Entry Â· PNP",
     note: "Clearest PR pathway for BD graduates."
   }, {
     id: "au",
-    flag: "🇦🇺",
+    flag: "ðŸ‡¦ðŸ‡º",
     name: "Australia",
     unit: "AUD/yr",
-    visa: "TSS 482 · SC 189",
+    visa: "TSS 482 Â· SC 189",
     note: "High quality of life, strong engineering demand."
   }, {
     id: "de",
-    flag: "🇩🇪",
+    flag: "ðŸ‡©ðŸ‡ª",
     name: "Germany",
     unit: "EUR/yr",
     visa: "EU Blue Card",
     note: "No tuition. DAAD scholarships. Strong industry."
   }, {
     id: "kr",
-    flag: "🇰🇷",
+    flag: "ðŸ‡°ðŸ‡·",
     name: "South Korea",
     unit: "KRW/mo",
-    visa: "E-7 · GKS scholar",
+    visa: "E-7 Â· GKS scholar",
     note: "GKS scholarship covers full tuition + stipend."
   }, {
     id: "sg",
-    flag: "🇸🇬",
+    flag: "ðŸ‡¸ðŸ‡¬",
     name: "Singapore",
     unit: "SGD/mo",
     visa: "Employment Pass",
     note: "Regional tech hub. Low tax. High competition."
   }, {
     id: "ae",
-    flag: "🇦🇪",
+    flag: "ðŸ‡¦ðŸ‡ª",
     name: "UAE (Dubai)",
     unit: "AED/mo",
     visa: "Work visa",
     note: "Tax-free income. Largest BD expatriate community."
   }, {
     id: "my",
-    flag: "🇲🇾",
+    flag: "ðŸ‡²ðŸ‡¾",
     name: "Malaysia",
     unit: "MYR/mo",
     visa: "Employment Pass",
     note: "Affordable living. Common first destination abroad."
   }, {
     id: "jp",
-    flag: "🇯🇵",
+    flag: "ðŸ‡¯ðŸ‡µ",
     name: "Japan",
     unit: "JPY/mo",
     visa: "Engineer / HSP",
     note: "MEXT scholarship. Language barrier is real."
   }, {
     id: "qa",
-    flag: "🇶🇦",
+    flag: "ðŸ‡¶ðŸ‡¦",
     name: "Qatar",
     unit: "QAR/mo",
     visa: "Work visa",
     note: "Tax-free. Infrastructure boom. Construction/Eng."
   }, {
     id: "sa",
-    flag: "🇸🇦",
+    flag: "ðŸ‡¸ðŸ‡¦",
     name: "Saudi Arabia",
     unit: "SAR/mo",
     visa: "Iqama",
     note: "Large BD diaspora. Engineering & healthcare roles."
   }, {
     id: "nl",
-    flag: "🇳🇱",
+    flag: "ðŸ‡³ðŸ‡±",
     name: "Netherlands",
     unit: "EUR/yr",
     visa: "Highly Skilled Migrant",
     note: "Strong tech scene. English widely spoken."
   }, {
     id: "se",
-    flag: "🇸🇪",
+    flag: "ðŸ‡¸ðŸ‡ª",
     name: "Sweden",
     unit: "SEK/mo",
     visa: "Work permit",
     note: "High salary, high tax. Strong welfare system."
   }, {
     id: "nz",
-    flag: "🇳🇿",
+    flag: "ðŸ‡³ðŸ‡¿",
     name: "New Zealand",
     unit: "NZD/yr",
     visa: "Skilled Migrant",
     note: "Peaceful, growing tech sector. PR-friendly."
   }];
 
-  // Starting salaries — entry level (0-3 years experience)
+  // Starting salaries â€” entry level (0-3 years experience)
   const CAREER_FIELDS = [{
     slug: "cse",
     name: "Software Engineering / CSE",
     desc: "Backend, frontend, mobile, DevOps, AI/ML engineering",
     demand: "high",
     subjectSlugs: ["cse"],
-    bd_dhaka: "BDT 35,000–80,000/mo",
-    bd_outside: "BDT 20,000–40,000/mo",
+    bd_dhaka: "BDT 35,000â€“80,000/mo",
+    bd_outside: "BDT 20,000â€“40,000/mo",
     salaries: {
-      us: "USD 80,000–125,000/yr",
-      uk: "£30,000–55,000/yr",
-      ca: "CAD 65,000–95,000/yr",
-      au: "AUD 70,000–100,000/yr",
-      de: "€42,000–65,000/yr",
-      kr: "KRW 3,200,000–4,800,000/mo",
-      sg: "SGD 4,500–8,500/mo",
-      ae: "AED 12,000–24,000/mo",
-      my: "MYR 3,500–6,500/mo",
-      jp: "JPY 300,000–500,000/mo",
-      qa: "QAR 14,000–26,000/mo",
-      sa: "SAR 10,000–20,000/mo",
-      nl: "€38,000–60,000/yr",
-      se: "SEK 38,000–55,000/mo",
-      nz: "NZD 65,000–95,000/yr"
+      us: "USD 80,000â€“125,000/yr",
+      uk: "Â£30,000â€“55,000/yr",
+      ca: "CAD 65,000â€“95,000/yr",
+      au: "AUD 70,000â€“100,000/yr",
+      de: "â‚¬42,000â€“65,000/yr",
+      kr: "KRW 3,200,000â€“4,800,000/mo",
+      sg: "SGD 4,500â€“8,500/mo",
+      ae: "AED 12,000â€“24,000/mo",
+      my: "MYR 3,500â€“6,500/mo",
+      jp: "JPY 300,000â€“500,000/mo",
+      qa: "QAR 14,000â€“26,000/mo",
+      sa: "SAR 10,000â€“20,000/mo",
+      nl: "â‚¬38,000â€“60,000/yr",
+      se: "SEK 38,000â€“55,000/mo",
+      nz: "NZD 65,000â€“95,000/yr"
     }
   }, {
     slug: "civil",
@@ -11325,24 +11325,24 @@ Object.assign(window, {
     desc: "Construction, infrastructure, roads, bridges, urban planning",
     demand: "medium",
     subjectSlugs: ["civil-engineering"],
-    bd_dhaka: "BDT 25,000–55,000/mo",
-    bd_outside: "BDT 18,000–35,000/mo",
+    bd_dhaka: "BDT 25,000â€“55,000/mo",
+    bd_outside: "BDT 18,000â€“35,000/mo",
     salaries: {
-      us: "USD 55,000–80,000/yr",
-      uk: "£26,000–42,000/yr",
-      ca: "CAD 55,000–80,000/yr",
-      au: "AUD 65,000–90,000/yr",
-      de: "€36,000–52,000/yr",
-      kr: "KRW 2,800,000–4,000,000/mo",
-      sg: "SGD 3,500–5,500/mo",
-      ae: "AED 10,000–18,000/mo",
-      my: "MYR 2,800–4,500/mo",
-      jp: "JPY 260,000–380,000/mo",
-      qa: "QAR 12,000–22,000/mo",
-      sa: "SAR 8,000–16,000/mo",
-      nl: "€32,000–48,000/yr",
-      se: "SEK 33,000–46,000/mo",
-      nz: "NZD 58,000–82,000/yr"
+      us: "USD 55,000â€“80,000/yr",
+      uk: "Â£26,000â€“42,000/yr",
+      ca: "CAD 55,000â€“80,000/yr",
+      au: "AUD 65,000â€“90,000/yr",
+      de: "â‚¬36,000â€“52,000/yr",
+      kr: "KRW 2,800,000â€“4,000,000/mo",
+      sg: "SGD 3,500â€“5,500/mo",
+      ae: "AED 10,000â€“18,000/mo",
+      my: "MYR 2,800â€“4,500/mo",
+      jp: "JPY 260,000â€“380,000/mo",
+      qa: "QAR 12,000â€“22,000/mo",
+      sa: "SAR 8,000â€“16,000/mo",
+      nl: "â‚¬32,000â€“48,000/yr",
+      se: "SEK 33,000â€“46,000/mo",
+      nz: "NZD 58,000â€“82,000/yr"
     }
   }, {
     slug: "eee",
@@ -11350,24 +11350,24 @@ Object.assign(window, {
     desc: "Power systems, telecom, embedded systems, electronics",
     demand: "medium",
     subjectSlugs: ["eee"],
-    bd_dhaka: "BDT 25,000–55,000/mo",
-    bd_outside: "BDT 18,000–38,000/mo",
+    bd_dhaka: "BDT 25,000â€“55,000/mo",
+    bd_outside: "BDT 18,000â€“38,000/mo",
     salaries: {
-      us: "USD 70,000–105,000/yr",
-      uk: "£28,000–48,000/yr",
-      ca: "CAD 60,000–88,000/yr",
-      au: "AUD 65,000–92,000/yr",
-      de: "€38,000–58,000/yr",
-      kr: "KRW 2,900,000–4,200,000/mo",
-      sg: "SGD 3,800–6,200/mo",
-      ae: "AED 9,000–17,000/mo",
-      my: "MYR 3,000–5,000/mo",
-      jp: "JPY 270,000–400,000/mo",
-      qa: "QAR 10,000–20,000/mo",
-      sa: "SAR 8,000–16,000/mo",
-      nl: "€34,000–52,000/yr",
-      se: "SEK 34,000–48,000/mo",
-      nz: "NZD 60,000–85,000/yr"
+      us: "USD 70,000â€“105,000/yr",
+      uk: "Â£28,000â€“48,000/yr",
+      ca: "CAD 60,000â€“88,000/yr",
+      au: "AUD 65,000â€“92,000/yr",
+      de: "â‚¬38,000â€“58,000/yr",
+      kr: "KRW 2,900,000â€“4,200,000/mo",
+      sg: "SGD 3,800â€“6,200/mo",
+      ae: "AED 9,000â€“17,000/mo",
+      my: "MYR 3,000â€“5,000/mo",
+      jp: "JPY 270,000â€“400,000/mo",
+      qa: "QAR 10,000â€“20,000/mo",
+      sa: "SAR 8,000â€“16,000/mo",
+      nl: "â‚¬34,000â€“52,000/yr",
+      se: "SEK 34,000â€“48,000/mo",
+      nz: "NZD 60,000â€“85,000/yr"
     }
   }, {
     slug: "bba",
@@ -11375,24 +11375,24 @@ Object.assign(window, {
     desc: "Management, operations, marketing, HR, strategy",
     demand: "medium",
     subjectSlugs: ["bba"],
-    bd_dhaka: "BDT 20,000–45,000/mo",
-    bd_outside: "BDT 14,000–28,000/mo",
+    bd_dhaka: "BDT 20,000â€“45,000/mo",
+    bd_outside: "BDT 14,000â€“28,000/mo",
     salaries: {
-      us: "USD 50,000–85,000/yr",
-      uk: "£24,000–40,000/yr",
-      ca: "CAD 48,000–75,000/yr",
-      au: "AUD 55,000–80,000/yr",
-      de: "€32,000–50,000/yr",
-      kr: "KRW 2,500,000–3,800,000/mo",
-      sg: "SGD 3,200–5,500/mo",
-      ae: "AED 8,000–16,000/mo",
-      my: "MYR 2,800–4,500/mo",
-      jp: "JPY 240,000–360,000/mo",
-      qa: "QAR 9,000–18,000/mo",
-      sa: "SAR 7,000–14,000/mo",
-      nl: "€30,000–46,000/yr",
-      se: "SEK 30,000–44,000/mo",
-      nz: "NZD 50,000–72,000/yr"
+      us: "USD 50,000â€“85,000/yr",
+      uk: "Â£24,000â€“40,000/yr",
+      ca: "CAD 48,000â€“75,000/yr",
+      au: "AUD 55,000â€“80,000/yr",
+      de: "â‚¬32,000â€“50,000/yr",
+      kr: "KRW 2,500,000â€“3,800,000/mo",
+      sg: "SGD 3,200â€“5,500/mo",
+      ae: "AED 8,000â€“16,000/mo",
+      my: "MYR 2,800â€“4,500/mo",
+      jp: "JPY 240,000â€“360,000/mo",
+      qa: "QAR 9,000â€“18,000/mo",
+      sa: "SAR 7,000â€“14,000/mo",
+      nl: "â‚¬30,000â€“46,000/yr",
+      se: "SEK 30,000â€“44,000/mo",
+      nz: "NZD 50,000â€“72,000/yr"
     }
   }, {
     slug: "finance",
@@ -11400,24 +11400,24 @@ Object.assign(window, {
     desc: "Investment, commercial banking, accounting, financial analysis",
     demand: "medium",
     subjectSlugs: ["finance-banking", "economics"],
-    bd_dhaka: "BDT 25,000–60,000/mo",
-    bd_outside: "BDT 16,000–30,000/mo",
+    bd_dhaka: "BDT 25,000â€“60,000/mo",
+    bd_outside: "BDT 16,000â€“30,000/mo",
     salaries: {
-      us: "USD 60,000–100,000/yr",
-      uk: "£28,000–55,000/yr",
-      ca: "CAD 52,000–82,000/yr",
-      au: "AUD 58,000–88,000/yr",
-      de: "€34,000–55,000/yr",
-      kr: "KRW 2,800,000–4,200,000/mo",
-      sg: "SGD 3,800–6,800/mo",
-      ae: "AED 10,000–20,000/mo",
-      my: "MYR 3,000–5,200/mo",
-      jp: "JPY 260,000–400,000/mo",
-      qa: "QAR 10,000–20,000/mo",
-      sa: "SAR 8,000–16,000/mo",
-      nl: "€32,000–52,000/yr",
-      se: "SEK 32,000–48,000/mo",
-      nz: "NZD 52,000–78,000/yr"
+      us: "USD 60,000â€“100,000/yr",
+      uk: "Â£28,000â€“55,000/yr",
+      ca: "CAD 52,000â€“82,000/yr",
+      au: "AUD 58,000â€“88,000/yr",
+      de: "â‚¬34,000â€“55,000/yr",
+      kr: "KRW 2,800,000â€“4,200,000/mo",
+      sg: "SGD 3,800â€“6,800/mo",
+      ae: "AED 10,000â€“20,000/mo",
+      my: "MYR 3,000â€“5,200/mo",
+      jp: "JPY 260,000â€“400,000/mo",
+      qa: "QAR 10,000â€“20,000/mo",
+      sa: "SAR 8,000â€“16,000/mo",
+      nl: "â‚¬32,000â€“52,000/yr",
+      se: "SEK 32,000â€“48,000/mo",
+      nz: "NZD 52,000â€“78,000/yr"
     }
   }, {
     slug: "medicine",
@@ -11425,24 +11425,24 @@ Object.assign(window, {
     desc: "General practice, specialisation, hospital medicine",
     demand: "high",
     subjectSlugs: [],
-    bd_dhaka: "BDT 30,000–60,000/mo (govt) · 40,000–100,000/mo (pvt)",
-    bd_outside: "BDT 20,000–40,000/mo",
+    bd_dhaka: "BDT 30,000â€“60,000/mo (govt) Â· 40,000â€“100,000/mo (pvt)",
+    bd_outside: "BDT 20,000â€“40,000/mo",
     salaries: {
-      us: "USD 55,000–75,000/yr (resident) · 200,000–350,000/yr (attending)",
-      uk: "£28,000–40,000/yr (junior) · £80,000–150,000/yr (consultant)",
-      ca: "CAD 60,000–90,000/yr (resident) · 250,000–400,000/yr (specialist)",
-      au: "AUD 65,000–100,000/yr (resident) · 200,000–400,000/yr (specialist)",
-      de: "€45,000–65,000/yr (resident)",
-      kr: "KRW 4,000,000–6,000,000/mo",
-      sg: "SGD 5,000–9,000/mo",
-      ae: "AED 15,000–35,000/mo",
-      my: "MYR 4,000–7,000/mo",
-      jp: "JPY 400,000–600,000/mo",
-      qa: "QAR 18,000–35,000/mo",
-      sa: "SAR 15,000–30,000/mo",
-      nl: "€42,000–65,000/yr",
-      se: "SEK 40,000–58,000/mo",
-      nz: "NZD 70,000–110,000/yr (resident)"
+      us: "USD 55,000â€“75,000/yr (resident) Â· 200,000â€“350,000/yr (attending)",
+      uk: "Â£28,000â€“40,000/yr (junior) Â· Â£80,000â€“150,000/yr (consultant)",
+      ca: "CAD 60,000â€“90,000/yr (resident) Â· 250,000â€“400,000/yr (specialist)",
+      au: "AUD 65,000â€“100,000/yr (resident) Â· 200,000â€“400,000/yr (specialist)",
+      de: "â‚¬45,000â€“65,000/yr (resident)",
+      kr: "KRW 4,000,000â€“6,000,000/mo",
+      sg: "SGD 5,000â€“9,000/mo",
+      ae: "AED 15,000â€“35,000/mo",
+      my: "MYR 4,000â€“7,000/mo",
+      jp: "JPY 400,000â€“600,000/mo",
+      qa: "QAR 18,000â€“35,000/mo",
+      sa: "SAR 15,000â€“30,000/mo",
+      nl: "â‚¬42,000â€“65,000/yr",
+      se: "SEK 40,000â€“58,000/mo",
+      nz: "NZD 70,000â€“110,000/yr (resident)"
     }
   }, {
     slug: "pharmacy",
@@ -11450,24 +11450,24 @@ Object.assign(window, {
     desc: "Clinical pharmacy, pharmaceutical industry, drug research",
     demand: "medium",
     subjectSlugs: [],
-    bd_dhaka: "BDT 22,000–50,000/mo",
-    bd_outside: "BDT 15,000–28,000/mo",
+    bd_dhaka: "BDT 22,000â€“50,000/mo",
+    bd_outside: "BDT 15,000â€“28,000/mo",
     salaries: {
-      us: "USD 100,000–130,000/yr",
-      uk: "£24,000–40,000/yr",
-      ca: "CAD 70,000–100,000/yr",
-      au: "AUD 65,000–90,000/yr",
-      de: "€30,000–48,000/yr",
-      kr: "KRW 2,600,000–3,800,000/mo",
-      sg: "SGD 3,200–5,500/mo",
-      ae: "AED 8,000–15,000/mo",
-      my: "MYR 2,800–4,500/mo",
-      jp: "JPY 260,000–380,000/mo",
-      qa: "QAR 9,000–16,000/mo",
-      sa: "SAR 8,000–15,000/mo",
-      nl: "€28,000–44,000/yr",
-      se: "SEK 30,000–42,000/mo",
-      nz: "NZD 55,000–78,000/yr"
+      us: "USD 100,000â€“130,000/yr",
+      uk: "Â£24,000â€“40,000/yr",
+      ca: "CAD 70,000â€“100,000/yr",
+      au: "AUD 65,000â€“90,000/yr",
+      de: "â‚¬30,000â€“48,000/yr",
+      kr: "KRW 2,600,000â€“3,800,000/mo",
+      sg: "SGD 3,200â€“5,500/mo",
+      ae: "AED 8,000â€“15,000/mo",
+      my: "MYR 2,800â€“4,500/mo",
+      jp: "JPY 260,000â€“380,000/mo",
+      qa: "QAR 9,000â€“16,000/mo",
+      sa: "SAR 8,000â€“15,000/mo",
+      nl: "â‚¬28,000â€“44,000/yr",
+      se: "SEK 30,000â€“42,000/mo",
+      nz: "NZD 55,000â€“78,000/yr"
     }
   }, {
     slug: "architecture",
@@ -11475,24 +11475,24 @@ Object.assign(window, {
     desc: "Building design, urban planning, interior architecture",
     demand: "low",
     subjectSlugs: [],
-    bd_dhaka: "BDT 20,000–50,000/mo",
-    bd_outside: "BDT 14,000–28,000/mo",
+    bd_dhaka: "BDT 20,000â€“50,000/mo",
+    bd_outside: "BDT 14,000â€“28,000/mo",
     salaries: {
-      us: "USD 50,000–75,000/yr",
-      uk: "£24,000–38,000/yr",
-      ca: "CAD 48,000–72,000/yr",
-      au: "AUD 55,000–80,000/yr",
-      de: "€30,000–48,000/yr",
-      kr: "KRW 2,400,000–3,500,000/mo",
-      sg: "SGD 3,000–5,000/mo",
-      ae: "AED 8,000–16,000/mo",
-      my: "MYR 2,500–4,000/mo",
-      jp: "JPY 230,000–350,000/mo",
-      qa: "QAR 9,000–18,000/mo",
-      sa: "SAR 7,000–14,000/mo",
-      nl: "€28,000–44,000/yr",
-      se: "SEK 28,000–40,000/mo",
-      nz: "NZD 50,000–70,000/yr"
+      us: "USD 50,000â€“75,000/yr",
+      uk: "Â£24,000â€“38,000/yr",
+      ca: "CAD 48,000â€“72,000/yr",
+      au: "AUD 55,000â€“80,000/yr",
+      de: "â‚¬30,000â€“48,000/yr",
+      kr: "KRW 2,400,000â€“3,500,000/mo",
+      sg: "SGD 3,000â€“5,000/mo",
+      ae: "AED 8,000â€“16,000/mo",
+      my: "MYR 2,500â€“4,000/mo",
+      jp: "JPY 230,000â€“350,000/mo",
+      qa: "QAR 9,000â€“18,000/mo",
+      sa: "SAR 7,000â€“14,000/mo",
+      nl: "â‚¬28,000â€“44,000/yr",
+      se: "SEK 28,000â€“40,000/mo",
+      nz: "NZD 50,000â€“70,000/yr"
     }
   }, {
     slug: "data",
@@ -11500,24 +11500,24 @@ Object.assign(window, {
     desc: "Machine learning, analytics, data engineering, AI research",
     demand: "high",
     subjectSlugs: ["cse"],
-    bd_dhaka: "BDT 40,000–90,000/mo",
-    bd_outside: "BDT 25,000–50,000/mo",
+    bd_dhaka: "BDT 40,000â€“90,000/mo",
+    bd_outside: "BDT 25,000â€“50,000/mo",
     salaries: {
-      us: "USD 90,000–140,000/yr",
-      uk: "£35,000–65,000/yr",
-      ca: "CAD 72,000–105,000/yr",
-      au: "AUD 75,000–110,000/yr",
-      de: "€44,000–70,000/yr",
-      kr: "KRW 3,500,000–5,500,000/mo",
-      sg: "SGD 5,000–9,500/mo",
-      ae: "AED 14,000–28,000/mo",
-      my: "MYR 4,000–7,500/mo",
-      jp: "JPY 330,000–550,000/mo",
-      qa: "QAR 14,000–26,000/mo",
-      sa: "SAR 12,000–22,000/mo",
-      nl: "€40,000–65,000/yr",
-      se: "SEK 40,000–60,000/mo",
-      nz: "NZD 70,000–105,000/yr"
+      us: "USD 90,000â€“140,000/yr",
+      uk: "Â£35,000â€“65,000/yr",
+      ca: "CAD 72,000â€“105,000/yr",
+      au: "AUD 75,000â€“110,000/yr",
+      de: "â‚¬44,000â€“70,000/yr",
+      kr: "KRW 3,500,000â€“5,500,000/mo",
+      sg: "SGD 5,000â€“9,500/mo",
+      ae: "AED 14,000â€“28,000/mo",
+      my: "MYR 4,000â€“7,500/mo",
+      jp: "JPY 330,000â€“550,000/mo",
+      qa: "QAR 14,000â€“26,000/mo",
+      sa: "SAR 12,000â€“22,000/mo",
+      nl: "â‚¬40,000â€“65,000/yr",
+      se: "SEK 40,000â€“60,000/mo",
+      nz: "NZD 70,000â€“105,000/yr"
     }
   }, {
     slug: "uiux",
@@ -11525,24 +11525,24 @@ Object.assign(window, {
     desc: "User interface, user experience, product design, visual design",
     demand: "medium",
     subjectSlugs: ["uiux"],
-    bd_dhaka: "BDT 20,000–55,000/mo",
-    bd_outside: "BDT 12,000–30,000/mo",
+    bd_dhaka: "BDT 20,000â€“55,000/mo",
+    bd_outside: "BDT 12,000â€“30,000/mo",
     salaries: {
-      us: "USD 65,000–105,000/yr",
-      uk: "£27,000–50,000/yr",
-      ca: "CAD 58,000–88,000/yr",
-      au: "AUD 60,000–92,000/yr",
-      de: "€36,000–58,000/yr",
-      kr: "KRW 2,800,000–4,200,000/mo",
-      sg: "SGD 3,800–7,000/mo",
-      ae: "AED 9,000–18,000/mo",
-      my: "MYR 3,000–5,500/mo",
-      jp: "JPY 270,000–430,000/mo",
-      qa: "QAR 9,000–18,000/mo",
-      sa: "SAR 8,000–16,000/mo",
-      nl: "€34,000–55,000/yr",
-      se: "SEK 34,000–50,000/mo",
-      nz: "NZD 55,000–85,000/yr"
+      us: "USD 65,000â€“105,000/yr",
+      uk: "Â£27,000â€“50,000/yr",
+      ca: "CAD 58,000â€“88,000/yr",
+      au: "AUD 60,000â€“92,000/yr",
+      de: "â‚¬36,000â€“58,000/yr",
+      kr: "KRW 2,800,000â€“4,200,000/mo",
+      sg: "SGD 3,800â€“7,000/mo",
+      ae: "AED 9,000â€“18,000/mo",
+      my: "MYR 3,000â€“5,500/mo",
+      jp: "JPY 270,000â€“430,000/mo",
+      qa: "QAR 9,000â€“18,000/mo",
+      sa: "SAR 8,000â€“16,000/mo",
+      nl: "â‚¬34,000â€“55,000/yr",
+      se: "SEK 34,000â€“50,000/mo",
+      nz: "NZD 55,000â€“85,000/yr"
     }
   }, {
     slug: "textile",
@@ -11550,24 +11550,24 @@ Object.assign(window, {
     desc: "Garment production, textile R&D, quality management",
     demand: "medium",
     subjectSlugs: [],
-    bd_dhaka: "BDT 25,000–60,000/mo",
-    bd_outside: "BDT 18,000–35,000/mo",
+    bd_dhaka: "BDT 25,000â€“60,000/mo",
+    bd_outside: "BDT 18,000â€“35,000/mo",
     salaries: {
-      us: "USD 48,000–72,000/yr",
-      uk: "£22,000–36,000/yr",
-      ca: "CAD 45,000–68,000/yr",
-      au: "AUD 52,000–75,000/yr",
-      de: "€30,000–46,000/yr",
-      kr: "KRW 2,400,000–3,600,000/mo",
-      sg: "SGD 2,800–4,500/mo",
-      ae: "AED 7,000–14,000/mo",
-      my: "MYR 2,500–4,200/mo",
-      jp: "JPY 230,000–340,000/mo",
-      qa: "QAR 7,000–13,000/mo",
-      sa: "SAR 6,000–12,000/mo",
-      nl: "€26,000–40,000/yr",
-      se: "SEK 26,000–38,000/mo",
-      nz: "NZD 45,000–65,000/yr"
+      us: "USD 48,000â€“72,000/yr",
+      uk: "Â£22,000â€“36,000/yr",
+      ca: "CAD 45,000â€“68,000/yr",
+      au: "AUD 52,000â€“75,000/yr",
+      de: "â‚¬30,000â€“46,000/yr",
+      kr: "KRW 2,400,000â€“3,600,000/mo",
+      sg: "SGD 2,800â€“4,500/mo",
+      ae: "AED 7,000â€“14,000/mo",
+      my: "MYR 2,500â€“4,200/mo",
+      jp: "JPY 230,000â€“340,000/mo",
+      qa: "QAR 7,000â€“13,000/mo",
+      sa: "SAR 6,000â€“12,000/mo",
+      nl: "â‚¬26,000â€“40,000/yr",
+      se: "SEK 26,000â€“38,000/mo",
+      nz: "NZD 45,000â€“65,000/yr"
     }
   }, {
     slug: "journalism",
@@ -11575,24 +11575,24 @@ Object.assign(window, {
     desc: "Print, broadcast, digital media, content creation, PR",
     demand: "low",
     subjectSlugs: ["journalism"],
-    bd_dhaka: "BDT 15,000–35,000/mo",
-    bd_outside: "BDT 10,000–20,000/mo",
+    bd_dhaka: "BDT 15,000â€“35,000/mo",
+    bd_outside: "BDT 10,000â€“20,000/mo",
     salaries: {
-      us: "USD 38,000–62,000/yr",
-      uk: "£20,000–34,000/yr",
-      ca: "CAD 36,000–58,000/yr",
-      au: "AUD 45,000–65,000/yr",
-      de: "€26,000–42,000/yr",
-      kr: "KRW 2,000,000–3,200,000/mo",
-      sg: "SGD 2,500–4,200/mo",
-      ae: "AED 6,000–12,000/mo",
-      my: "MYR 2,200–3,800/mo",
-      jp: "JPY 220,000–320,000/mo",
-      qa: "QAR 7,000–13,000/mo",
-      sa: "SAR 5,000–10,000/mo",
-      nl: "€24,000–38,000/yr",
-      se: "SEK 26,000–36,000/mo",
-      nz: "NZD 40,000–60,000/yr"
+      us: "USD 38,000â€“62,000/yr",
+      uk: "Â£20,000â€“34,000/yr",
+      ca: "CAD 36,000â€“58,000/yr",
+      au: "AUD 45,000â€“65,000/yr",
+      de: "â‚¬26,000â€“42,000/yr",
+      kr: "KRW 2,000,000â€“3,200,000/mo",
+      sg: "SGD 2,500â€“4,200/mo",
+      ae: "AED 6,000â€“12,000/mo",
+      my: "MYR 2,200â€“3,800/mo",
+      jp: "JPY 220,000â€“320,000/mo",
+      qa: "QAR 7,000â€“13,000/mo",
+      sa: "SAR 5,000â€“10,000/mo",
+      nl: "â‚¬24,000â€“38,000/yr",
+      se: "SEK 26,000â€“36,000/mo",
+      nz: "NZD 40,000â€“60,000/yr"
     }
   }];
   const demandLabel = {
@@ -11701,9 +11701,9 @@ Object.assign(window, {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      SHARE MODAL  (quick-access overlay from footer / detail)
-     ═══════════════════════════════════════════════════════════ -->
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const {
@@ -11714,7 +11714,7 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD — Share Your Story modal (quick-access version)
+  // EduPath BD â€” Share Your Story modal (quick-access version)
   // No personal information is mandatory. Only consent checkboxes are required.
 
   function ShareModal({
@@ -12114,9 +12114,9 @@ Object.assign(window, {
 })();
 </script>
 
-<!-- ═══════════════════════════════════════════════════════════
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
      APP ROOT + ROUTER
-     ═══════════════════════════════════════════════════════════ -->
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script src="extracted/universities.js"></script>
 <script src="extracted/subject-universities.js"></script>
 <script src="db/subjects_db.js"></script>
@@ -12136,7 +12136,7 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD — App root + simple router
+  // EduPath BD â€” App root + simple router
 
 
   // ScreenSearchResults component
@@ -12558,7 +12558,7 @@ Object.assign(window, {
     }
   }
   // Wait for all external data scripts (universities.js, career-data.js etc.) to load
-  // before rendering — mirrors the DOMContentLoaded behaviour of the old Babel setup
+  // before rendering â€” mirrors the DOMContentLoaded behaviour of the old Babel setup
   document.addEventListener("DOMContentLoaded", async function () {
     if (window.EduPathDB?.loadApprovedTestimonials) {
       await window.EduPathDB.loadApprovedTestimonials();
@@ -12574,10 +12574,10 @@ Object.assign(window, {
 
 
 
-<!-- ═══════════════════════════════════════════════════════════
-     CAREER DATA — universities, subject mappings, salary data
+<!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+     CAREER DATA â€” universities, subject mappings, salary data
      Loaded after the main app; used by the matcher Results view.
-     ═══════════════════════════════════════════════════════════ -->
+     â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script>
 // universities.js inlined
 </script>
@@ -12585,3 +12585,4 @@ Object.assign(window, {
 
 </body>
 </html>
+
