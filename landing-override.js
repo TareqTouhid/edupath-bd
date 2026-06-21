@@ -104,7 +104,7 @@
         .pf-nav__links {
           display: flex !important;
           justify-content: flex-end !important;
-          gap: 8px !important;
+          gap: 32px !important;
           margin-left: auto !important;
         }
         .ep-landing-shell,
