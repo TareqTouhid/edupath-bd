@@ -31,3 +31,5 @@ db/viewer.html
 db/schema.md
 _deploy_current/
 test-results/
+
+_backup/

@@ -4,38 +4,38 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="icon" href="/favicon.svg" type="image/svg+xml"/>
-  <title>EduPath BD â€” Find the degree you were made for.</title>
+  <title>EduPath BD — Find the degree you were made for.</title>
 
   <!-- SEO + Social sharing -->
-  <meta name="description" content="56 Bangladeshi graduates answered honestly â€” what their subject was really like, and whether they'd choose it again. Use their data to choose yours."/>
+  <meta name="description" content="56 Bangladeshi graduates answered honestly — what their subject was really like, and whether they'd choose it again. Use their data to choose yours."/>
   <meta name="keywords" content="Bangladesh university, HSC subject choice, CSE Bangladesh, BBA Bangladesh, admission guidance BD, EduPath BD"/>
   <meta name="author" content="EduPath BD"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://edupath-bd.vercel.app"/>
-  <meta property="og:title" content="EduPath BD â€” Find the degree you were made for."/>
+  <meta property="og:title" content="EduPath BD — Find the degree you were made for."/>
   <meta property="og:description" content="56 Bangladeshi graduates answered honestly about their subject. Use their data. Free forever."/>
   <meta property="og:image" content="https://edupath-bd.vercel.app/og-image.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:title" content="EduPath BD â€” Find the degree you were made for."/>
-  <meta name="twitter:description" content="56 real responses. 31 subjects. 15 countries of salary data. Free forever."/>
+  <meta name="twitter:title" content="EduPath BD — Find the degree you were made for."/>
+  <meta name="twitter:description" content="56 real responses. Starting-salary estimates for Bangladesh and 15 countries. Free forever."/>
   <link rel="canonical" href="https://edupath-bd.vercel.app"/>
 
-  <!-- Analytics â€” replace 'YOUR-DOMAIN.com' with your Plausible domain, or remove if not needed -->
+  <!-- Analytics — replace 'YOUR-DOMAIN.com' with your Plausible domain, or remove if not needed -->
   <!-- <script defer data-domain="YOUR-DOMAIN.com" src="https://plausible.io/js/script.js"></script> -->
 
   <!-- Fonts via Google Fonts (Fraunces + Plus Jakarta Sans variable) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 
   <style>
 /* ============================================================
-   EduPath BD â€” Design Tokens
+   EduPath BD — Design Tokens
    colors_and_type.css
    ============================================================ */
 
-/* Fonts â€” self-hosted variable TTFs.
-   Fraunces is loaded with its full opsz (9â€“144) + wght (100â€“900) axes,
+/* Fonts — self-hosted variable TTFs.
+   Fraunces is loaded with its full opsz (9–144) + wght (100–900) axes,
    so font-optical-sizing: auto picks the right cut at every scale and
    the gold-italic accent word in headlines uses the true italic. */
 
@@ -45,22 +45,22 @@
 
 :root {
   /* ---------- COLOR (8 brand tokens + 2 derived overlays) ---------- */
-  --bg:           #F5EFE4;
+  --bg:           #F4F4F4;
   --surface:      #FFFFFF;
-  --surface-alt:  #EDE8DF;
+  --surface-alt:  #E8E8E8;
   --green:        #006A4E;
   --green-dark:   #004D38;
   --gold:         #F4A823;
-  --terracotta:   #C8553D;
-  --text:         #1A1714;
-  --text-muted:   #7A6E65;
+  --terracotta:   #B45309;
+  --text:         #161616;
+  --text-muted:   #525252;
 
   --green-12:     color-mix(in oklab, #006A4E 12%, transparent);
   --green-24:     color-mix(in oklab, #006A4E 24%, transparent);
-  --ink-08:       color-mix(in oklab, #1A1714 8%, transparent);
-  --ink-16:       color-mix(in oklab, #1A1714 16%, transparent);
+  --ink-08:       color-mix(in oklab, #161616 12%, transparent);
+  --ink-16:       color-mix(in oklab, #161616 24%, transparent);
   --gold-16:      color-mix(in oklab, #F4A823 16%, transparent);
-  --terracotta-16:color-mix(in oklab, #C8553D 16%, transparent);
+  --terracotta-16:color-mix(in oklab, #B45309 12%, transparent);
 
   /* Field accent colors (subject categories) */
   --field-technology:      #2A6FDB;
@@ -73,8 +73,8 @@
   --field-applied:         #4F5D75;
 
   /* ---------- TYPOGRAPHY ---------- */
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
-  --font-body:    "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "IBM Plex Serif", ui-serif, Georgia, serif;
+  --font-body:    "IBM Plex Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* Type scale tokens */
   --display-1-size:   72px;  --display-1-line:   76px;
@@ -103,22 +103,22 @@
   --s-12: 128px;
 
   /* ---------- RADIUS ---------- */
-  --r-card:  16px;
-  --r-modal: 24px;
-  --r-pill:  100px;
-  --r-input: 12px;
-  --r-image: 12px;
+  --r-card:  4px;
+  --r-modal: 8px;
+  --r-pill:  4px;
+  --r-input: 4px;
+  --r-image: 4px;
 
   /* ---------- SHADOWS ---------- */
-  --shadow-1: 0 1px 2px rgba(26,23,20,0.06), 0 4px 12px rgba(26,23,20,0.04);
-  --shadow-2: 0 4px 8px rgba(26,23,20,0.08), 0 12px 28px rgba(26,23,20,0.08);
-  --shadow-3: 0 24px 64px rgba(26,23,20,0.18), 0 8px 16px rgba(26,23,20,0.08);
+  --shadow-1: 0 1px 3px rgba(22,22,22,0.12), 0 1px 2px rgba(22,22,22,0.08);
+  --shadow-2: 0 4px 8px rgba(22,22,22,0.12), 0 2px 4px rgba(22,22,22,0.08);
+  --shadow-3: 0 16px 32px rgba(22,22,22,0.16), 0 4px 8px rgba(22,22,22,0.08);
 
-  /* ---------- MOTION ---------- */
-  --ease-editorial: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --t-fast: 120ms;
-  --t-mid:  240ms;
-  --t-slow: 400ms;
+  /* ---------- MOTION (Carbon productive) ---------- */
+  --ease-editorial: cubic-bezier(0.2, 0, 0.38, 0.9);
+  --t-fast: 70ms;
+  --t-mid:  150ms;
+  --t-slow: 240ms;
 
   /* ---------- LAYOUT ---------- */
   --container-marketing: 1200px;
@@ -227,7 +227,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 .gold-em {
   font-style: italic;
   color: var(--gold);
-  /* Optical bump â€” italic Fraunces benefits from a touch more weight */
+  /* Optical bump — italic Fraunces benefits from a touch more weight */
   font-weight: 500;
 }
 
@@ -308,7 +308,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 }
 .card:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
 
-/* Honesty box â€” terracotta-bordered callout */
+/* Honesty box — terracotta-bordered callout */
 .honesty {
   border-left: 4px solid var(--terracotta);
   background: var(--terracotta-16);
@@ -325,7 +325,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 }
 
 /* ============================================================
-   EduPath BD UI Kit â€” layout + component styles
+   EduPath BD UI Kit — layout + component styles
    ============================================================ */
 
 /* ---------- App scaffold ---------- */
@@ -368,7 +368,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 }
 .pf-nav__link:hover { color: var(--green); }
 .pf-nav__link.is-active { color: var(--green); font-weight: 600; }
-/* Both nav buttons â€” identical size, only fill differs */
+/* Both nav buttons — identical size, only fill differs */
 .pf-nav__btn { font-size: 13px !important; padding: 0 22px !important; min-width: 168px !important; min-height: 44px !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; }
 
 /* ---------- Hero ---------- */
@@ -391,7 +391,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 .pf-hero__viz { position: relative; height: 480px; }
 .pf-hero__card {
   position: absolute; width: 340px;
-  background: var(--surface); border-radius: 20px;
+  background: var(--surface); border-radius: 4px;
   box-shadow: var(--shadow-2);
   padding: 22px 22px 20px;
   transition: transform 600ms var(--ease-editorial), opacity 600ms var(--ease-editorial), filter 600ms var(--ease-editorial);
@@ -421,7 +421,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
   font-weight: 600; color: var(--text-muted); margin-top: 8px;
 }
 
-/* Who strip â€” compact persona chips below hero */
+/* Who strip — compact persona chips below hero */
 .pf-who-strip {
   background: var(--bg);
   border-bottom: 1px solid var(--ink-08);
@@ -450,7 +450,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 .pf-features { padding: 96px 0; }
 .pf-features__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
 .pf-feature {
-  border-radius: 12px; padding: 28px 24px 24px; min-height: 220px;
+  border-radius: 4px; padding: 28px 24px 24px; min-height: 220px;
   display: flex; flex-direction: column; gap: 14px;
   background: var(--surface);
   border: 1px solid var(--ink-08);
@@ -516,7 +516,7 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 
 /* ---------- Subject card ---------- */
 .pf-scard {
-  background: var(--surface); border-radius: 14px;
+  background: var(--surface); border-radius: 4px;
   border: 1px solid var(--ink-08);
   display: flex; flex-direction: column; cursor: pointer;
   text-align: left; border: none; font: inherit; color: inherit;
@@ -547,16 +547,16 @@ p, .body { font-size: var(--body-size); line-height: var(--body-line); margin: 0
 }
 button { cursor: pointer; }
 
-/* ---------- Testimonial card â€” strict 4-layer hierarchy ----------
+/* ---------- Testimonial card — strict 4-layer hierarchy ----------
    Layer 1 (identity):  avatar + name/age + location chip  [compact]
    Layer 2 (context):   university Â· role                  [muted, small]
    Layer 3 (content):   the quote                          [display font, hero]
    Layer 4 (verdict):   recommend signal + expand toggle   [separated footer]
    ------------------------------------------------------------------ */
-/* â”€â”€ Testimonial card â€” uniform, minimal, no colored borders â”€â”€ */
+/* â”€â”€ Testimonial card — uniform, minimal, no colored borders â”€â”€ */
 .pf-tcard {
   background: var(--surface);
-  border-radius: 14px;
+  border-radius: 4px;
   border: 1px solid var(--ink-08);
   padding: 20px 20px 16px;
   display: flex; flex-direction: column;
@@ -572,7 +572,7 @@ button { cursor: pointer; }
 .pf-tcard__name { font-weight: 600; font-size: 13px; line-height: 1.3; color: var(--text); }
 .pf-tcard__location { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
 
-/* Subject pill â€” neutral gray, no field color */
+/* Subject pill — neutral gray, no field color */
 .pf-tcard__subj {
   flex-shrink: 0;
   display: inline-block; padding: 3px 9px; border-radius: 100px;
@@ -588,7 +588,7 @@ button { cursor: pointer; }
 }
 .pf-tcard__role { opacity: 0.75; }
 
-/* Quote â€” clamped to 3 lines by default */
+/* Quote — clamped to 3 lines by default */
 .pf-tcard__quote {
   font-family: var(--font-display); font-size: 15px;
   line-height: 1.65; color: var(--text); font-style: italic;
@@ -627,7 +627,7 @@ button { cursor: pointer; }
   gap: 12px; flex-wrap: wrap;
   font-size: 14px; color: var(--text-muted);
   padding: 14px 20px; background: var(--surface-alt);
-  border: 1px solid var(--ink-08); border-radius: 10px;
+  border: 1px solid var(--ink-08); border-radius: 4px;
   margin-bottom: 28px;
 }
 .pf-stories-bottom {
@@ -646,7 +646,7 @@ button { cursor: pointer; }
 }
 .pf-av--lg { width: 64px; height: 64px; font-size: 24px; }
 
-/* ---------- Recommendation chips â€” no emoji, pure semantic color ---------- */
+/* ---------- Recommendation chips — no emoji, pure semantic color ---------- */
 .pill-ok   { background: #E2F1EA; color: #0A5E44; box-shadow: none; font-weight: 600; font-size: 11px; }
 .pill-sw   { background: #FDECEA; color: #922820; box-shadow: none; font-weight: 600; font-size: 11px; }
 .pill-note { background: #FBEFD0; color: #7A5400; box-shadow: none; font-weight: 600; font-size: 11px; }
@@ -672,7 +672,7 @@ button { cursor: pointer; }
 /* Curriculum timeline */
 .pf-timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; position: relative; }
 .pf-timeline::before { content:""; position: absolute; top: 22px; left: 0; right: 0; height: 2px; background: var(--green); opacity: 0.2; z-index:0;}
-.pf-tphase { background: var(--surface); border-radius: 14px; padding: 18px 18px 20px; box-shadow: var(--shadow-1); position: relative; }
+.pf-tphase { background: var(--surface); border-radius: 4px; padding: 18px 18px 20px; box-shadow: var(--shadow-1); position: relative; }
 .pf-tphase__year { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
 .pf-tphase__dot { width: 14px; height: 14px; border-radius: 50%; background: var(--green); flex-shrink: 0; position: relative; z-index: 1; box-shadow: 0 0 0 4px var(--bg); }
 .pf-tphase__yr-label { font-family: var(--font-display); font-weight: 600; font-size: 18px; }
@@ -699,13 +699,13 @@ button { cursor: pointer; }
   position: relative; z-index: 1; width: 14px; height: 14px; border-radius: 50%;
   background: var(--surface); box-shadow: 0 0 0 3px var(--green), 0 0 0 6px var(--bg);
 }
-.pf-vphase__body { background: var(--surface); border-radius: 14px; padding: 22px 24px; box-shadow: var(--shadow-1); margin-bottom: 16px; }
+.pf-vphase__body { background: var(--surface); border-radius: 4px; padding: 22px 24px; box-shadow: var(--shadow-1); margin-bottom: 16px; }
 .pf-vphase__year { font-family: var(--font-body); font-weight: 700; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
 .pf-vphase__body h4 { font-family: var(--font-display); font-weight: 600; font-size: 22px; line-height: 1.2; margin: 0 0 14px; letter-spacing: -0.01em; }
 .pf-vphase__body ul { list-style: none; padding: 0; margin: 0 0 14px; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.5; }
 .pf-vphase__body li::before { content: "â€¢  "; color: var(--green); }
 
-/* Verified badge â€” minimal, doesn't compete with content */
+/* Verified badge — minimal, doesn't compete with content */
 .pf-verified {
   display: inline-flex; align-items: center; gap: 4px;
   padding: 2px 0; border-radius: 0;
@@ -717,7 +717,7 @@ button { cursor: pointer; }
 
 /* Career columns */
 .pf-careers { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-.pf-career-col { background: var(--surface); border-radius: 14px; padding: 22px 24px; box-shadow: var(--shadow-1); }
+.pf-career-col { background: var(--surface); border-radius: 4px; padding: 22px 24px; box-shadow: var(--shadow-1); }
 .pf-career-col h3 { font-family: var(--font-display); font-size: 20px; font-weight: 600; margin-bottom: 14px; display:flex;align-items:center;gap:8px;}
 .pf-career-col ul { list-style: none; padding: 0; margin: 0 0 18px; display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
 .pf-career-col ul li::before { content: "Â·  "; color: var(--green); }
@@ -751,7 +751,7 @@ button { cursor: pointer; }
 .pf-matcher__chips { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 28px; }
 .pf-matcher__chip {
   display: flex; align-items: center; gap: 12px; padding: 14px 16px;
-  border-radius: 14px; background: var(--surface);
+  border-radius: 4px; background: var(--surface);
   box-shadow: inset 0 0 0 1.5px var(--ink-08);
   cursor: pointer; text-align: left; font-family: inherit;
   transition: box-shadow var(--t-fast), background var(--t-fast);
@@ -764,7 +764,7 @@ button { cursor: pointer; }
 .pf-matcher__chip .desc { font-size: 12px; color: var(--text-muted); line-height: 1.3; }
 .pf-matcher__cards { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
 .pf-matcher__option {
-  padding: 20px; border-radius: 16px; background: var(--surface);
+  padding: 20px; border-radius: 4px; background: var(--surface);
   box-shadow: inset 0 0 0 1.5px var(--ink-08); cursor: pointer; text-align: left;
   font-family: inherit; border:none; transition: box-shadow var(--t-fast), background var(--t-fast);
 }
@@ -775,12 +775,12 @@ button { cursor: pointer; }
 .pf-matcher__option .desc { font-size: 13px; color: var(--text-muted); line-height: 1.4; }
 .pf-matcher__actions { display: flex; justify-content: space-between; align-items: center; padding-top: 16px; border-top: 1px solid var(--ink-08); }
 .pf-matcher__transition {
-  background: var(--gold-16); border-radius: 14px; padding: 18px 20px;
+  background: var(--gold-16); border-radius: 4px; padding: 18px 20px;
   margin-bottom: 24px; font-size: 14px; line-height: 1.5;
 }
 
 /* Match result */
-.pf-result { padding: 24px; border-radius: 18px; background: var(--surface); box-shadow: var(--shadow-1); margin-bottom: 16px; }
+.pf-result { padding: 24px; border-radius: 4px; background: var(--surface); box-shadow: var(--shadow-1); margin-bottom: 16px; }
 .pf-result.alt { box-shadow: var(--shadow-1), inset 4px 0 0 var(--terracotta); }
 .pf-result__head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; gap: 14px; }
 .pf-result__rank {
@@ -847,7 +847,7 @@ button { cursor: pointer; }
 /* Tags row */
 .pf-tagrow { display: flex; gap: 8px; flex-wrap: wrap; }
 
-/* Responsive â€” collapse */
+/* Responsive — collapse */
 @media (max-width: 880px) {
   .pf-hero__grid, .pf-features__grid, .pf-how__grid, .pf-careers, .pf-grid-3, .pf-timeline, .pf-stats__grid, .pf-footer__grid, .pf-matcher__chips, .pf-matcher__cards, .pf-grid-2 { grid-template-columns: 1fr; }
   .pf-hero__viz { height: 360px; }
@@ -880,7 +880,7 @@ button { cursor: pointer; }
 .pf-col-2  { grid-column: span 2; }
 .pf-col-1  { grid-column: span 1; }
 
-/* Tablet â€” 8-col grid */
+/* Tablet — 8-col grid */
 @media (max-width: 1100px) {
   .pf-grid { grid-template-columns: repeat(8, 1fr); gap: 20px; }
   /* Web-12 spans map onto the 8-col grid */
@@ -896,7 +896,7 @@ button { cursor: pointer; }
   .pf-col-2  { grid-column: span 2; }
 }
 
-/* Mobile â€” 4-col grid */
+/* Mobile — 4-col grid */
 @media (max-width: 700px) {
   .pf-grid { grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .pf-col-12, .pf-col-10, .pf-col-9, .pf-col-8, .pf-col-7, .pf-col-6, .pf-col-5, .pf-col-4, .pf-col-3 { grid-column: span 4; }
@@ -940,7 +940,7 @@ button { cursor: pointer; }
 .pf-narrow { max-width: 960px !important; margin: 0 auto; padding: 0 24px; }
 
 /* â”€â”€ Editorial hero â”€â”€ */
-/* â”€â”€ Editorial hero â€” full-screen, cream, massive type â”€â”€ */
+/* â”€â”€ Editorial hero — full-screen, cream, massive type â”€â”€ */
 .pf-hero--editorial {
   min-height: 100vh;
   padding: clamp(120px, 18vh, 200px) 0 clamp(80px, 10vh, 120px);
@@ -949,7 +949,7 @@ button { cursor: pointer; }
   background: var(--bg);
 }
 
-/* â”€â”€ Headline â€” editorial, tight, not overwhelming â”€â”€ */
+/* â”€â”€ Headline — editorial, tight, not overwhelming â”€â”€ */
 .pf-hero__h1 {
   font-family: var(--font-display);
   font-size: clamp(44px, 6vw, 80px);
@@ -963,7 +963,7 @@ button { cursor: pointer; }
 }
 .pf-hero__h1 em.gold-em { font-style: italic; color: var(--gold); font-weight: 500; }
 
-/* Sub â€” more prominent, darker */
+/* Sub — more prominent, darker */
 .pf-hero--editorial .pf-hero__sub {
   font-size: clamp(18px, 1.8vw, 22px);
   line-height: 1.6; color: var(--text);
@@ -971,7 +971,7 @@ button { cursor: pointer; }
   max-width: 580px; margin: 0 0 32px;
 }
 
-/* Eyebrow â€” plain label, no pill */
+/* Eyebrow — plain label, no pill */
 .pf-hero--editorial .pf-hero__eyebrow {
   background: none; padding: 0; border-radius: 0;
   font-size: 11px; font-weight: 700; letter-spacing: .1em;
@@ -979,7 +979,7 @@ button { cursor: pointer; }
   margin-bottom: 28px; display: block;
 }
 
-/* Trust line â€” more visible */
+/* Trust line — more visible */
 .pf-hero--editorial .pf-hero__trust {
   display: flex; gap: 0; flex-wrap: wrap;
   font-size: 14px; font-weight: 500; color: var(--text-muted); margin-top: 24px;
@@ -988,10 +988,10 @@ button { cursor: pointer; }
 .pf-hero--editorial .pf-hero__trust span::before { content: "Â· "; }
 .pf-hero--editorial .pf-hero__trust span:first-child::before { display: none; }
 
-/* Particle canvas opacity for cream bg â€” visible but not distracting */
+/* Particle canvas opacity for cream bg — visible but not distracting */
 .pf-hero--editorial .pf-starfield { opacity: 0.42; }
 
-/* Route preview pills â€” fills hero dead space, previews 3-route concept */
+/* Route preview pills — fills hero dead space, previews 3-route concept */
 .pf-hero__routes {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
   margin-top: 40px; padding-top: 32px;
@@ -999,7 +999,7 @@ button { cursor: pointer; }
   width: 100%; max-width: 680px; margin-left: auto; margin-right: auto;
 }
 .pf-hero__route-pill {
-  padding: 14px 16px; border-radius: 12px;
+  padding: 14px 16px; border-radius: 4px;
   background: var(--surface); border: 1px solid var(--ink-08);
   text-align: left;
   transition: border-color var(--t-fast) ease;
@@ -1016,12 +1016,12 @@ button { cursor: pointer; }
   .pf-hero__routes { grid-template-columns: 1fr; }
 }
 
-/* Lenis smooth scroll â€” prevent double-scroll on html/body */
+/* Lenis smooth scroll — prevent double-scroll on html/body */
 html.lenis { height: auto; }
 .lenis.lenis-smooth { scroll-behavior: auto !important; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 
-/* â”€â”€ Human-first hero â€” light, two-column â”€â”€ */
+/* â”€â”€ Human-first hero — light, two-column â”€â”€ */
 .pf-hero--human {
   background: var(--bg);
   padding: 72px 0 64px;
@@ -1037,7 +1037,7 @@ html.lenis { height: auto; }
 
 /* Eyebrow on light bg */
 .pf-hero--human .pf-hero__eyebrow {
-  /* strip the gold pill â€” plain label only */
+  /* strip the gold pill — plain label only */
   background: none;
   padding: 0;
   border-radius: 0;
@@ -1090,7 +1090,7 @@ html.lenis { height: auto; }
 .pf-hero__acard {
   display: flex; align-items: center; gap: 12px;
   background: var(--surface); border: 1px solid var(--ink-08);
-  border-radius: 12px; padding: 14px 14px;
+  border-radius: 4px; padding: 14px 14px;
   cursor: pointer; text-align: left; font-family: inherit;
   transition: border-color var(--t-fast) ease, box-shadow var(--t-fast) ease;
   box-shadow: var(--shadow-1);
@@ -1119,11 +1119,11 @@ html.lenis { height: auto; }
 .pf-hero__alumni-more {
   font-size: 13px; font-weight: 600; color: var(--green);
   text-align: center; cursor: pointer; padding: 8px;
-  border: 1px dashed var(--ink-16); border-radius: 10px;
+  border: 1px dashed var(--ink-16); border-radius: 4px;
 }
 .pf-hero__alumni-more:hover { border-color: var(--green); background: #E2F1EA22; }
 
-/* Journey strip â€” dark green, below hero */
+/* Journey strip — dark green, below hero */
 .pf-journey-strip {
   background: #0A1A12;
   padding: 36px 0;
@@ -1144,12 +1144,12 @@ html.lenis { height: auto; }
 @media (max-width: 560px) {
   .pf-hero__alumni { grid-template-columns: 1fr; }
 }
-/* Hero split grid â€” left: copy, right: demo */
+/* Hero split grid — left: copy, right: demo */
 .pf-hero__editorial { display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 720px; margin: 0 auto; }
 .pf-hero__demo-panel { display: none !important;
   background: var(--surface);
   border: 1px solid var(--ink-08);
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 28px 24px;
   box-shadow: var(--shadow-2);
   display: flex; flex-direction: column; gap: 12px;
@@ -1168,7 +1168,7 @@ html.lenis { height: auto; }
   .pf-hero__demo-panel { display: none; }
 }
 
-/* SplitText mask container â€” each line is masked, the inner span animates up from below */
+/* SplitText mask container — each line is masked, the inner span animates up from below */
 .pf-mask { overflow: hidden; display: block; padding-bottom: 0.08em; }
 .pf-mask > span { display: inline-block; will-change: transform; }
 
@@ -1343,9 +1343,9 @@ html.lenis { height: auto; }
 .pf-tier-criteria { font-family: var(--font-body); font-weight: 600; font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); }
 .pf-tier-body { font-size: 14.5px; line-height: 1.5; color: var(--text); }
 
-/* â”€â”€ HORIZONTAL SCROLL â€” featured subjects â”€â”€ */
-/* Subject grid â€” replaces horizontal scroll */
-/* Subject grid â€” landing page only; scoped to avoid clash with explore pf-scard */
+/* â”€â”€ HORIZONTAL SCROLL — featured subjects â”€â”€ */
+/* Subject grid — replaces horizontal scroll */
+/* Subject grid — landing page only; scoped to avoid clash with explore pf-scard */
 .pf-subject-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
 }
@@ -1463,7 +1463,7 @@ html.lenis { height: auto; }
   .pf-pathways { grid-template-columns: 1fr; }
 }
 
-/* â”€â”€ Journey entry cards â€” hero widget â”€â”€ */
+/* â”€â”€ Journey entry cards — hero widget â”€â”€ */
 .pf-journey {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1472,7 +1472,7 @@ html.lenis { height: auto; }
 .pf-journey__card {
   background: rgba(255,255,255,0.10);
   border: 1px solid rgba(255,255,255,0.22);
-  border-radius: 14px;
+  border-radius: 4px;
   padding: 18px 18px 16px;
   cursor: pointer;
   text-align: left;
@@ -1508,7 +1508,7 @@ html.lenis { height: auto; }
   .pf-journey { grid-template-columns: 1fr; }
 }
 
-/* â”€â”€ Pathway cards â€” matcher results â”€â”€ */
+/* â”€â”€ Pathway cards — matcher results â”€â”€ */
 .pf-pathways {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1516,7 +1516,7 @@ html.lenis { height: auto; }
 }
 .pf-pathway {
   background: var(--surface);
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 20px 20px 18px;
   box-shadow: var(--shadow-1);
   border: 1px solid var(--ink-08);
@@ -1561,9 +1561,9 @@ html.lenis { height: auto; }
   font-style: italic; margin-top: auto; padding-top: 4px;
 }
 
-/* â”€â”€ Outcome strip â€” above pathway cards â”€â”€ */
+/* â”€â”€ Outcome strip — above pathway cards â”€â”€ */
 .pf-outcome-strip {
-  background: var(--surface-alt); border-radius: 14px;
+  background: var(--surface-alt); border-radius: 4px;
   padding: 18px 22px; margin-bottom: 24px;
   border: 1px solid var(--ink-08);
 }
@@ -1588,7 +1588,7 @@ html.lenis { height: auto; }
   width: 48px; height: 48px;
   display: flex; align-items: center; justify-content: center;
   background: rgba(0,106,78,0.08);
-  border-radius: 12px; margin-bottom: 18px;
+  border-radius: 4px; margin-bottom: 18px;
   color: var(--green);
 }
 
@@ -1604,7 +1604,7 @@ html.lenis { height: auto; }
 .pf-question {
   background: var(--surface);
   border: 1.5px solid var(--ink-08);
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 22px 24px;
   text-align: left;
   cursor: pointer;
@@ -1639,7 +1639,7 @@ html.lenis { height: auto; }
   margin-top: 20px;
   padding: 16px 20px;
   background: var(--surface);
-  border-radius: 12px;
+  border-radius: 4px;
   border: 1px solid var(--ink-08);
   display: inline-block;
   box-shadow: var(--shadow-1);
@@ -1659,7 +1659,7 @@ html.lenis { height: auto; }
 
 .pf-sim-card {
   background: var(--surface);
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 22px 22px 20px;
   box-shadow: var(--shadow-1);
   border: 1px solid var(--ink-08);
@@ -1712,7 +1712,7 @@ html.lenis { height: auto; }
 /* Bangladesh baseline card */
 .pf-careers-bd {
   display: flex; align-items: flex-start; gap: 14px;
-  background: #E2F1EA; border-radius: 12px; padding: 16px 20px;
+  background: #E2F1EA; border-radius: 4px; padding: 16px 20px;
 }
 .pf-careers-bd__flag { font-size: 28px; line-height: 1; }
 .pf-careers-bd__label {
@@ -1734,7 +1734,7 @@ html.lenis { height: auto; }
 .pf-careers-card {
   background: var(--surface);
   border: 1px solid var(--ink-08);
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 16px 18px;
   display: flex; flex-direction: column; gap: 8px;
   transition: box-shadow var(--t-fast) ease;
@@ -1758,7 +1758,7 @@ html.lenis { height: auto; }
   border-top: 1px solid var(--ink-06); padding-top: 8px; margin-top: 2px;
 }
 
-/* â”€â”€ Global type scale upgrade â€” editorial contrast â”€â”€ */
+/* â”€â”€ Global type scale upgrade — editorial contrast â”€â”€ */
 .display-2 {
   font-size: clamp(32px, 4.8vw, 54px) !important;
   letter-spacing: -0.025em !important;
@@ -1788,7 +1788,7 @@ html.lenis { height: auto; }
 .pf-teaser-card {
   background: var(--surface);
   border: 1px solid var(--ink-08);
-  border-radius: 12px;
+  border-radius: 4px;
   padding: 18px 22px;
   font-size: 15px; font-weight: 500; line-height: 1.5;
   color: var(--text);
@@ -1888,7 +1888,7 @@ html.lenis { height: auto; }
 .pf-saved-strip {
   display: flex; align-items: center; justify-content: space-between;
   gap: 12px; padding: 12px 18px; margin-top: 24px;
-  background: #E2F1EA; border-radius: 10px;
+  background: #E2F1EA; border-radius: 4px;
   font-size: 13px; color: #0A5E44; font-weight: 500;
 }
 
@@ -1910,11 +1910,11 @@ html.lenis { height: auto; }
 
 /* â”€â”€ Mobile responsive fixes â”€â”€ */
 @media (max-width: 640px) {
-  /* Hero headline â€” readable on 375px */
+  /* Hero headline — readable on 375px */
   .pf-hero__h1 { font-size: clamp(38px, 11vw, 60px) !important; }
   .pf-hero--editorial { padding: 100px 0 60px; }
 
-  /* Journey cards â€” 2 columns on small screens */
+  /* Journey cards — 2 columns on small screens */
   .pf-journey { grid-template-columns: repeat(2, 1fr); }
 
   /* Stats grid â†’ 2 col on mobile */
@@ -1928,7 +1928,7 @@ html.lenis { height: auto; }
   .pf-sim-grid { grid-template-columns: 1fr; }
   .pf-pathways { grid-template-columns: 1fr; }
 
-  /* Matcher card â€” full width with smaller padding */
+  /* Matcher card — full width with smaller padding */
   .pf-matcher__card { padding: 24px 18px; margin: 0 12px; }
   .pf-matcher__chips { grid-template-columns: 1fr 1fr !important; }
   .pf-matcher__cards { grid-template-columns: 1fr !important; }
@@ -1943,11 +1943,11 @@ html.lenis { height: auto; }
   /* Careers grid â†’ 1 col */
   .pf-careers-grid { grid-template-columns: 1fr; }
 
-  /* Search â€” full width */
+  /* Search — full width */
   .pf-search { width: 100% !important; }
   .pf-search-wrap { width: 100%; }
 
-  /* Nav â€” hide extra links */
+  /* Nav — hide extra links */
   .pf-nav__inner { padding: 0 16px; gap: 12px; }
   .pf-nav__links, .pf-nav__actions { display: none !important; }
   .pf-nav__menu-toggle {
@@ -1967,9 +1967,9 @@ html.lenis { height: auto; }
     grid-column: 1 / -1; justify-content: center; width: 100%;
   }
 
-  /* Share buttons â€” wrap */
+  /* Share buttons — wrap */
 
-  /* Stories nudge â€” stack */
+  /* Stories nudge — stack */
   .pf-stories-nudge { flex-direction: column; align-items: flex-start; }
 }
 
@@ -1983,15 +1983,15 @@ html.lenis { height: auto; }
 .pf-hero--editorial { padding-top: 120px; }
 </style>
 
-  <!-- React 18 production builds â€” 10x smaller than dev builds -->
+  <!-- React 18 production builds — 10x smaller than dev builds -->
   <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" crossorigin="anonymous"></script>
 
-  <!-- Animation libs removed â€” 835KB saved. CSS handles transitions. -->
+  <!-- Animation libs removed — 835KB saved. CSS handles transitions. -->
 </head>
 <body>
 <div id="root">
-  <!-- Inline loading screen â€” visible immediately before Babel transpiles React -->
+  <!-- Inline loading screen — visible immediately before Babel transpiles React -->
   <div id="pf-boot" style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:#F5EFE4;flex-direction:column;gap:16px;font-family:system-ui,sans-serif;">
     <div style="width:40px;height:40px;border:3px solid #E8E2D9;border-top-color:#006A4E;border-radius:50%;animation:pf-spin 0.8s linear infinite;"></div>
     <p style="color:#7A6E65;font-size:14px;margin:0;">Loading EduPath BDâ€¦</p>
@@ -2016,7 +2016,7 @@ document.addEventListener("DOMContentLoaded", function() {
      DATA  (subjects + testimonials + FIELDS)
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script>
-/* EduPath BD â€” Demo data
+/* EduPath BD — Demo data
    56 verified testimonials from the cleaned 2024 student/graduate survey.
    15 subjects with full profiles (Verified or Emerging tier).
    16 additional subjects appear in Stories only (Listed-only tier; no profile card).
@@ -2038,9 +2038,9 @@ window.PFData = (function () {
   };
 
   // Confidence tier names follow the EduPath BD Build Plan Â§4.1:
-  //   verified   â€” verified course profile + 8+ approved testimonials
-  //   emerging   â€” profile present OR 3â€“7 testimonials
-  //   listed     â€” fewer than 3 testimonials, no verified profile
+  //   verified   — verified course profile + 8+ approved testimonials
+  //   emerging   — profile present OR 3–7 testimonials
+  //   listed     — fewer than 3 testimonials, no verified profile
   // Computed on the fly in computeConfidence(); the value stamped on each subject
   // is the EXPECTED tier at the current dataset size, kept honest with the data.
 
@@ -2050,7 +2050,7 @@ window.PFData = (function () {
       slug: "cse",
       name: "Computer Science & Engineering",
       field: "technology",
-      desc: "Software, systems, AI â€” the backbone of modern work.",
+      desc: "Software, systems, AI — the backbone of modern work.",
       hsc: ["Science"],
       math: true,
       difficulty: 3,
@@ -2058,17 +2058,17 @@ window.PFData = (function () {
       regional: {
         dhaka: {
           careers: ["Software Engineer", "Data Scientist", "IT Manager", "Cybersecurity Analyst"],
-          salary: "à§³30kâ€“2L+/mo",
-          note: "85% of BD software roles are in Dhaka. Outside-Dhaka graduates report a 30â€“40% initial salary gap. Remote work is growing but not standard.",
+          salary: "à§³30k–2L+/mo",
+          note: "85% of BD software roles are in Dhaka. Outside-Dhaka graduates report a 30–40% initial salary gap. Remote work is growing but not standard.",
         },
         outside: {
           careers: ["Govt IT officer (BCS)", "Lecturer / Teacher", "NGO field coordinator", "Local startup / freelance"],
-          salary: "à§³15kâ€“80k/mo",
+          salary: "à§³15k–80k/mo",
           note: "Outside Dhaka, CSE graduates typically target BCS, teaching, or build local freelance practices. Remote work for Dhaka/global companies is rising but requires portfolio strength.",
         },
         intl: {
           careers: ["ML Research Scientist", "Cloud Architect", "Silicon Valley SWE", "Tech Entrepreneur"],
-          salary: "$80kâ€“$180k/yr",
+          salary: "$80k–$180k/yr",
         },
       },
       curriculum: [
@@ -2091,19 +2091,19 @@ window.PFData = (function () {
       difficulty: 2,
       trend: "stable",
       regional: {
-        dhaka: { careers: ["Agritech analyst", "Research assistant", "Govt agriculture officer"], salary: "à§³25kâ€“70k/mo",
+        dhaka: { careers: ["Agritech analyst", "Research assistant", "Govt agriculture officer"], salary: "à§³25k–70k/mo",
           note: "Most senior research and agritech roles still cluster around Dhaka and Gazipur. Field roles are equally distributed nationally."},
-        outside: { careers: ["BCS Agriculture cadre", "NGO field officer (BRAC, Grameen)", "Cooperative agronomist", "Local farm tech consultant"], salary: "à§³18kâ€“55k/mo",
-          note: "Outside Dhaka is the natural home for this subject â€” most jobs ARE outside Dhaka. The BCS Agriculture cadre is a strong public-sector path."},
-        intl: { careers: ["Food systems researcher", "FAO / WFP analyst", "Agronomy PhD pathways"], salary: "$45kâ€“$95k/yr" },
+        outside: { careers: ["BCS Agriculture cadre", "NGO field officer (BRAC, Grameen)", "Cooperative agronomist", "Local farm tech consultant"], salary: "à§³18k–55k/mo",
+          note: "Outside Dhaka is the natural home for this subject — most jobs ARE outside Dhaka. The BCS Agriculture cadre is a strong public-sector path."},
+        intl: { careers: ["Food systems researcher", "FAO / WFP analyst", "Agronomy PhD pathways"], salary: "$45k–$95k/yr" },
       },
       curriculum: [
-        { year: "Year 1", title: "Foundation",   items: ["Plant biology", "Soil basics", "Field methods"], note: "Field work starts in week 3 â€” be ready", noteTone: "good" },
+        { year: "Year 1", title: "Foundation",   items: ["Plant biology", "Soil basics", "Field methods"], note: "Field work starts in week 3 — be ready", noteTone: "good" },
         { year: "Year 2", title: "Core Systems", items: ["Crop sciences", "Animal husbandry", "Genetics"], note: null },
         { year: "Year 3", title: "Specialisation", items: ["Agribusiness", "Horticulture", "Aquaculture"], note: null },
         { year: "Year 4", title: "Capstone",     items: ["Thesis project", "Internship", "BCS preparation"], note: "Strong public-sector outcomes", noteTone: "good" },
       ],
-      unis: { public: ["BAU (Mymensingh)", "SAU (Dhaka)", "BSMRAU", "PSTU"], private: ["â€”"] },
+      unis: { public: ["BAU (Mymensingh)", "SAU (Dhaka)", "BSMRAU", "PSTU"], private: ["—"] },
       alts: ["environmental", "biology"],
       confidence: "emerging",
     },
@@ -2111,17 +2111,17 @@ window.PFData = (function () {
       slug: "bba",
       name: "Business Administration (BBA)",
       field: "business",
-      desc: "Management, finance, marketing â€” broad, applied, employable.",
+      desc: "Management, finance, marketing — broad, applied, employable.",
       hsc: ["Science", "Commerce"],
       math: false,
       difficulty: 2,
       trend: "stable",
       regional: {
-        dhaka: { careers: ["Management trainee", "Brand executive", "Bank officer", "Consultant"], salary: "à§³25kâ€“1L+/mo",
+        dhaka: { careers: ["Management trainee", "Brand executive", "Bank officer", "Consultant"], salary: "à§³25k–1L+/mo",
           note: "Top private universities recruit heavily for management trainee programs in Dhaka. Network effects compound here." },
-        outside: { careers: ["Local bank officer", "MFI manager", "Family business operator", "Sales lead"], salary: "à§³18kâ€“60k/mo",
+        outside: { careers: ["Local bank officer", "MFI manager", "Family business operator", "Sales lead"], salary: "à§³18k–60k/mo",
           note: "Outside Dhaka, BBA is most useful for joining local banks, MFIs, and helping run family businesses." },
-        intl: { careers: ["MBA pathway (post-3yr work)", "Multinational management programs"], salary: "$60kâ€“$150k/yr" },
+        intl: { careers: ["MBA pathway (post-3yr work)", "Multinational management programs"], salary: "$60k–$150k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Principles of Mgmt", "Financial Accounting", "Microeconomics"], note: null },
@@ -2143,11 +2143,11 @@ window.PFData = (function () {
       difficulty: 3,
       trend: "rising",
       regional: {
-        dhaka: { careers: ["Policy analyst", "Research economist", "Bank economist", "Think tank associate"], salary: "à§³30kâ€“1.2L+/mo",
+        dhaka: { careers: ["Policy analyst", "Research economist", "Bank economist", "Think tank associate"], salary: "à§³30k–1.2L+/mo",
           note: "Most policy think tanks (CPD, PRI, BIDS) are Dhaka-centred." },
-        outside: { careers: ["BCS economic cadre", "NGO researcher", "Local research assistant", "University teaching"], salary: "à§³18kâ€“60k/mo",
+        outside: { careers: ["BCS economic cadre", "NGO researcher", "Local research assistant", "University teaching"], salary: "à§³18k–60k/mo",
           note: "Outside Dhaka, the BCS economic cadre and NGO research roles dominate. Academic pathway is realistic." },
-        intl: { careers: ["IMF / World Bank associate", "Economics PhD", "Quant researcher"], salary: "$70kâ€“$160k/yr" },
+        intl: { careers: ["IMF / World Bank associate", "Economics PhD", "Quant researcher"], salary: "$70k–$160k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Micro", "Macro", "Math for Economists"], note: "Math is heavier than students expect", noteTone: "warn" },
@@ -2169,11 +2169,11 @@ window.PFData = (function () {
       difficulty: 2,
       trend: "rising",
       regional: {
-        dhaka: { careers: ["UI/UX designer", "Brand designer", "Product designer", "Agency creative"], salary: "à§³25kâ€“1.5L+/mo",
+        dhaka: { careers: ["UI/UX designer", "Brand designer", "Product designer", "Agency creative"], salary: "à§³25k–1.5L+/mo",
           note: "Dhaka's product/agency scene hires strongly on portfolio, weakly on degree. Show work, not transcripts." },
-        outside: { careers: ["Freelance designer", "Local print/agency work", "Remote contract design"], salary: "à§³15kâ€“80k/mo",
+        outside: { careers: ["Freelance designer", "Local print/agency work", "Remote contract design"], salary: "à§³15k–80k/mo",
           note: "Outside Dhaka, freelance + remote contract work is the realistic path. Portfolio strength matters more than location." },
-        intl: { careers: ["Remote product designer", "Studio designer (Dribbble-pipeline)", "EU/US design teams"], salary: "$55kâ€“$140k/yr" },
+        intl: { careers: ["Remote product designer", "Studio designer (Dribbble-pipeline)", "EU/US design teams"], salary: "$55k–$140k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Drawing", "Type & Color", "Composition"], note: null },
@@ -2195,11 +2195,11 @@ window.PFData = (function () {
       difficulty: 2,
       trend: "stable",
       regional: {
-        dhaka: { careers: ["Editor / Sub-editor", "Content strategist", "Communications lead", "Teacher"], salary: "à§³18kâ€“80k/mo",
+        dhaka: { careers: ["Editor / Sub-editor", "Content strategist", "Communications lead", "Teacher"], salary: "à§³18k–80k/mo",
           note: "Most publishing, NGO communications, and content roles are Dhaka-based." },
-        outside: { careers: ["Secondary / college teacher", "BCS education cadre", "NGO communications"], salary: "à§³15kâ€“45k/mo",
+        outside: { careers: ["Secondary / college teacher", "BCS education cadre", "NGO communications"], salary: "à§³15k–45k/mo",
           note: "Teaching and government cadre are the dominant outside-Dhaka pathways." },
-        intl: { careers: ["MA pathway abroad", "Editorial assistant", "Localization specialist"], salary: "$35kâ€“$70k/yr" },
+        intl: { careers: ["MA pathway abroad", "Editorial assistant", "Localization specialist"], salary: "$35k–$70k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Survey of literature", "Composition", "Linguistics"], note: null },
@@ -2221,11 +2221,11 @@ window.PFData = (function () {
       difficulty: 2,
       trend: "rising",
       regional: {
-        dhaka: { careers: ["NGO program officer", "Policy research", "Donor agency role"], salary: "à§³25kâ€“80k/mo",
-          note: "Bangladesh is a global NGO hub â€” BRAC, Grameen, donor agencies all hire heavily in Dhaka." },
-        outside: { careers: ["NGO field officer", "Local government", "Microfinance"], salary: "à§³18kâ€“50k/mo",
-          note: "Outside Dhaka is where the actual development work happens â€” most field roles are here." },
-        intl: { careers: ["UN agency", "World Bank consultant", "MA Development abroad"], salary: "$50kâ€“$110k/yr" },
+        dhaka: { careers: ["NGO program officer", "Policy research", "Donor agency role"], salary: "à§³25k–80k/mo",
+          note: "Bangladesh is a global NGO hub — BRAC, Grameen, donor agencies all hire heavily in Dhaka." },
+        outside: { careers: ["NGO field officer", "Local government", "Microfinance"], salary: "à§³18k–50k/mo",
+          note: "Outside Dhaka is where the actual development work happens — most field roles are here." },
+        intl: { careers: ["UN agency", "World Bank consultant", "MA Development abroad"], salary: "$50k–$110k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Theories of development", "Sociology", "Stats basics"], note: null },
@@ -2247,11 +2247,11 @@ window.PFData = (function () {
       difficulty: 2,
       trend: "rising",
       regional: {
-        dhaka: { careers: ["GIS analyst", "Climate research", "Urban planning consultant"], salary: "à§³25kâ€“75k/mo",
+        dhaka: { careers: ["GIS analyst", "Climate research", "Urban planning consultant"], salary: "à§³25k–75k/mo",
           note: "Urban planning, climate adaptation, and donor-funded GIS work is concentrated in Dhaka." },
-        outside: { careers: ["BCS administration / forest cadre", "NGO climate field officer", "Local planning office"], salary: "à§³18kâ€“55k/mo",
+        outside: { careers: ["BCS administration / forest cadre", "NGO climate field officer", "Local planning office"], salary: "à§³18k–55k/mo",
           note: "Coastal and northern districts have growing climate-adaptation roles funded by international donors." },
-        intl: { careers: ["GIS specialist", "Climate research abroad", "Remote-sensing analyst"], salary: "$50kâ€“$95k/yr" },
+        intl: { careers: ["GIS specialist", "Climate research abroad", "Remote-sensing analyst"], salary: "$50k–$95k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Physical geography", "Cartography", "Earth systems"], note: null },
@@ -2259,7 +2259,7 @@ window.PFData = (function () {
         { year: "Year 3", title: "Specialisation", items: ["Remote sensing", "Urban", "Environmental policy"], note: null },
         { year: "Year 4", title: "Capstone",     items: ["Field study", "Thesis"], note: null },
       ],
-      unis: { public: ["DU", "JU", "RU", "CU", "NSTU"], private: ["â€”"] },
+      unis: { public: ["DU", "JU", "RU", "CU", "NSTU"], private: ["—"] },
       alts: ["agriculture", "development-studies"],
       confidence: "emerging",
     },
@@ -2267,17 +2267,17 @@ window.PFData = (function () {
       slug: "finance-banking",
       name: "Finance & Banking",
       field: "business",
-      desc: "Capital markets, banking, risk â€” quantitative, structured, employable.",
+      desc: "Capital markets, banking, risk — quantitative, structured, employable.",
       hsc: ["Science", "Commerce"],
       math: true,
       difficulty: 3,
       trend: "stable",
       regional: {
-        dhaka: { careers: ["Investment analyst", "Risk officer", "Treasury", "Audit"], salary: "à§³30kâ€“1.2L+/mo",
+        dhaka: { careers: ["Investment analyst", "Risk officer", "Treasury", "Audit"], salary: "à§³30k–1.2L+/mo",
           note: "All major banks, brokerages, and asset managers are headquartered in Dhaka." },
-        outside: { careers: ["Branch banking", "BCS administration", "Local audit firm"], salary: "à§³20kâ€“55k/mo",
+        outside: { careers: ["Branch banking", "BCS administration", "Local audit firm"], salary: "à§³20k–55k/mo",
           note: "Outside Dhaka, branch banking and BCS administration are the dominant paths." },
-        intl: { careers: ["CFA pathway", "International audit", "Risk analyst abroad"], salary: "$60kâ€“$140k/yr" },
+        intl: { careers: ["CFA pathway", "International audit", "Risk analyst abroad"], salary: "$60k–$140k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Accounting", "Microeconomics", "Quant methods"], note: null },
@@ -2293,7 +2293,7 @@ window.PFData = (function () {
       slug: "physics",
       name: "Physics",
       field: "science",
-      desc: "Classical mechanics, quantum, electrodynamics â€” pure science with a heavy theory load.",
+      desc: "Classical mechanics, quantum, electrodynamics — pure science with a heavy theory load.",
       hsc: ["Science"],
       math: true,
       difficulty: 4,
@@ -2301,17 +2301,17 @@ window.PFData = (function () {
       curriculumStyle: "vertical",
       regretSignal: { rate: 50, note: "Half of the Physics respondents in our dataset explicitly regret the choice. The single recurring complaint: the national curriculum never teaches the computational programming you need to actually do modern physics." },
       regional: {
-        dhaka: { careers: ["Private tutor (high-paying)", "Research assistant (university)", "Corporate analytics generalist"], salary: "à§³25kâ€“65k/mo",
+        dhaka: { careers: ["Private tutor (high-paying)", "Research assistant (university)", "Corporate analytics generalist"], salary: "à§³25k–65k/mo",
           note: "Research infrastructure and serious physics-track tutoring is concentrated at DU/BUET. Most Dhaka-based Physics graduates pivot into private tutoring or generalist analytics; pure-physics roles are rare outside academia." },
-        outside: { careers: ["College / school teacher", "BCS general cadre"], salary: "à§³15kâ€“40k/mo",
+        outside: { careers: ["College / school teacher", "BCS general cadre"], salary: "à§³15k–40k/mo",
           note: "Outside Dhaka, college teaching and BCS general cadre are essentially the only paths. Industry rarely hires Physics graduates as Physics graduates." },
-        intl: { careers: ["MS / PhD pathway (the dominant route)", "Computational physics / quant adjacent"], salary: "$45kâ€“$130k/yr (post-PhD)" },
+        intl: { careers: ["MS / PhD pathway (the dominant route)", "Computational physics / quant adjacent"], salary: "$45k–$130k/yr (post-PhD)" },
       },
       curriculum: [
-        { year: "Years 1â€“2", title: "Classical frameworks & calculus", items: ["Vector analysis & Newtonian mechanics", "Waves and optics", "Multivariable calculus, ODEs"], note: "Heavily theoretical. No programming taught â€” you'll need to learn it on your own", noteTone: "warn" },
-        { year: "Years 3â€“4", title: "Advanced quantum dynamics", items: ["Statistical mechanics", "Modern electrodynamics", "Solid state, lab thesis modules"], note: "Computational gap becomes painful here â€” most research now requires Python/MATLAB", noteTone: "warn" },
+        { year: "Years 1–2", title: "Classical frameworks & calculus", items: ["Vector analysis & Newtonian mechanics", "Waves and optics", "Multivariable calculus, ODEs"], note: "Heavily theoretical. No programming taught — you'll need to learn it on your own", noteTone: "warn" },
+        { year: "Years 3–4", title: "Advanced quantum dynamics", items: ["Statistical mechanics", "Modern electrodynamics", "Solid state, lab thesis modules"], note: "Computational gap becomes painful here — most research now requires Python/MATLAB", noteTone: "warn" },
       ],
-      unis: { public: ["DU", "JU", "CU", "RU", "BUET (Physics dept.)"], private: ["â€”"] },
+      unis: { public: ["DU", "JU", "CU", "RU", "BUET (Physics dept.)"], private: ["—"] },
       alts: ["cse", "agriculture"],
       confidence: "listed",
     },
@@ -2319,7 +2319,7 @@ window.PFData = (function () {
       slug: "journalism",
       name: "Journalism & Media Studies",
       field: "humanities",
-      desc: "Reporting, broadcasting, content production â€” creatively rich, financially precarious.",
+      desc: "Reporting, broadcasting, content production — creatively rich, financially precarious.",
       hsc: ["Science", "Commerce", "Arts"],
       math: false,
       difficulty: 2,
@@ -2327,15 +2327,15 @@ window.PFData = (function () {
       curriculumStyle: "vertical",
       regretSignal: { rate: 60, note: "Multiple respondents say flatly: don't take this subject in Bangladesh until media wages improve. The creative work is real; the pay isn't." },
       regional: {
-        dhaka: { careers: ["TV reporter / producer", "Online news editor", "Brand content / agency creative"], salary: "à§³18kâ€“60k/mo",
-          note: "All major TV networks and newspapers are headquartered in Dhaka. Baseline wages are persistently low â€” the creative ceiling is high but pay rarely matches." },
-        outside: { careers: ["Local stringer", "District correspondent", "Freelance content"], salary: "à§³10kâ€“25k/mo",
+        dhaka: { careers: ["TV reporter / producer", "Online news editor", "Brand content / agency creative"], salary: "à§³18k–60k/mo",
+          note: "All major TV networks and newspapers are headquartered in Dhaka. Baseline wages are persistently low — the creative ceiling is high but pay rarely matches." },
+        outside: { careers: ["Local stringer", "District correspondent", "Freelance content"], salary: "à§³10k–25k/mo",
           note: "Outside Dhaka, journalism is almost entirely stringer work and underpaid. Most graduates pivot out within five years." },
-        intl: { careers: ["MA in media abroad", "Production / content roles overseas", "Freelance + remote"], salary: "$35kâ€“$70k/yr" },
+        intl: { careers: ["MA in media abroad", "Production / content roles overseas", "Freelance + remote"], salary: "$35k–$70k/yr" },
       },
       curriculum: [
-        { year: "Years 1â€“2", title: "Foundation â€” reporting & media theory", items: ["News writing & reporting basics", "Media history & ethics", "Camera and field exercises"], note: "The practical labs are genuinely good", noteTone: "good" },
-        { year: "Years 3â€“4", title: "Specialisation â€” production & projects", items: ["TV / broadcast production", "Specialised reporting beats", "Capstone documentary / thesis"], note: "The career gap shows up around graduation â€” wages start so low that most pivot", noteTone: "warn" },
+        { year: "Years 1–2", title: "Foundation — reporting & media theory", items: ["News writing & reporting basics", "Media history & ethics", "Camera and field exercises"], note: "The practical labs are genuinely good", noteTone: "good" },
+        { year: "Years 3–4", title: "Specialisation — production & projects", items: ["TV / broadcast production", "Specialised reporting beats", "Capstone documentary / thesis"], note: "The career gap shows up around graduation — wages start so low that most pivot", noteTone: "warn" },
       ],
       unis: { public: ["DU", "JU", "RU", "CU"], private: ["ULAB", "DIU"] },
       alts: ["english-lit", "uiux", "development-studies"],
@@ -2345,17 +2345,17 @@ window.PFData = (function () {
       slug: "psychology",
       name: "Psychology",
       field: "social-science",
-      desc: "How minds and behaviour work â€” clinical, research, and applied.",
+      desc: "How minds and behaviour work — clinical, research, and applied.",
       hsc: ["Science", "Commerce", "Arts"],
       math: false,
       difficulty: 2,
       trend: "rising",
       regional: {
-        dhaka: { careers: ["Clinical counsellor", "Therapist (post-MA)", "UX researcher", "HR specialist"], salary: "à§³25kâ€“80k/mo",
+        dhaka: { careers: ["Clinical counsellor", "Therapist (post-MA)", "UX researcher", "HR specialist"], salary: "à§³25k–80k/mo",
           note: "Mental health is a rapidly growing field in Dhaka, but most clinical practice requires an MA." },
-        outside: { careers: ["School counsellor", "NGO mental health field officer"], salary: "à§³18kâ€“45k/mo",
-          note: "Outside Dhaka, school counselling and NGO field work are the main openings â€” clinical practice is sparse." },
-        intl: { careers: ["MA / PhD pathway abroad", "Research assistant"], salary: "$45kâ€“$95k/yr" },
+        outside: { careers: ["School counsellor", "NGO mental health field officer"], salary: "à§³18k–45k/mo",
+          note: "Outside Dhaka, school counselling and NGO field work are the main openings — clinical practice is sparse." },
+        intl: { careers: ["MA / PhD pathway abroad", "Research assistant"], salary: "$45k–$95k/yr" },
       },
       curriculum: [
         { year: "Year 1", title: "Foundation",   items: ["Intro psych", "Stats", "Biological basis"], note: null },
@@ -2372,24 +2372,24 @@ window.PFData = (function () {
       slug: "bangla",
       name: "Bangla",
       field: "humanities",
-      desc: "Literature, language, criticism â€” the national tongue, studied seriously.",
+      desc: "Literature, language, criticism — the national tongue, studied seriously.",
       hsc: ["Science", "Commerce", "Arts"],
       math: false,
       difficulty: 2,
       trend: "stable",
       curriculumStyle: "vertical",
       regional: {
-        dhaka: { careers: ["Editorial / publishing", "School & college teaching", "NGO communications", "Cultural sector"], salary: "à§³15kâ€“60k/mo",
+        dhaka: { careers: ["Editorial / publishing", "School & college teaching", "NGO communications", "Cultural sector"], salary: "à§³15k–60k/mo",
           note: "Most respondents work as teachers or in publishing. The Bangla literary scene is Dhaka-centred but the teaching path is national." },
-        outside: { careers: ["BCS education cadre", "College / school teacher", "Local publishing & culture work"], salary: "à§³12kâ€“40k/mo",
+        outside: { careers: ["BCS education cadre", "College / school teacher", "Local publishing & culture work"], salary: "à§³12k–40k/mo",
           note: "Outside Dhaka, teaching and BCS education cadre are the dominant pathways. Stable, modest, respected work." },
-        intl: { careers: ["MA in Bangla / South Asian studies abroad", "Translation / language work"], salary: "$25kâ€“$55k/yr" },
+        intl: { careers: ["MA in Bangla / South Asian studies abroad", "Translation / language work"], salary: "$25k–$55k/yr" },
       },
       curriculum: [
-        { year: "Years 1â€“2", title: "Foundation â€” language & history", items: ["Bangla grammar & linguistics", "Survey of Bangla literature", "Poetry & prose traditions"], note: null },
-        { year: "Years 3â€“4", title: "Specialisation & thesis", items: ["Modernist & post-colonial criticism", "Comparative literature options", "Capstone thesis"], note: "Strong fit for teaching-track aspirants", noteTone: "good" },
+        { year: "Years 1–2", title: "Foundation — language & history", items: ["Bangla grammar & linguistics", "Survey of Bangla literature", "Poetry & prose traditions"], note: null },
+        { year: "Years 3–4", title: "Specialisation & thesis", items: ["Modernist & post-colonial criticism", "Comparative literature options", "Capstone thesis"], note: "Strong fit for teaching-track aspirants", noteTone: "good" },
       ],
-      unis: { public: ["DU", "JU", "RU", "CU", "Jagannath University"], private: ["â€”"] },
+      unis: { public: ["DU", "JU", "RU", "CU", "Jagannath University"], private: ["—"] },
       alts: ["english-lit", "development-studies"],
       confidence: "emerging",
     },
@@ -2397,22 +2397,22 @@ window.PFData = (function () {
       slug: "civil-engineering",
       name: "Civil Engineering",
       field: "technology",
-      desc: "Structures, transport, water â€” the physical infrastructure of the country.",
+      desc: "Structures, transport, water — the physical infrastructure of the country.",
       hsc: ["Science"],
       math: true,
       difficulty: 4,
       trend: "stable",
       curriculumStyle: "vertical",
       regional: {
-        dhaka: { careers: ["Structural / site engineer", "Consulting firm", "Real-estate developer", "Govt PWD"], salary: "à§³35kâ€“1.2L+/mo",
+        dhaka: { careers: ["Structural / site engineer", "Consulting firm", "Real-estate developer", "Govt PWD"], salary: "à§³35k–1.2L+/mo",
           note: "Dhaka has the largest concentration of consulting firms and high-rise developers. Site work is national." },
-        outside: { careers: ["Site engineer (national rotation)", "LGED / PWD postings", "BCS engineering cadre", "Local contractor"], salary: "à§³25kâ€“70k/mo",
+        outside: { careers: ["Site engineer (national rotation)", "LGED / PWD postings", "BCS engineering cadre", "Local contractor"], salary: "à§³25k–70k/mo",
           note: "Civil engineering is one of the few subjects where outside-Dhaka work is the norm, not a fallback. National infrastructure work pays decently." },
-        intl: { careers: ["MS abroad (structural / transportation)", "Gulf / Middle East site work"], salary: "$45kâ€“$110k/yr" },
+        intl: { careers: ["MS abroad (structural / transportation)", "Gulf / Middle East site work"], salary: "$45k–$110k/yr" },
       },
       curriculum: [
-        { year: "Years 1â€“2", title: "Foundation â€” mechanics & math", items: ["Engineering mechanics", "Strength of materials", "Calculus & numerical methods"], note: "Theory load is heavy â€” the math doesn't let up", noteTone: "warn" },
-        { year: "Years 3â€“4", title: "Specialisation & site work", items: ["Structural / geotechnical / transport", "Hydraulics & water resources", "Capstone design project"], note: "Final-year placement is the most career-defining moment", noteTone: "good" },
+        { year: "Years 1–2", title: "Foundation — mechanics & math", items: ["Engineering mechanics", "Strength of materials", "Calculus & numerical methods"], note: "Theory load is heavy — the math doesn't let up", noteTone: "warn" },
+        { year: "Years 3–4", title: "Specialisation & site work", items: ["Structural / geotechnical / transport", "Hydraulics & water resources", "Capstone design project"], note: "Final-year placement is the most career-defining moment", noteTone: "good" },
       ],
       unis: { public: ["BUET", "KUET", "RUET", "CUET", "IUT"], private: ["AIUB", "BRAC University", "IUB"] },
       alts: ["cse", "geography"],
@@ -2428,17 +2428,17 @@ window.PFData = (function () {
       difficulty: 4,
       trend: "rising",
       curriculumStyle: "vertical",
-      regretSignal: { rate: 33, note: "One of our three Mathematics respondents flatly says: 'I would choose Computer Science. Because of demand in higher studies.' The pure-math route is a respected academic path â€” but the demand gap with CSE is real, and worth knowing before you sign up." },
+      regretSignal: { rate: 33, note: "One of our three Mathematics respondents flatly says: 'I would choose Computer Science. Because of demand in higher studies.' The pure-math route is a respected academic path — but the demand gap with CSE is real, and worth knowing before you sign up." },
       regional: {
-        dhaka: { careers: ["Quant / data analyst (pivot)", "Actuarial / risk", "University teaching (post-MS)", "Statistical consulting"], salary: "à§³25kâ€“80k/mo",
+        dhaka: { careers: ["Quant / data analyst (pivot)", "Actuarial / risk", "University teaching (post-MS)", "Statistical consulting"], salary: "à§³25k–80k/mo",
           note: "Most Math graduates in Dhaka pivot into data, finance, or actuarial roles. Pure-math jobs are essentially academia." },
-        outside: { careers: ["College / school teacher", "BCS education / general cadre", "Statistics-adjacent govt roles"], salary: "à§³15kâ€“45k/mo",
+        outside: { careers: ["College / school teacher", "BCS education / general cadre", "Statistics-adjacent govt roles"], salary: "à§³15k–45k/mo",
           note: "Outside Dhaka, teaching and BCS are the dominant paths. Stable but slow-growing." },
-        intl: { careers: ["MS / PhD abroad", "Quant / data science globally"], salary: "$60kâ€“$160k/yr" },
+        intl: { careers: ["MS / PhD abroad", "Quant / data science globally"], salary: "$60k–$160k/yr" },
       },
       curriculum: [
-        { year: "Years 1â€“2", title: "Foundation â€” calculus & algebra", items: ["Single & multivariable calculus", "Linear algebra & ODEs", "Discrete math & logic"], note: null },
-        { year: "Years 3â€“4", title: "Specialisation â€” pure or applied", items: ["Topology, analysis, group theory (pure)", "Probability, statistics, numerical methods (applied)", "Thesis"], note: "Topology and fuzzy mathematics are the recurring pain points in our data", noteTone: "warn" },
+        { year: "Years 1–2", title: "Foundation — calculus & algebra", items: ["Single & multivariable calculus", "Linear algebra & ODEs", "Discrete math & logic"], note: null },
+        { year: "Years 3–4", title: "Specialisation — pure or applied", items: ["Topology, analysis, group theory (pure)", "Probability, statistics, numerical methods (applied)", "Thesis"], note: "Topology and fuzzy mathematics are the recurring pain points in our data", noteTone: "warn" },
       ],
       unis: { public: ["DU", "BUET (Math)", "JU", "CU", "RU"], private: ["BRAC University"] },
       alts: ["cse", "finance-banking", "economics"],
@@ -2695,7 +2695,7 @@ window.PFData = (function () {
         "good": "1. Problem-Solving and Creativity â€¢ Debugging Challenges: Solving a bug after hours of work is immensely satisfying. â€¢ Building Projects: Creating something from scratch, like apps, websites, or algorithms, allows for creativity and hands-on learning. 2. Collaborative Learning â€¢ Team Projects: Working with peers to build solutions or complete assignments fosters teamwork. â€¢ Hackathons: These events push you to think innovatively under pressure and are great learning experiences.",
         "bad": "1. Steep Learning Curve â€¢ Overwhelming Complexity: Understanding advanced concepts like machine learning, operating systems, or algorithms can be daunting. â€¢ Syntax Errors: Hours spent fixing small errors in code can be frustrating. 2. High Expectations â€¢ Heavy Workload: Balancing multiple assignments, projects, and exams can lead to burnout. â€¢ Unrealistic Deadlines: Meeting tight deadlines in both coursework and personal projects can feel overwhelming.",
         "whoShould": "Those uninterested in logical problem-solving or abstract thinking. â€¢ Individuals who dislike constant learning and adapting to new tools and technologies. â€¢ Students with little patience for trial and error, as coding and debugging often require persistence.",
-        "whoShouldnt": "Choosing CSEâ€”or any fieldâ€”should depend on your interests, strengths, and long-term goals. If youâ€™re unsure, exploring beginner programming courses or talking to current students can help you decide.",
+        "whoShouldnt": "Choosing CSE—or any field—should depend on your interests, strengths, and long-term goals. If youâ€™re unsure, exploring beginner programming courses or talking to current students can help you decide.",
         "opportunities": "There are many opportunities",
         "again": "yes",
         "alternative": null
@@ -3626,7 +3626,7 @@ window.PFData = (function () {
     }
 ];
 
-  // Helper â€” compute confidence tier from current testimonial count.
+  // Helper — compute confidence tier from current testimonial count.
   // Use the static `confidence` field on each subject for SSR/initial render;
   // re-derive at runtime if data grows.
   function computeConfidence(slug, hasProfile) {
@@ -3647,7 +3647,7 @@ window.PFData = (function () {
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
-  // EduPath BD â€” Shared components
+  // EduPath BD — Shared components
   // Nav, Footer, primitives (Pill, Avatar, HonestyBox, StatsStrip, SectionHead)
 
   const {
@@ -3899,7 +3899,7 @@ window.PFData = (function () {
     }, children));
   }
 
-  // Initials avatar â€” gradient circle.
+  // Initials avatar — gradient circle.
   // Use `name` if given; otherwise derive initials from subject (first letter of each word, up to 2).
   function Avatar({
     name,
@@ -3972,7 +3972,7 @@ window.PFData = (function () {
     }, "\u25CE Niche");
   }
 
-  // Confidence-tier badge â€” names match the EduPath BD Build Plan Â§4.1.
+  // Confidence-tier badge — names match the EduPath BD Build Plan Â§4.1.
   function ConfidencePill({
     tier
   }) {
@@ -3980,7 +3980,7 @@ window.PFData = (function () {
       listed: {
         bg: "#FBEFD0",
         fg: "#7A5400",
-        label: "Listed only â€” limited evidence"
+        label: "Listed only — limited evidence"
       },
       emerging: {
         bg: "#DCEAF7",
@@ -4036,7 +4036,7 @@ window.PFData = (function () {
     useMemo
   } = React;
 
-  // EduPath BD â€” SubjectCard + TestimonialCard (minimal, uniform)
+  // EduPath BD — SubjectCard + TestimonialCard (minimal, uniform)
 
   function SubjectCard({
     subject,
@@ -4121,7 +4121,7 @@ window.PFData = (function () {
     const subj = PFData.subjects.find(s => s.slug === t.subjectSlug);
     const fieldKey = subj ? subj.field : t.field || "social-science";
     const subjName = t.subjectName || subj && subj.name || t.subjectSlug;
-    const whoLine = t.name ? `${t.name} Â· age ${t.age}` : `Class of ${t.session || "â€”"} Â· age ${t.age}`;
+    const whoLine = t.name ? `${t.name} Â· age ${t.age}` : `Class of ${t.session || "—"} Â· age ${t.age}`;
     return /*#__PURE__*/React.createElement("div", {
       className: "pf-tcard"
     }, /*#__PURE__*/React.createElement("div", {
@@ -4187,10 +4187,10 @@ window.PFData = (function () {
     useMemo
   } = React;
 
-  // EduPath BD â€” Additional landing sections
+  // EduPath BD — Additional landing sections
   // Composed by screen-landing.jsx into a 14-section editorial scroll.
 
-  // â”€â”€ 1. Pinned "brutal reality" â€” three stats appear sequentially over a
+  // â”€â”€ 1. Pinned "brutal reality" — three stats appear sequentially over a
   //        creamâ†’green background transition, with floating quote snippets behind â”€â”€
   function PinnedRealitySection() {
     const fragments = [{
@@ -4218,7 +4218,7 @@ window.PFData = (function () {
       y: "70%",
       r: -3
     }, {
-      q: "Course structure was a bit off â€” we never received proper training in programming.",
+      q: "Course structure was a bit off — we never received proper training in programming.",
       who: "Physics Â· DU Â· 2013 Â· now Syracuse",
       x: "44%",
       y: "8%",
@@ -4418,7 +4418,7 @@ window.PFData = (function () {
     }, "Appears in the directory and Stories. The matcher mentions it only as \"worth investigating\" and ", /*#__PURE__*/React.createElement("strong", null, "never ranks it #1"), ". Today: 16 of 31 subjects sit here.")))));
   }
 
-  // â”€â”€ 4. Featured subjects â€” static 3Ã—2 grid â”€â”€
+  // â”€â”€ 4. Featured subjects — static 3Ã—2 grid â”€â”€
   function FeaturedSubjectsSection({
     go,
     setSubjectSlug
@@ -4485,13 +4485,13 @@ window.PFData = (function () {
         className: "pf-scard__lbl"
       }, "Universities"), /*#__PURE__*/React.createElement("span", {
         className: "pf-scard__val"
-      }, uniCount || "â€”")), /*#__PURE__*/React.createElement("div", {
+      }, uniCount || "—")), /*#__PURE__*/React.createElement("div", {
         className: "pf-scard__row"
       }, /*#__PURE__*/React.createElement("span", {
         className: "pf-scard__lbl"
       }, "Career paths"), /*#__PURE__*/React.createElement("span", {
         className: "pf-scard__val"
-      }, jobCount || "â€”"))));
+      }, jobCount || "—"))));
     })), /*#__PURE__*/React.createElement("div", {
       style: {
         marginTop: 32
@@ -4521,7 +4521,7 @@ window.PFData = (function () {
       route: "explore",
       cta: "Explore commerce paths â†’"
     }, {
-      q: "What do CSE graduates actually earn â€” in Dhaka and outside?",
+      q: "What do CSE graduates actually earn — in Dhaka and outside?",
       tag: "Salary reality",
       route: "detail",
       slug: "cse",
@@ -4609,10 +4609,10 @@ window.PFData = (function () {
     }, item.cta))))));
   }
 
-  // â”€â”€ 6. Full simulation preview â€” shows what you ACTUALLY get â”€â”€
+  // â”€â”€ 6. Full simulation preview — shows what you ACTUALLY get â”€â”€
   function SimulationPreviewSection() {
     return null;
-  } // removed â€” replaced by live matcher output
+  } // removed — replaced by live matcher output
 
   function _SimulationPreviewSection_UNUSED({
     go
@@ -4620,47 +4620,47 @@ window.PFData = (function () {
     const routes = [{
       id: "A",
       variant: "public",
-      label: "Route A â€” CSE at a public university",
+      label: "Route A — CSE at a public university",
       fit: "Best fit for this profile",
       rows: [{
         k: "4-year total cost",
-        v: "BDT 60,000â€“100,000"
+        v: "BDT 60,000–100,000"
       }, {
         k: "Key universities",
         v: "BUET Â· RUET Â· DU Â· KUET"
       }, {
         k: "Starting salary",
-        v: "BDT 35,000â€“55,000/mo in Dhaka"
+        v: "BDT 35,000–55,000/mo in Dhaka"
       }, {
         k: "Abroad pathway",
-        v: "Very strong â€” highest int'l demand"
+        v: "Very strong — highest int'l demand"
       }, {
         k: "Admission odds",
-        v: "~3â€“8% at top public universities"
+        v: "~3–8% at top public universities"
       }],
-      risk: "Year 2â€“3 math workload surprises almost everyone. Ask anyone who's done it.",
+      risk: "Year 2–3 math workload surprises almost everyone. Ask anyone who's done it.",
       quote: "I wish someone told me the math gets this intense in year 2.",
       who: "CSE Â· BUET Â· class of 2018"
     }, {
       id: "B",
       variant: "private",
-      label: "Route B â€” UI/UX at a private university",
+      label: "Route B — UI/UX at a private university",
       fit: "Strong alternative Â· portfolio-based",
       rows: [{
         k: "4-year total cost",
-        v: "BDT 700kâ€“900k (merit waiver: âˆ’30%)"
+        v: "BDT 700k–900k (merit waiver: âˆ’30%)"
       }, {
         k: "Key universities",
         v: "BRAC Â· NSU Â· UIU Â· Daffodil"
       }, {
         k: "Starting salary",
-        v: "BDT 25,000â€“60,000/mo Â· remote USD 800â€“2,000"
+        v: "BDT 25,000–60,000/mo Â· remote USD 800–2,000"
       }, {
         k: "Remote probability",
         v: "High after 2 years of strong portfolio"
       }, {
         k: "Admission odds",
-        v: "High â€” portfolio matters more than GPA"
+        v: "High — portfolio matters more than GPA"
       }],
       risk: "Bangladesh's local design job market is still thin. Strong English is non-negotiable for remote.",
       quote: "The degree matters less than the portfolio. Start building from semester one.",
@@ -4668,7 +4668,7 @@ window.PFData = (function () {
     }, {
       id: "C",
       variant: "abroad",
-      label: "Route C â€” Korea (GKS Scholarship)",
+      label: "Route C — Korea (GKS Scholarship)",
       fit: "Matches abroad goal Â· fully-funded option",
       rows: [{
         k: "Cost if scholarship",
@@ -4686,7 +4686,7 @@ window.PFData = (function () {
         k: "Competition",
         v: "~200 GKS seats/year for Bangladesh"
       }],
-      risk: "Highly competitive. Applications open Octâ€“Dec. Language prep takes 12â€“18 months.",
+      risk: "Highly competitive. Applications open Oct–Dec. Language prep takes 12–18 months.",
       quote: "Start the TOPIK prep in HSC year 2. Most people who miss the scholarship waited too long.",
       who: "Korean alumni Â· GKS batch of 2022"
     }];
@@ -4852,7 +4852,7 @@ window.PFData = (function () {
   function MasonryVoicesSection({
     go
   }) {
-    // Three voices with complete, standalone quotes â€” one per HSC group
+    // Three voices with complete, standalone quotes — one per HSC group
     const ids = ["resp_018", "resp_043", "resp_003"];
     const picks = ids.map(id => PFData.testimonials.find(t => t.id === id)).filter(Boolean);
     return /*#__PURE__*/React.createElement("section", {
@@ -4912,13 +4912,13 @@ window.PFData = (function () {
     }))))));
   }
 
-  // â”€â”€ 8. Universities row â€” quiet, with response counts â”€â”€
+  // â”€â”€ 8. Universities row — quiet, with response counts â”€â”€
   function UniversitiesSection() {
     // Aggregate from testimonials
     const counts = {};
     PFData.testimonials.forEach(t => {
       const k = (t.uni || "").trim();
-      if (!k || k === "â€”") return;
+      if (!k || k === "—") return;
       counts[k] = (counts[k] || 0) + 1;
     });
     const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]).filter(([k]) => !k.toLowerCase().includes("anonymised")).slice(0, 12);
@@ -4952,7 +4952,7 @@ window.PFData = (function () {
     }, n, " ", n === 1 ? "voice" : "voices"))))));
   }
 
-  // â”€â”€ 9. For parents / teachers callout â€” brief â”€â”€
+  // â”€â”€ 9. For parents / teachers callout — brief â”€â”€
   function ForParentsSection({
     go
   }) {
@@ -4995,26 +4995,26 @@ window.PFData = (function () {
     }, "Help your child choose with facts, not pressure \u2192")));
   }
 
-  // â”€â”€ Matcher Teaser â€” split-screen, sticky left / animated right â”€â”€
+  // â”€â”€ Matcher Teaser — split-screen, sticky left / animated right â”€â”€
   function MatcherTeaserSection({
     go
   }) {
     const steps = [{
-      label: "Step 1 â€” Your signal",
+      label: "Step 1 — Your signal",
       card: {
         text: "Interest detected: Physics + problem-solving",
         type: "signal"
       }
     }, {
-      label: "Step 2 â€” Reality check",
+      label: "Step 2 — Reality check",
       card: {
         text: "Arts HSC group detected. Direct entry to Physics at DU is restricted. This path is blocked for you.",
         type: "warning"
       }
     }, {
-      label: "Step 3 â€” Rerouted",
+      label: "Step 3 — Rerouted",
       card: {
-        text: "Suggested instead: Economics & Data Analytics â€” same analytical drive, open to all HSC groups.",
+        text: "Suggested instead: Economics & Data Analytics — same analytical drive, open to all HSC groups.",
         type: "success"
       }
     }];
@@ -5079,7 +5079,7 @@ window.PFData = (function () {
     }, s.card.text)))))));
   }
 
-  // â”€â”€ University Marquee â€” infinite CSS scroll â”€â”€
+  // â”€â”€ University Marquee — infinite CSS scroll â”€â”€
   function UniversityMarqueeSection() {
     const unis = ["University of Dhaka", "BUET", "Jahangirnagar University", "BRAC University", "North South University", "IUT", "Rajshahi University", "SUST", "Chittagong University", "RUET", "KUET", "DUET", "Daffodil International University", "East West University", "United International University"];
     // Duplicate for seamless loop
@@ -5118,7 +5118,7 @@ window.PFData = (function () {
 
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SEARCH INFRASTRUCTURE â€” buildSearchIndex, searchIndex, SearchBar
+     SEARCH INFRASTRUCTURE — buildSearchIndex, searchIndex, SearchBar
      Runs before ScreenLanding which uses <SearchBar>
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
@@ -5176,7 +5176,7 @@ window.PFData = (function () {
         slug: job.slug,
         related_subjects: job.related_subjects || [],
         searchText: (job.title + " " + (job.related_subjects || []).join(" ")).toLowerCase(),
-        salary: job.salary?.bd?.entry ? { range: `à§³${job.salary.bd.entry.min}â€“${job.salary.bd.entry.max}/${job.salary.bd.unit || "month"}` } : null
+        salary: job.salary?.bd?.entry ? { range: `à§³${job.salary.bd.entry.min}–${job.salary.bd.entry.max}/${job.salary.bd.unit || "month"}` } : null
       }));
     } else if (window.CareerData?.jobs) {
       const jobSet = new Set();
@@ -5398,7 +5398,7 @@ window.PFData = (function () {
 
 <!-- â•â•â• AI MATCHER (auto-generated) â•â•â• -->
 <script type="text/javascript">
-// EduPath BD â€” Smart Matcher (local, free â€” no API calls)
+// EduPath BD — Smart Matcher (local, free — no API calls)
 // Uses keyword extraction + weighted scoring against subjects in PFData
 
 // â”€â”€ Subject signal weights â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -5697,7 +5697,7 @@ function scoreLocal({
     let score = 30;
     let matchedKeywords = [];
 
-    // HSC eligibility â€” hard filter
+    // HSC eligibility — hard filter
     if (!sig.group.includes(hscGroup)) {
       return {
         slug,
@@ -5720,10 +5720,10 @@ function scoreLocal({
     if (mathHate && sig.math >= 0.7) score -= 18;
     if (mathHate && sig.math <= 0.3) score += 8;
 
-    // Money signal â€” boost CSE, Finance, Pharmacy, BBA
+    // Money signal — boost CSE, Finance, Pharmacy, BBA
     if (wantsMoney && ["cse", "finance-banking", "pharmacy", "bba", "accounting", "eee"].includes(slug)) score += 6;
 
-    // Abroad signal â€” boost CSE, research-track subjects
+    // Abroad signal — boost CSE, research-track subjects
     if (wantsAbroad && ["cse", "physics", "mathematics", "statistics", "economics", "biochemistry"].includes(slug)) score += 5;
     score = Math.min(100, Math.max(0, score));
     return {
@@ -5747,26 +5747,26 @@ function buildWhy(slug, matched, profile) {
     return `Based on your HSC group and priorities, ${subj} aligns with several signals in your profile. Worth exploring the subject detail page for honest alumni reviews.`;
   }
   const top = matched.slice(0, 3).join(", ");
-  return `Your profile mentions ${top} â€” strong alignment with what ${subj} actually involves day-to-day. The skills you described transfer directly to this field.`;
+  return `Your profile mentions ${top} — strong alignment with what ${subj} actually involves day-to-day. The skills you described transfer directly to this field.`;
 }
 function buildWatchouts(slug) {
   const w = {
     "cse": "Highly competitive market; constant learning required. Good teachers are rare in BD.",
-    "eee": "Core electronics jobs are limited locally â€” many graduates pivot to CSE or go abroad.",
+    "eee": "Core electronics jobs are limited locally — many graduates pivot to CSE or go abroad.",
     "physics": "Very few research roles in BD. Most graduates become teachers or pivot to data/CSE.",
     "mathematics": "Limited direct industry roles in BD; usually leads to teaching, data, or higher studies abroad.",
-    "bba": "Saturated market â€” degree alone isn't enough. Internships, networking, and a niche skill matter most.",
+    "bba": "Saturated market — degree alone isn't enough. Internships, networking, and a niche skill matter most.",
     "marketing": "Salary entry-points are low. Real income comes 5+ years in or through brand-side roles.",
     "journalism": "Pay is modest unless you reach senior editorial roles. Skills transfer to PR and content.",
     "bangla": "Strong path to teaching/civil service; international career options limited.",
-    "history": "Mostly leads to teaching, BCS, or research â€” narrow industry track.",
+    "history": "Mostly leads to teaching, BCS, or research — narrow industry track.",
     "agriculture": "Excellent if you join government or BAU research; private agribusiness scene is small.",
-    "pharmacy": "Strong demand, good salaries â€” but the coursework is heavy and competitive.",
-    "law": "Long path to earning well â€” 3-5 years before independent practice pays off.",
+    "pharmacy": "Strong demand, good salaries — but the coursework is heavy and competitive.",
+    "law": "Long path to earning well — 3-5 years before independent practice pays off.",
     "uiux": "BD market still maturing; most high-paying clients are international.",
     "architecture": "5-year program, low entry salary, intense workload. Long-term ceiling is high."
   };
-  return w[slug] || "Read full alumni testimonials on the subject page before committing â€” every subject has trade-offs.";
+  return w[slug] || "Read full alumni testimonials on the subject page before committing — every subject has trade-offs.";
 }
 
 // â”€â”€ React component â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
@@ -5806,7 +5806,7 @@ function ScreenAIMatcher({
         careerPaths: SUBJECT_CAREERS[s.slug] || [],
         topUniversities: SUBJECT_UNIS[s.slug] || []
       }));
-      const summary = recs.length > 0 ? `Based on your ${hscGroup.toUpperCase()} background and the interests you described, here are the 5 subjects that best align with your profile â€” ranked by fit, with honest trade-offs for each.` : "We couldn't find strong matches with the inputs given â€” try adding more detail about your interests and try again.";
+      const summary = recs.length > 0 ? `Based on your ${hscGroup.toUpperCase()} background and the interests you described, here are the 5 subjects that best align with your profile — ranked by fit, with honest trade-offs for each.` : "We couldn't find strong matches with the inputs given — try adding more detail about your interests and try again.";
       setResults({
         summary,
         recommendations: recs
@@ -6199,16 +6199,16 @@ Object.assign(window, {
 </script>
 <!-- â•â•â• END AI MATCHER â•â•â• -->
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SCREEN â€” LANDING
+     SCREEN — LANDING
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
   const { useState, useEffect, useRef, useCallback, useMemo } = React;
   const SearchBar = window.SearchBar;
 
-  // EduPath BD â€” Landing (editorial narrative scroll)
+  // EduPath BD — Landing (editorial narrative scroll)
 
-  // EduPath BD â€” ScreenLanding (source JSX, compiled by _compile_landing.js)
+  // EduPath BD — ScreenLanding (source JSX, compiled by _compile_landing.js)
   
   // University data: image + abbreviation + accent color
   const UNI_META = {
@@ -6752,7 +6752,7 @@ Object.assign(window, {
           color: "var(--text-muted)",
           margin: 0
         }
-      }, "Class of ", t.session || "â€”"))));
+      }, "Class of ", t.session || "—"))));
     })), /*#__PURE__*/React.createElement("div", {
       style: {
         marginTop: 24
@@ -6883,7 +6883,7 @@ Object.assign(window, {
 </script>
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SCREEN â€” EXPLORE  (subject grid + regional lens + filters)
+     SCREEN — EXPLORE  (subject grid + regional lens + filters)
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
@@ -6895,7 +6895,7 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD â€” Explore (subject grid + search + regional lens + bookmarks)
+  // EduPath BD — Explore (subject grid + search + regional lens + bookmarks)
 
   // â”€â”€ localStorage bookmark helpers (no React state needed) â”€â”€
   function getSaved() {
@@ -7048,7 +7048,7 @@ Object.assign(window, {
         setQuery("");
         setField("all");
         const slugs = [...saved];
-        // highlight saved ones â€” just scroll to first
+        // highlight saved ones — just scroll to first
         const firstCard = document.querySelector(`[data-slug="${slugs[0]}"]`);
         if (firstCard) firstCard.scrollIntoView({
           behavior: "smooth",
@@ -7145,7 +7145,7 @@ Object.assign(window, {
 </script>
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SCREEN â€” DETAIL  (full subject profile + timeline)
+     SCREEN — DETAIL  (full subject profile + timeline)
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
@@ -7157,7 +7157,7 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD â€” Subject Detail
+  // EduPath BD — Subject Detail
 
   function ScreenDetail({
     go,
@@ -7359,7 +7359,7 @@ Object.assign(window, {
         marginTop: 18
       }
     }, /*#__PURE__*/React.createElement(HonestyBox, {
-      label: lens === "dhaka" ? "Regional reality â€” Dhaka" : "Regional reality â€” Outside Dhaka"
+      label: lens === "dhaka" ? "Regional reality — Dhaka" : "Regional reality — Outside Dhaka"
     }, region.note)))), /*#__PURE__*/React.createElement("section", {
       className: "pf-detail-section"
     }, /*#__PURE__*/React.createElement("div", {
@@ -7560,7 +7560,7 @@ Object.assign(window, {
 </script>
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SCREEN â€” UNIVERSITY DETAIL
+     SCREEN — UNIVERSITY DETAIL
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
@@ -7840,7 +7840,7 @@ Object.assign(window, {
 </script>
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SCREEN â€” JOB DETAIL
+     SCREEN — JOB DETAIL
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
@@ -8189,7 +8189,7 @@ Object.assign(window, {
 </script>
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SCREEN â€” ALL UNIVERSITIES
+     SCREEN — ALL UNIVERSITIES
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
@@ -8279,7 +8279,7 @@ Object.assign(window, {
 </script>
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SCREEN â€” ALL SUBJECTS
+     SCREEN — ALL SUBJECTS
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
@@ -8467,7 +8467,7 @@ Object.assign(window, {
 </script>
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SCREEN â€” STORIES  (testimonials wall, masonry)
+     SCREEN — STORIES  (testimonials wall, masonry)
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
@@ -8479,7 +8479,7 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD â€” Stories wall
+  // EduPath BD — Stories wall
 
   function ScreenStories({
     go
@@ -8669,7 +8669,7 @@ Object.assign(window, {
 </script>
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SCREEN â€” MATCHER  (7-step dual-layer questionnaire)
+     SCREEN — MATCHER  (7-step dual-layer questionnaire)
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
@@ -8681,9 +8681,9 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD â€” Matcher
-  // 7-step questionnaire covering the AI Matcher Spec's 14 questions (A1â€“A7, B1â€“B7).
-  // Steps 1â€“4 = Layer 01 (Interest & working style). Steps 5â€“7 = Layer 02 (Constraints).
+  // EduPath BD — Matcher
+  // 7-step questionnaire covering the AI Matcher Spec's 14 questions (A1–A7, B1–B7).
+  // Steps 1–4 = Layer 01 (Interest & working style). Steps 5–7 = Layer 02 (Constraints).
   // The scoring heuristic remains intentionally lightweight; the spec describes the
   // real retrieval-grounded model that lives server-side in production.
 
@@ -8706,7 +8706,7 @@ Object.assign(window, {
   const WORK_ENV = [["desk", "ðŸ’»", "At a desk / on a computer"], ["lab", "ðŸ”¬", "In a lab or in the field"], ["people", "ðŸ—£ï¸", "With and among people"], ["site", "ðŸ—ï¸", "On a site / hands-on"], ["flex", "ðŸŒ€", "Flexible / varied"]];
 
   // â”€â”€ B1: HSC group â”€â”€
-  const HSC = [["science", "ðŸ”¬", "Science", "Opens CSE, Engineering, Physics, Architecture, Agriculture, Medicine, Geography, Psychology"], ["commerce", "ðŸ“Š", "Commerce / Business Studies", "Opens BBA, Finance & Banking, Economics, Accounting, Management"], ["arts", "ðŸŽ­", "Humanities / Arts", "Opens Bangla, English Lit, History, Philosophy, Development Studies, Social Work, Geography"], ["any", "ðŸ¤”", "Not sure / different board", "Show me all paths â€” I'll filter by interest only"]];
+  const HSC = [["science", "ðŸ”¬", "Science", "Opens CSE, Engineering, Physics, Architecture, Agriculture, Medicine, Geography, Psychology"], ["commerce", "ðŸ“Š", "Commerce / Business Studies", "Opens BBA, Finance & Banking, Economics, Accounting, Management"], ["arts", "ðŸŽ­", "Humanities / Arts", "Opens Bangla, English Lit, History, Philosophy, Development Studies, Social Work, Geography"], ["any", "ðŸ¤”", "Not sure / different board", "Show me all paths — I'll filter by interest only"]];
 
   // â”€â”€ B2: Results band â”€â”€
   const RESULTS_BAND = [["strong", "Strong results", "GPA close to the top of my college"], ["average", "Average", "Around the middle of my class"], ["below", "Below what I hoped", "I want a realistic path given where I am"]];
@@ -8715,10 +8715,10 @@ Object.assign(window, {
   const BUDGET = [["public", "Public university only", "Cost is a real constraint"], ["private", "Private is an option", "We can stretch if the path is right"], ["unsure", "Not sure yet", "Don't filter on this yet"]];
 
   // â”€â”€ B4: Where you can study â”€â”€
-  const LOCATION = [["home", "Home division only", "I can't relocate yet"], ["national", "Anywhere in Bangladesh", "I can move within the country"], ["global", "Anywhere â€” including abroad", "Open to studying outside BD"]];
+  const LOCATION = [["home", "Home division only", "I can't relocate yet"], ["national", "Anywhere in Bangladesh", "I can move within the country"], ["global", "Anywhere — including abroad", "Open to studying outside BD"]];
 
   // â”€â”€ B5: Abroad intent â”€â”€
-  const ABROAD = [["yes", "âœˆï¸", "Yes â€” it's a goal", "Boosts subjects with strong abroad pathways"], ["maybe", "ðŸ¤”", "Maybe", "Treat it as a soft preference"], ["stay", "ðŸ ", "No â€” I plan to stay", "Local opportunities ranked higher"]];
+  const ABROAD = [["yes", "âœˆï¸", "Yes — it's a goal", "Boosts subjects with strong abroad pathways"], ["maybe", "ðŸ¤”", "Maybe", "Treat it as a soft preference"], ["stay", "ðŸ ", "No — I plan to stay", "Local opportunities ranked higher"]];
 
   // â”€â”€ B6: Career risk appetite â”€â”€
   const RISK = [["stable", "ðŸ›¡ï¸", "Stable, predictable", "Banking, govt, established sectors"], ["upside", "ðŸš€", "Trade some stability for upside", "Tech, startups, finance"], ["unsure", "ðŸ¤·", "Unsure yet", "Show me both"]];
@@ -8766,7 +8766,7 @@ Object.assign(window, {
       className: "desc"
     }, desc) : null);
   }
-  // Sub-question wrapper â€” a small label + the chip row below
+  // Sub-question wrapper — a small label + the chip row below
   function SubQ({
     label,
     hint,
@@ -8796,7 +8796,7 @@ Object.assign(window, {
     const [step, setStep] = useState(1); // 1..7
     const [phase, setPhase] = useState("step"); // step | processing | results
 
-    // Layer 01 â€” interests & working style
+    // Layer 01 — interests & working style
     const [interests, setInterests] = useState(new Set());
     const [driver, setDriver] = useState(null);
     const [math, setMath] = useState(null);
@@ -8805,7 +8805,7 @@ Object.assign(window, {
     const [workEnv, setWorkEnv] = useState(null);
     const [curiosity, setCuriosity] = useState("");
 
-    // Layer 02 â€” constraints
+    // Layer 02 — constraints
     const [hsc, setHsc] = useState(null);
     const [resultsBand, setResultsBand] = useState(null);
     const [budget, setBudget] = useState(null);
@@ -8879,7 +8879,7 @@ Object.assign(window, {
         science: "âœ“ You're eligible for the widest range of subjects. You can access all profiled subjects in our database.",
         commerce: "âœ“ You're eligible for Business, Economics, Finance and most Arts subjects. âš  Engineering, Physics, Architecture, Agriculture, Medicine typically require Science group admission.",
         arts: "âœ“ You're eligible for most Arts and Social Science subjects. âš  CSE, Engineering, Physics, Architecture, Agriculture, Medicine, Geography typically require Science group admission.",
-        any: "We'll filter by your interest signals alone â€” and surface subjects with the lowest HSC-group friction first."
+        any: "We'll filter by your interest signals alone — and surface subjects with the lowest HSC-group friction first."
       };
       hscPreview = /*#__PURE__*/React.createElement(HonestyBox, {
         label: "Eligibility preview"
@@ -9198,7 +9198,7 @@ Object.assign(window, {
     }, lines[i])));
   }
 
-  // â”€â”€ Scoring heuristic v3 â€” all 34 subjects, weighted features + hard gates â”€â”€
+  // â”€â”€ Scoring heuristic v3 — all 34 subjects, weighted features + hard gates â”€â”€
   function scoreSubject(s, inputs) {
     let score = 50;
 
@@ -9549,7 +9549,7 @@ Object.assign(window, {
     };
     score += (envFit[inputs.workEnv] || {})[s.slug] || 0;
 
-    // â”€â”€ Feature 7: HSC group â€” hard gate â”€â”€
+    // â”€â”€ Feature 7: HSC group — hard gate â”€â”€
     const groupMap = {
       science: "Science",
       commerce: "Commerce",
@@ -9656,7 +9656,7 @@ Object.assign(window, {
     };
   }
 
-  // â”€â”€ Results v3 â€” full subject report â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+  // â”€â”€ Results v3 — full subject report â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
   function whyItFits(s, inputs) {
     const lines = [];
@@ -9688,8 +9688,8 @@ Object.assign(window, {
       return w > 0;
     });
     if (matched.length) lines.push("Your interest in " + matched.slice(0, 2).map(t => imap[t] || t).join(" and ") + " aligns with the core work of this field.");
-    if (inputs.math === "love" && s.math) lines.push("You said you enjoy math â€” this subject is math-heavy, which is a positive signal.");
-    if (inputs.math === "avoid" && !s.math) lines.push("You prefer to avoid heavy math â€” this subject keeps it light.");
+    if (inputs.math === "love" && s.math) lines.push("You said you enjoy math — this subject is math-heavy, which is a positive signal.");
+    if (inputs.math === "avoid" && !s.math) lines.push("You prefer to avoid heavy math — this subject keeps it light.");
     if (inputs.driver === "payoff" && ["cse", "finance-banking", "law", "mbbs", "pharmacy", "accounting"].includes(s.slug)) lines.push("Your priority on career payoff matches this field's salary ceiling in Bangladesh.");
     if (inputs.driver === "impact" && ["social-work", "nursing", "mbbs", "development-studies"].includes(s.slug)) lines.push("Your drive to make an impact on people is central to this career.");
     if (inputs.driver === "aesthetic" && ["graphic-design", "architecture", "journalism"].includes(s.slug)) lines.push("Your appreciation for creating something good-looking fits this field's core output.");
@@ -9948,13 +9948,13 @@ Object.assign(window, {
             fontSize: 12,
             color: "var(--text)"
           }
-        }, /*#__PURE__*/React.createElement("strong", null, "BDT ", bd.min, "â€“", bd.max), "/", j.salary.bd.unit || "month"), abroad.map(([country, r]) => /*#__PURE__*/React.createElement("span", {
+        }, /*#__PURE__*/React.createElement("strong", null, "BDT ", bd.min, "–", bd.max), "/", j.salary.bd.unit || "month"), abroad.map(([country, r]) => /*#__PURE__*/React.createElement("span", {
           key: country,
           style: {
             fontSize: 12,
             color: "var(--text-muted)"
           }
-        }, country.toUpperCase(), ": ", r.currency, " ", r.entry_min, "â€“", r.entry_max))));
+        }, country.toUpperCase(), ": ", r.currency, " ", r.entry_min, "–", r.entry_max))));
       })), /*#__PURE__*/React.createElement("div", {
         style: {
           marginTop: 8,
@@ -10463,7 +10463,7 @@ Object.assign(window, {
 </script>
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SCREEN â€” CONTRIBUTE  (full-page submission form)
+     SCREEN — CONTRIBUTE  (full-page submission form)
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
@@ -10475,9 +10475,9 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD â€” Contribute screen
+  // EduPath BD — Contribute screen
   // Full-page destination for people sharing their experience.
-  // No personal fields are mandatory â€” only the two consent checkboxes.
+  // No personal fields are mandatory — only the two consent checkboxes.
 
   // â”€â”€ Replace with your Formspree form ID: https://formspree.io/forms â”€â”€
   const FORMSPREE_ENDPOINT = "https://formspree.io/f/mqeozapo";
@@ -10738,7 +10738,7 @@ Object.assign(window, {
       icon: "ðŸ”",
       step: "2",
       title: "We review",
-      desc: "Every response is read by a human before publishing â€” within 48 hrs."
+      desc: "Every response is read by a human before publishing — within 48 hrs."
     }, {
       icon: "ðŸ“–",
       step: "3",
@@ -10748,7 +10748,7 @@ Object.assign(window, {
       icon: "ðŸ§ ",
       step: "4",
       title: "Model trains",
-      desc: "Your data improves the 7-step matcher's scoring â€” anonymised, never sold."
+      desc: "Your data improves the 7-step matcher's scoring — anonymised, never sold."
     }].map((s, i) => /*#__PURE__*/React.createElement("div", {
       key: i,
       style: {
@@ -10990,7 +10990,7 @@ Object.assign(window, {
         flexWrap: "wrap",
         marginTop: 4
       }
-    }, ["1 â€” Not at all", "2", "3", "4", "5 â€” Very satisfied"].map((o, i) => /*#__PURE__*/React.createElement("label", {
+    }, ["1 — Not at all", "2", "3", "4", "5 — Very satisfied"].map((o, i) => /*#__PURE__*/React.createElement("label", {
       key: i,
       style: {
         display: "flex",
@@ -11162,14 +11162,14 @@ Object.assign(window, {
 })();
 </script>
 <script src="ui-system.js?v=202606071420"></script>
-<script src="landing-override.js?v=202606220300"></script>
+<script src="landing-override.js?v=202611170103"></script>
 <script src="matcher-override.js?v=202606130115"></script>
 <script src="no-footer.js?v=202606220200"></script>
 <script src="share-override.js?v=202606231200"></script>
 <script src="stories-override.js?v=202606220600"></script>
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     SCREEN â€” CAREERS  (salary guide across 15 countries)
+     SCREEN — CAREERS  (salary guide across 15 countries)
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script type="text/javascript">
 (function () {
@@ -11181,7 +11181,7 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD â€” Career Salary Guide
+  // EduPath BD — Career Salary Guide
   // Starting salaries by field across 15 countries relevant to BD graduates.
   // All figures: starting/entry-level, 0-3 years experience.
   // Sources: Glassdoor, LinkedIn Salary, Levels.fyi, BBS, World Bank job portals.
@@ -11293,31 +11293,31 @@ Object.assign(window, {
     note: "Peaceful, growing tech sector. PR-friendly."
   }];
 
-  // Starting salaries â€” entry level (0-3 years experience)
+  // Starting salaries — entry level (0-3 years experience)
   const CAREER_FIELDS = [{
     slug: "cse",
     name: "Software Engineering / CSE",
     desc: "Backend, frontend, mobile, DevOps, AI/ML engineering",
     demand: "high",
     subjectSlugs: ["cse"],
-    bd_dhaka: "BDT 35,000â€“80,000/mo",
-    bd_outside: "BDT 20,000â€“40,000/mo",
+    bd_dhaka: "BDT 35,000–80,000/mo",
+    bd_outside: "BDT 20,000–40,000/mo",
     salaries: {
-      us: "USD 80,000â€“125,000/yr",
-      uk: "Â£30,000â€“55,000/yr",
-      ca: "CAD 65,000â€“95,000/yr",
-      au: "AUD 70,000â€“100,000/yr",
-      de: "â‚¬42,000â€“65,000/yr",
-      kr: "KRW 3,200,000â€“4,800,000/mo",
-      sg: "SGD 4,500â€“8,500/mo",
-      ae: "AED 12,000â€“24,000/mo",
-      my: "MYR 3,500â€“6,500/mo",
-      jp: "JPY 300,000â€“500,000/mo",
-      qa: "QAR 14,000â€“26,000/mo",
-      sa: "SAR 10,000â€“20,000/mo",
-      nl: "â‚¬38,000â€“60,000/yr",
-      se: "SEK 38,000â€“55,000/mo",
-      nz: "NZD 65,000â€“95,000/yr"
+      us: "USD 80,000–125,000/yr",
+      uk: "Â£30,000–55,000/yr",
+      ca: "CAD 65,000–95,000/yr",
+      au: "AUD 70,000–100,000/yr",
+      de: "â‚¬42,000–65,000/yr",
+      kr: "KRW 3,200,000–4,800,000/mo",
+      sg: "SGD 4,500–8,500/mo",
+      ae: "AED 12,000–24,000/mo",
+      my: "MYR 3,500–6,500/mo",
+      jp: "JPY 300,000–500,000/mo",
+      qa: "QAR 14,000–26,000/mo",
+      sa: "SAR 10,000–20,000/mo",
+      nl: "â‚¬38,000–60,000/yr",
+      se: "SEK 38,000–55,000/mo",
+      nz: "NZD 65,000–95,000/yr"
     }
   }, {
     slug: "civil",
@@ -11325,24 +11325,24 @@ Object.assign(window, {
     desc: "Construction, infrastructure, roads, bridges, urban planning",
     demand: "medium",
     subjectSlugs: ["civil-engineering"],
-    bd_dhaka: "BDT 25,000â€“55,000/mo",
-    bd_outside: "BDT 18,000â€“35,000/mo",
+    bd_dhaka: "BDT 25,000–55,000/mo",
+    bd_outside: "BDT 18,000–35,000/mo",
     salaries: {
-      us: "USD 55,000â€“80,000/yr",
-      uk: "Â£26,000â€“42,000/yr",
-      ca: "CAD 55,000â€“80,000/yr",
-      au: "AUD 65,000â€“90,000/yr",
-      de: "â‚¬36,000â€“52,000/yr",
-      kr: "KRW 2,800,000â€“4,000,000/mo",
-      sg: "SGD 3,500â€“5,500/mo",
-      ae: "AED 10,000â€“18,000/mo",
-      my: "MYR 2,800â€“4,500/mo",
-      jp: "JPY 260,000â€“380,000/mo",
-      qa: "QAR 12,000â€“22,000/mo",
-      sa: "SAR 8,000â€“16,000/mo",
-      nl: "â‚¬32,000â€“48,000/yr",
-      se: "SEK 33,000â€“46,000/mo",
-      nz: "NZD 58,000â€“82,000/yr"
+      us: "USD 55,000–80,000/yr",
+      uk: "Â£26,000–42,000/yr",
+      ca: "CAD 55,000–80,000/yr",
+      au: "AUD 65,000–90,000/yr",
+      de: "â‚¬36,000–52,000/yr",
+      kr: "KRW 2,800,000–4,000,000/mo",
+      sg: "SGD 3,500–5,500/mo",
+      ae: "AED 10,000–18,000/mo",
+      my: "MYR 2,800–4,500/mo",
+      jp: "JPY 260,000–380,000/mo",
+      qa: "QAR 12,000–22,000/mo",
+      sa: "SAR 8,000–16,000/mo",
+      nl: "â‚¬32,000–48,000/yr",
+      se: "SEK 33,000–46,000/mo",
+      nz: "NZD 58,000–82,000/yr"
     }
   }, {
     slug: "eee",
@@ -11350,24 +11350,24 @@ Object.assign(window, {
     desc: "Power systems, telecom, embedded systems, electronics",
     demand: "medium",
     subjectSlugs: ["eee"],
-    bd_dhaka: "BDT 25,000â€“55,000/mo",
-    bd_outside: "BDT 18,000â€“38,000/mo",
+    bd_dhaka: "BDT 25,000–55,000/mo",
+    bd_outside: "BDT 18,000–38,000/mo",
     salaries: {
-      us: "USD 70,000â€“105,000/yr",
-      uk: "Â£28,000â€“48,000/yr",
-      ca: "CAD 60,000â€“88,000/yr",
-      au: "AUD 65,000â€“92,000/yr",
-      de: "â‚¬38,000â€“58,000/yr",
-      kr: "KRW 2,900,000â€“4,200,000/mo",
-      sg: "SGD 3,800â€“6,200/mo",
-      ae: "AED 9,000â€“17,000/mo",
-      my: "MYR 3,000â€“5,000/mo",
-      jp: "JPY 270,000â€“400,000/mo",
-      qa: "QAR 10,000â€“20,000/mo",
-      sa: "SAR 8,000â€“16,000/mo",
-      nl: "â‚¬34,000â€“52,000/yr",
-      se: "SEK 34,000â€“48,000/mo",
-      nz: "NZD 60,000â€“85,000/yr"
+      us: "USD 70,000–105,000/yr",
+      uk: "Â£28,000–48,000/yr",
+      ca: "CAD 60,000–88,000/yr",
+      au: "AUD 65,000–92,000/yr",
+      de: "â‚¬38,000–58,000/yr",
+      kr: "KRW 2,900,000–4,200,000/mo",
+      sg: "SGD 3,800–6,200/mo",
+      ae: "AED 9,000–17,000/mo",
+      my: "MYR 3,000–5,000/mo",
+      jp: "JPY 270,000–400,000/mo",
+      qa: "QAR 10,000–20,000/mo",
+      sa: "SAR 8,000–16,000/mo",
+      nl: "â‚¬34,000–52,000/yr",
+      se: "SEK 34,000–48,000/mo",
+      nz: "NZD 60,000–85,000/yr"
     }
   }, {
     slug: "bba",
@@ -11375,24 +11375,24 @@ Object.assign(window, {
     desc: "Management, operations, marketing, HR, strategy",
     demand: "medium",
     subjectSlugs: ["bba"],
-    bd_dhaka: "BDT 20,000â€“45,000/mo",
-    bd_outside: "BDT 14,000â€“28,000/mo",
+    bd_dhaka: "BDT 20,000–45,000/mo",
+    bd_outside: "BDT 14,000–28,000/mo",
     salaries: {
-      us: "USD 50,000â€“85,000/yr",
-      uk: "Â£24,000â€“40,000/yr",
-      ca: "CAD 48,000â€“75,000/yr",
-      au: "AUD 55,000â€“80,000/yr",
-      de: "â‚¬32,000â€“50,000/yr",
-      kr: "KRW 2,500,000â€“3,800,000/mo",
-      sg: "SGD 3,200â€“5,500/mo",
-      ae: "AED 8,000â€“16,000/mo",
-      my: "MYR 2,800â€“4,500/mo",
-      jp: "JPY 240,000â€“360,000/mo",
-      qa: "QAR 9,000â€“18,000/mo",
-      sa: "SAR 7,000â€“14,000/mo",
-      nl: "â‚¬30,000â€“46,000/yr",
-      se: "SEK 30,000â€“44,000/mo",
-      nz: "NZD 50,000â€“72,000/yr"
+      us: "USD 50,000–85,000/yr",
+      uk: "Â£24,000–40,000/yr",
+      ca: "CAD 48,000–75,000/yr",
+      au: "AUD 55,000–80,000/yr",
+      de: "â‚¬32,000–50,000/yr",
+      kr: "KRW 2,500,000–3,800,000/mo",
+      sg: "SGD 3,200–5,500/mo",
+      ae: "AED 8,000–16,000/mo",
+      my: "MYR 2,800–4,500/mo",
+      jp: "JPY 240,000–360,000/mo",
+      qa: "QAR 9,000–18,000/mo",
+      sa: "SAR 7,000–14,000/mo",
+      nl: "â‚¬30,000–46,000/yr",
+      se: "SEK 30,000–44,000/mo",
+      nz: "NZD 50,000–72,000/yr"
     }
   }, {
     slug: "finance",
@@ -11400,24 +11400,24 @@ Object.assign(window, {
     desc: "Investment, commercial banking, accounting, financial analysis",
     demand: "medium",
     subjectSlugs: ["finance-banking", "economics"],
-    bd_dhaka: "BDT 25,000â€“60,000/mo",
-    bd_outside: "BDT 16,000â€“30,000/mo",
+    bd_dhaka: "BDT 25,000–60,000/mo",
+    bd_outside: "BDT 16,000–30,000/mo",
     salaries: {
-      us: "USD 60,000â€“100,000/yr",
-      uk: "Â£28,000â€“55,000/yr",
-      ca: "CAD 52,000â€“82,000/yr",
-      au: "AUD 58,000â€“88,000/yr",
-      de: "â‚¬34,000â€“55,000/yr",
-      kr: "KRW 2,800,000â€“4,200,000/mo",
-      sg: "SGD 3,800â€“6,800/mo",
-      ae: "AED 10,000â€“20,000/mo",
-      my: "MYR 3,000â€“5,200/mo",
-      jp: "JPY 260,000â€“400,000/mo",
-      qa: "QAR 10,000â€“20,000/mo",
-      sa: "SAR 8,000â€“16,000/mo",
-      nl: "â‚¬32,000â€“52,000/yr",
-      se: "SEK 32,000â€“48,000/mo",
-      nz: "NZD 52,000â€“78,000/yr"
+      us: "USD 60,000–100,000/yr",
+      uk: "Â£28,000–55,000/yr",
+      ca: "CAD 52,000–82,000/yr",
+      au: "AUD 58,000–88,000/yr",
+      de: "â‚¬34,000–55,000/yr",
+      kr: "KRW 2,800,000–4,200,000/mo",
+      sg: "SGD 3,800–6,800/mo",
+      ae: "AED 10,000–20,000/mo",
+      my: "MYR 3,000–5,200/mo",
+      jp: "JPY 260,000–400,000/mo",
+      qa: "QAR 10,000–20,000/mo",
+      sa: "SAR 8,000–16,000/mo",
+      nl: "â‚¬32,000–52,000/yr",
+      se: "SEK 32,000–48,000/mo",
+      nz: "NZD 52,000–78,000/yr"
     }
   }, {
     slug: "medicine",
@@ -11425,24 +11425,24 @@ Object.assign(window, {
     desc: "General practice, specialisation, hospital medicine",
     demand: "high",
     subjectSlugs: [],
-    bd_dhaka: "BDT 30,000â€“60,000/mo (govt) Â· 40,000â€“100,000/mo (pvt)",
-    bd_outside: "BDT 20,000â€“40,000/mo",
+    bd_dhaka: "BDT 30,000–60,000/mo (govt) Â· 40,000–100,000/mo (pvt)",
+    bd_outside: "BDT 20,000–40,000/mo",
     salaries: {
-      us: "USD 55,000â€“75,000/yr (resident) Â· 200,000â€“350,000/yr (attending)",
-      uk: "Â£28,000â€“40,000/yr (junior) Â· Â£80,000â€“150,000/yr (consultant)",
-      ca: "CAD 60,000â€“90,000/yr (resident) Â· 250,000â€“400,000/yr (specialist)",
-      au: "AUD 65,000â€“100,000/yr (resident) Â· 200,000â€“400,000/yr (specialist)",
-      de: "â‚¬45,000â€“65,000/yr (resident)",
-      kr: "KRW 4,000,000â€“6,000,000/mo",
-      sg: "SGD 5,000â€“9,000/mo",
-      ae: "AED 15,000â€“35,000/mo",
-      my: "MYR 4,000â€“7,000/mo",
-      jp: "JPY 400,000â€“600,000/mo",
-      qa: "QAR 18,000â€“35,000/mo",
-      sa: "SAR 15,000â€“30,000/mo",
-      nl: "â‚¬42,000â€“65,000/yr",
-      se: "SEK 40,000â€“58,000/mo",
-      nz: "NZD 70,000â€“110,000/yr (resident)"
+      us: "USD 55,000–75,000/yr (resident) Â· 200,000–350,000/yr (attending)",
+      uk: "Â£28,000–40,000/yr (junior) Â· Â£80,000–150,000/yr (consultant)",
+      ca: "CAD 60,000–90,000/yr (resident) Â· 250,000–400,000/yr (specialist)",
+      au: "AUD 65,000–100,000/yr (resident) Â· 200,000–400,000/yr (specialist)",
+      de: "â‚¬45,000–65,000/yr (resident)",
+      kr: "KRW 4,000,000–6,000,000/mo",
+      sg: "SGD 5,000–9,000/mo",
+      ae: "AED 15,000–35,000/mo",
+      my: "MYR 4,000–7,000/mo",
+      jp: "JPY 400,000–600,000/mo",
+      qa: "QAR 18,000–35,000/mo",
+      sa: "SAR 15,000–30,000/mo",
+      nl: "â‚¬42,000–65,000/yr",
+      se: "SEK 40,000–58,000/mo",
+      nz: "NZD 70,000–110,000/yr (resident)"
     }
   }, {
     slug: "pharmacy",
@@ -11450,24 +11450,24 @@ Object.assign(window, {
     desc: "Clinical pharmacy, pharmaceutical industry, drug research",
     demand: "medium",
     subjectSlugs: [],
-    bd_dhaka: "BDT 22,000â€“50,000/mo",
-    bd_outside: "BDT 15,000â€“28,000/mo",
+    bd_dhaka: "BDT 22,000–50,000/mo",
+    bd_outside: "BDT 15,000–28,000/mo",
     salaries: {
-      us: "USD 100,000â€“130,000/yr",
-      uk: "Â£24,000â€“40,000/yr",
-      ca: "CAD 70,000â€“100,000/yr",
-      au: "AUD 65,000â€“90,000/yr",
-      de: "â‚¬30,000â€“48,000/yr",
-      kr: "KRW 2,600,000â€“3,800,000/mo",
-      sg: "SGD 3,200â€“5,500/mo",
-      ae: "AED 8,000â€“15,000/mo",
-      my: "MYR 2,800â€“4,500/mo",
-      jp: "JPY 260,000â€“380,000/mo",
-      qa: "QAR 9,000â€“16,000/mo",
-      sa: "SAR 8,000â€“15,000/mo",
-      nl: "â‚¬28,000â€“44,000/yr",
-      se: "SEK 30,000â€“42,000/mo",
-      nz: "NZD 55,000â€“78,000/yr"
+      us: "USD 100,000–130,000/yr",
+      uk: "Â£24,000–40,000/yr",
+      ca: "CAD 70,000–100,000/yr",
+      au: "AUD 65,000–90,000/yr",
+      de: "â‚¬30,000–48,000/yr",
+      kr: "KRW 2,600,000–3,800,000/mo",
+      sg: "SGD 3,200–5,500/mo",
+      ae: "AED 8,000–15,000/mo",
+      my: "MYR 2,800–4,500/mo",
+      jp: "JPY 260,000–380,000/mo",
+      qa: "QAR 9,000–16,000/mo",
+      sa: "SAR 8,000–15,000/mo",
+      nl: "â‚¬28,000–44,000/yr",
+      se: "SEK 30,000–42,000/mo",
+      nz: "NZD 55,000–78,000/yr"
     }
   }, {
     slug: "architecture",
@@ -11475,24 +11475,24 @@ Object.assign(window, {
     desc: "Building design, urban planning, interior architecture",
     demand: "low",
     subjectSlugs: [],
-    bd_dhaka: "BDT 20,000â€“50,000/mo",
-    bd_outside: "BDT 14,000â€“28,000/mo",
+    bd_dhaka: "BDT 20,000–50,000/mo",
+    bd_outside: "BDT 14,000–28,000/mo",
     salaries: {
-      us: "USD 50,000â€“75,000/yr",
-      uk: "Â£24,000â€“38,000/yr",
-      ca: "CAD 48,000â€“72,000/yr",
-      au: "AUD 55,000â€“80,000/yr",
-      de: "â‚¬30,000â€“48,000/yr",
-      kr: "KRW 2,400,000â€“3,500,000/mo",
-      sg: "SGD 3,000â€“5,000/mo",
-      ae: "AED 8,000â€“16,000/mo",
-      my: "MYR 2,500â€“4,000/mo",
-      jp: "JPY 230,000â€“350,000/mo",
-      qa: "QAR 9,000â€“18,000/mo",
-      sa: "SAR 7,000â€“14,000/mo",
-      nl: "â‚¬28,000â€“44,000/yr",
-      se: "SEK 28,000â€“40,000/mo",
-      nz: "NZD 50,000â€“70,000/yr"
+      us: "USD 50,000–75,000/yr",
+      uk: "Â£24,000–38,000/yr",
+      ca: "CAD 48,000–72,000/yr",
+      au: "AUD 55,000–80,000/yr",
+      de: "â‚¬30,000–48,000/yr",
+      kr: "KRW 2,400,000–3,500,000/mo",
+      sg: "SGD 3,000–5,000/mo",
+      ae: "AED 8,000–16,000/mo",
+      my: "MYR 2,500–4,000/mo",
+      jp: "JPY 230,000–350,000/mo",
+      qa: "QAR 9,000–18,000/mo",
+      sa: "SAR 7,000–14,000/mo",
+      nl: "â‚¬28,000–44,000/yr",
+      se: "SEK 28,000–40,000/mo",
+      nz: "NZD 50,000–70,000/yr"
     }
   }, {
     slug: "data",
@@ -11500,24 +11500,24 @@ Object.assign(window, {
     desc: "Machine learning, analytics, data engineering, AI research",
     demand: "high",
     subjectSlugs: ["cse"],
-    bd_dhaka: "BDT 40,000â€“90,000/mo",
-    bd_outside: "BDT 25,000â€“50,000/mo",
+    bd_dhaka: "BDT 40,000–90,000/mo",
+    bd_outside: "BDT 25,000–50,000/mo",
     salaries: {
-      us: "USD 90,000â€“140,000/yr",
-      uk: "Â£35,000â€“65,000/yr",
-      ca: "CAD 72,000â€“105,000/yr",
-      au: "AUD 75,000â€“110,000/yr",
-      de: "â‚¬44,000â€“70,000/yr",
-      kr: "KRW 3,500,000â€“5,500,000/mo",
-      sg: "SGD 5,000â€“9,500/mo",
-      ae: "AED 14,000â€“28,000/mo",
-      my: "MYR 4,000â€“7,500/mo",
-      jp: "JPY 330,000â€“550,000/mo",
-      qa: "QAR 14,000â€“26,000/mo",
-      sa: "SAR 12,000â€“22,000/mo",
-      nl: "â‚¬40,000â€“65,000/yr",
-      se: "SEK 40,000â€“60,000/mo",
-      nz: "NZD 70,000â€“105,000/yr"
+      us: "USD 90,000–140,000/yr",
+      uk: "Â£35,000–65,000/yr",
+      ca: "CAD 72,000–105,000/yr",
+      au: "AUD 75,000–110,000/yr",
+      de: "â‚¬44,000–70,000/yr",
+      kr: "KRW 3,500,000–5,500,000/mo",
+      sg: "SGD 5,000–9,500/mo",
+      ae: "AED 14,000–28,000/mo",
+      my: "MYR 4,000–7,500/mo",
+      jp: "JPY 330,000–550,000/mo",
+      qa: "QAR 14,000–26,000/mo",
+      sa: "SAR 12,000–22,000/mo",
+      nl: "â‚¬40,000–65,000/yr",
+      se: "SEK 40,000–60,000/mo",
+      nz: "NZD 70,000–105,000/yr"
     }
   }, {
     slug: "uiux",
@@ -11525,24 +11525,24 @@ Object.assign(window, {
     desc: "User interface, user experience, product design, visual design",
     demand: "medium",
     subjectSlugs: ["uiux"],
-    bd_dhaka: "BDT 20,000â€“55,000/mo",
-    bd_outside: "BDT 12,000â€“30,000/mo",
+    bd_dhaka: "BDT 20,000–55,000/mo",
+    bd_outside: "BDT 12,000–30,000/mo",
     salaries: {
-      us: "USD 65,000â€“105,000/yr",
-      uk: "Â£27,000â€“50,000/yr",
-      ca: "CAD 58,000â€“88,000/yr",
-      au: "AUD 60,000â€“92,000/yr",
-      de: "â‚¬36,000â€“58,000/yr",
-      kr: "KRW 2,800,000â€“4,200,000/mo",
-      sg: "SGD 3,800â€“7,000/mo",
-      ae: "AED 9,000â€“18,000/mo",
-      my: "MYR 3,000â€“5,500/mo",
-      jp: "JPY 270,000â€“430,000/mo",
-      qa: "QAR 9,000â€“18,000/mo",
-      sa: "SAR 8,000â€“16,000/mo",
-      nl: "â‚¬34,000â€“55,000/yr",
-      se: "SEK 34,000â€“50,000/mo",
-      nz: "NZD 55,000â€“85,000/yr"
+      us: "USD 65,000–105,000/yr",
+      uk: "Â£27,000–50,000/yr",
+      ca: "CAD 58,000–88,000/yr",
+      au: "AUD 60,000–92,000/yr",
+      de: "â‚¬36,000–58,000/yr",
+      kr: "KRW 2,800,000–4,200,000/mo",
+      sg: "SGD 3,800–7,000/mo",
+      ae: "AED 9,000–18,000/mo",
+      my: "MYR 3,000–5,500/mo",
+      jp: "JPY 270,000–430,000/mo",
+      qa: "QAR 9,000–18,000/mo",
+      sa: "SAR 8,000–16,000/mo",
+      nl: "â‚¬34,000–55,000/yr",
+      se: "SEK 34,000–50,000/mo",
+      nz: "NZD 55,000–85,000/yr"
     }
   }, {
     slug: "textile",
@@ -11550,24 +11550,24 @@ Object.assign(window, {
     desc: "Garment production, textile R&D, quality management",
     demand: "medium",
     subjectSlugs: [],
-    bd_dhaka: "BDT 25,000â€“60,000/mo",
-    bd_outside: "BDT 18,000â€“35,000/mo",
+    bd_dhaka: "BDT 25,000–60,000/mo",
+    bd_outside: "BDT 18,000–35,000/mo",
     salaries: {
-      us: "USD 48,000â€“72,000/yr",
-      uk: "Â£22,000â€“36,000/yr",
-      ca: "CAD 45,000â€“68,000/yr",
-      au: "AUD 52,000â€“75,000/yr",
-      de: "â‚¬30,000â€“46,000/yr",
-      kr: "KRW 2,400,000â€“3,600,000/mo",
-      sg: "SGD 2,800â€“4,500/mo",
-      ae: "AED 7,000â€“14,000/mo",
-      my: "MYR 2,500â€“4,200/mo",
-      jp: "JPY 230,000â€“340,000/mo",
-      qa: "QAR 7,000â€“13,000/mo",
-      sa: "SAR 6,000â€“12,000/mo",
-      nl: "â‚¬26,000â€“40,000/yr",
-      se: "SEK 26,000â€“38,000/mo",
-      nz: "NZD 45,000â€“65,000/yr"
+      us: "USD 48,000–72,000/yr",
+      uk: "Â£22,000–36,000/yr",
+      ca: "CAD 45,000–68,000/yr",
+      au: "AUD 52,000–75,000/yr",
+      de: "â‚¬30,000–46,000/yr",
+      kr: "KRW 2,400,000–3,600,000/mo",
+      sg: "SGD 2,800–4,500/mo",
+      ae: "AED 7,000–14,000/mo",
+      my: "MYR 2,500–4,200/mo",
+      jp: "JPY 230,000–340,000/mo",
+      qa: "QAR 7,000–13,000/mo",
+      sa: "SAR 6,000–12,000/mo",
+      nl: "â‚¬26,000–40,000/yr",
+      se: "SEK 26,000–38,000/mo",
+      nz: "NZD 45,000–65,000/yr"
     }
   }, {
     slug: "journalism",
@@ -11575,24 +11575,24 @@ Object.assign(window, {
     desc: "Print, broadcast, digital media, content creation, PR",
     demand: "low",
     subjectSlugs: ["journalism"],
-    bd_dhaka: "BDT 15,000â€“35,000/mo",
-    bd_outside: "BDT 10,000â€“20,000/mo",
+    bd_dhaka: "BDT 15,000–35,000/mo",
+    bd_outside: "BDT 10,000–20,000/mo",
     salaries: {
-      us: "USD 38,000â€“62,000/yr",
-      uk: "Â£20,000â€“34,000/yr",
-      ca: "CAD 36,000â€“58,000/yr",
-      au: "AUD 45,000â€“65,000/yr",
-      de: "â‚¬26,000â€“42,000/yr",
-      kr: "KRW 2,000,000â€“3,200,000/mo",
-      sg: "SGD 2,500â€“4,200/mo",
-      ae: "AED 6,000â€“12,000/mo",
-      my: "MYR 2,200â€“3,800/mo",
-      jp: "JPY 220,000â€“320,000/mo",
-      qa: "QAR 7,000â€“13,000/mo",
-      sa: "SAR 5,000â€“10,000/mo",
-      nl: "â‚¬24,000â€“38,000/yr",
-      se: "SEK 26,000â€“36,000/mo",
-      nz: "NZD 40,000â€“60,000/yr"
+      us: "USD 38,000–62,000/yr",
+      uk: "Â£20,000–34,000/yr",
+      ca: "CAD 36,000–58,000/yr",
+      au: "AUD 45,000–65,000/yr",
+      de: "â‚¬26,000–42,000/yr",
+      kr: "KRW 2,000,000–3,200,000/mo",
+      sg: "SGD 2,500–4,200/mo",
+      ae: "AED 6,000–12,000/mo",
+      my: "MYR 2,200–3,800/mo",
+      jp: "JPY 220,000–320,000/mo",
+      qa: "QAR 7,000–13,000/mo",
+      sa: "SAR 5,000–10,000/mo",
+      nl: "â‚¬24,000–38,000/yr",
+      se: "SEK 26,000–36,000/mo",
+      nz: "NZD 40,000–60,000/yr"
     }
   }];
   const demandLabel = {
@@ -11714,7 +11714,7 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD â€” Share Your Story modal (quick-access version)
+  // EduPath BD — Share Your Story modal (quick-access version)
   // No personal information is mandatory. Only consent checkboxes are required.
 
   function ShareModal({
@@ -12136,7 +12136,7 @@ Object.assign(window, {
     useMemo
   } = React;
 
-  // EduPath BD â€” App root + simple router
+  // EduPath BD — App root + simple router
 
 
   // ScreenSearchResults component
@@ -12558,7 +12558,7 @@ Object.assign(window, {
     }
   }
   // Wait for all external data scripts (universities.js, career-data.js etc.) to load
-  // before rendering â€” mirrors the DOMContentLoaded behaviour of the old Babel setup
+  // before rendering — mirrors the DOMContentLoaded behaviour of the old Babel setup
   document.addEventListener("DOMContentLoaded", async function () {
     if (window.EduPathDB?.loadApprovedTestimonials) {
       await window.EduPathDB.loadApprovedTestimonials();
@@ -12575,7 +12575,7 @@ Object.assign(window, {
 
 
 <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
-     CAREER DATA â€” universities, subject mappings, salary data
+     CAREER DATA — universities, subject mappings, salary data
      Loaded after the main app; used by the matcher Results view.
      â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
 <script>
@@ -12583,6 +12583,33 @@ Object.assign(window, {
 </script>
 
 
+<footer class="ep-site-footer" aria-label="Site information">
+  <style>
+    .ep-site-footer { background: #004D38; color: rgba(255,255,255,.88); padding: 40px 24px 32px; font-family: var(--font-body, system-ui, sans-serif); }
+    .ep-site-footer__in { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.4fr 1fr; gap: 32px; }
+    .ep-site-footer__brand { font-family: var(--font-display, Georgia, serif); font-weight: 600; font-size: 20px; color: #fff; margin: 0 0 8px; }
+    .ep-site-footer p { margin: 0 0 10px; font-size: 13px; line-height: 1.6; }
+    .ep-site-footer ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; flex-wrap: wrap; align-content: flex-start; }
+    .ep-site-footer a { color: #fff; font-size: 14px; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+    .ep-site-footer__fine { grid-column: 1 / -1; border-top: 1px solid rgba(255,255,255,.2); padding-top: 20px; color: rgba(255,255,255,.78); }
+    @media (max-width: 720px) { .ep-site-footer__in { grid-template-columns: 1fr; } }
+  </style>
+  <div class="ep-site-footer__in">
+    <div>
+      <p class="ep-site-footer__brand">EduPath BD</p>
+      <p>Compare subjects, universities and careers using what real graduates report. Free to use.</p>
+    </div>
+    <ul>
+      <li><a href="/privacy.html">Privacy</a></li>
+      <li><a href="/terms.html">Terms</a></li>
+      <li><a href="mailto:contact@edupathbd.com">Contact</a></li>
+    </ul>
+    <div class="ep-site-footer__fine">
+      <p><strong>About the data.</strong> Graduate responses are self-reported, anonymous and not independently verified; many subjects have only a few responses. Salary figures are indicative estimates from public sources, not guarantees. Admission rules and seat numbers change each session, so check the official circular before you decide.</p>
+      <p><strong>Independence.</strong> EduPath BD is not affiliated with or endorsed by any university, the University Grants Commission or any government body. It provides information, not professional advice.</p>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
 
