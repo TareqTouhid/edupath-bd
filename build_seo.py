@@ -162,6 +162,7 @@ def generate_page(subj, uni_ids, seats, base_html):
     page_html = re.sub(
         r'<head>',
         f'''<head>
+  <base href="/">
   <!-- ═══ SEO: {name} ═══ -->
   <title>{title}</title>
   <meta name="description" content="{og_desc}" />

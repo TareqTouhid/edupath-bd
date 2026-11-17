@@ -12390,6 +12390,8 @@ Object.assign(window, {
       "/discover-opportunities": { section: "matcher" },
       "/share-my-experience": { section: "contribute" }
     };
+    const subjectMatch = path.match(/^\/subject\/([a-z0-9-]+)$/);
+    if (subjectMatch) return { section: "detail", subjectSlug: subjectMatch[1] };
     return map[path] || { section: "landing" };
   }
   function pathForSection(section) {
@@ -12428,7 +12430,7 @@ Object.assign(window, {
         return;
       }
       if (opts && opts.subjectSlug) setSubjectSlug(opts.subjectSlug);
-      const nextPath = pathForSection(next);
+      const nextPath = next === "detail" ? "/subject/" + ((opts && opts.subjectSlug) || subjectSlug) + "/" : pathForSection(next);
       if (nextPath && window.location.pathname !== nextPath) {
         window.history.pushState({ section: next }, "", nextPath);
       }
