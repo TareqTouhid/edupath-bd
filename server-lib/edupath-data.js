@@ -160,6 +160,27 @@ function summarizeTestimonials(testimonials = []) {
 
 let cached;
 
+export const MIN_EVIDENCE = 5;
+
+// Single source of truth for how graduate feedback moves a subject's score.
+// Below MIN_EVIDENCE responses it contributes nothing; above it, rates are
+// shrunk toward a neutral prior so a handful of answers cannot swing the rank.
+export function evidenceAdjustment(stats = {}) {
+  const yes = Number(stats.wouldAgainYes) || 0;
+  const no = Number(stats.wouldAgainNo) || 0;
+  const answered = yes + no;
+  if (answered < MIN_EVIDENCE) return 0;
+  const smoothedAgain = (yes + 10 * 0.7) / (answered + 10);
+  let adj = Math.max(-6, Math.min(4, (smoothedAgain - 0.7) * 20));
+  const worth = Number(stats.avgSubjectWorthRating);
+  if (Number.isFinite(worth) && worth > 0) {
+    const n = Number(stats.count) || answered;
+    const smoothedWorth = (5 * 3.5 + n * worth) / (5 + n);
+    adj += Math.max(-5, Math.min(5, (smoothedWorth - 3.5) * 6));
+  }
+  return adj;
+}
+
 export function loadEduPathData() {
   if (cached) return cached;
 
@@ -413,13 +434,10 @@ export function loadEduPathData() {
         if (fromInterests.has(subject.slug)) score += 18;
         const haystack = `${subject.name} ${subject.desc} ${subject.field || ""} ${(subject.related_interests || []).join(" ")} ${(subject.curriculum || []).flatMap(p => p.items || []).join(" ")} ${(subject.related_jobs || []).map(j => j.title).join(" ")} ${subject.bcs?.cadre_options?.join(" ") || ""}`.toLowerCase();
         if (freeText && freeText.split(/\W+/).filter(w => w.length > 3).some(w => haystack.includes(w))) score += 8;
-        score += Math.min(8, Math.round((subject.testimonial_stats?.count || 0) / 2));
-        if (subject.testimonial_stats?.avgSubjectWorthRating >= 4) score += 5;
-        if (subject.testimonial_stats?.avgSubjectWorthRating && subject.testimonial_stats.avgSubjectWorthRating < 3) score -= 5;
-        if (subject.testimonial_stats?.wouldAgainRate >= 70) score += 4;
-        if (subject.testimonial_stats?.regretRate >= 40) score -= 6;
         if ((profile.mathComfort === "avoid" || profile.math === "avoid") && subject.math) score -= 16;
-        return { subject, score: Math.max(0, Math.min(100, score)) };
+        const baseScore = Math.max(0, Math.min(100, score));
+        const finalScore = Math.max(0, Math.min(100, Math.round(baseScore + evidenceAdjustment(subject.testimonial_stats))));
+        return { subject, score: finalScore, baseScore };
       }).sort((a, b) => b.score - a.score);
     },
   };

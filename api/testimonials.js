@@ -66,11 +66,10 @@ function validate(body) {
 
   return {
     testimonial: {
-      id: `approved_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+      id: `sub_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
       source: "submission",
-      status: "approved",
+      status: "pending",
       anonymous: true,
-      approvedAt: new Date().toISOString(),
       schemaVersion: 2,
       currentCity: cleanText(body.currentCity, 120),
       currentCountry: cleanText(body.currentCountry, 120),
@@ -115,7 +114,7 @@ async function storeInBlob(testimonial) {
 
   const date = testimonial.createdAt.slice(0, 10);
   const slug = testimonial.subjectSlug || "unknown-subject";
-  const pathname = `testimonials/approved/${date}/${slug}/${testimonial.id}.json`;
+  const pathname = `testimonials/pending/${date}/${slug}/${testimonial.id}.json`;
   const blob = await put(pathname, JSON.stringify(testimonial, null, 2), {
     access: "private",
     contentType: "application/json",
@@ -124,9 +123,32 @@ async function storeInBlob(testimonial) {
   return blob.url;
 }
 
+// Best-effort only: serverless instances do not share memory, so this slows
+// casual abuse but is not a substitute for moderation or an edge rate limit.
+const recentByIp = new Map();
+const WINDOW_MS = 60 * 60 * 1000;
+const MAX_PER_WINDOW = 5;
+
+function rateLimited(req) {
+  const ip = String(req.headers["x-forwarded-for"] || req.socket?.remoteAddress || "unknown").split(",")[0].trim();
+  const now = Date.now();
+  const hits = (recentByIp.get(ip) || []).filter(t => now - t < WINDOW_MS);
+  if (hits.length >= MAX_PER_WINDOW) {
+    recentByIp.set(ip, hits);
+    return true;
+  }
+  hits.push(now);
+  recentByIp.set(ip, hits);
+  if (recentByIp.size > 5000) recentByIp.clear();
+  return false;
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
+  }
+  if (rateLimited(req)) {
+    return res.status(429).json({ error: "Too many submissions from this connection. Please try again later." });
   }
 
   const checked = validate(req.body || {});

@@ -2,7 +2,7 @@
 // POST /api/recommend  { profile: {...wizardInputs}, matched_subjects: [...slugs] }
 import Anthropic from "@anthropic-ai/sdk";
 import { get, list } from "@vercel/blob";
-import { loadEduPathData } from "../server-lib/edupath-data.js";
+import { loadEduPathData, evidenceAdjustment } from "../server-lib/edupath-data.js";
 import { readOverlay } from "../server-lib/overlay-store.js";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
@@ -98,14 +98,10 @@ function mergeStats(staticStats = {}, approvedRows = []) {
 function applyApprovedBlobScore(candidates, approvedBySubject = {}) {
   return candidates.map(candidate => {
     const stats = mergeStats(candidate.subject.testimonial_stats || {}, approvedBySubject[candidate.subject.slug] || []);
-    let score = candidate.score;
-    if (stats.avgSubjectWorthRating >= 4) score += 5;
-    if (stats.avgSubjectWorthRating && stats.avgSubjectWorthRating < 3) score -= 5;
-    if (stats.wouldAgainRate >= 70) score += 4;
-    if (stats.regretRate >= 40) score -= 6;
+    const score = (candidate.baseScore ?? candidate.score) + evidenceAdjustment(stats);
     return {
       ...candidate,
-      score: Math.max(0, Math.min(100, score)),
+      score: Math.max(0, Math.min(100, Math.round(score))),
       subject: { ...candidate.subject, testimonial_stats: stats }
     };
   }).sort((a, b) => b.score - a.score);
